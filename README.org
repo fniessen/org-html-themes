@@ -1,14 +1,14 @@
 #+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+Time-stamp: <2014-09-13 Sat 15:12>
+#+Time-stamp: <2014-09-13 Sat 15:29>
 #+DESCRIPTION: Org-HTML export made simple.
 #+KEYWORDS:  org, export, html, theme, style, css, js
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  padline no
-#+SETUPFILE: setup/bigblow.setup
+#+SETUPFILE: setup/bigblow-local.setup
 
 * Overview
 
@@ -43,7 +43,8 @@ Click thumbnails for a bigger view.
 BigBlow is perfect for your work: it is a clean design aimed at optimal *Org
 experience in your browser*. It looks just awesome!
 
-#+HTML: <iframe width="640" height="360" src="//www.youtube.com/embed/DnSGSiXYuOk?rel=0" frameborder="0" allowfullscreen></iframe>
+#+ATTR_HTML: :width 640
+[[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
 
 * Installing a theme
 
@@ -80,21 +81,21 @@ and link to it this way:
 If you prefer, you can add the content of the setup file at the beginning of
 your Org file instead:
 
-#+begin_src org :exports code :tangle setup/bigblow.setup
+#+begin_src org :exports code :tangle setup/bigblow-github-dev.setup
 # -*- mode: org; -*-
 
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/css/htmlize.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/css/bigblow.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/css/hideshow.css"/>
+,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/htmlize.css"/>
+,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/bigblow.css"/>
+,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/hideshow.css"/>
 
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
 
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/jquery.localscroll-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/jquery.zclip.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/bigblow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="http://svn/mc/missioncriticalit/org-style/trunk/styles/bigblow/js/hideshow.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.zclip.min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/bigblow.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
 #+begin_src org :exports code :tangle setup/bigblow-pirilampo.setup
