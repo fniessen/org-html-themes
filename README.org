@@ -1,7 +1,7 @@
 #+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+Time-stamp: <2014-09-13 Sat 15:34>
+#+Time-stamp: <2014-09-15 Mon 20:42>
 #+DESCRIPTION: Org-HTML export made simple.
 #+KEYWORDS:  org, export, html, theme, style, css, js
 #+LANGUAGE:  en
@@ -16,6 +16,11 @@
 
 Org provides basic HTML support.  Though, we can easily override CSS stylesheets
 and add our own HTML themes.
+
+#+begin_html
+<script src="http://platform.twitter.com/widgets.js"></script>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="f_niessen">Tweet</a>
+#+end_html
 
 ** Objective
 
