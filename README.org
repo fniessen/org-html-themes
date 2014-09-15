@@ -1,7 +1,7 @@
 #+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+Time-stamp: <2014-09-15 Mon 20:42>
+#+Time-stamp: <2014-09-15 Mon 20:44>
 #+DESCRIPTION: Org-HTML export made simple.
 #+KEYWORDS:  org, export, html, theme, style, css, js
 #+LANGUAGE:  en
@@ -41,8 +41,6 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 This is a list of available *themes for Org*, which you can use right now!  Well,
 I hope to have more than one in a couple of weeks...
 
-Click thumbnails for a bigger view.
-
 ** BigBlow
 
 BigBlow is perfect for your work: it is a clean design aimed at optimal *Org
@@ -50,6 +48,8 @@ experience in your browser*. It looks just awesome!
 
 #+ATTR_HTML: :width 640
 [[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
+
+Click thumbnail for a demo.
 
 * Installing a theme
 
