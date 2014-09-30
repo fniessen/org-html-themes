@@ -1,9 +1,9 @@
 #+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+Time-stamp: <2014-09-15 Mon 22:59>
+#+Time-stamp: <2014-09-30 Tue 15:15>
 #+DESCRIPTION: Org-HTML export made simple.
-#+KEYWORDS:  org, export, html, theme, style, css, js
+#+KEYWORDS:  org-mode, export, html, theme, style, css, js
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 toc:t num:2
 
@@ -14,8 +14,8 @@
 
 ** Description
 
-Org provides basic HTML support.  Though, we can easily override CSS stylesheets
-and add our own HTML themes.
+Org mode provides basic HTML support.  Though, we can easily override CSS
+stylesheets and add our own HTML themes.
 
 #+begin_html
 <script src="http://platform.twitter.com/widgets.js"></script>
@@ -24,7 +24,7 @@ and add our own HTML themes.
 
 ** Objective
 
-The goal of the Org-HMTL themes is to provide you with a list of very nice
+The goal of the *Org-HMTL themes* is to provide you with a list of very nice
 (cross-browser) themes.
 
 ** Requirements
@@ -38,13 +38,13 @@ If such a version is not bundled with your Emacs, install one from ELPA.
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
   :END:
 
-This is a list of available *themes for Org*, which you can use right now!  Well,
-I hope to have more than one in a couple of weeks...
+This is a list of available *HTML themes for Org mode*, which you can use right
+now!  Well, I hope to have more than one in a couple of weeks...
 
 ** BigBlow
 
 BigBlow is perfect for your work: it is a clean design aimed at optimal *Org
-experience in your browser*. It looks just awesome!
+mode experience in your browser*. It looks just awesome!
 
 #+ATTR_HTML: :width 640
 [[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
@@ -53,20 +53,20 @@ Click thumbnail for a demo.
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut | What it does                      |
-|----------+-----------------------------------|
-| =?= or =h=   | Access the *dashboard*              |
+| Shortcut   | What it does                        |
+|------------+-------------------------------------|
+| =?= or =h= | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                         |
-| =<=        | Scroll to top                     |
-| =>=        | Scroll to bottom                  |
-| =-=        | Collapse all                      |
-| =+=        | Expand all                        |
-| =r=        | Go to next task in list           |
-| =R=        | Go to previous task in list       |
-| =q=        | Stop reviewing the list of tasks  |
-| =g=        | Reload the page                   |
+| =b=        | Scroll up                           |
+| =<=        | Scroll to top                       |
+| =>=        | Scroll to bottom                    |
+| =-=        | Collapse all                        |
+| =+=        | Expand all                          |
+| =r=        | Go to next task in list             |
+| =R=        | Go to previous task in list         |
+| =q=        | Stop reviewing the list of tasks    |
+| =g=        | Reload the page                     |
 
 * Installing a theme
 
