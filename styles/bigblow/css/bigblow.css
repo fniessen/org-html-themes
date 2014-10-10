@@ -701,7 +701,6 @@ p.verse {
 }
 
 #left-panel-button {
-    -webkit-writing-mode: vertical-rl;
     transform: rotate(90deg);
     background-color: #EFEFEF;
     border: 1px dotted #ADADAD;
