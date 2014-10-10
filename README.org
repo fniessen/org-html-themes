@@ -1,7 +1,6 @@
 #+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+Time-stamp: <2014-09-30 Tue 15:15>
 #+DESCRIPTION: Org-HTML export made simple.
 #+KEYWORDS:  org-mode, export, html, theme, style, css, js
 #+LANGUAGE:  en
@@ -53,20 +52,20 @@ Click thumbnail for a demo.
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut   | What it does                        |
-|------------+-------------------------------------|
-| =?= or =h= | Access the *dashboard*              |
+| Shortcut | What it does                      |
+|----------+-----------------------------------|
+| =?= or =h=   | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                           |
-| =<=        | Scroll to top                       |
-| =>=        | Scroll to bottom                    |
-| =-=        | Collapse all                        |
-| =+=        | Expand all                          |
-| =r=        | Go to next task in list             |
-| =R=        | Go to previous task in list         |
-| =q=        | Stop reviewing the list of tasks    |
-| =g=        | Reload the page                     |
+| =b=        | Scroll up                         |
+| =<=        | Scroll to top                     |
+| =>=        | Scroll to bottom                  |
+| =-=        | Collapse all                      |
+| =+=        | Expand all                        |
+| =r=        | Go to next task in list           |
+| =R=        | Go to previous task in list       |
+| =q=        | Stop reviewing the list of tasks  |
+| =g=        | Reload the page                   |
 
 * Installing a theme
 
