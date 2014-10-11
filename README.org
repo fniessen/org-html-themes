@@ -48,7 +48,7 @@ mode experience in your browser*. It looks just awesome!
 #+ATTR_HTML: :width 640
 [[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
 
-Click thumbnail for a demo.
+Click on the image for a quick demo of BigBlow (2:49 min, no audio).
 
 Keyboard shortcuts to save time and boost your productivity:
 
