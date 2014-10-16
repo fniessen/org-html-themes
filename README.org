@@ -32,6 +32,22 @@ Org mode version 8 (or later) is required.
 
 If such a version is not bundled with your Emacs, install one from ELPA.
 
+* Quotations
+
+"Very very nice, I enjoy it a lot." \\
+-- Ista Zahn
+
+"This is awesome. I love it!" \\
+-- Rainer M Krug
+
+"This is awesome!!" \\
+-- Mehul Sanghvi
+
+"This very nice html theme. [...] I cannot use another emacs-theme than your
+[[https://github.com/fniessen/emacs-leuven-theme][emacs-leuven-theme]], and it is going to be probably the same with your html
+theme!" \\
+-- Joseph Vidal-Rosset
+
 * Gallery
   :PROPERTIES:
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
