@@ -1,7 +1,7 @@
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.
-#+KEYWORDS:  org-mode, export, html, theme, style, css, js
+#+KEYWORDS:  org-mode, export, html, theme, style, css, js, bigblow
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 toc:t num:2
 
@@ -57,15 +57,15 @@ theme!" \\
 This is a list of available *HTML themes for Org mode*, which you can use right
 now!  Well, I hope to have more than one in a couple of weeks...
 
-*** BigBlow
+*** Bigblow
 
-BigBlow is perfect for your work: it is a clean design aimed at optimal *Org
+Bigblow is perfect for your work: it is a clean design aimed at optimal *Org
 mode experience in your browser*. It looks just awesome!
 
 #+ATTR_HTML: :width 640
 [[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
 
-Click on the image for a quick demo of BigBlow (2:49 min, no audio).
+Click on the image for a quick demo of Bigblow (2:49 min, no audio).
 
 Keyboard shortcuts to save time and boost your productivity:
 
@@ -107,7 +107,7 @@ You can either:
   ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup
   #+end_src
 
-*** BigBlow
+*** Bigblow
 
 In order to use this style, just copy the [[file:setup/bigblow-pirilampo.setup][bigblow-pirilampo.setup]] file to your
 project and link to it this way:
