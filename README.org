@@ -6,7 +6,9 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  padline no
-#+SETUPFILE: setup/bigblow-local.setup
+# #+SETUPFILE: setup/bigblow-local.setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/rtd.css"/>
+#+HTML_HEAD: <script type="text/javascript" src="styles/rtd.js"></script>
 
 * Awesome HTML themes for files exported from Org mode [[http://opensource.org/licenses/GPL-3.0][http://img.shields.io/:license-gpl-blue.svg]] [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
 
@@ -48,6 +50,12 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 [[https://github.com/fniessen/emacs-leuven-theme][emacs-leuven-theme]], and it is going to be probably the same with your html
 theme!" \\
 -- /Joseph Vidal-Rosset/
+
+"Thanks a lot for sharing [...] the wonderful Bigblow theme.  I create lot of
+specification for other team members to use.  It has always been a trouble to
+share and maintain such spec.  Now, I can create a much neater spec which is
+available for the team's reference as a webpage." \\
+-- /Shankar R./
 
 ** Gallery
   :PROPERTIES:
