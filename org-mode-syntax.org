@@ -6,8 +6,11 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:5 num:nil toc:2 p:t
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/rtd.css"/>
-#+HTML_HEAD: <script type="text/javascript" src="styles/rtd.js"></script>
+#+HTML_LINK_HOME: http://www.google.com
+#+HTML_LINK_UP: http://www.bing.com
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/rtd.css"/>
+#+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
 
 #+PROPERTY:  eval never-export
 
@@ -178,9 +181,20 @@ Text can be preformatted (in a fixed-width font).
 
 *** Centered text
 
+#+begin_left
+This text is \\
+aligned to the left!
+#+end_left
+
 #+begin_center
-This text is centered!
+This text is \\
+centered!
 #+end_center
+
+#+begin_right
+This text is \\
+aligned to the right!
+#+end_right
 
 ** Code blocks
 
@@ -412,7 +426,7 @@ A short one:
 
 #+begin_quote
 Everything should be made as simple as possible,
-but not any simpler -- Albert Einstein
+but not any simpler. -- Albert Einstein
 #+end_quote
 
 In a ~verse~ environment, there is an implicit line break at the end of each
@@ -507,23 +521,23 @@ their typographically correct entitites):
 
 *** Accents
 
-\Agrave \Aacute
+- \Agrave \Aacute
 
 *** Punctuation
 
-Dash: \ndash \mdash
+- Dash: \ndash \mdash
 
-Marks: \iexcl \iquest
+- Marks: \iexcl \iquest
 
-Quotations: \laquo \raquo
+- Quotations: \laquo \raquo
 
-Miscellaneous: \para \ordf
+- Miscellaneous: \para \ordf
 
 *** Commercial symbols
 
-Property marks: \copy \reg
+- Property marks: \copy \reg
 
-Currency: \cent \EUR \yen \pound
+- Currency: \cent \EUR \yen \pound
 
 *** Greek characters
 
@@ -531,19 +545,19 @@ The Greek letters \alpha, \beta, and \gamma are used to denote angles.
 
 *** Math characters
 
-Science: \pm \div
+- Science: \pm \div
 
-Arrows: \to \rarr \larr \harr \rArr \lArr \hArr
+- Arrows: \to \rarr \larr \harr \rArr \lArr \hArr
 
-Function names: \arccos \cos
+- Function names: \arccos \cos
 
-Signs and symbols: \bull \star
+- Signs and symbols: \bull \star
 
 *** Misc
 
 # Smilies: \smiley \sad
 
-Suits: \clubs \spades
+- Suits: \clubs \spades
 
 ** Comments
 
@@ -666,7 +680,7 @@ Videos can't be added directly but you can add an image with a link to the video
 
 *** Sounds
 
-** Special text boxes
+** Special text boxes ("admonitions")
 
 Simple box ("inline task"): XXX
 
@@ -690,23 +704,10 @@ Find entries with an *exact phrase* -- To do this, put the phrase in quotes:
 You can create several other boxes (~info~, ~tip~, ~note~ or ~warning~) which all have
 a different default image.
 
-*** Info
+Admonitions: attention, caution, danger, error, hint, important, note, tip,
+warning and the generic admonition.
 
-An info box is displayed as follows:
-
-#+begin_info
-*Info example* \\
-Did you know...
-#+end_info
-
-*** Tip
-
-A tip box is displayed as follows:
-
-#+begin_tip
-*Tip example* \\
-Try doing it this way...
-#+end_tip
+(Most themes style only ~note~ and ~warning~ specially.)
 
 *** Note
 
@@ -717,6 +718,10 @@ A note box is displayed as follows:
 This is a useful note...
 #+end_note
 
+#+begin_seealso
+See also
+#+end_seealso
+
 *** Warning
 
 A warning box is displayed as follows:
@@ -725,6 +730,113 @@ A warning box is displayed as follows:
 *Warning example* \\
 Be careful!  Check that you have...
 #+end_warning
+
+#+begin_caution
+Caution
+#+end_caution
+
+
+#+begin_attention
+Attention
+#+end_attention
+
+#+begin_admonitiontodo
+Admonitiontodo
+#+end_admonitiontodo
+
+*** Tip
+
+A tip box is displayed as follows:
+
+#+begin_tip
+*Tip example* \\
+Try doing it this way...
+#+end_tip
+
+#+begin_important
+Important
+#+end_important
+
+
+#+begin_hint
+Hint
+#+end_hint
+
+#+begin_success
+Success
+#+end_success
+
+*** Info
+
+An info box is displayed as follows:
+
+#+begin_info
+*Info example* \\
+Did you know...
+#+end_info
+
+*** Danger
+
+#+begin_danger
+Danger
+#+end_danger
+
+#+begin_error
+Error
+#+end_error
+
+*** Neutral
+
+#+begin_neutral
+Neutral
+#+end_neutral
+
+** Additional body elements
+
+*** Special highlighted body elements
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+#+begin_sidebar
+sidebar
+#+end_sidebar
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
+sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien
+ullamcorper pharetra. Vestibulum erat wisi...
+
+Phasellus ut libero. Nulla in libero non enim tristique sollicitudin. Ut
+tempor. Phasellus pellentesque augue eget ante. Mauris malesuada. Donec sit
+amet diam sit amet dolor placerat blandit. Morbi enim purus, imperdiet in,
+molestie sit amet, pellentesque eu, mauris. In vel erat vel ipsum bibendum
+commodo. Curabitur accumsan. Nam sed metus. Etiam tristique bibendum justo.
+
+*** Block quote with optional attribution line
+
+#+begin_epigraph
+epigraph
+#+end_epigraph
+
+*** Block quotes with their own class attribute
+
+#+begin_highlights
+highlights
+#+end_highlights
+
+#+begin_pull-quote
+pull-quote
+#+end_pull-quote
+
+#+begin_blockquote
+Blockquote
+#+end_blockquote
 
 ** Links
    :PROPERTIES:
