@@ -11,47 +11,51 @@
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/rtd.css"/>
 #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
+# #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
 
-#+PROPERTY:  eval never-export
+#+PROPERTY:  eval yes
+#+PROPERTY:  exports both
+#+PROPERTY:  results replace
 
 This is an Org mode document.
 
 *Org mode* is a easy-to-write /plain text/ formatting syntax for authoring LaTeX
 documents, creating Web pages and much more!
 
-* Basics
+* Document header
 
-** Biggest heading
+Title and author line:
+
+#+begin_src org :eval never-export
+,#+TITLE:     Org mode syntax example
+,#+AUTHOR:    Fabrice Niessen
+
+My document provides...
+#+end_src
+
+Attributes...
+
+* Section titles (headings)
+
+#+begin_src org
+,* Biggest heading (level 1)
 
 New chapter.
 
-*** Bigger heading
+,** Bigger heading (level 2)
 
 New section.
 
-**** Big heading
+,*** Big heading (level 3)
 
 New sub-section.
 
-**** Text breaks
+,**** Heading (level 4)
 
-A single newline has no effect.
-This line is part of the same paragraph.
+New sub-sub-section.
+#+end_src
 
-But an empty line
-
-demarcates paragraphs.
-
-By entering two consecutive backslashes,
-you can force to break lines \\
-without starting a new paragraph.
-
-For an horizontal line, insert at least 5 dashes: this is some text above an
-horizontal rule
------
-and some text below it.
-
-**** Numbered headings
+** Numbered headings
 
 You can create numbered headings up to a certain level by setting an option:
 
@@ -59,7 +63,37 @@ You can create numbered headings up to a certain level by setting an option:
 ,#+OPTIONS: H:4
 #+end_src
 
-*** Text width
+* Paragraphs
+
+** Normal
+
+#+begin_src org
+A single newline has no effect.
+This line is part of the same paragraph.
+
+But an empty line
+
+demarcates paragraphs.
+#+end_src
+
+** Line breaks
+
+#+begin_src org
+By entering two consecutive backslashes,
+you can force to break lines \\
+without starting a new paragraph.
+#+end_src
+
+** Horizontal rules
+
+#+begin_src org
+For an horizontal line, insert at least 5 dashes: this is some text above an
+horizontal rule
+-----
+and some text below it.
+#+end_src
+
+** Text width
 
 # Premiere Elements, page 111
 #
@@ -83,48 +117,67 @@ and divided by arches into stiff sections. The bedding was hardly able to cover
 it and seemed ready to slide off any moment. His many legs, pitifully thin
 compared with the size of the rest of him, waved about helplessly as he looked.
 
-** Lists
+* Lists
 
-Org markup allows you to create bulleted or numbered lists. It allows any
+Org markup allows you to create *bulleted* or *numbered* lists. It allows any
 combination of the two list types.
 
-*** Unordered lists
+** Unordered lists
 
-Itemized lists are marked with bullets. They are convenient to:
+Itemized lists are marked with bullets. Create them with a minus or a plus sign.
 
-- organize data, and
-- make the document
-  + prettier, and
-  + easier to read.
+They are convenient to:
 
-Create them with a minus or a plus sign.
+#+begin_src org
+- Organize data, and
+- Make the document
+  + Prettier, and
+  + Easier to read.
+#+end_src
 
-*** Ordered lists
+** Checklists
+
+#+begin_src org
+- [X] Checked
+- [-] Half-checked
+- [ ] Not checked
+- Normal list item
+#+end_src
+
+** Ordered lists
 
 Enumerated lists are marked with numbers or letters:
 
+#+begin_src org
 1. First element
    1) First sub-item
    2) Last sub-item
 2. Second element
+#+end_src
 
 You can have ordered lists with jumping numbers:
 
+#+begin_src org
 1. [@1] First
 2. [@2] Second
 5. [@5] Jump to 5th
+#+end_src
 
-*** Definition lists
+** Definition lists
 
-- Definition list ::
-     List containing definitions.
+Labeled, multi-line lists.
 
-- Term to define ::
-     Explication of the term.
+#+begin_src org
+- First term to define ::
+     Definition of the first term.
 
-** Miscellaneous effects
+- Second term ::
+     Explication of the second term.
+#+end_src
 
-*** Include Org files
+* Miscellaneous effects
+
+** Include Org files
 
 You can include another Org file and skip its title by using the ~:lines~ argument
 to ~#+INCLUDE~:
@@ -137,7 +190,7 @@ to ~#+INCLUDE~:
 File inclusion, through INCLUDE keywords, is an *export-only feature*.
 #+end_note
 
-*** Inline HTML
+** Inline HTML
 
 You can include raw HTML in your Org documents and it will get kept as HTML
 when it's exported. XXX
@@ -171,7 +224,7 @@ Finally, you can include an HTML file verbatim (during export) with:
 
 Don't edit the exported HTML file!
 
-*** Inline LaTeX
+** Inline LaTeX
 
 You can also use raw LaTeX. XXX
 
@@ -179,7 +232,7 @@ You can also use raw LaTeX. XXX
 Text can be preformatted (in a fixed-width font).
 #+LaTeX_END: \end{verbatim}
 
-*** Centered text
+** Centered text
 
 #+begin_left
 This text is \\
@@ -196,9 +249,17 @@ This text is \\
 aligned to the right!
 #+end_right
 
-** Code blocks
+* Source code
 
-*** COMMENT Syntax highlighting
+** Inline code
+
+#+begin_src org
+Reference code like ~variables~ or ~functions~ inline.
+#+end_src
+
+You can also evaluate code inline as follows: 1 + 1 is src_R{1 + 1}.
+
+** Code block with syntax highlighting
 
 The source code blocks support syntax highlighting:
 
@@ -251,7 +312,7 @@ print("This block is in scriptsize")
 #+end_src
 #+latex: \normalize
 
-*** Line numbers
+** Line numbers
 
 Both in ~example~ and in ~src~ snippets, you can add a ~-n~ switch to the end of the
 ~begin~ line, to get the lines of the example numbered.
@@ -290,17 +351,17 @@ parentheses.  Here is an example:
 In line [[(sc)]], we remember the current position.  [[(jump)][Line (jump)]] jumps to
 ~point-min~.
 
-*** Output
+** Output
 
 The output from the *execution* of programs, scripts or commands can be inserted
 in the document itself, allowing you to work in the /reproducible research/
 mindset.
 
-**** Text
+*** Text
 
 A one-liner result:
 
-#+begin_src sh :exports both :results verbatim
+#+begin_src shell :exports both :results verbatim
 date +"%Y-%m-%d"
 #+end_src
 
@@ -310,7 +371,7 @@ date +"%Y-%m-%d"
 # A multiple-line result:
 #
 # #+name: list-of-styles
-# #+begin_src sh :exports both :results verbatim
+# #+begin_src shell :exports both :results verbatim
 # # output all styles, but the default one (if any)
 # ls styles | grep -v "default"
 # #+end_src
@@ -322,7 +383,7 @@ date +"%Y-%m-%d"
 # maunakea
 # #+end_example
 
-**** Graphics
+*** Graphics
 
 Data to be charted:
 
@@ -356,7 +417,7 @@ The resulting chart:
 #+results: R-plot
 [[file:../../images/Rplot.png]]
 
-**** R code block
+*** R code block
 
 #+begin_src R
 library(ggplot2)
@@ -369,10 +430,6 @@ Plot:
 library(ggplot2)
 qplot(speed, dist, data = cars) + geom_smooth()
 #+end_src
-
-** Inline code
-
-You can also evaluate code inline as follows: 1 + 1 is src_R{1 + 1}.
 
 ** Notes at the footer
 
@@ -637,9 +694,9 @@ And here's a table on the right side:
 Here the hfill adds infinite stretch before the table, so it pushes the table
 to the right.
 
-** Images, video and audio
+* Images, video and audio
 
-*** Images
+** Images
 
 You can insert *image* files of different *formats* to a page:
 
@@ -672,15 +729,15 @@ XXX Available HTML image tags include:
 
 Place images side by side: XXX
 
-*** Video
+** Video
 
 Videos can't be added directly but you can add an image with a link to the video like this:
 
 [[http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg][http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE]]
 
-*** Sounds
+** Sounds
 
-** Special text boxes ("admonitions")
+* Special text boxes ("admonitions")
 
 Simple box ("inline task"): XXX
 
@@ -693,7 +750,7 @@ Simple box ("inline task"): XXX
 # *************** WAIT [#B] Do also this other task                        :phone:
 # *************** END
 
-*** Example
+** Example
 
 You can have ~example~ blocks.
 
@@ -709,7 +766,7 @@ warning and the generic admonition.
 
 (Most themes style only ~note~ and ~warning~ specially.)
 
-*** Note
+** Note
 
 A note box is displayed as follows:
 
@@ -722,7 +779,7 @@ This is a useful note...
 See also
 #+end_seealso
 
-*** Warning
+** Warning
 
 A warning box is displayed as follows:
 
@@ -744,7 +801,7 @@ Attention
 Admonitiontodo
 #+end_admonitiontodo
 
-*** Tip
+** Tip
 
 A tip box is displayed as follows:
 
@@ -766,7 +823,7 @@ Hint
 Success
 #+end_success
 
-*** Info
+** Info
 
 An info box is displayed as follows:
 
@@ -775,7 +832,7 @@ An info box is displayed as follows:
 Did you know...
 #+end_info
 
-*** Danger
+** Danger
 
 #+begin_danger
 Danger
@@ -785,7 +842,7 @@ Danger
 Error
 #+end_error
 
-*** Neutral
+** Neutral
 
 #+begin_neutral
 Neutral
@@ -838,42 +895,61 @@ pull-quote
 Blockquote
 #+end_blockquote
 
-** Links
+* Links
    :PROPERTIES:
    :CUSTOM_ID: links
    :END:
 
-*** Anchors
+This document is available in [[file:example.txt][plain text]], [[file:example.html][HTML]] and [[file:example.pdf][PDF]].
+
+The links are delimited by ~[square brackets]~.
+
+** External links
+
+#+begin_src org
+See http://www.pirilampo.org (automatic!) and the
+[[http://orgmode.org/][Org mode Web site]].
+#+end_src
+
+# Clicking on the image [[http://orgmode.org/][file:org-mode-unicorn.png]] leads to the Org mode home
+# page.
+
+*** Relative links
+
+#+begin_src org
+[[index.html][Home]]
+#+end_src
+
+*** Email links
+
+#+begin_src org
+[[mailto:concat.fni.at-sign.pirilampo.org][Mailto link]]
+#+end_src
+
+** Internal links
    :PROPERTIES:
    :ID:       0d2b0cb2-116c-4a61-a076-4c641faf4346
    :END:
+
+*** Inline anchors
+
+#+begin_src org
+<<anchor>> Inline anchors make arbitrary content referenceable.
+
+Use a [[anchor][cross reference]] to link to this location.
+#+end_src
+
+*** Internal cross references
 
 Links generally point to an headline.
 
 They can also point to a link anchor <<name-of-anchor-here>> in the current
 document or in another document.
 
-*** Hyperlinks
-
-This document is available in [[file:example.txt][plain text]], [[file:example.html][HTML]] and [[file:example.pdf][PDF]].
-
-The links are delimited by ~[square brackets]~.
-
-**** Internal links
-
 See:
 - chapter [[#links][Links]]
 - section [[id:0d2b0cb2-116c-4a61-a076-4c641faf4346][Anchors]]
 - [[name-of-anchor-here][target in the document]]
-
-**** External links
-
-See the [[http://orgmode.org/][Org mode Web site]].
-
-# Clicking on the image [[http://orgmode.org/][file:org-mode-unicorn.png]] leads to the Org mode home
-# page.
-
-[[mailto:concat.fni.at-sign.pirilampo.org][Mailto link]]
 
 * Org miscellaneous
 
