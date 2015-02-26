@@ -1,8 +1,8 @@
-#+TITLE:     Org mode syntax example
+#+TITLE:     Org mode syntax quick reference
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     fniessen@pirilampo.org
 #+DESCRIPTION: Org mode syntax example
-#+KEYWORDS:  syntax, org, document
+#+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, latex, beamer, html
 #+LANGUAGE:  en
 #+OPTIONS:   H:5 num:nil toc:2 p:t
 
@@ -19,8 +19,8 @@
 
 This is an Org mode document.
 
-*Org mode* is a easy-to-write /plain text/ formatting syntax for authoring LaTeX
-documents, creating Web pages and much more!
+*Org mode* is an easy-to-write /plain text/ formatting syntax for authoring notes,
+articles, LaTeX documents, books, Web pages, Beamer slide decks and much more!
 
 * Document header
 
@@ -117,6 +117,109 @@ and divided by arches into stiff sections. The bedding was hardly able to cover
 it and seemed ready to slide off any moment. His many legs, pitifully thin
 compared with the size of the rest of him, waved about helplessly as he looked.
 
+* Formatting text
+
+Text effects.
+
+** Bold and italic
+
+#+begin_src org
+/Emphasize/ (italics), *strongly* (bold), and */very strongly/* (bold italics).
+#+end_src
+
+Markup elements could be nested:
+
+#+begin_src org
+This is /italic text which contains _underlined text_ within it/, whereas _this is
+normal underlined text_.
+#+end_src
+
+Markup can span across multiple lines, by default *no more than 2*:
+
+#+begin_src org
+*This
+is not
+bold*
+#+end_src
+
+** Monospace, superscript and subscript
+
+Other elements to use sparingly are:
+
+#+begin_src org
+- monospaced typewriter font for ~inline code~
+- monospaced typewriter font for =verbatim text=
+- +deleted+ text (vs. _inserted_ text)
+- text with super^{script} (for example: ~m/s^{2}~ gives m/s^{2})
+- text with sub_{script}
+#+end_src
+
+** Quotations
+
+Use the ~quote~ block to typeset quoted text.
+
+#+begin_quote
+Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a computer what to do,
+let us concentrate rather on explaining to human beings what we want a
+computer to do.
+
+The practitioner of literate programming can be regarded as an essayist, whose
+main concern is with exposition and excellence of style. Such an author, with
+thesaurus in hand, chooses the names of variables carefully and explains what
+each variable means. He or she strives for a program that is comprehensible
+because its concepts have been introduced in an order that is best for human
+understanding, using a mixture of formal and informal methods that reinforce
+each other.
+
+--- Donald Knuth
+#+end_quote
+
+A short one:
+
+#+begin_quote
+Everything should be made as simple as possible,
+but not any simpler. -- Albert Einstein
+#+end_quote
+
+In a ~verse~ environment, there is an implicit line break at the end of each
+line, and indentation and vertical space are preserved:
+
+#+begin_verse
+Everything should be made as simple as possible,
+but not any simpler -- Albert Einstein
+#+end_verse
+
+Typically used for quoting passages of an email message:
+
+#+begin_verse
+>> This is an email message with "nested" quoting. Lorem ipsum dolor sit amet,
+>> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+>> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+>
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem
+> consectetuer libero luctus adipiscing.
+
+Itemized or unordered lists (~ul~):
+- This is the first list item.
+- This is the second list item.
+
+Enumerated or ordered Lists (~ol~):
+1. This is the first list item.
+2. This is the second list item.
+
+Maybe an equation here?
+
+See http://www.google.com/ for more information...
+#+end_verse
+
+** Spaces
+
+Using non-breaking spaces.
+
+Insert the Unicode character ~00A0~ to add a non-breaking space. FIXME
+Or add/use an Org entity?
+
 * Lists
 
 Org markup allows you to create *bulleted* or *numbered* lists. It allows any
@@ -175,79 +278,122 @@ Labeled, multi-line lists.
      Explication of the second term.
 #+end_src
 
-* Miscellaneous effects
+* Links
+   :PROPERTIES:
+   :CUSTOM_ID: links
+   :END:
 
-** Include Org files
+This document is available in [[file:example.txt][plain text]], [[file:example.html][HTML]] and [[file:example.pdf][PDF]].
 
-You can include another Org file and skip its title by using the ~:lines~ argument
-to ~#+INCLUDE~:
+The links are delimited by ~[square brackets]~.
 
-#+begin_src org
-,#+INCLUDE: chapter1.org :lines "2-"
-#+end_src
-
-#+begin_note
-File inclusion, through INCLUDE keywords, is an *export-only feature*.
-#+end_note
-
-** Inline HTML
-
-You can include raw HTML in your Org documents and it will get kept as HTML
-when it's exported. XXX
-
-#+HTML_BEGIN: <pre style="color:red">
-Text can be preformatted (in a fixed-width font).
-#+HTML_END: </pre>
-
-It is especially useful for more advanced stuff like images or tables where you
-need more control of the HTML options than Org mode actually gives you.
-
-Similarly, you can incorporate JS or do anything else you can do in a Web page
-(such as importing a CSS file).
-
-You can create named classes (to get style control from your CSS) with:
-
-#+begin_example
-,#+begin_info
-,*Info example* \\
-Did you know...
-,#+end_info
-#+end_example
-
-You can also add interactive elements to the HTML such as interactive R plots.
-
-Finally, you can include an HTML file verbatim (during export) with:
+** External links
 
 #+begin_src org
-,#+INCLUDE: file.html html
+See http://www.pirilampo.org (automatic!) and the
+[[http://orgmode.org/][Org mode Web site]].
 #+end_src
 
-Don't edit the exported HTML file!
+# Clicking on the image [[http://orgmode.org/][file:org-mode-unicorn.png]] leads to the Org mode home
+# page.
 
-** Inline LaTeX
+*** Relative links
 
-You can also use raw LaTeX. XXX
+#+begin_src org
+[[index.html][Home]]
+#+end_src
 
-#+LaTeX_BEGIN: \begin{verbatim}
-Text can be preformatted (in a fixed-width font).
-#+LaTeX_END: \end{verbatim}
+*** Email links
 
-** Centered text
+#+begin_src org
+[[mailto:concat.fni.at-sign.pirilampo.org][Mailto link]]
+#+end_src
 
-#+begin_left
-This text is \\
-aligned to the left!
-#+end_left
+** Internal links
+   :PROPERTIES:
+   :ID:       0d2b0cb2-116c-4a61-a076-4c641faf4346
+   :END:
 
-#+begin_center
-This text is \\
-centered!
-#+end_center
+*** Inline anchors
 
-#+begin_right
-This text is \\
-aligned to the right!
-#+end_right
+#+begin_src org
+<<anchor>> Inline anchors make arbitrary content referenceable.
+
+Use a [[anchor][cross reference]] to link to this location.
+#+end_src
+
+*** Internal cross references
+
+Links generally point to an headline.
+
+They can also point to a link anchor <<name-of-anchor-here>> in the current
+document or in another document.
+
+#+begin_src org
+See:
+- Chapter [[#links][Links]]
+- Section [[id:0d2b0cb2-116c-4a61-a076-4c641faf4346][Anchors]]
+- [[name-of-anchor-here][Target in the document]]
+#+end_src
+
+* Images
+
+You can insert *image* files of different *formats* to a document:
+
+|      | HTML                         | PDF |
+|------+------------------------------+-----|
+| gif  | yes                          |     |
+| jpeg | yes                          |     |
+| png  | yes                          |     |
+| bmp  | (depends on browser support) |     |
+
+** Inline picture
+
+#+begin_src org
+#+CAPTION: Org mode logo
+[[file:demo/org-mode-unicorn.png]]
+#+end_src
+
+#+begin_src org
+Click to see the [[file:demo/org-mode-unicorn.png][Unicorn picture]].
+#+end_src
+
+** Using positioning
+
+XXX Available HTML image tags include ...
+
+** Image attributes and values
+
+| Attribute   | Value(s)                    |
+|-------------+-----------------------------|
+| align       |                             |
+| border      |                             |
+| bordercolor |                             |
+| hspace      |                             |
+| vspace      |                             |
+| width       | User defined size in pixels |
+| height      |                             |
+| title       | User defined text           |
+| alt         |                             |
+
+#+begin_src org
+#+ATTR_LaTeX: :width 0.25\linewidth
+[[file:demo/org-mode-unicorn.png]]
+#+end_src
+
+Place images side by side: XXX
+
+* Videos
+
+Videos can't be added directly.
+
+Though you can add an image with a link to the video like this:
+
+#+begin_src org
+[[http://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
+#+end_src
+
+* Sounds                                                              :noexport:
 
 * Source code
 
@@ -431,99 +577,6 @@ library(ggplot2)
 qplot(speed, dist, data = cars) + geom_smooth()
 #+end_src
 
-** Notes at the footer
-
-It is possible to define named footnotes[fn:myfootnote], or ones with
-automatic anchors[fn:2].
-
-** Formatting text
-
-*** Text effects
-
-/Emphasize/ (italics), *strongly* (bold), and */very strongly/* (bold italics).
-
-Markup elements could be nested: this is /italic text which contains
-_underlined text_ within it/, whereas _this is normal underlined text_.
-
-Markup can span across multiple lines, by default *no more than 2*:
-
-*This
-is not
-bold*
-
-Other elements to use sparingly are:
-- monospaced typewriter font for ~inline code~
-- monospaced typewriter font for =verbatim text=
-- +deleted+ text (vs. _inserted_ text)
-- text with^{superscript} (for example: ~m/s^{2}~ gives m/s^{2})
-- text with_{subscript}
-
-*** Quotations
-
-Use the ~quote~ block to typeset quoted text.
-
-#+begin_quote
-Let us change our traditional attitude to the construction of programs:
-Instead of imagining that our main task is to instruct a computer what to do,
-let us concentrate rather on explaining to human beings what we want a
-computer to do.
-
-The practitioner of literate programming can be regarded as an essayist, whose
-main concern is with exposition and excellence of style. Such an author, with
-thesaurus in hand, chooses the names of variables carefully and explains what
-each variable means. He or she strives for a program that is comprehensible
-because its concepts have been introduced in an order that is best for human
-understanding, using a mixture of formal and informal methods that reinforce
-each other.
-
---- Donald Knuth
-#+end_quote
-
-A short one:
-
-#+begin_quote
-Everything should be made as simple as possible,
-but not any simpler. -- Albert Einstein
-#+end_quote
-
-In a ~verse~ environment, there is an implicit line break at the end of each
-line, and indentation and vertical space are preserved:
-
-#+begin_verse
-Everything should be made as simple as possible,
-but not any simpler -- Albert Einstein
-#+end_verse
-
-Typically used for quoting passages of an email message:
-
-#+begin_verse
->> This is an email message with "nested" quoting. Lorem ipsum dolor sit amet,
->> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
->> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
->
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem
-> consectetuer libero luctus adipiscing.
-
-Itemized or unordered lists (~ul~):
-- This is the first list item.
-- This is the second list item.
-
-Enumerated or ordered Lists (~ol~):
-1. This is the first list item.
-2. This is the second list item.
-
-Maybe an equation here?
-
-See http://www.google.com/ for more information...
-#+end_verse
-
-*** Spaces
-
-Using non-breaking spaces.
-
-Insert the Unicode character ~00A0~ to add a non-breaking space. FIXME
-Or add/use an Org entity?
-
 ** Mathematical formulae
 
 You can embed LaTeX math formatting in Org mode files using the following
@@ -578,185 +631,80 @@ their typographically correct entitites):
 
 *** Accents
 
+#+begin_src org
 - \Agrave \Aacute
+#+end_src
 
 *** Punctuation
 
+#+begin_src org
 - Dash: \ndash \mdash
-
 - Marks: \iexcl \iquest
-
 - Quotations: \laquo \raquo
-
 - Miscellaneous: \para \ordf
+#+end_src
 
 *** Commercial symbols
 
+#+begin_src org
 - Property marks: \copy \reg
-
 - Currency: \cent \EUR \yen \pound
+#+end_src
 
 *** Greek characters
 
+#+begin_src org
 The Greek letters \alpha, \beta, and \gamma are used to denote angles.
+#+end_src
 
 *** Math characters
 
+#+begin_src org
 - Science: \pm \div
-
 - Arrows: \to \rarr \larr \harr \rArr \lArr \hArr
-
 - Function names: \arccos \cos
-
 - Signs and symbols: \bull \star
+#+end_src
 
 *** Misc
 
+#+begin_src org
 # Smilies: \smiley \sad
-
 - Suits: \clubs \spades
-
-** Comments
-
-It's possible to add comments in the document.
-
-# This Org comment here won't be displayed.
-
-** Tables
-
-You can create tables with an optional header row (by using an horizontal line
-of dashes to separate it from the rest of the table).
-
-#+CAPTION: An example of table
-| Header 1    | Header 2      | Header 3 |
-|-------------+---------------+----------|
-| Top left    | Top middle    |          |
-|             |               | Right    |
-| Bottom left | Bottom middle |          |
-
-Columns are automatically aligned:
-
-- Number-rich columns to the right, and
-- String-rich columns to the left.
-
-If you want to override the automatic alignment, use ~<r>~, ~<c>~ or ~<l>~.
-
-#+CAPTION: Table with alignment
-|          <r> | <c>          | <l>          |
-|            1 | 2            | 3            |
-|        right | center       | left         |
-| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
-
-Placement:
-
-#+ATTR_LATEX: :center nil
-| a | b |
-| 1 | 2 |
-
-XXX
-Different from the following:
-
-| a | b |
-| 1 | 2 |
-
-*** Align tables on the page
-
-Here is a table on the left side:
-
-#+LATEX: \noindent
-#+ATTR_LATEX: :center nil
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-#+LATEX: \hfill
-
-The noindent just gets rid of the indentation of the first line of a paragraph
-which in this case is the table. The hfill adds infinite stretch after the
-table, so it pushes the table to the left.
-
-Here is a centered table:
-
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-
-And here's a table on the right side:
-
-#+LATEX: \hfill
-#+ATTR_LATEX: :center nil
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-
-Here the hfill adds infinite stretch before the table, so it pushes the table
-to the right.
-
-* Images, video and audio
-
-** Images
-
-You can insert *image* files of different *formats* to a page:
-
-|      | HTML                         | PDF |
-|------+------------------------------+-----|
-| gif  | yes                          |     |
-| jpeg | yes                          |     |
-| png  | yes                          |     |
-| bmp  | (depends on browser support) |     |
-
-In-line picture:
-
-#+CAPTION: Org mode logo
-#+ATTR_LaTeX: :width 0.25\linewidth
-[[file:../../images/org-mode-unicorn.png]]
-
-Direct link to just the [[file:org-mode-unicorn.png][Unicorn picture file]].
-
-XXX Available HTML image tags include:
-
-- align
-- border
-- bordercolor
-- hspace
-- vspace
-- width
-- height
-- title
-- alt
-
-Place images side by side: XXX
-
-** Video
-
-Videos can't be added directly but you can add an image with a link to the video like this:
-
-[[http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg][http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE]]
-
-** Sounds
+#+end_src
 
 * Special text boxes ("admonitions")
 
-Simple box ("inline task"): XXX
+Simple box ("inline task"):
 
-# *************** TODO Do this task
-# Description of inline task.
-# *************** END
-#
-# or:
-#
-# *************** WAIT [#B] Do also this other task                        :phone:
-# *************** END
+#+begin_src org
+*************** TODO Do this task
+Description of inline task.
+*************** END
+#+end_src
+
+or:
+
+#+begin_src org
+*************** WAIT [#B] Do also this other task                        :phone:
+*************** END
+#+end_src
 
 ** Example
 
 You can have ~example~ blocks.
 
-Find entries with an *exact phrase* -- To do this, put the phrase in quotes:
-
+#+begin_src org
 : "hd ready"
+#+end_src
+
+or
+
+#+begin_src org
+,#+begin_example
+"hd ready"
+,#+end_example
+#+end_src
 
 You can create several other boxes (~info~, ~tip~, ~note~ or ~warning~) which all have
 a different default image.
@@ -895,61 +843,166 @@ pull-quote
 Blockquote
 #+end_blockquote
 
-* Links
-   :PROPERTIES:
-   :CUSTOM_ID: links
-   :END:
+* Tables
 
-This document is available in [[file:example.txt][plain text]], [[file:example.html][HTML]] and [[file:example.pdf][PDF]].
+You can create tables with an optional header row (by using an horizontal line
+of dashes to separate it from the rest of the table).
 
-The links are delimited by ~[square brackets]~.
+#+CAPTION: An example of table
+| Header 1    | Header 2      | Header 3 |
+|-------------+---------------+----------|
+| Top left    | Top middle    |          |
+|             |               | Right    |
+| Bottom left | Bottom middle |          |
 
-** External links
+Columns are automatically aligned:
+
+- Number-rich columns to the right, and
+- String-rich columns to the left.
+
+If you want to override the automatic alignment, use ~<r>~, ~<c>~ or ~<l>~.
+
+#+CAPTION: Table with alignment
+|          <r> | <c>          | <l>          |
+|            1 | 2            | 3            |
+|        right | center       | left         |
+| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+
+Placement:
+
+#+ATTR_LATEX: :center nil
+| a | b |
+| 1 | 2 |
+
+XXX
+Different from the following:
+
+| a | b |
+| 1 | 2 |
+
+** Align tables on the page
+
+Here is a table on the left side:
+
+#+LATEX: \noindent
+#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+#+LATEX: \hfill
+
+The noindent just gets rid of the indentation of the first line of a paragraph
+which in this case is the table. The hfill adds infinite stretch after the
+table, so it pushes the table to the left.
+
+Here is a centered table:
+
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+And here's a table on the right side:
+
+#+LATEX: \hfill
+#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+
+Here the hfill adds infinite stretch before the table, so it pushes the table
+to the right.
+
+* Comments
 
 #+begin_src org
-See http://www.pirilampo.org (automatic!) and the
-[[http://orgmode.org/][Org mode Web site]].
+It's possible to add comments in the document.
+
+# This Org comment here won't be displayed.
 #+end_src
 
-# Clicking on the image [[http://orgmode.org/][file:org-mode-unicorn.png]] leads to the Org mode home
-# page.
+* Miscellaneous effects
 
-*** Relative links
+** Include Org files
+
+You can include another Org file and skip its title by using the ~:lines~ argument
+to ~#+INCLUDE~:
 
 #+begin_src org
-[[index.html][Home]]
+,#+INCLUDE: chapter1.org :lines "2-"
 #+end_src
 
-*** Email links
+#+begin_note
+File inclusion, through INCLUDE keywords, is an *export-only feature*.
+#+end_note
+
+** Inline HTML
+
+You can include raw HTML in your Org documents and it will get kept as HTML
+when it's exported. XXX
+
+#+HTML_BEGIN: <pre style="color:red">
+Text can be preformatted (in a fixed-width font).
+#+HTML_END: </pre>
+
+It is especially useful for more advanced stuff like images or tables where you
+need more control of the HTML options than Org mode actually gives you.
+
+Similarly, you can incorporate JS or do anything else you can do in a Web page
+(such as importing a CSS file).
+
+You can create named classes (to get style control from your CSS) with:
+
+#+begin_example
+,#+begin_note
+,*Note example* \\
+Did you know...
+,#+end_note
+#+end_example
+
+You can also add interactive elements to the HTML such as interactive R plots.
+
+Finally, you can include an HTML file verbatim (during export) with:
 
 #+begin_src org
-[[mailto:concat.fni.at-sign.pirilampo.org][Mailto link]]
+,#+INCLUDE: file.html html
 #+end_src
 
-** Internal links
-   :PROPERTIES:
-   :ID:       0d2b0cb2-116c-4a61-a076-4c641faf4346
-   :END:
+Don't edit the exported HTML file!
 
-*** Inline anchors
+** Inline LaTeX
+
+You can also use raw LaTeX. XXX
+
+#+LaTeX_BEGIN: \begin{verbatim}
+Text can be preformatted (in a fixed-width font).
+#+LaTeX_END: \end{verbatim}
+
+** Centered text
+
+#+begin_left
+This text is \\
+aligned to the left!
+#+end_left
+
+#+begin_center
+This text is \\
+centered!
+#+end_center
+
+#+begin_right
+This text is \\
+aligned to the right!
+#+end_right
+
+* Notes at the footer
 
 #+begin_src org
-<<anchor>> Inline anchors make arbitrary content referenceable.
-
-Use a [[anchor][cross reference]] to link to this location.
+It is possible to define named footnotes[fn:myfootnote], or ones with automatic
+anchors[fn:2].
 #+end_src
-
-*** Internal cross references
-
-Links generally point to an headline.
-
-They can also point to a link anchor <<name-of-anchor-here>> in the current
-document or in another document.
-
-See:
-- chapter [[#links][Links]]
-- section [[id:0d2b0cb2-116c-4a61-a076-4c641faf4346][Anchors]]
-- [[name-of-anchor-here][target in the document]]
 
 * Org miscellaneous
 
@@ -1011,7 +1064,7 @@ collapsed, so that you can really focus on one item at a time!
 
 Find more macros on [[https://github.com/fniessen/org-macros][GitHub]].
 
-* BigBlow addons
+* Bigblow addons
 
 The string ~fixme~ (in *upper case*) gets replaced by a "Fix Me!" image:
 
@@ -1027,8 +1080,3 @@ veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-# This is for the sake of Emacs.
-# Local Variables:
-# org-html-postamble: nil
-# End:
