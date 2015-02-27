@@ -88,7 +88,7 @@ mark{
     margin:1px 0 24px 0}
 
 pre.src{
-    color:#404040;
+    /* color:#404040; */
     display:block;
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size:12px;
@@ -1031,55 +1031,56 @@ select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[re
 .full-width{
     width:100%}
 
-table,#content table.field-list{
+table{
     border-collapse:collapse;
     border-spacing:0;
     empty-cells:show;
     margin-bottom:24px}
 
-table caption,#content table.field-list caption{
+table caption, .figure p{
     color:#000;
     font:italic 85%/1 arial,sans-serif;
-    padding:1em 0;
-    text-align:center}
+    padding:1em 0;}
 
-table td,#content table.field-list td,table th,#content table.field-list th{
+table td,table th{
     font-size:90%;
     margin:0;
     overflow:visible;
-    padding:8px 16px}
+    padding:8px 16px;
+    background-color: transparent;
+    border: 1px solid #e1e4e5;}
 
-table td:first-child,#content table.field-list td:first-child,table th:first-child,#content table.field-list th:first-child{
-    border-left-width:0}
-
-table thead,#content table.field-list thead{
-    color:#000;
-    text-align:left;
-    vertical-align:bottom;
-    white-space:nowrap}
-
-table thead th,#content table.field-list thead th{
+/* table td:first-child,table th:first-child{ */
+/*     border-left-width:0} */
+/*  */
+/* table thead{ */
+/*     color:#000; */
+/*     text-align:left; */
+/*     vertical-align:bottom; */
+/*     white-space:nowrap} */
+/*  */
+table thead th{
     font-weight:bold;
     border-bottom:solid 2px #e1e4e5}
 
-table td,#content table.field-list td{
-    background-color:transparent;
-    vertical-align:middle}
-
-table td p,#content table.field-list td p{
-    line-height:18px}
-
-table td p:last-child,#content table.field-list td p:last-child{
-    margin-bottom:0}
-
-table table-cell-min,#content table.field-list table-cell-min{
-    width:1%;
-    padding-right:0}
-
-table table-cell-min input[type=checkbox],#content table.field-list table-cell-min input[type=checkbox],table table-cell-min input[type=checkbox],#content table.field-list table-cell-min input[type=checkbox]{
-    margin:0}
-
-table-odd td,table-striped tr:nth-child(2n-1) td{
+/* table td{ */
+/*     background-color:transparent; */
+/*     vertical-align:middle} */
+/*  */
+/* table td p{ */
+/*     line-height:18px} */
+/*  */
+/* table td p:last-child{ */
+/*     margin-bottom:0} */
+/*  */
+/* table table-cell-min{ */
+/*     width:1%; */
+/*     padding-right:0} */
+/*  */
+/* table table-cell-min input[type=checkbox],table table-cell-min input[type=checkbox]{ */
+/*     margin:0} */
+/*  */
+table tr:nth-child(2n-1) td{
     background-color:#f3f6f6}
 
 a{
@@ -1201,7 +1202,7 @@ code,#content tt{
     font-size:75%;
     padding:0 5px;
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    color:#E74C3C;
+    /* color:#E74C3C; */
     overflow-x:auto}
 
 code.code-large,#content tt.code-large{
@@ -1859,26 +1860,6 @@ nav.stickynav{
 #content .footnote-reference,#content .citation-reference{
     vertical-align:super;
     font-size:90%}
-
-#content table.field-list{
-    border:none}
-
-#content table.field-list td{
-    border:none;
-    padding-top:5px}
-
-#content table.field-list td>strong{
-    display:inline-block;
-    margin-top:3px}
-
-#content table.field-list .field-name{
-    padding-right:10px;
-    text-align:left;
-    white-space:nowrap}
-
-#content table.field-list .field-body{
-    text-align:left;
-    padding-left:0}
 
 #content tt{
     color:#000}
