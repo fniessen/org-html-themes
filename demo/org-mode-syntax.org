@@ -2,9 +2,9 @@
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     fniessen@pirilampo.org
 #+DESCRIPTION: Org mode syntax example
-#+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, latex, beamer, html
+#+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, recommended practices, latex, beamer, html
 #+LANGUAGE:  en
-#+OPTIONS:   H:5 num:nil toc:2 p:t
+#+OPTIONS:   H:4 num:nil toc:2 p:t
 
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
@@ -19,10 +19,17 @@
 
 # #+MACRO: longtext this is a very very long text to include
 
-This is an Org mode document.
+This is an Org mode document, using the .org extension (supported by GitHub).
 
 *Org mode* is an easy-to-write /plain text/ formatting syntax for authoring notes,
 articles, LaTeX documents, books, Web pages, Beamer slide decks and much more!
+
+* Abstract
+
+This is a cheatsheet for Org mode - "Your life in plain text!".
+
+This cheatsheet is for *Org mode 8* (because of some markup syntax changes since
+Org mode 7), using *ReadTheOrg CSS*.
 
 * Document header
 
@@ -35,7 +42,44 @@ Title and author line:
 My document provides...
 #+end_src
 
-Attributes...
+It's a good practice to also include an email line following the author line.
+
+#+begin_src org :eval never-export
+,#+EMAIL:     john.doe@example.com
+#+end_src
+
+* Document settings
+
+** Document description
+
+#+begin_src org :eval never-export
+#+DESCRIPTION: This document catalogs a set of tips and tricks for composing documents in Org mode.
+#+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, recommended practices, latex, beamer, html
+#+LANGUAGE:  en
+#+end_src
+
+** Section numbering
+
+#+begin_src org :eval never-export
+#+OPTIONS:   H:4
+#+end_src
+
+#+begin_src org :eval never-export
+#+OPTIONS:   num:nil
+#+end_src
+
+** Table of contents
+
+Set the ~toc~ attribute to activate an auto-generated table of contents (limited
+to its 2 first levels) at the top of document.
+
+#+begin_src org :eval never-export
+#+OPTIONS:   toc:2
+#+end_src
+
+#+begin_src org :eval never-export
+#+OPTIONS:   p:t
+#+end_src
 
 * Section titles (headings)
 
@@ -129,7 +173,7 @@ Text effects.
 /Emphasize/ (italics), *strongly* (bold), and */very strongly/* (bold italics).
 #+end_src
 
-Markup elements could be nested:
+Markup elements can be nested:
 
 #+begin_src org
 This is /italic text which contains _underlined text_ within it/, whereas _this is
@@ -141,7 +185,7 @@ Markup can span across multiple lines, by default *no more than 2*:
 #+begin_src org
 *This
 is not
-bold*
+bold.*
 #+end_src
 
 ** Monospace, superscript and subscript
@@ -165,22 +209,24 @@ combination of the two list types.
 
 Itemized lists are marked with bullets. Create them with a minus or a plus sign.
 
-They are convenient to:
+They are convenient to organize data, and make the document prettier, and easier
+to read.
 
 #+begin_src org
-- Organize data, and
-- Make the document
-  + Prettier, and
-  + Easier to read.
+- Item with some lengthy text wrapping hopefully across several lines. We add
+  a few words to really show the line wrapping.
+- Bullet.
+  + Bullet.
+    * Bullet.
 #+end_src
 
 ** Checklists
 
 #+begin_src org
-- [X] Checked
-- [-] Half-checked
-- [ ] Not checked
-- Normal list item
+- [X] Checked.
+- [-] Half-checked.
+- [ ] Not checked.
+- Normal list item.
 #+end_src
 
 ** Ordered lists
@@ -188,18 +234,20 @@ They are convenient to:
 Enumerated lists are marked with numbers or letters:
 
 #+begin_src org
-1. First element
-   1) First sub-item
-   2) Last sub-item
-2. Second element
+1. Arabic (decimal) numbered list item. We add a few words to show the line
+   wrapping.
+   A. Upper case alpha (letter) numbered list item.
+      a. Lower alpha.
+      b. Lower alpha.
+   B. Upper alpha.
+2. Number.
 #+end_src
 
 You can have ordered lists with jumping numbers:
 
 #+begin_src org
-1. [@1] First
-2. [@2] Second
-5. [@5] Jump to 5th
+2. [@2] We start with point number 2.
+3. Automatically numbered item.
 #+end_src
 
 ** Definition lists
@@ -208,10 +256,30 @@ Labeled, multi-line lists.
 
 #+begin_src org
 - First term to define ::
-     Definition of the first term.
+     Definition of the first term. We add a few words to show the line wrapping,
+     to see what happens when you have long lines.
 
 - Second term ::
      Explication of the second term.
+
+     In many paragraphs.
+#+end_src
+
+** Separating lists
+
+Adjacent lists sometimes like to fuse. To force the start of a new list, offset
+the two lists by an empty line comment:
+
+#+begin_src org
+- apples
+- oranges
+- bananas
+
+# Comment.
+
+- carrots
+- tomatoes
+- celery
 #+end_src
 
 * Tables
@@ -253,7 +321,7 @@ You can create tables with an header row (by using an horizontal line of dashes
 to separate it from the rest of the table).
 
 #+begin_src org
-#+CAPTION: An example of table
+#+CAPTION: Table with an header row
 | Name of column 1 | Name of column 2 | Name of column 3 |
 |------------------+------------------+------------------|
 | Top left         | Top middle       |                  |
@@ -278,6 +346,8 @@ XXX Different from the following:
 
 ** Align tables on the page
 
+*** Left
+
 Here is a table on the left side:
 
 #+begin_src org
@@ -290,9 +360,11 @@ Here is a table on the left side:
 ,#+LATEX: \hfill
 #+end_src
 
-The noindent just gets rid of the indentation of the first line of a paragraph
-which in this case is the table. The hfill adds infinite stretch after the
+The ~noindent~ just gets rid of the indentation of the first line of a paragraph
+which in this case is the table. The ~hfill~ adds infinite stretch after the
 table, so it pushes the table to the left.
+
+*** Center
 
 Here is a centered table:
 
@@ -302,6 +374,8 @@ Here is a centered table:
 | 1 | 2 | 3 |
 | 4 | 5 | 6 |
 #+end_src
+
+*** Right
 
 And here's a table on the right side:
 
@@ -314,7 +388,7 @@ And here's a table on the right side:
 | 4 | 5 | 6 |
 #+end_src
 
-Here the hfill adds infinite stretch before the table, so it pushes the table
+Here the ~hfill~ adds infinite stretch before the table, so it pushes the table
 to the right.
 
 ** Table size
@@ -324,6 +398,10 @@ to the right.
 | Cell in column 1, row 1 | Cell in column 2, row 1 |
 | Cell in column 1, row 2 | Cell in column 2, row 2 |
 #+end_src
+
+* CSV
+
+You can fill table from CSV file using R commands.
 
 * Links
    :PROPERTIES:
@@ -353,7 +431,7 @@ See http://www.pirilampo.org (automatic!) and the
 *** Email links
 
 #+begin_src org
-[[mailto:concat.fni.at-sign.pirilampo.org][Mailto link]]
+[[mailto:john.doe@example.com][email John Doe]]
 #+end_src
 
 ** Internal links
@@ -363,25 +441,30 @@ See http://www.pirilampo.org (automatic!) and the
 
 *** Inline anchors
 
+Anchors are used to specify hypertext link targets.
+
 #+begin_src org
 <<anchor>> Inline anchors make arbitrary content referenceable.
-
-Use a [[anchor][cross reference]] to link to this location.
 #+end_src
 
 *** Internal cross references
 
 Links generally point to an headline.
 
-They can also point to a link anchor <<name-of-anchor-here>> in the current
+#+begin_src org
+See chapter [[#links][Links]].
+#+end_src
+
+You can also create a hypertext link to a document anchor in the current
 document or in another document.
 
 #+begin_src org
 See:
-- Chapter [[#links][Links]]
-- Section [[id:0d2b0cb2-116c-4a61-a076-4c641faf4346][Anchors]]
-- [[name-of-anchor-here][Target in the document]]
+- Location [[anchor][cross reference]].
+- Section [[id:0d2b0cb2-116c-4a61-a076-4c641faf4346][Internal links]]
 #+end_src
+
+** Extensions that define new hyperlinks targets
 
 * Images
 
@@ -434,7 +517,7 @@ Place images side by side: XXX
 
 Videos can't be added directly.
 
-Though you can add an image with a link to the video like this:
+Though, you can add an image with a link to the video like this:
 
 #+begin_src org
 [[http://www.youtube.com/watch?v=DnSGSiXYuOk][file:../bigblow.png]]
@@ -464,6 +547,18 @@ or:
 *************** WAIT [#B] Do also this other task                        :phone:
 *************** END
 #+end_src
+
+** List of supported admonitions
+
+|           | Confluence | AsciiDoc | reST | Total |
+|-----------+------------+----------+------+-------|
+| note      |          1 |        1 |      | 2     |
+| warning   |          1 |        1 |      | 2     |
+| tip       |          1 |        1 |      | 2     |
+| important |            |        1 |      | 1     |
+| caution   |            |        1 |      | 1     |
+| info      |          1 |          |      | 1     |
+#+TBLFM: $5=vsum($2..$4)
 
 ** Note
 
@@ -568,6 +663,7 @@ aligned to the right!
 
 * Sidebar
 
+#+begin_src org
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -575,11 +671,11 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#+begin_sidebar
+,#+begin_sidebar
 Org mode was first released in 2004 (?) by Carsten Dominik. It was designed from
 the start to be a shorthand syntax for producing professional documents like
 LaTeX.
-#+end_sidebar
+,#+end_sidebar
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
 turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
@@ -592,22 +688,47 @@ tempor. Phasellus pellentesque augue eget ante. Mauris malesuada. Donec sit
 amet diam sit amet dolor placerat blandit. Morbi enim purus, imperdiet in,
 molestie sit amet, pellentesque eu, mauris. In vel erat vel ipsum bibendum
 commodo. Curabitur accumsan. Nam sed metus. Etiam tristique bibendum justo.
+#+end_src
 
 * Example
 
 You can have ~example~ blocks.
 
 #+begin_src org
-: > Useful for quotes
-: > from email
+: .MS-DOS directory listing
+: -----------------------------------------------------
+: 10/17/97   9:04         <DIR>    bin
+: 10/16/97  14:11         <DIR>    DOS
+: 10/16/97  14:40         <DIR>    Program Files
+: 10/16/97  14:46         <DIR>    TEMP
+: 10/17/97   9:04         <DIR>    tmp
+: 10/16/97  14:37         <DIR>    WINNT
+: 10/16/97  14:25             119  AUTOEXEC.BAT
+:  2/13/94   6:21          54,619  COMMAND.COM
+: 10/16/97  14:25             115  CONFIG.SYS
+: 11/16/97  17:17      61,865,984  pagefile.sys
+:  2/13/94   6:21           9,349  WINA20.386
+: -----------------------------------------------------
 #+end_src
 
 or
 
 #+begin_src org
 ,#+begin_example
-> Useful for quotes
-> from email
+.MS-DOS directory listing
+-----------------------------------------------------
+10/17/97   9:04         <DIR>    bin
+10/16/97  14:11         <DIR>    DOS
+10/16/97  14:40         <DIR>    Program Files
+10/16/97  14:46         <DIR>    TEMP
+10/17/97   9:04         <DIR>    tmp
+10/16/97  14:37         <DIR>    WINNT
+10/16/97  14:25             119  AUTOEXEC.BAT
+ 2/13/94   6:21          54,619  COMMAND.COM
+10/16/97  14:25             115  CONFIG.SYS
+11/16/97  17:17      61,865,984  pagefile.sys
+ 2/13/94   6:21           9,349  WINA20.386
+-----------------------------------------------------
 ,#+end_example
 #+end_src
 
@@ -666,7 +787,11 @@ Typically used for quoting passages of an email message:
 >
 > Has the deadline for the report been moved too?
 
-Yes. See http://www.doodle.com/ for setting up a new meeting...
+Yes.  And chekout http://www.doodle.com/ for rescheduling the meeting.
+
+In the text body,
+   indentation is
+preserved.
 ,#+end_verse
 #+end_src
 
@@ -705,7 +830,7 @@ It's possible to add comments in the document.
 # This Org comment here won't be displayed.
 #+end_src
 
-* Substitutions
+* Substitutions (macros)
 
 #+begin_src org :eval no
 ,#+MACRO: longtext this very very long text
@@ -716,8 +841,6 @@ Insert {{{longtext}}} wherever required.
 #+MACRO: longtext this very very long text
 
 Insert {{{longtext}}} wherever required.
-
-** Org macros
 
 #+BEGIN_SRC org :eval no
 ,#+MACRO: color @@html:<span style="color: $1">$2</span>@@
@@ -817,6 +940,8 @@ be continued in the current one:
   (if a (not b) b))
 #+end_src
 
+** Callouts
+
 In literal examples, Org will interpret strings like ~(ref:name)~ as labels, and
 use them as targets for special hyperlinks like ~[[(name)]]~ (i.e., the reference
 name enclosed in single parenthesis).  In HTML, hovering the mouse over such
@@ -840,7 +965,7 @@ In line [[(sc)]], we remember the current position.  [[(jump)][Line (jump)]] jum
 ** Special characters
 
 Some of the widely used special characters (converted from text characters to
-their typographically correct entitites):
+their typographically correct entities):
 
 *** Accents
 
@@ -919,7 +1044,7 @@ LaTeX allows to inline such ~\[...\]~ constructs (/quadratic formula/):
 #+end_src
 
 #+begin_warning
-*Double dollar signs (~$$~) should not be used*.
+Double dollar signs (~$$~) should not be used.
 #+end_warning
 
 ** Equation numbers
@@ -939,18 +1064,23 @@ a^2 + b^2 = c^2
 
 See equation [[pythag]].
 
-The /sinus theorem/ can then be written as the equation:
+The /sinus theorem/ can be written as the equation:
 
 \begin{equation}
 \label{eqn:sinalpha}
 \frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
 \end{equation}
+
+See equation [[eqn:sinalpha]].
 #+end_src
 
 Only captioned equations are numbered.
 
-Other alternative: use \begin{equation*} or \begin{displaymath} (= the verbose
-form of the ~\[...\]~ construct). M-q does not fill those.
+Other alternatives: use
+- ~\begin{equation*}~ or
+- ~\begin{displaymath}~ (= the verbose form of the ~\[...\]~ construct).
+
+~M-q~ does not fill those.
 
 * Miscellaneous effects
 
@@ -1190,6 +1320,10 @@ Plot:
 library(ggplot2)
 qplot(speed, dist, data = cars) + geom_smooth()
 #+end_src
+
+* Glossary
+
+* Bibliography
 
 * Footnotes
 
