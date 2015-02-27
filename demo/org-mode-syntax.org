@@ -9,13 +9,15 @@
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/rtd.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.css"/>
 #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
 # #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
 
 #+PROPERTY:  eval yes
 #+PROPERTY:  exports both
 #+PROPERTY:  results replace
+
+# #+MACRO: longtext this is a very very long text to include
 
 This is an Org mode document.
 
@@ -79,8 +81,8 @@ demarcates paragraphs.
 ** Line breaks
 
 #+begin_src org
-By entering two consecutive backslashes,
-you can force to break lines \\
+By entering two consecutive backslashes, \\
+you can force to break lines
 without starting a new paragraph.
 #+end_src
 
@@ -154,72 +156,6 @@ Other elements to use sparingly are:
 - text with sub_{script}
 #+end_src
 
-** Quotations
-
-Use the ~quote~ block to typeset quoted text.
-
-#+begin_quote
-Let us change our traditional attitude to the construction of programs:
-Instead of imagining that our main task is to instruct a computer what to do,
-let us concentrate rather on explaining to human beings what we want a
-computer to do.
-
-The practitioner of literate programming can be regarded as an essayist, whose
-main concern is with exposition and excellence of style. Such an author, with
-thesaurus in hand, chooses the names of variables carefully and explains what
-each variable means. He or she strives for a program that is comprehensible
-because its concepts have been introduced in an order that is best for human
-understanding, using a mixture of formal and informal methods that reinforce
-each other.
-
---- Donald Knuth
-#+end_quote
-
-A short one:
-
-#+begin_quote
-Everything should be made as simple as possible,
-but not any simpler. -- Albert Einstein
-#+end_quote
-
-In a ~verse~ environment, there is an implicit line break at the end of each
-line, and indentation and vertical space are preserved:
-
-#+begin_verse
-Everything should be made as simple as possible,
-but not any simpler -- Albert Einstein
-#+end_verse
-
-Typically used for quoting passages of an email message:
-
-#+begin_verse
->> This is an email message with "nested" quoting. Lorem ipsum dolor sit amet,
->> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
->> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
->
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem
-> consectetuer libero luctus adipiscing.
-
-Itemized or unordered lists (~ul~):
-- This is the first list item.
-- This is the second list item.
-
-Enumerated or ordered Lists (~ol~):
-1. This is the first list item.
-2. This is the second list item.
-
-Maybe an equation here?
-
-See http://www.google.com/ for more information...
-#+end_verse
-
-** Spaces
-
-Using non-breaking spaces.
-
-Insert the Unicode character ~00A0~ to add a non-breaking space. FIXME
-Or add/use an Org entity?
-
 * Lists
 
 Org markup allows you to create *bulleted* or *numbered* lists. It allows any
@@ -278,12 +214,123 @@ Labeled, multi-line lists.
      Explication of the second term.
 #+end_src
 
+* Tables
+
+Tables are one of the most refined areas of the Org mode syntax. They are very easy
+to create and to read.
+
+** Simple table
+
+#+begin_src org
+| Cell in column 1, row 1 | Cell in column 2, row 1 |
+| Cell in column 1, row 2 | Cell in column 2, row 2 |
+#+end_src
+
+** Column formatting
+
+Columns are automatically aligned:
+
+- Number-rich columns to the right, and
+- String-rich columns to the left.
+
+*** Table with aligned cells
+
+If you want to override the automatic alignment, use ~<r>~, ~<c>~ or ~<l>~.
+
+#+begin_src org
+,#+CAPTION: Table with aligned columns
+|          <r> | <c>          | <l>          |
+|            1 | 2            | 3            |
+|        Right | Center       | Left         |
+| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
+#+end_src
+
+*** Table with column size adjusted
+
+** Header row
+
+You can create tables with an header row (by using an horizontal line of dashes
+to separate it from the rest of the table).
+
+#+begin_src org
+#+CAPTION: An example of table
+| Name of column 1 | Name of column 2 | Name of column 3 |
+|------------------+------------------+------------------|
+| Top left         | Top middle       |                  |
+|                  |                  | Right            |
+| Bottom left      | Bottom middle    |                  |
+#+end_src
+
+** Table placement
+
+#+begin_src org
+#+ATTR_LATEX: :center nil
+| a | b |
+| 1 | 2 |
+#+end_src
+
+XXX Different from the following:
+
+#+begin_src org
+| a | b |
+| 1 | 2 |
+#+end_src
+
+** Align tables on the page
+
+Here is a table on the left side:
+
+#+begin_src org
+,#+LATEX: \noindent
+,#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+,#+LATEX: \hfill
+#+end_src
+
+The noindent just gets rid of the indentation of the first line of a paragraph
+which in this case is the table. The hfill adds infinite stretch after the
+table, so it pushes the table to the left.
+
+Here is a centered table:
+
+#+begin_src org
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+#+end_src
+
+And here's a table on the right side:
+
+#+begin_src org
+#+LATEX: \hfill
+#+ATTR_LATEX: :center nil
+| a | b | c |
+|---+---+---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+#+end_src
+
+Here the hfill adds infinite stretch before the table, so it pushes the table
+to the right.
+
+** Table size
+
+#+begin_src org
+#+ATTR_HTML: :width 100%
+| Cell in column 1, row 1 | Cell in column 2, row 1 |
+| Cell in column 1, row 2 | Cell in column 2, row 2 |
+#+end_src
+
 * Links
    :PROPERTIES:
    :CUSTOM_ID: links
    :END:
 
-This document is available in [[file:example.txt][plain text]], [[file:example.html][HTML]] and [[file:example.pdf][PDF]].
+This document is available in [[file:org-mode-syntax.org][plain text]], [[file:org-mode-syntax.html][HTML]] and [[file:org-mode-syntax.pdf][PDF]].
 
 The links are delimited by ~[square brackets]~.
 
@@ -300,7 +347,7 @@ See http://www.pirilampo.org (automatic!) and the
 *** Relative links
 
 #+begin_src org
-[[index.html][Home]]
+[[../README.html][Home]]
 #+end_src
 
 *** Email links
@@ -351,11 +398,11 @@ You can insert *image* files of different *formats* to a document:
 
 #+begin_src org
 #+CAPTION: Org mode logo
-[[file:demo/org-mode-unicorn.png]]
+[[file:org-mode-unicorn.png]]
 #+end_src
 
 #+begin_src org
-Click to see the [[file:demo/org-mode-unicorn.png][Unicorn picture]].
+Click to see the [[file:org-mode-unicorn.png][Unicorn picture]].
 #+end_src
 
 ** Using positioning
@@ -364,21 +411,21 @@ XXX Available HTML image tags include ...
 
 ** Image attributes and values
 
-| Attribute   | Value(s)                    |
-|-------------+-----------------------------|
-| align       |                             |
-| border      |                             |
-| bordercolor |                             |
-| hspace      |                             |
-| vspace      |                             |
-| width       | User defined size in pixels |
-| height      |                             |
-| title       | User defined text           |
-| alt         |                             |
+| Attribute    | Value(s)                    |
+|--------------+-----------------------------|
+| ~:alt~         | Alternate text              |
+| ~:height~      |                             |
+| ~:width~       | User defined size in pixels |
+| ~:align~       |                             |
+| ~:border~      |                             |
+| ~:bordercolor~ |                             |
+| ~:hspace~      |                             |
+| ~:vspace~      |                             |
+| ~:title~       | User defined text           |
 
 #+begin_src org
 #+ATTR_LaTeX: :width 0.25\linewidth
-[[file:demo/org-mode-unicorn.png]]
+[[file:org-mode-unicorn.png]]
 #+end_src
 
 Place images side by side: XXX
@@ -390,10 +437,303 @@ Videos can't be added directly.
 Though you can add an image with a link to the video like this:
 
 #+begin_src org
-[[http://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
+[[http://www.youtube.com/watch?v=DnSGSiXYuOk][file:../bigblow.png]]
 #+end_src
 
-* Sounds                                                              :noexport:
+* Admonitions
+
+You can create several other boxes (~info~, ~tip~, ~note~ or ~warning~) which all have
+a different default image.
+
+Admonitions: attention, caution, danger, error, hint, important, note, tip,
+warning and the generic admonition.
+
+(Most themes style only ~note~ and ~warning~ specially.)
+
+Simple box ("inline task"):
+
+#+begin_src org
+*************** TODO Do this task
+Description of inline task.
+*************** END
+#+end_src
+
+or:
+
+#+begin_src org
+*************** WAIT [#B] Do also this other task                        :phone:
+*************** END
+#+end_src
+
+** Note
+
+A note box is displayed as follows:
+
+#+begin_note
+*Note example* \\
+This is a useful note.
+#+end_note
+
+#+begin_seealso
+*See also* \\
+- [[http://en.wikipedia.org/wiki/Apple][Apples]] ::
+     A kind of [[http://en.wikipedia.org/wiki/Fruit][fruit]].
+#+end_seealso
+
+** Warning
+
+A warning box is displayed as follows:
+
+#+begin_warning
+*Warning example* \\
+Be careful!  Check that you have...
+#+end_warning
+
+#+begin_caution
+Caution
+#+end_caution
+
+
+#+begin_attention
+Attention
+#+end_attention
+
+#+begin_admonitiontodo
+Admonitiontodo
+#+end_admonitiontodo
+
+** Tip
+
+A tip box is displayed as follows:
+
+#+begin_tip
+*Tip example* \\
+Try doing it this way...
+#+end_tip
+
+#+begin_important
+Important
+#+end_important
+
+
+#+begin_hint
+Hint
+#+end_hint
+
+#+begin_success
+Success
+#+end_success
+
+** Info
+
+An info box is displayed as follows:
+
+#+begin_info
+*Info example* \\
+Did you know...
+#+end_info
+
+** Danger
+
+#+begin_danger
+Danger
+#+end_danger
+
+#+begin_error
+Error
+#+end_error
+
+** Neutral
+
+#+begin_neutral
+Neutral
+#+end_neutral
+
+* Centered text
+
+#+begin_left
+This text is \\
+aligned to the left!
+#+end_left
+
+#+begin_center
+This text is \\
+centered!
+#+end_center
+
+#+begin_right
+This text is \\
+aligned to the right!
+#+end_right
+
+* Sidebar
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+#+begin_sidebar
+Org mode was first released in 2004 (?) by Carsten Dominik. It was designed from
+the start to be a shorthand syntax for producing professional documents like
+LaTeX.
+#+end_sidebar
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
+sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien
+ullamcorper pharetra. Vestibulum erat wisi...
+
+Phasellus ut libero. Nulla in libero non enim tristique sollicitudin. Ut
+tempor. Phasellus pellentesque augue eget ante. Mauris malesuada. Donec sit
+amet diam sit amet dolor placerat blandit. Morbi enim purus, imperdiet in,
+molestie sit amet, pellentesque eu, mauris. In vel erat vel ipsum bibendum
+commodo. Curabitur accumsan. Nam sed metus. Etiam tristique bibendum justo.
+
+* Example
+
+You can have ~example~ blocks.
+
+#+begin_src org
+: > Useful for quotes
+: > from email
+#+end_src
+
+or
+
+#+begin_src org
+,#+begin_example
+> Useful for quotes
+> from email
+,#+end_example
+#+end_src
+
+* Prose excerpts
+
+** Quote
+
+Use the ~quote~ block for content that *doesn't require the preservation of line
+breaks*.
+
+#+begin_src org
+,#+begin_quote
+Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a computer what to do,
+let us concentrate rather on explaining to human beings what we want a
+computer to do.
+
+The practitioner of literate programming can be regarded as an essayist, whose
+main concern is with exposition and excellence of style. Such an author, with
+thesaurus in hand, chooses the names of variables carefully and explains what
+each variable means. He or she strives for a program that is comprehensible
+because its concepts have been introduced in an order that is best for human
+understanding, using a mixture of formal and informal methods that reinforce
+each other.
+
+-- Donald Knuth
+,#+end_quote
+#+end_src
+
+A short one:
+
+#+begin_src org
+,#+begin_quote
+Everything should be made as simple as possible,
+but not any simpler. -- Albert Einstein
+,#+end_quote
+#+end_src
+
+** Verse
+
+In a ~verse~ environment, there is an *implicit line break at the end of each line*,
+and *indentation* is preserved:
+
+#+begin_src org
+,#+begin_verse
+Everything should be made as simple as possible,
+but not any simpler. -- Albert Einstein
+,#+end_verse
+#+end_src
+
+Typically used for quoting passages of an email message:
+
+#+begin_src org
+,#+begin_verse
+>>  The meeting has been postponed to next Friday.
+>
+> Has the deadline for the report been moved too?
+
+Yes. See http://www.doodle.com/ for setting up a new meeting...
+,#+end_verse
+#+end_src
+
+** Block quote with optional attribution line
+
+#+begin_epigraph
+epigraph
+#+end_epigraph
+
+** Block quotes with their own class attribute
+
+#+begin_highlights
+highlights
+#+end_highlights
+
+#+begin_pull-quote
+pull-quote
+#+end_pull-quote
+
+#+begin_blockquote
+Blockquote
+#+end_blockquote
+
+** Spaces
+
+Using non-breaking spaces.
+
+Insert the Unicode character ~00A0~ to add a non-breaking space. FIXME
+Or add/use an Org entity?
+
+* Comments
+
+#+begin_src org
+It's possible to add comments in the document.
+
+# This Org comment here won't be displayed.
+#+end_src
+
+* Substitutions
+
+#+begin_src org :eval no
+,#+MACRO: longtext this very very long text
+
+Insert {{{longtext}}} wherever required.
+#+end_src
+
+#+MACRO: longtext this very very long text
+
+Insert {{{longtext}}} wherever required.
+
+** Org macros
+
+#+BEGIN_SRC org :eval no
+,#+MACRO: color @@html:<span style="color: $1">$2</span>@@
+
+{{{color(blue, This text is colored in blue.)}}}
+
+{{{color(red, This other text is in red.)}}}
+#+END_SRC
+
+#+MACRO: color @@html:<span style="color: $1">$2</span>@@
+
+{{{color(blue, This text is colored in blue.)}}}
+
+{{{color(red, This other text is in red.)}}}
+
+Find more macros on [[https://github.com/fniessen/org-macros][GitHub]].
 
 * Source code
 
@@ -497,133 +837,6 @@ parentheses.  Here is an example:
 In line [[(sc)]], we remember the current position.  [[(jump)][Line (jump)]] jumps to
 ~point-min~.
 
-** Output
-
-The output from the *execution* of programs, scripts or commands can be inserted
-in the document itself, allowing you to work in the /reproducible research/
-mindset.
-
-*** Text
-
-A one-liner result:
-
-#+begin_src shell :exports both :results verbatim
-date +"%Y-%m-%d"
-#+end_src
-
-#+results:
-: 2014-03-15
-
-# A multiple-line result:
-#
-# #+name: list-of-styles
-# #+begin_src shell :exports both :results verbatim
-# # output all styles, but the default one (if any)
-# ls styles | grep -v "default"
-# #+end_src
-#
-# #+results: list-of-styles
-# #+begin_example
-# bigblow
-# leuven
-# maunakea
-# #+end_example
-
-*** Graphics
-
-Data to be charted:
-
-#+name: data
-| Month | Degrees |
-|-------+---------|
-|     1 |     3.8 |
-|     2 |     4.1 |
-|     3 |     6.3 |
-|     4 |     9.0 |
-|     5 |    11.9 |
-|     6 |    15.1 |
-|     7 |    17.1 |
-|     8 |    17.4 |
-|     9 |    15.7 |
-|    10 |    11.8 |
-|    11 |     7.7 |
-|    12 |     4.8 |
-
-Code:
-
-#+name: R-plot
-#+begin_src R :var data=data :results graphics :file ../../images/Rplot.png :exports both
-plot(data, type="b", bty="l", col=c("#ABD249"), las=1, lwd=4)
-grid(nx=NULL, ny=NULL, col=c("#E8E8E8"), lwd=1)
-legend("bottom", legend=c("Degrees"), col=c("#ABD249"), pch=c(19))
-#+end_src
-
-The resulting chart:
-
-#+results: R-plot
-[[file:../../images/Rplot.png]]
-
-*** R code block
-
-#+begin_src R
-library(ggplot2)
-summary(cars)
-#+end_src
-
-Plot:
-
-#+begin_src R
-library(ggplot2)
-qplot(speed, dist, data = cars) + geom_smooth()
-#+end_src
-
-** Mathematical formulae
-
-You can embed LaTeX math formatting in Org mode files using the following
-syntax:
-
-- For *inline math* expressions, use ~\(...\)~: \(x^2\) or \(1 < 2\).
-
-  It's /not/ advised to use the constructs ~$...$~ (both for Org and MathJax).
-
-- Centered display equation (the /Euler theorem/):
-
-  \[
-  \int_0^\infty e^{-x^2} dx = {{\sqrt{\pi}} \over {2}}
-  \]
-
-  The use of ~\[...\]~ is for mathematical expressions which you want to make
-  *stand out, on their own lines*.
-
-  LaTeX allows to inline such ~\[...\]~ constructs (/quadratic formula/):
-  \[ \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a} \]
-
-  *Double dollar signs (~$$~) should not be used*.
-
-- The /sinus theorem/ can then be written as the equation:
-
-  \begin{equation}
-  \label{eqn:sinalpha}
-  \frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
-  \end{equation}
-
-- See Equation [[the-first]],
-
-  #+name: the-first
-  \begin{equation}
-  n_{i+1} = \frac{n_{i} (d-i) (e-1)}{(i+1)}
-  \end{equation}
-
-  Only captioned equations are numbered
-
-- Other alternative: use \begin{equation*} or \begin{displaymath} (= the verbose
-  form of the ~\[...\]~ construct). M-q does not fill those.
-
-Differently from $...$ and \(...\), an equation environment produces a *numbered*
-equation to which you can add a label and reference the equation by (label)
-name in other parts of the text. This is not possibly with unnumbered math
-environments ($$, ...).
-
 ** Special characters
 
 Some of the widely used special characters (converted from text characters to
@@ -673,255 +886,71 @@ The Greek letters \alpha, \beta, and \gamma are used to denote angles.
 - Suits: \clubs \spades
 #+end_src
 
-* Special text boxes ("admonitions")
+* Math
 
-Simple box ("inline task"):
+You can embed LaTeX math formatting in Org mode files.
 
-#+begin_src org
-*************** TODO Do this task
-Description of inline task.
-*************** END
-#+end_src
+** Inline math expressions
 
-or:
+For *inline math* expressions, use ~\(...\)~:
 
 #+begin_src org
-*************** WAIT [#B] Do also this other task                        :phone:
-*************** END
+The formula \(a^2 + b^2 = c^2\) has been discovered by Pythagoras.
 #+end_src
-
-** Example
-
-You can have ~example~ blocks.
-
-#+begin_src org
-: "hd ready"
-#+end_src
-
-or
-
-#+begin_src org
-,#+begin_example
-"hd ready"
-,#+end_example
-#+end_src
-
-You can create several other boxes (~info~, ~tip~, ~note~ or ~warning~) which all have
-a different default image.
-
-Admonitions: attention, caution, danger, error, hint, important, note, tip,
-warning and the generic admonition.
-
-(Most themes style only ~note~ and ~warning~ specially.)
-
-** Note
-
-A note box is displayed as follows:
-
-#+begin_note
-*Note example* \\
-This is a useful note...
-#+end_note
-
-#+begin_seealso
-See also
-#+end_seealso
-
-** Warning
-
-A warning box is displayed as follows:
 
 #+begin_warning
-*Warning example* \\
-Be careful!  Check that you have...
+It's /not/ advised to use the constructs ~$...$~ (both for Org and for MathJax).
 #+end_warning
 
-#+begin_caution
-Caution
-#+end_caution
+** Math expressions in display mode
 
-
-#+begin_attention
-Attention
-#+end_attention
-
-#+begin_admonitiontodo
-Admonitiontodo
-#+end_admonitiontodo
-
-** Tip
-
-A tip box is displayed as follows:
-
-#+begin_tip
-*Tip example* \\
-Try doing it this way...
-#+end_tip
-
-#+begin_important
-Important
-#+end_important
-
-
-#+begin_hint
-Hint
-#+end_hint
-
-#+begin_success
-Success
-#+end_success
-
-** Info
-
-An info box is displayed as follows:
-
-#+begin_info
-*Info example* \\
-Did you know...
-#+end_info
-
-** Danger
-
-#+begin_danger
-Danger
-#+end_danger
-
-#+begin_error
-Error
-#+end_error
-
-** Neutral
-
-#+begin_neutral
-Neutral
-#+end_neutral
-
-** Additional body elements
-
-*** Special highlighted body elements
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-#+begin_sidebar
-sidebar
-#+end_sidebar
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
-sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien
-ullamcorper pharetra. Vestibulum erat wisi...
-
-Phasellus ut libero. Nulla in libero non enim tristique sollicitudin. Ut
-tempor. Phasellus pellentesque augue eget ante. Mauris malesuada. Donec sit
-amet diam sit amet dolor placerat blandit. Morbi enim purus, imperdiet in,
-molestie sit amet, pellentesque eu, mauris. In vel erat vel ipsum bibendum
-commodo. Curabitur accumsan. Nam sed metus. Etiam tristique bibendum justo.
-
-*** Block quote with optional attribution line
-
-#+begin_epigraph
-epigraph
-#+end_epigraph
-
-*** Block quotes with their own class attribute
-
-#+begin_highlights
-highlights
-#+end_highlights
-
-#+begin_pull-quote
-pull-quote
-#+end_pull-quote
-
-#+begin_blockquote
-Blockquote
-#+end_blockquote
-
-* Tables
-
-You can create tables with an optional header row (by using an horizontal line
-of dashes to separate it from the rest of the table).
-
-#+CAPTION: An example of table
-| Header 1    | Header 2      | Header 3 |
-|-------------+---------------+----------|
-| Top left    | Top middle    |          |
-|             |               | Right    |
-| Bottom left | Bottom middle |          |
-
-Columns are automatically aligned:
-
-- Number-rich columns to the right, and
-- String-rich columns to the left.
-
-If you want to override the automatic alignment, use ~<r>~, ~<c>~ or ~<l>~.
-
-#+CAPTION: Table with alignment
-|          <r> | <c>          | <l>          |
-|            1 | 2            | 3            |
-|        right | center       | left         |
-| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |
-
-Placement:
-
-#+ATTR_LATEX: :center nil
-| a | b |
-| 1 | 2 |
-
-XXX
-Different from the following:
-
-| a | b |
-| 1 | 2 |
-
-** Align tables on the page
-
-Here is a table on the left side:
-
-#+LATEX: \noindent
-#+ATTR_LATEX: :center nil
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-#+LATEX: \hfill
-
-The noindent just gets rid of the indentation of the first line of a paragraph
-which in this case is the table. The hfill adds infinite stretch after the
-table, so it pushes the table to the left.
-
-Here is a centered table:
-
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-
-And here's a table on the right side:
-
-#+LATEX: \hfill
-#+ATTR_LATEX: :center nil
-| a | b | c |
-|---+---+---|
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-
-Here the hfill adds infinite stretch before the table, so it pushes the table
-to the right.
-
-* Comments
+For mathematical expressions which you want to make *stand out, centered on their
+own lines*, use ~\[...\]~:
 
 #+begin_src org
-It's possible to add comments in the document.
+The /Euler theorem/:
 
-# This Org comment here won't be displayed.
+\[
+\int_0^\infty e^{-x^2} dx = {{\sqrt{\pi}} \over {2}}
+\]
+
+LaTeX allows to inline such ~\[...\]~ constructs (/quadratic formula/):
+\[ \frac{-b \pm \sqrt{b^2 - 4 a c}}{2a} \]
 #+end_src
+
+#+begin_warning
+*Double dollar signs (~$$~) should not be used*.
+#+end_warning
+
+** Equation numbers
+
+Differently from ~$...$~ and ~\(...\)~, an equation environment produces a *numbered*
+equation to which you can add a label and reference the equation by (label) name
+in other parts of the text. This is not possibly with unnumbered math
+environments (~$$~, ...).
+
+#+begin_src org
+The /Pythagoras theorem/:
+
+#+name: pythag
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+See equation [[pythag]].
+
+The /sinus theorem/ can then be written as the equation:
+
+\begin{equation}
+\label{eqn:sinalpha}
+\frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
+\end{equation}
+#+end_src
+
+Only captioned equations are numbered.
+
+Other alternative: use \begin{equation*} or \begin{displaymath} (= the verbose
+form of the ~\[...\]~ construct). M-q does not fill those.
 
 * Miscellaneous effects
 
@@ -980,23 +1009,6 @@ You can also use raw LaTeX. XXX
 Text can be preformatted (in a fixed-width font).
 #+LaTeX_END: \end{verbatim}
 
-** Centered text
-
-#+begin_left
-This text is \\
-aligned to the left!
-#+end_left
-
-#+begin_center
-This text is \\
-centered!
-#+end_center
-
-#+begin_right
-This text is \\
-aligned to the right!
-#+end_right
-
 * Notes at the footer
 
 #+begin_src org
@@ -1004,24 +1016,28 @@ It is possible to define named footnotes[fn:myfootnote], or ones with automatic
 anchors[fn:2].
 #+end_src
 
-* Org miscellaneous
+* Useful extensions
 
-** Dates
+** Todo extension
+
+*** Dates
 
 Timestamps: [2014-01-16 Thu] and <2014-01-16 Thu>.
 
-** DONE [#A] Buy GTD book                                               :online:
-   :LOGBOOK:
-   - State "TODO"        ->  "DONE"       [2014-01-16 Thu 09:52]
-   :END:
+*** TODO We need to achieve...
+
+*** DONE [#A] Buy GTD book                                              :online:
+    :LOGBOOK:
+    - State "TODO"        ->  "DONE"       [2014-01-16 Thu 09:52]
+    :END:
 
 By default, ~DONE~ actions will be collapsed.
 
 Note that I should probably implement that default behavior only for ~ARCHIVE~'d
 items.
 
-** TODO [#A] Read GTD book
-   SCHEDULED: <2014-09-11 Thu>
+*** TODO [#A] Read GTD book
+    SCHEDULED: <2014-09-11 Thu>
 
 By default, *all* (active) entries will be expanded at page load, so that their
 contents is visible.
@@ -1032,43 +1048,148 @@ That can be changed by adding such a line (into your Org document):
 ,#+HTML_HEAD: <script> var HS_STARTUP_FOLDED = true; </script>
 #+end_src
 
-** TODO [#B] Apply GTD methodoloy
-   DEADLINE: <2014-12-01 Mon>
-   :PROPERTIES:
-   :HTML_CONTAINER_CLASS:    hsCollapsed
-   :END:
+*** TODO [#B] Apply GTD methodoloy
+    DEADLINE: <2014-12-01 Mon>
+    :PROPERTIES:
+    :HTML_CONTAINER_CLASS:    hsCollapsed
+    :END:
 
 This section will be collapsed when loading the page because the entry has the
 value ~hsCollapsed~ for the property ~:HTML_CONTAINER_CLASS:~.
 
 Powerful, no?
 
-** Some note                                                    :computer:write:
+*** Some note                                                   :computer:write:
 
 You can add tags to any entry, and hightlight all entries having some specific
 tag by clicking on the buttons made accessible to you in the "Dashboard".
 
-** Weekly review                                                      :computer:
+*** Weekly review                                                     :computer:
 
 Now, you can even make your weekly review in the HTML export... Press the ~r~ key
 to start entering the "review mode" where all but one active entry are
 collapsed, so that you can really focus on one item at a time!
 
-* Org macros
-
-#+MACRO: color @@html:<span style="color: $1">$2</span>@@
-
-{{{color(blue, This text is colored in blue.)}}}
-
-{{{color(red, This other text is in red.)}}}
-
-Find more macros on [[https://github.com/fniessen/org-macros][GitHub]].
-
-* Bigblow addons
+** Bigblow extension
 
 The string ~fixme~ (in *upper case*) gets replaced by a "Fix Me!" image:
 
+#+begin_src org
 FIXME Delete this...
+#+end_src
+
+* Graphs with Graphviz
+
+To enable the Graphviz extension, we have to add it to the extensions list in
+conf.py:
+
+extensions = ['sphinx.est.graphviz']
+
+It uses directly the dot command to process DOT language.
+
+** Undirected
+
+#+begin_src org
+,#+begin_src dot :file graph.png :cmdline -Tpng
+graph foo {
+        "bar" -- "baz";
+}
+,#+end_src
+#+end_src
+
+** Directed
+
+#+begin_src org :exports results
+,#+begin_src dot :file digraph.png :cmdline -Tpng
+digraph foo {
+        "bar" -> "baz";
+}
+,#+end_src
+#+end_src
+
+* Graphs with R
+
+The output from the *execution* of programs, scripts or commands can be inserted
+in the document itself, allowing you to work in the /reproducible research/
+mindset.
+
+** Text
+
+A one-liner result:
+
+#+begin_src shell :exports both :results verbatim
+date +"%Y-%m-%d"
+#+end_src
+
+#+results:
+: 2014-03-15
+
+# A multiple-line result:
+#
+# #+name: list-of-styles
+# #+begin_src shell :exports both :results verbatim
+# # output all styles, but the default one (if any)
+# ls styles | grep -v "default"
+# #+end_src
+#
+# #+results: list-of-styles
+# #+begin_example
+# bigblow
+# leuven
+# maunakea
+# #+end_example
+
+** Example
+
+Data to be charted:
+
+#+name: data
+| Month | Degrees |
+|-------+---------|
+|     1 |     3.8 |
+|     2 |     4.1 |
+|     3 |     6.3 |
+|     4 |     9.0 |
+|     5 |    11.9 |
+|     6 |    15.1 |
+|     7 |    17.1 |
+|     8 |    17.4 |
+|     9 |    15.7 |
+|    10 |    11.8 |
+|    11 |     7.7 |
+|    12 |     4.8 |
+
+Code:
+
+#+name: R-plot
+#+begin_src R :var data=data :results graphics :file Rplot.png :exports both
+plot(data, type="b", bty="l", col=c("#ABD249"), las=1, lwd=4)
+grid(nx=NULL, ny=NULL, col=c("#E8E8E8"), lwd=1)
+legend("bottom", legend=c("Degrees"), col=c("#ABD249"), pch=c(19))
+#+end_src
+
+** Graph
+
+The resulting chart:
+
+#+results: R-plot
+[[file:Rplot.png]]
+
+** R code block
+
+#+begin_src R
+library(ggplot2)
+summary(cars)
+#+end_src
+
+#+results:
+
+Plot:
+
+#+begin_src R
+library(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth()
+#+end_src
 
 * Footnotes
 
