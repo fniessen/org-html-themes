@@ -1,4 +1,15 @@
+$(function() {
+    $('.note').before("<p class='admonition-title note'>Note</p>");
+    $('.seealso').before("<p class='admonition-title seealso'>See also</p>");
+    $('.warning').before("<p class='admonition-title warning'>Warning</p>");
+    $('.caution').before("<p class='admonition-title caution'>Caution</p>");
+    $('.important').before("<p class='admonition-title important'>Important</p>");
+    $('.tip').before("<p class='admonition-title tip'>Tip</p>");
+    $('.error').before("<p class='admonition-title error'>Error</p>");
+});
+
 $( document ).ready(function() {
+
     // Shift nav in mobile when clicking the menu.
     $(document).on('click', "[data-toggle='wy-nav-top']", function() {
       $("[data-toggle='wy-nav-shift']").toggleClass("shift");
@@ -11,9 +22,10 @@ $( document ).ready(function() {
     });
     $(document).on('click', "[data-toggle='rst-current-version']", function() {
       $("[data-toggle='rst-versions']").toggleClass("shift-up");
-    });  
+    });
     // Make tables responsive
     $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
+
 });
 
 window.SphinxRtdTheme = (function (jquery) {

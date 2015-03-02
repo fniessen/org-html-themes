@@ -1,5 +1,6 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700);
 
+
 *{
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -273,7 +274,7 @@ td{
     font-weight:normal;
     font-style:normal}
 
-.fa,#content .admonition-title,#content h1 .headerlink,#content h2 .headerlink,#content h3 .headerlink,#content h4 .headerlink,#content h5 .headerlink,#content h6 .headerlink,#content dl dt .headerlink,.icon{
+.fa,#content .admonition-title,.icon{
     display:inline-block;
     font-family:FontAwesome;
     font-style:normal;
@@ -332,11 +333,11 @@ td{
 .pull-left{
     float:left}
 
-.fa.pull-left,#content .pull-left.admonition-title,#content h1 .pull-left.headerlink,#content h2 .pull-left.headerlink,#content h3 .pull-left.headerlink,#content h4 .pull-left.headerlink,#content h5 .pull-left.headerlink,#content h6 .pull-left.headerlink,#content dl dt .pull-left.headerlink,.pull-left.icon{
-    margin-right:.3em}
-
-.fa.pull-right,#content .pull-right.admonition-title,#content h1 .pull-right.headerlink,#content h2 .pull-right.headerlink,#content h3 .pull-right.headerlink,#content h4 .pull-right.headerlink,#content h5 .pull-right.headerlink,#content h6 .pull-right.headerlink,#content dl dt .pull-right.headerlink,.pull-right.icon{
-    margin-left:.3em}
+/* .fa.pull-left,#content .pull-left.admonition-title,#content h1 .pull-left.headerlink,#content h2 .pull-left.headerlink,#content h3 .pull-left.headerlink,#content h4 .pull-left.headerlink,#content h5 .pull-left.headerlink,#content h6 .pull-left.headerlink,#content dl dt .pull-left.headerlink,.pull-left.icon{ */
+/*     margin-right:.3em} */
+/*  */
+/* .fa.pull-right,#content .pull-right.admonition-title,#content h1 .pull-right.headerlink,#content h2 .pull-right.headerlink,#content h3 .pull-right.headerlink,#content h4 .pull-right.headerlink,#content h5 .pull-right.headerlink,#content h6 .pull-right.headerlink,#content dl dt .pull-right.headerlink,.pull-right.icon{ */
+/*     margin-left:.3em} */
 
 .fa-spin{
     -webkit-animation:spin 2s infinite linear;
@@ -445,10 +446,10 @@ td{
 .fa-inverse{
     color:#fff}
 
-.fa,#content .admonition-title,#content h1 .headerlink,#content h2 .headerlink,#content h3 .headerlink,#content h4 .headerlink,#content h5 .headerlink,#content h6 .headerlink,#content dl dt .headerlink,.icon,.wy-dropdown .caret,.wy-inline-validate.wy-inline-validate-success .wy-input-context,.wy-inline-validate.wy-inline-validate-danger .wy-input-context,.wy-inline-validate.wy-inline-validate-warning .wy-input-context,.wy-inline-validate.wy-inline-validate-info .wy-input-context{
+.fa,#content .admonition-title{
     font-family:inherit}
 
-.fa:before,#content .admonition-title:before,#content h1 .headerlink:before,#content h2 .headerlink:before,#content h3 .headerlink:before,#content h4 .headerlink:before,#content h5 .headerlink:before,#content h6 .headerlink:before,#content dl dt .headerlink:before,.icon:before,.wy-dropdown .caret:before,.wy-inline-validate.wy-inline-validate-success .wy-input-context:before,.wy-inline-validate.wy-inline-validate-danger .wy-input-context:before,.wy-inline-validate.wy-inline-validate-warning .wy-input-context:before,.wy-inline-validate.wy-inline-validate-info .wy-input-context:before{
+.fa:before,#content .admonition-title:before{
     font-family:"FontAwesome";
     display:inline-block;
     font-style:normal;
@@ -456,29 +457,23 @@ td{
     line-height:1;
     text-decoration:inherit}
 
-a .fa,a #content .admonition-title,#content a .admonition-title,a #content h1 .headerlink,#content h1 a .headerlink,a #content h2 .headerlink,#content h2 a .headerlink,a #content h3 .headerlink,#content h3 a .headerlink,a #content h4 .headerlink,#content h4 a .headerlink,a #content h5 .headerlink,#content h5 a .headerlink,a #content h6 .headerlink,#content h6 a .headerlink,a #content dl dt .headerlink,#content dl dt a .headerlink,a .icon{
+a .fa,a #content .admonition-title,#content a .admonition-title{
     display:inline-block;
     text-decoration:inherit}
 
-.btn .fa,.btn #content .admonition-title,#content .btn .admonition-title,.btn #content h1 .headerlink,#content h1 .btn .headerlink,.btn #content h2 .headerlink,#content h2 .btn .headerlink,.btn #content h3 .headerlink,#content h3 .btn .headerlink,.btn #content h4 .headerlink,#content h4 .btn .headerlink,.btn #content h5 .headerlink,#content h5 .btn .headerlink,.btn #content h6 .headerlink,#content h6 .btn .headerlink,.btn #content dl dt .headerlink,#content dl dt .btn .headerlink,.btn .icon,.nav .fa,.nav #content .admonition-title,#content .nav .admonition-title,.nav #content h1 .headerlink,#content h1 .nav .headerlink,.nav #content h2 .headerlink,#content h2 .nav .headerlink,.nav #content h3 .headerlink,#content h3 .nav .headerlink,.nav #content h4 .headerlink,#content h4 .nav .headerlink,.nav #content h5 .headerlink,#content h5 .nav .headerlink,.nav #content h6 .headerlink,#content h6 .nav .headerlink,.nav #content dl dt .headerlink,#content dl dt .nav .headerlink,.nav .icon{
+.btn .fa,.btn #content .admonition-title,#content .btn .admonition-title,.nav #content .admonition-title,#content .nav .admonition-title,.nav .icon{
     display:inline}
 
-.btn .fa.fa-large,.btn #content .fa-large.admonition-title,#content .btn .fa-large.admonition-title,.btn #content h1 .fa-large.headerlink,#content h1 .btn .fa-large.headerlink,.btn #content h2 .fa-large.headerlink,#content h2 .btn .fa-large.headerlink,.btn #content h3 .fa-large.headerlink,#content h3 .btn .fa-large.headerlink,.btn #content h4 .fa-large.headerlink,#content h4 .btn .fa-large.headerlink,.btn #content h5 .fa-large.headerlink,#content h5 .btn .fa-large.headerlink,.btn #content h6 .fa-large.headerlink,#content h6 .btn .fa-large.headerlink,.btn #content dl dt .fa-large.headerlink,#content dl dt .btn .fa-large.headerlink,.btn .fa-large.icon,.nav .fa.fa-large,.nav #content .fa-large.admonition-title,#content .nav .fa-large.admonition-title,.nav #content h1 .fa-large.headerlink,#content h1 .nav .fa-large.headerlink,.nav #content h2 .fa-large.headerlink,#content h2 .nav .fa-large.headerlink,.nav #content h3 .fa-large.headerlink,#content h3 .nav .fa-large.headerlink,.nav #content h4 .fa-large.headerlink,#content h4 .nav .fa-large.headerlink,.nav #content h5 .fa-large.headerlink,#content h5 .nav .fa-large.headerlink,.nav #content h6 .fa-large.headerlink,#content h6 .nav .fa-large.headerlink,.nav #content dl dt .fa-large.headerlink,#content dl dt .nav .fa-large.headerlink,.nav .fa-large.icon{
-    line-height:0.9em}
-
-.btn .fa.fa-spin,.btn #content .fa-spin.admonition-title,#content .btn .fa-spin.admonition-title,.btn #content h1 .fa-spin.headerlink,#content h1 .btn .fa-spin.headerlink,.btn #content h2 .fa-spin.headerlink,#content h2 .btn .fa-spin.headerlink,.btn #content h3 .fa-spin.headerlink,#content h3 .btn .fa-spin.headerlink,.btn #content h4 .fa-spin.headerlink,#content h4 .btn .fa-spin.headerlink,.btn #content h5 .fa-spin.headerlink,#content h5 .btn .fa-spin.headerlink,.btn #content h6 .fa-spin.headerlink,#content h6 .btn .fa-spin.headerlink,.btn #content dl dt .fa-spin.headerlink,#content dl dt .btn .fa-spin.headerlink,.btn .fa-spin.icon,.nav .fa.fa-spin,.nav #content .fa-spin.admonition-title,#content .nav .fa-spin.admonition-title,.nav #content h1 .fa-spin.headerlink,#content h1 .nav .fa-spin.headerlink,.nav #content h2 .fa-spin.headerlink,#content h2 .nav .fa-spin.headerlink,.nav #content h3 .fa-spin.headerlink,#content h3 .nav .fa-spin.headerlink,.nav #content h4 .fa-spin.headerlink,#content h4 .nav .fa-spin.headerlink,.nav #content h5 .fa-spin.headerlink,#content h5 .nav .fa-spin.headerlink,.nav #content h6 .fa-spin.headerlink,#content h6 .nav .fa-spin.headerlink,.nav #content dl dt .fa-spin.headerlink,#content dl dt .nav .fa-spin.headerlink,.nav .fa-spin.icon{
-    display:inline-block}
-
-.btn.fa:before,#content .btn.admonition-title:before,#content h1 .btn.headerlink:before,#content h2 .btn.headerlink:before,#content h3 .btn.headerlink:before,#content h4 .btn.headerlink:before,#content h5 .btn.headerlink:before,#content h6 .btn.headerlink:before,#content dl dt .btn.headerlink:before,.btn.icon:before{
+.btn.fa:before,#content .btn.admonition-title:before{
     opacity:0.5;
     -webkit-transition:opacity 0.05s ease-in;
     -moz-transition:opacity 0.05s ease-in;
     transition:opacity 0.05s ease-in}
 
-.btn.fa:hover:before,#content .btn.admonition-title:hover:before,#content h1 .btn.headerlink:hover:before,#content h2 .btn.headerlink:hover:before,#content h3 .btn.headerlink:hover:before,#content h4 .btn.headerlink:hover:before,#content h5 .btn.headerlink:hover:before,#content h6 .btn.headerlink:hover:before,#content dl dt .btn.headerlink:hover:before,.btn.icon:hover:before{
+.btn.fa:hover:before,#content .btn.admonition-title:hover:before{
     opacity:1}
 
-.btn-mini .fa:before,.btn-mini #content .admonition-title:before,#content .btn-mini .admonition-title:before,.btn-mini #content h1 .headerlink:before,#content h1 .btn-mini .headerlink:before,.btn-mini #content h2 .headerlink:before,#content h2 .btn-mini .headerlink:before,.btn-mini #content h3 .headerlink:before,#content h3 .btn-mini .headerlink:before,.btn-mini #content h4 .headerlink:before,#content h4 .btn-mini .headerlink:before,.btn-mini #content h5 .headerlink:before,#content h5 .btn-mini .headerlink:before,.btn-mini #content h6 .headerlink:before,#content h6 .btn-mini .headerlink:before,.btn-mini #content dl dt .headerlink:before,#content dl dt .btn-mini .headerlink:before,.btn-mini .icon:before{
+.btn-mini .fa:before,.btn-mini #content .admonition-title:before,#content .btn-mini .admonition-title:before{
     font-size:14px;
     vertical-align:-15%}
 
@@ -486,93 +481,77 @@ a .fa,a #content .admonition-title,#content a .admonition-title,a #content h1 .h
     padding:12px;
     line-height:24px;
     margin-bottom:24px;
-    background:#e7f2fa}
+    background:#e7f2fa;
+}
 
 .wy-alert-title,#content .admonition-title{
     color:#fff;
     font-weight:bold;
     display:block;
     color:#fff;
-    background:#6ab0de;
-    margin:-12px;
+    /* background:#6ab0de; */
+    /* margin:-12px; */
     padding:6px 12px;
-    margin-bottom:12px}
+    margin-bottom:0px}
 
 .wy-alert.wy-alert-danger,#content .wy-alert-danger.note,#content .wy-alert-danger.attention,#content .wy-alert-danger.caution,#content .danger,#content .error,#content .wy-alert-danger.hint,#content .wy-alert-danger.important,#content .wy-alert-danger.tip,#content .wy-alert-danger.warning,#content .wy-alert-danger.seealso,#content .wy-alert-danger.admonitiontodo{
     background:#fdf3f2}
 
-.wy-alert.wy-alert-danger .wy-alert-title,#content .wy-alert-danger.note .wy-alert-title,#content .wy-alert-danger.attention .wy-alert-title,#content .wy-alert-danger.caution .wy-alert-title,#content .danger .wy-alert-title,#content .error .wy-alert-title,#content .wy-alert-danger.hint .wy-alert-title,#content .wy-alert-danger.important .wy-alert-title,#content .wy-alert-danger.tip .wy-alert-title,#content .wy-alert-danger.warning .wy-alert-title,#content .wy-alert-danger.seealso .wy-alert-title,#content .wy-alert-danger.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-danger #content .admonition-title,#content .wy-alert.wy-alert-danger .admonition-title,#content .wy-alert-danger.note .admonition-title,#content .wy-alert-danger.attention .admonition-title,#content .wy-alert-danger.caution .admonition-title,#content .danger .admonition-title,#content .error .admonition-title,#content .wy-alert-danger.hint .admonition-title,#content .wy-alert-danger.important .admonition-title,#content .wy-alert-danger.tip .admonition-title,#content .wy-alert-danger.warning .admonition-title,#content .wy-alert-danger.seealso .admonition-title,#content .wy-alert-danger.admonitiontodo .admonition-title{
-    background:#f29f97}
+/* .wy-alert.wy-alert-danger .wy-alert-title,#content .wy-alert-danger.note .wy-alert-title,#content .wy-alert-danger.attention .wy-alert-title,#content .wy-alert-danger.caution .wy-alert-title,#content .danger .wy-alert-title,#content .error .wy-alert-title,#content .wy-alert-danger.hint .wy-alert-title,#content .wy-alert-danger.important .wy-alert-title,#content .wy-alert-danger.tip .wy-alert-title,#content .wy-alert-danger.warning .wy-alert-title,#content .wy-alert-danger.seealso .wy-alert-title,#content .wy-alert-danger.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-danger #content .admonition-title,#content .wy-alert.wy-alert-danger .admonition-title,#content .wy-alert-danger.note .admonition-title,#content .wy-alert-danger.attention .admonition-title,#content .wy-alert-danger.caution .admonition-title,#content .danger .admonition-title,#content .error .admonition-title,#content .wy-alert-danger.hint .admonition-title,#content .wy-alert-danger.important .admonition-title,#content .wy-alert-danger.tip .admonition-title,#content .wy-alert-danger.warning .admonition-title,#content .wy-alert-danger.seealso .admonition-title,#content .wy-alert-danger.admonitiontodo .admonition-title{ */
+/*     background:#f29f97} */
 
 .wy-alert.wy-alert-warning,#content .wy-alert-warning.note,#content .attention,#content .caution,#content .wy-alert-warning.danger,#content .wy-alert-warning.error,#content .wy-alert-warning.hint,#content .wy-alert-warning.important,#content .wy-alert-warning.tip,#content .warning,#content .wy-alert-warning.seealso,#content .admonitiontodo{
     background:#ffedcc}
 
-.wy-alert.wy-alert-warning .wy-alert-title,#content .wy-alert-warning.note .wy-alert-title,#content .attention .wy-alert-title,#content .caution .wy-alert-title,#content .wy-alert-warning.danger .wy-alert-title,#content .wy-alert-warning.error .wy-alert-title,#content .wy-alert-warning.hint .wy-alert-title,#content .wy-alert-warning.important .wy-alert-title,#content .wy-alert-warning.tip .wy-alert-title,#content .warning .wy-alert-title,#content .wy-alert-warning.seealso .wy-alert-title,#content .admonitiontodo .wy-alert-title,.wy-alert.wy-alert-warning #content .admonition-title,#content .wy-alert.wy-alert-warning .admonition-title,#content .wy-alert-warning.note .admonition-title,#content .attention .admonition-title,#content .caution .admonition-title,#content .wy-alert-warning.danger .admonition-title,#content .wy-alert-warning.error .admonition-title,#content .wy-alert-warning.hint .admonition-title,#content .wy-alert-warning.important .admonition-title,#content .wy-alert-warning.tip .admonition-title,#content .warning .admonition-title,#content .wy-alert-warning.seealso .admonition-title,#content .admonitiontodo .admonition-title{
-    background:#f0b37e}
+#content .admonition-title.warning,#content .admonition-title.caution,#content .admonition-title.attention{
+    background: #f0b37e;
+    /* font-family:FontAwesome; */
+    content: "\25AE";
+}
 
-.wy-alert.wy-alert-info,#content .note,#content .wy-alert-info.attention,#content .wy-alert-info.caution,#content .wy-alert-info.danger,#content .wy-alert-info.error,#content .wy-alert-info.hint,#content .wy-alert-info.important,#content .wy-alert-info.tip,#content .wy-alert-info.warning,#content .seealso,#content .wy-alert-info.admonitiontodo{
+#content .admonition-title.warning:before,#content .admonition-title.caution:before,#content .admonition-title.attention:before{
+    font-family:FontAwesome;
+    content: "";}
+
+#content .note,#content .seealso{
     background:#e7f2fa}
 
-.wy-alert.wy-alert-info .wy-alert-title,#content .note .wy-alert-title,#content .wy-alert-info.attention .wy-alert-title,#content .wy-alert-info.caution .wy-alert-title,#content .wy-alert-info.danger .wy-alert-title,#content .wy-alert-info.error .wy-alert-title,#content .wy-alert-info.hint .wy-alert-title,#content .wy-alert-info.important .wy-alert-title,#content .wy-alert-info.tip .wy-alert-title,#content .wy-alert-info.warning .wy-alert-title,#content .seealso .wy-alert-title,#content .wy-alert-info.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-info #content .admonition-title,#content .wy-alert.wy-alert-info .admonition-title,#content .note .admonition-title,#content .wy-alert-info.attention .admonition-title,#content .wy-alert-info.caution .admonition-title,#content .wy-alert-info.danger .admonition-title,#content .wy-alert-info.error .admonition-title,#content .wy-alert-info.hint .admonition-title,#content .wy-alert-info.important .admonition-title,#content .wy-alert-info.tip .admonition-title,#content .wy-alert-info.warning .admonition-title,#content .seealso .admonition-title,#content .wy-alert-info.admonitiontodo .admonition-title{
-    background:#6ab0de}
+/* .wy-alert.wy-alert-info .wy-alert-title,#content .note .wy-alert-title,#content .wy-alert-info.attention .wy-alert-title,#content .wy-alert-info.caution .wy-alert-title,#content .wy-alert-info.danger .wy-alert-title,#content .wy-alert-info.error .wy-alert-title,#content .wy-alert-info.hint .wy-alert-title,#content .wy-alert-info.important .wy-alert-title,#content .wy-alert-info.tip .wy-alert-title,#content .wy-alert-info.warning .wy-alert-title,#content .seealso .wy-alert-title,#content .wy-alert-info.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-info #content .admonition-title,#content .wy-alert.wy-alert-info .admonition-title,#content .note .admonition-title,#content .wy-alert-info.attention .admonition-title,#content .wy-alert-info.caution .admonition-title,#content .wy-alert-info.danger .admonition-title,#content .wy-alert-info.error .admonition-title,#content .wy-alert-info.hint .admonition-title,#content .wy-alert-info.important .admonition-title,#content .wy-alert-info.tip .admonition-title,#content .wy-alert-info.warning .admonition-title,#content .seealso .admonition-title,#content .wy-alert-info.admonitiontodo .admonition-title{ */
+/*     background:#6ab0de} */
 
-.wy-alert.wy-alert-success,#content .wy-alert-success.note,#content .wy-alert-success.attention,#content .wy-alert-success.caution,#content .wy-alert-success.danger,#content .wy-alert-success.error,#content .hint,#content .important,#content .tip,#content .wy-alert-success.warning,#content .wy-alert-success.seealso,#content .wy-alert-success.admonitiontodo{
+#content .admonition-title.note,#content .admonition-title.seealso{
+    background:#6ab0de}
+}
+#content .important,#content .tip{
     background:#dbfaf4}
 
-.wy-alert.wy-alert-success .wy-alert-title,#content .wy-alert-success.note .wy-alert-title,#content .wy-alert-success.attention .wy-alert-title,#content .wy-alert-success.caution .wy-alert-title,#content .wy-alert-success.danger .wy-alert-title,#content .wy-alert-success.error .wy-alert-title,#content .hint .wy-alert-title,#content .important .wy-alert-title,#content .tip .wy-alert-title,#content .wy-alert-success.warning .wy-alert-title,#content .wy-alert-success.seealso .wy-alert-title,#content .wy-alert-success.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-success #content .admonition-title,#content .wy-alert.wy-alert-success .admonition-title,#content .wy-alert-success.note .admonition-title,#content .wy-alert-success.attention .admonition-title,#content .wy-alert-success.caution .admonition-title,#content .wy-alert-success.danger .admonition-title,#content .wy-alert-success.error .admonition-title,#content .hint .admonition-title,#content .important .admonition-title,#content .tip .admonition-title,#content .wy-alert-success.warning .admonition-title,#content .wy-alert-success.seealso .admonition-title,#content .wy-alert-success.admonitiontodo .admonition-title{
-    background:#1abc9c}
+/* .wy-alert.wy-alert-success .wy-alert-title,#content .wy-alert-success.note .wy-alert-title,#content .wy-alert-success.attention .wy-alert-title,#content .wy-alert-success.caution .wy-alert-title,#content .wy-alert-success.danger .wy-alert-title,#content .wy-alert-success.error .wy-alert-title,#content .hint .wy-alert-title,#content .important .wy-alert-title,#content .tip .wy-alert-title,#content .wy-alert-success.warning .wy-alert-title,#content .wy-alert-success.seealso .wy-alert-title,#content .wy-alert-success.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-success #content .admonition-title,#content .wy-alert.wy-alert-success .admonition-title,#content .wy-alert-success.note .admonition-title,#content .wy-alert-success.attention .admonition-title,#content .wy-alert-success.caution .admonition-title,#content .wy-alert-success.danger .admonition-title,#content .wy-alert-success.error .admonition-title,#content .hint .admonition-title,#content .important .admonition-title,#content .tip .admonition-title,#content .wy-alert-success.warning .admonition-title,#content .wy-alert-success.seealso .admonition-title,#content .wy-alert-success.admonitiontodo .admonition-title{ */
+/*     background:#1abc9c} */
 
 .wy-alert.wy-alert-neutral,#content .wy-alert-neutral.note,#content .wy-alert-neutral.attention,#content .wy-alert-neutral.caution,#content .wy-alert-neutral.danger,#content .wy-alert-neutral.error,#content .wy-alert-neutral.hint,#content .wy-alert-neutral.important,#content .wy-alert-neutral.tip,#content .wy-alert-neutral.warning,#content .wy-alert-neutral.seealso,#content .wy-alert-neutral.admonitiontodo{
     background:#f3f6f6}
 
-.wy-alert.wy-alert-neutral .wy-alert-title,#content .wy-alert-neutral.note .wy-alert-title,#content .wy-alert-neutral.attention .wy-alert-title,#content .wy-alert-neutral.caution .wy-alert-title,#content .wy-alert-neutral.danger .wy-alert-title,#content .wy-alert-neutral.error .wy-alert-title,#content .wy-alert-neutral.hint .wy-alert-title,#content .wy-alert-neutral.important .wy-alert-title,#content .wy-alert-neutral.tip .wy-alert-title,#content .wy-alert-neutral.warning .wy-alert-title,#content .wy-alert-neutral.seealso .wy-alert-title,#content .wy-alert-neutral.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-neutral #content .admonition-title,#content .wy-alert.wy-alert-neutral .admonition-title,#content .wy-alert-neutral.note .admonition-title,#content .wy-alert-neutral.attention .admonition-title,#content .wy-alert-neutral.caution .admonition-title,#content .wy-alert-neutral.danger .admonition-title,#content .wy-alert-neutral.error .admonition-title,#content .wy-alert-neutral.hint .admonition-title,#content .wy-alert-neutral.important .admonition-title,#content .wy-alert-neutral.tip .admonition-title,#content .wy-alert-neutral.warning .admonition-title,#content .wy-alert-neutral.seealso .admonition-title,#content .wy-alert-neutral.admonitiontodo .admonition-title{
-    color:#404040;
-    background:#e1e4e5}
+/* .wy-alert.wy-alert-neutral .wy-alert-title,#content .wy-alert-neutral.note .wy-alert-title,#content .wy-alert-neutral.attention .wy-alert-title,#content .wy-alert-neutral.caution .wy-alert-title,#content .wy-alert-neutral.danger .wy-alert-title,#content .wy-alert-neutral.error .wy-alert-title,#content .wy-alert-neutral.hint .wy-alert-title,#content .wy-alert-neutral.important .wy-alert-title,#content .wy-alert-neutral.tip .wy-alert-title,#content .wy-alert-neutral.warning .wy-alert-title,#content .wy-alert-neutral.seealso .wy-alert-title,#content .wy-alert-neutral.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-neutral #content .admonition-title,#content .wy-alert.wy-alert-neutral .admonition-title,#content .wy-alert-neutral.note .admonition-title,#content .wy-alert-neutral.attention .admonition-title,#content .wy-alert-neutral.caution .admonition-title,#content .wy-alert-neutral.danger .admonition-title,#content .wy-alert-neutral.error .admonition-title,#content .wy-alert-neutral.hint .admonition-title,#content .wy-alert-neutral.important .admonition-title,#content .wy-alert-neutral.tip .admonition-title,#content .wy-alert-neutral.warning .admonition-title,#content .wy-alert-neutral.seealso .admonition-title,#content .wy-alert-neutral.admonitiontodo .admonition-title{ */
+/*     color:#404040; */
+/*     background:#e1e4e5} */
 
-.wy-alert.wy-alert-neutral a,#content .wy-alert-neutral.note a,#content .wy-alert-neutral.attention a,#content .wy-alert-neutral.caution a,#content .wy-alert-neutral.danger a,#content .wy-alert-neutral.error a,#content .wy-alert-neutral.hint a,#content .wy-alert-neutral.important a,#content .wy-alert-neutral.tip a,#content .wy-alert-neutral.warning a,#content .wy-alert-neutral.seealso a,#content .wy-alert-neutral.admonitiontodo a{
-    color:#2980B9}
+/* .wy-alert.wy-alert-neutral a,#content .wy-alert-neutral.note a,#content .wy-alert-neutral.attention a,#content .wy-alert-neutral.caution a,#content .wy-alert-neutral.danger a,#content .wy-alert-neutral.error a,#content .wy-alert-neutral.hint a,#content .wy-alert-neutral.important a,#content .wy-alert-neutral.tip a,#content .wy-alert-neutral.warning a,#content .wy-alert-neutral.seealso a,#content .wy-alert-neutral.admonitiontodo a{ */
+/*     color:#2980B9} */
 
 .wy-alert p:last-child,#content .note p:last-child,#content .attention p:last-child,#content .caution p:last-child,#content .danger p:last-child,#content .error p:last-child,#content .hint p:last-child,#content .important p:last-child,#content .tip p:last-child,#content .warning p:last-child,#content .seealso p:last-child,#content .admonitiontodo p:last-child{
     margin-bottom:0}
 
-.wy-tray-container{
-    position:fixed;
-    bottom:0px;
-    left:0;
-    z-index:600}
-
-.wy-tray-container li{
-    display:block;
-    width:300px;
-    background:transparent;
-    color:#fff;
-    text-align:center;
-    box-shadow:0 5px 5px 0 rgba(0,0,0,0.1);
-    padding:0 24px;
-    min-width:20%;
-    opacity:0;
-    height:0;
-    line-height:56px;
-    overflow:hidden;
-    -webkit-transition:all 0.3s ease-in;
-    -moz-transition:all 0.3s ease-in;
-    transition:all 0.3s ease-in}
-
-.wy-tray-container li.wy-tray-item-success{
+#content .admonition-title.tip,#content .admonition-title.important{
     background:#27AE60}
 
-.wy-tray-container li.wy-tray-item-info{
+#content .admonition-title.note,#content .admonition-title.seealso{
     background:#2980B9}
 
-.wy-tray-container li.wy-tray-item-warning{
+#content .admonition-title.warning,#content .admonition-title.caution{
     background:#E67E22}
 
-.wy-tray-container li.wy-tray-item-danger{
+#content .admonition-title.error{
     background:#E74C3C}
-
-.wy-tray-container li.on{
-    opacity:1;
-    height:56px}
 
 @media screen and (max-width: 768px){
     .wy-tray-container{
@@ -1645,6 +1624,7 @@ nav.stickynav{
     background:#1f1d1d;
     border-top:solid 10px #343131;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-size: 90%;
     z-index:400;
     padding:12px;
 }
