@@ -43,6 +43,8 @@ since Org mode 7), using [[https://github.com/fniessen/org-html-themes][ReadTheO
 Reading through all the documentation is highly recommended, but for the truly
 impatient, following are some quick steps to get started.
 
+# See http://asciidoctor.org/docs/user-manual/#the-big-picture
+
 * Document header
 
 Title and author line:
@@ -579,26 +581,26 @@ Admonitiontodo
 
 ** List of supported admonitions
 
-| Total |           | reST rtd | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence |
-|-------+-----------+----------+----------+---------+-------------------+---------+------------|
-|     5 | note      |        1 |        1 |       1 |                 1 |         |          1 |
-|     6 | warning   |        1 |        1 |       1 |                 1 |       1 |          1 |
-|     5 | tip       |        1 |        1 |       1 |                 1 |         |          1 |
-|-------+-----------+----------+----------+---------+-------------------+---------+------------|
-|     4 | important |        1 |        1 |       1 |                 1 |         |            |
-|     4 | caution   |        1 |        1 |       1 |                 1 |         |            |
-|-------+-----------+----------+----------+---------+-------------------+---------+------------|
-|     1 | attention |        1 |          |         |                   |         |            |
-|     1 | danger    |        1 |          |         |                   |         |            |
-|     1 | error     |        1 |          |         |                   |         |            |
-|     1 | hint      |        1 |          |         |                   |         |            |
-|     1 | seealso   |        1 |          |         |                   |         |            |
-|     1 | todo      |        1 |          |         |                   |         |            |
-|     1 | notice    |          |          |         |                   |       1 |            |
-|     1 | question  |          |          |         |                   |       1 |            |
-|     1 | summary   |          |          |         |                   |       1 |            |
-|     1 | info      |          |          |         |                   |         |          1 |
-#+TBLFM: $1=vsum($8..$7)
+| Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence |
+|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
+|     0 | note      |   1 |   1 |        1 |       1 |                 1 |         |          1 |
+|     0 | warning   |   1 |   1 |        1 |       1 |                 1 |       1 |          1 |
+|     0 | tip       |   1 |   1 |        1 |       1 |                 1 |         |          1 |
+|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
+|     0 | important |   1 |   1 |        1 |       1 |                 1 |         |            |
+|     0 | caution   |   1 |   1 |        1 |       1 |                 1 |         |            |
+|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
+|     0 | attention |   1 |   1 |          |         |                   |         |            |
+|     0 | danger    |   1 |   1 |          |         |                   |         |            |
+|     0 | error     |   1 |   1 |          |         |                   |         |            |
+|     0 | hint      |   1 |   1 |          |         |                   |         |            |
+|     0 | seealso   |     |   ? |          |         |                   |         |            |
+|     0 | todo      |     |   ? |          |         |                   |         |            |
+|     0 | notice    |     |     |          |         |                   |       1 |            |
+|     0 | question  |     |     |          |         |                   |       1 |            |
+|     0 | summary   |     |     |          |         |                   |       1 |            |
+|     0 | info      |     |     |          |         |                   |         |          1 |
+#+TBLFM: $1=vsum($9..$8)
 
 ** Note
 

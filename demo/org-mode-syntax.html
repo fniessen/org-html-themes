@@ -14,48 +14,28 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -825,7 +805,7 @@ If you want to override the automatic alignment, use <code>&lt;r&gt;</code>, <co
 
 <div class="org-src-container">
 
-<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION: Table with aligned columns</span>
+<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION:</span> <span class="org-org-block">Table with aligned columns</span>
 <span class="org-org-table">|          </span><span class="org-org-formula">&lt;r&gt;</span><span class="org-org-table"> | </span><span class="org-org-formula">&lt;c&gt;</span><span class="org-org-table">          | </span><span class="org-org-formula">&lt;l&gt;</span><span class="org-org-table">          |</span>
 <span class="org-org-table">|            1 | 2            | 3            |</span>
 <span class="org-org-table">|        Right | Center       | Left         |</span>
@@ -881,7 +861,7 @@ to separate it from the rest of the table).
 
 <div class="org-src-container">
 
-<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION: Table with an header row</span>
+<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION:</span> <span class="org-org-block">Table with an header row</span>
 <span class="org-org-table">| Name of column 1 | Name of column 2 | Name of column 3 |</span>
 <span class="org-org-table">|------------------+------------------+------------------|</span>
 <span class="org-org-table">| Top left         | Top middle       |                  |</span>
@@ -1008,13 +988,13 @@ Here is a table on the left side:
 
 <div class="org-src-container">
 
-<pre class="src src-org"><span class="org-org-meta-line">#+LATEX:</span> <span class="org-org-block">\noindent</span>
+<pre class="src src-org"><span class="org-org-meta-line">#+LATEX: \noindent</span>
 <span class="org-org-meta-line">#+ATTR_LATEX: :center nil</span>
 <span class="org-org-table">| a | b | c |</span>
 <span class="org-org-table">|---+---+---|</span>
 <span class="org-org-table">| 1 | 2 | 3 |</span>
 <span class="org-org-table">| 4 | 5 | 6 |</span>
-<span class="org-org-meta-line">#+LATEX:</span> <span class="org-org-block">\hfill</span>
+<span class="org-org-meta-line">#+LATEX: \hfill</span>
 </pre>
 </div>
 
@@ -1116,7 +1096,7 @@ And here&rsquo;s a table on the right side:
 
 <div class="org-src-container">
 
-<pre class="src src-org"><span class="org-org-meta-line">#+LATEX:</span> <span class="org-org-block">\hfill</span>
+<pre class="src src-org"><span class="org-org-meta-line">#+LATEX: \hfill</span>
 <span class="org-org-meta-line">#+ATTR_LATEX: :center nil</span>
 <span class="org-org-table">| a | b | c |</span>
 <span class="org-org-table">|---+---+---|</span>
@@ -1395,7 +1375,7 @@ You can insert <b>image</b> files of different <b>formats</b> to a document:
 <div class="outline-text-3" id="text-unnumbered-49">
 <div class="org-src-container">
 
-<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION: Org mode logo</span>
+<pre class="src src-org"><span class="org-org-meta-line">#+CAPTION:</span> <span class="org-org-block">Org mode logo</span>
 <span class="org-org-link"><a href="file:org-mode-unicorn.png">file:org-mode-unicorn.png</a></span>
 </pre>
 </div>
@@ -1645,12 +1625,15 @@ Admonitiontodo
 <col  class="right" />
 
 <col  class="right" />
+
+<col  class="right" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="right">Total</th>
 <th scope="col" class="left">&#xa0;</th>
-<th scope="col" class="right">reST rtd</th>
+<th scope="col" class="right">rST</th>
+<th scope="col" class="right">RTD</th>
 <th scope="col" class="right">AsciiDoc</th>
 <th scope="col" class="right">DocBook</th>
 <th scope="col" class="right">MoinMoin (Modern)</th>
@@ -1660,8 +1643,9 @@ Admonitiontodo
 </thead>
 <tbody>
 <tr>
-<td class="right">5</td>
+<td class="right">0</td>
 <td class="left">note</td>
+<td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
@@ -1671,7 +1655,7 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">6</td>
+<td class="right">0</td>
 <td class="left">warning</td>
 <td class="right">1</td>
 <td class="right">1</td>
@@ -1679,34 +1663,38 @@ Admonitiontodo
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
+<td class="right">1</td>
 </tr>
 
 <tr>
-<td class="right">5</td>
+<td class="right">0</td>
 <td class="left">tip</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">1</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="right">4</td>
+<td class="right">0</td>
 <td class="left">important</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="right">4</td>
+<td class="right">0</td>
 <td class="left">caution</td>
+<td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
 <td class="right">1</td>
@@ -1717,9 +1705,10 @@ Admonitiontodo
 </tbody>
 <tbody>
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">attention</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1728,9 +1717,10 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">danger</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1739,9 +1729,10 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">error</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1750,9 +1741,10 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">hint</td>
 <td class="right">1</td>
+<td class="right">1</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1761,9 +1753,10 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">seealso</td>
-<td class="right">1</td>
+<td class="right">&#xa0;</td>
+<td class="right">?</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1772,9 +1765,10 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">todo</td>
-<td class="right">1</td>
+<td class="right">&#xa0;</td>
+<td class="right">?</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -1783,41 +1777,45 @@ Admonitiontodo
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">notice</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
+<td class="right">&#xa0;</td>
 <td class="right">1</td>
 <td class="right">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">question</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
+<td class="right">&#xa0;</td>
 <td class="right">1</td>
 <td class="right">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">summary</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
+<td class="right">&#xa0;</td>
 <td class="right">1</td>
 <td class="right">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="right">1</td>
+<td class="right">0</td>
 <td class="left">info</td>
+<td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
 <td class="right">&#xa0;</td>
@@ -3115,7 +3113,7 @@ A one-liner result:
 </div>
 
 <pre class="example">
-2015-03-01
+2015-03-02
 </pre>
 </div>
 </div>
