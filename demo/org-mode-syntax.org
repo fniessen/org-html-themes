@@ -12,11 +12,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.css"/>
 # #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/rtd.css"/>
 
-
-#+HTML_HEAD: <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-
-
 #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
 
 #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
@@ -94,6 +89,9 @@ to its 2 first levels) at the top of document.
 #+begin_src org :eval never-export
 #+OPTIONS:   p:t
 #+end_src
+
+~#+TOC: figures~ is not implemented yet in the HMTL backend (though ~#+TOC: tables~
+is).
 
 * Section titles (headings)
 
@@ -581,26 +579,26 @@ Admonitiontodo
 
 ** List of supported admonitions
 
-| Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence |
-|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
-|     0 | note      |   1 |   1 |        1 |       1 |                 1 |         |          1 |
-|     0 | warning   |   1 |   1 |        1 |       1 |                 1 |       1 |          1 |
-|     0 | tip       |   1 |   1 |        1 |       1 |                 1 |         |          1 |
-|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
-|     0 | important |   1 |   1 |        1 |       1 |                 1 |         |            |
-|     0 | caution   |   1 |   1 |        1 |       1 |                 1 |         |            |
-|-------+-----------+-----+-----+----------+---------+-------------------+---------+------------|
-|     0 | attention |   1 |   1 |          |         |                   |         |            |
-|     0 | danger    |   1 |   1 |          |         |                   |         |            |
-|     0 | error     |   1 |   1 |          |         |                   |         |            |
-|     0 | hint      |   1 |   1 |          |         |                   |         |            |
-|     0 | seealso   |     |   ? |          |         |                   |         |            |
-|     0 | todo      |     |   ? |          |         |                   |         |            |
-|     0 | notice    |     |     |          |         |                   |       1 |            |
-|     0 | question  |     |     |          |         |                   |       1 |            |
-|     0 | summary   |     |     |          |         |                   |       1 |            |
-|     0 | info      |     |     |          |         |                   |         |          1 |
-#+TBLFM: $1=vsum($9..$8)
+|  Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence | SuperCollider |
+|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
+|      6 | note      |   1 |   1 |        1 |       1 |                 1 |         |          1 |             1 |
+|      7 | warning   |   1 |   1 |        1 |       1 |                 1 |       1 |          1 |             1 |
+|      6 | tip       |   1 |   1 |        1 |       1 |                 1 |         |          1 |               |
+|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
+|      5 | important |   1 |   1 |        1 |       1 |                 1 |         |            |               |
+|      5 | caution   |   1 |   1 |        1 |       1 |                 1 |         |            |               |
+|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
+|      2 | attention |   1 |   1 |          |         |                   |         |            |               |
+|      2 | danger    |   1 |   1 |          |         |                   |         |            |               |
+|      2 | error     |   1 |   1 |          |         |                   |         |            |               |
+|      2 | hint      |   1 |   1 |          |         |                   |         |            |               |
+| #ERROR | seealso   |     |   ? |          |         |                   |         |            |               |
+| #ERROR | todo      |     |   ? |          |         |                   |         |            |               |
+|      1 | notice    |     |     |          |         |                   |       1 |            |               |
+|      1 | question  |     |     |          |         |                   |       1 |            |               |
+|      1 | summary   |     |     |          |         |                   |       1 |            |               |
+|      1 | info      |     |     |          |         |                   |         |          1 |               |
+#+TBLFM: $1=vsum($3..$9)
 
 ** Note
 
@@ -651,12 +649,6 @@ Important
 #+begin_error
 Error
 #+end_error
-
-** Neutral
-
-#+begin_neutral
-Neutral
-#+end_neutral
 
 * Centered text
 
@@ -711,40 +703,24 @@ commodo. Curabitur accumsan. Nam sed metus. Etiam tristique bibendum justo.
 You can have ~example~ blocks.
 
 #+begin_src org
-: .MS-DOS directory listing
-: -----------------------------------------------------
 : 10/17/97   9:04         <DIR>    bin
 : 10/16/97  14:11         <DIR>    DOS
-: 10/16/97  14:40         <DIR>    Program Files
 : 10/16/97  14:46         <DIR>    TEMP
-: 10/17/97   9:04         <DIR>    tmp
 : 10/16/97  14:37         <DIR>    WINNT
 : 10/16/97  14:25             119  AUTOEXEC.BAT
 :  2/13/94   6:21          54,619  COMMAND.COM
-: 10/16/97  14:25             115  CONFIG.SYS
-: 11/16/97  17:17      61,865,984  pagefile.sys
-:  2/13/94   6:21           9,349  WINA20.386
-: -----------------------------------------------------
 #+end_src
 
 or
 
 #+begin_src org
 ,#+begin_example
-.MS-DOS directory listing
------------------------------------------------------
 10/17/97   9:04         <DIR>    bin
 10/16/97  14:11         <DIR>    DOS
-10/16/97  14:40         <DIR>    Program Files
 10/16/97  14:46         <DIR>    TEMP
-10/17/97   9:04         <DIR>    tmp
 10/16/97  14:37         <DIR>    WINNT
 10/16/97  14:25             119  AUTOEXEC.BAT
  2/13/94   6:21          54,619  COMMAND.COM
-10/16/97  14:25             115  CONFIG.SYS
-11/16/97  17:17      61,865,984  pagefile.sys
- 2/13/94   6:21           9,349  WINA20.386
------------------------------------------------------
 ,#+end_example
 #+end_src
 
