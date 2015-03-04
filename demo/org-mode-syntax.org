@@ -431,8 +431,8 @@ See http://www.pirilampo.org (automatic!) and the
 [[http://orgmode.org/][Org mode Web site]].
 #+end_src
 
-# Clicking on the image [[http://orgmode.org/][file:org-mode-unicorn.png]] leads to the Org mode home
-# page.
+# Clicking on the image [[http://orgmode.org/][file:images/org-mode-unicorn.png]] leads to the Org mode
+# home page.
 
 *** Relative links
 
@@ -493,11 +493,11 @@ You can insert *image* files of different *formats* to a document:
 
 #+begin_src org
 #+CAPTION: Org mode logo
-[[file:org-mode-unicorn.png]]
+[[file:images/org-mode-unicorn.png]]
 #+end_src
 
 #+begin_src org
-Click to see the [[file:org-mode-unicorn.png][Unicorn picture]].
+Click to see the [[file:images/org-mode-unicorn.png][Unicorn picture]].
 #+end_src
 
 ** Image alignment (using positioning)
@@ -528,7 +528,7 @@ XXX Available HTML image tags include ...
 
 #+begin_src org
 #+ATTR_LaTeX: :width 0.25\linewidth
-[[file:org-mode-unicorn.png]]
+[[file:images/org-mode-unicorn.png]]
 #+end_src
 
 Place images side by side: XXX
@@ -1222,7 +1222,7 @@ It uses directly the dot command to process DOT language.
 ** Undirected
 
 #+begin_src org
-,#+begin_src dot :file graph.png :cmdline -Tpng
+,#+begin_src dot :file images/graph.png :cmdline -Tpng
 graph foo {
         "bar" -- "baz";
 }
@@ -1232,7 +1232,7 @@ graph foo {
 ** Directed
 
 #+begin_src org :exports results
-,#+begin_src dot :file digraph.png :cmdline -Tpng
+,#+begin_src dot :file images/digraph.png :cmdline -Tpng
 digraph foo {
         "bar" -> "baz";
 }
@@ -1294,7 +1294,7 @@ Data to be charted:
 Code:
 
 #+name: R-plot
-#+begin_src R :var data=data :results graphics :file Rplot.png :exports both
+#+begin_src R :var data=data :results graphics :file images/Rplot.png :exports both
 plot(data, type="b", bty="l", col=c("#ABD249"), las=1, lwd=4)
 grid(nx=NULL, ny=NULL, col=c("#E8E8E8"), lwd=1)
 legend("bottom", legend=c("Degrees"), col=c("#ABD249"), pch=c(19))
@@ -1305,7 +1305,7 @@ legend("bottom", legend=c("Degrees"), col=c("#ABD249"), pch=c(19))
 The resulting chart:
 
 #+results: R-plot
-[[file:Rplot.png]]
+[[file:images/Rplot.png]]
 
 ** R code block
 
