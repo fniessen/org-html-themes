@@ -117,17 +117,17 @@ You can either:
 
 *** Bigblow
 
-In order to use this style, just copy the [[file:setup/bigblow-pirilampo.setup][bigblow-pirilampo.setup]] file to your
+In order to use this style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to your
 project and link to it this way:
 
 #+begin_src org :exports code
-,#+SETUPFILE: bigblow-pirilampo.setup
+,#+SETUPFILE: theme-bigblow.setup
 #+end_src
 
 If you prefer, you can add the content of the setup file at the beginning of
 your Org file instead:
 
-#+begin_src org :exports code :tangle setup/bigblow-pirilampo.setup
+#+begin_src org :exports code :tangle setup/theme-bigblow.setup
 # -*- mode: org; -*-
 
 ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
@@ -144,9 +144,11 @@ your Org file instead:
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
+**** Local version
+
 Here a local version (using relative paths):
 
-#+begin_src org :exports code :tangle setup/bigblow-local.setup
+#+begin_src org :exports code :tangle setup/theme-bigblow-local.setup
 # -*- mode: org; -*-
 
 ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
@@ -163,10 +165,12 @@ Here a local version (using relative paths):
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
+**** Development version
+
 Here is a remote version (with CSS/JS files served from GitHub webservers) to
 share *temporary* examples or demos with small numbers of people:
 
-#+begin_src org :exports code :tangle setup/bigblow-github-dev.setup
+#+begin_src org :exports code :tangle setup/theme-bigblow-github-dev.setup
 # -*- mode: org; -*-
 
 ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/htmlize.css"/>
