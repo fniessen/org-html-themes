@@ -550,34 +550,20 @@ Though, you can add an image with a link to the video like this:
 
 * Admonitions
 
-You can create several other boxes (~info~, ~tip~, ~note~ or ~warning~) which all have
-a different default image.
+Admonitions are statements taken out of the content's flow and labeled with
+a title.
 
-Admonitions: attention, caution, danger, error, hint, important, note, tip,
-warning and the generic admonition.
+Common admonitions are:
+
+1. ~note~
+2. ~warning~
+3. ~tip~
+4. ~caution~
+5. ~important~
 
 (Most themes style only ~note~ and ~warning~ specially.)
 
-Simple box ("inline task"):
-
-#+begin_src org
-*************** TODO Do this task
-Description of inline task.
-*************** END
-#+end_src
-
-or:
-
-#+begin_src org
-*************** WAIT [#B] Do also this other task                        :phone:
-*************** END
-#+end_src
-
-#+begin_admonitiontodo
-Admonitiontodo
-#+end_admonitiontodo
-
-** List of supported admonitions
+** List of supported admonitions                                      :noexport:
 
 |  Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence | SuperCollider |
 |--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
@@ -604,51 +590,87 @@ Admonitiontodo
 
 A note box is displayed as follows:
 
-#+begin_note
+#+begin_src org
+,#+begin_note
 This is a useful note.
-#+end_note
+,#+end_note
+#+end_src
 
 # #+attr_html: :options [By the way...]
 # #+begin_note
 # This is a useful note (with a title).
 # #+end_note
 
-#+begin_seealso
+#+begin_src org
+,#+begin_seealso
 - [[http://en.wikipedia.org/wiki/Apple][Apples]] ::
      A kind of [[http://en.wikipedia.org/wiki/Fruit][fruit]].
-#+end_seealso
+,#+end_seealso
+#+end_src
 
 ** Warning
 
 A warning box is displayed as follows:
 
-#+begin_warning
+#+begin_src org
+,#+begin_warning
 Be careful!  Check that you have...
-#+end_warning
+,#+end_warning
+#+end_src
 
-# #+html: <p style="font-family: 'FontAwesome'>UUU  UUU Warning UUU</p>
-
-#+begin_caution
+#+begin_src org
+,#+begin_caution
 Caution
-#+end_caution
+,#+end_caution
+#+end_src
 
 ** Tip
 
 A tip box is displayed as follows:
 
-#+begin_tip
+#+begin_src org
+,#+begin_tip
 Try doing it this way...
-#+end_tip
+,#+end_tip
+#+end_src
 
-#+begin_important
+#+begin_src org
+,#+begin_important
 Important
-#+end_important
+,#+end_important
+#+end_src
 
 ** Error
 
-#+begin_error
+#+begin_src org
+,#+begin_error
 Error
-#+end_error
+,#+end_error
+#+end_src
+
+** Todo
+
+Simple box ("inline task"):
+
+#+begin_src org
+*************** TODO Do this task
+Description of inline task.
+*************** END
+#+end_src
+
+*************** TODO Do this task
+Description of inline task.
+*************** END
+or:
+
+#+begin_src org
+*************** WAIT [#B] Do also this other task                        :phone:
+*************** END
+#+end_src
+
+#+begin_admonitiontodo
+Admonitiontodo
+#+end_admonitiontodo
 
 * Centered text
 

@@ -115,11 +115,11 @@
 <li><a href="#unnumbered-56">Videos</a></li>
 <li><a href="#unnumbered-57">Admonitions</a>
 <ul>
-<li><a href="#unnumbered-58">List of supported admonitions</a></li>
-<li><a href="#unnumbered-59">Note</a></li>
-<li><a href="#unnumbered-60">Warning</a></li>
-<li><a href="#unnumbered-61">Tip</a></li>
-<li><a href="#unnumbered-62">Error</a></li>
+<li><a href="#unnumbered-58">Note</a></li>
+<li><a href="#unnumbered-59">Warning</a></li>
+<li><a href="#unnumbered-60">Tip</a></li>
+<li><a href="#unnumbered-61">Error</a></li>
+<li><a href="#unnumbered-62">Todo</a></li>
 </ul>
 </li>
 <li><a href="#unnumbered-63">Centered text</a></li>
@@ -1551,19 +1551,168 @@ Though, you can add an image with a link to the video like this:
 <h2 id="unnumbered-57">Admonitions</h2>
 <div class="outline-text-2" id="text-unnumbered-57">
 <p>
-You can create several other boxes (<code>info</code>, <code>tip</code>, <code>note</code> or <code>warning</code>) which all have
-a different default image.
+Admonitions are statements taken out of the content&rsquo;s flow and labeled with
+a title.
 </p>
 
 <p>
-Admonitions: attention, caution, danger, error, hint, important, note, tip,
-warning and the generic admonition.
+Common admonitions are:
 </p>
+
+<ol class="org-ol">
+<li><code>note</code></li>
+<li><code>warning</code></li>
+<li><code>tip</code></li>
+<li><code>caution</code></li>
+<li><code>important</code></li>
+</ol>
 
 <p>
 (Most themes style only <code>note</code> and <code>warning</code> specially.)
 </p>
+</div>
 
+<div id="outline-container-unnumbered-58" class="outline-3">
+<h3 id="unnumbered-58">Note</h3>
+<div class="outline-text-3" id="text-unnumbered-58">
+<p>
+A note box is displayed as follows:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_note</span>
+This is a useful note.
+<span class="org-org-block-end-line">#+end_note</span>
+</pre>
+</div>
+
+<div class="note">
+<p>
+This is a useful note.
+</p>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_seealso</span>
+- <span class="org-org-list-dt"><span class="org-org-link"><a href="http://en.wikipedia.org/wiki/Apple">Apples</a></span></span><span class="org-org-list-dt"> ::</span>
+     A kind of <span class="org-org-link"><a href="http://en.wikipedia.org/wiki/Fruit">fruit</a></span>.
+<span class="org-org-block-end-line">#+end_seealso</span>
+</pre>
+</div>
+
+<div class="seealso">
+<dl class="org-dl">
+<dt><a href="http://en.wikipedia.org/wiki/Apple">Apples</a></dt><dd>A kind of <a href="http://en.wikipedia.org/wiki/Fruit">fruit</a>.</dd>
+</dl>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-59" class="outline-3">
+<h3 id="unnumbered-59">Warning</h3>
+<div class="outline-text-3" id="text-unnumbered-59">
+<p>
+A warning box is displayed as follows:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_warning</span>
+Be careful!  Check that you have...
+<span class="org-org-block-end-line">#+end_warning</span>
+</pre>
+</div>
+
+<div class="warning">
+<p>
+Be careful!  Check that you have&#x2026;
+</p>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_caution</span>
+Caution
+<span class="org-org-block-end-line">#+end_caution</span>
+</pre>
+</div>
+
+<div class="caution">
+<p>
+Caution
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-60" class="outline-3">
+<h3 id="unnumbered-60">Tip</h3>
+<div class="outline-text-3" id="text-unnumbered-60">
+<p>
+A tip box is displayed as follows:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_tip</span>
+Try doing it this way...
+<span class="org-org-block-end-line">#+end_tip</span>
+</pre>
+</div>
+
+<div class="tip">
+<p>
+Try doing it this way&#x2026;
+</p>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_important</span>
+Important
+<span class="org-org-block-end-line">#+end_important</span>
+</pre>
+</div>
+
+<div class="important">
+<p>
+Important
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-61" class="outline-3">
+<h3 id="unnumbered-61">Error</h3>
+<div class="outline-text-3" id="text-unnumbered-61">
+<div class="org-src-container">
+
+<pre class="src src-org"><span class="org-org-block-begin-line">#+begin_error</span>
+Error
+<span class="org-org-block-end-line">#+end_error</span>
+</pre>
+</div>
+
+<div class="error">
+<p>
+Error
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-unnumbered-62" class="outline-3">
+<h3 id="unnumbered-62">Todo</h3>
+<div class="outline-text-3" id="text-unnumbered-62">
 <p>
 Simple box (&ldquo;inline task&rdquo;):
 </p>
@@ -1582,6 +1731,10 @@ Description of inline task.
 </p>
 <table class="inlinetask" width="100%"><tr><td valign="top"><b></b></td><td width="100%"><b>END</b><br /></td></tr></table>
 
+<table class="inlinetask" width="100%"><tr><td valign="top"><b><span class="todo TODO">TODO</span> </b></td><td width="100%"><b>Do this task</b><br /><p>
+Description of inline task.
+</p>
+</td></tr></table>
 <p>
 or:
 </p>
@@ -1601,329 +1754,6 @@ or:
 <div class="admonitiontodo">
 <p>
 Admonitiontodo
-</p>
-
-</div>
-</div>
-
-<div id="outline-container-unnumbered-58" class="outline-3">
-<h3 id="unnumbered-58">List of supported admonitions</h3>
-<div class="outline-text-3" id="text-unnumbered-58">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="right" />
-
-<col  class="left" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="right" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="right">Total</th>
-<th scope="col" class="left">&#xa0;</th>
-<th scope="col" class="right">rST</th>
-<th scope="col" class="right">RTD</th>
-<th scope="col" class="right">AsciiDoc</th>
-<th scope="col" class="right">DocBook</th>
-<th scope="col" class="right">MoinMoin (Modern)</th>
-<th scope="col" class="right">DocOnce</th>
-<th scope="col" class="right">Confluence</th>
-<th scope="col" class="right">SuperCollider</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="right">6</td>
-<td class="left">note</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">1</td>
-</tr>
-
-<tr>
-<td class="right">7</td>
-<td class="left">warning</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-</tr>
-
-<tr>
-<td class="right">6</td>
-<td class="left">tip</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td class="right">5</td>
-<td class="left">important</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">5</td>
-<td class="left">caution</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-</tbody>
-<tbody>
-<tr>
-<td class="right">2</td>
-<td class="left">attention</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">2</td>
-<td class="left">danger</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">2</td>
-<td class="left">error</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">2</td>
-<td class="left">hint</td>
-<td class="right">1</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">#ERROR</td>
-<td class="left">seealso</td>
-<td class="right">&#xa0;</td>
-<td class="right">?</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">#ERROR</td>
-<td class="left">todo</td>
-<td class="right">&#xa0;</td>
-<td class="right">?</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">1</td>
-<td class="left">notice</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">1</td>
-<td class="left">question</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">1</td>
-<td class="left">summary</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="right">1</td>
-<td class="left">info</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">&#xa0;</td>
-<td class="right">1</td>
-<td class="right">&#xa0;</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-unnumbered-59" class="outline-3">
-<h3 id="unnumbered-59">Note</h3>
-<div class="outline-text-3" id="text-unnumbered-59">
-<p>
-A note box is displayed as follows:
-</p>
-
-<div class="note">
-<p>
-This is a useful note.
-</p>
-
-</div>
-
-<div class="seealso">
-<dl class="org-dl">
-<dt><a href="http://en.wikipedia.org/wiki/Apple">Apples</a></dt><dd>A kind of <a href="http://en.wikipedia.org/wiki/Fruit">fruit</a>.</dd>
-</dl>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-unnumbered-60" class="outline-3">
-<h3 id="unnumbered-60">Warning</h3>
-<div class="outline-text-3" id="text-unnumbered-60">
-<p>
-A warning box is displayed as follows:
-</p>
-
-<div class="warning">
-<p>
-Be careful!  Check that you have&#x2026;
-</p>
-
-</div>
-
-<div class="caution">
-<p>
-Caution
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-unnumbered-61" class="outline-3">
-<h3 id="unnumbered-61">Tip</h3>
-<div class="outline-text-3" id="text-unnumbered-61">
-<p>
-A tip box is displayed as follows:
-</p>
-
-<div class="tip">
-<p>
-Try doing it this way&#x2026;
-</p>
-
-</div>
-
-<div class="important">
-<p>
-Important
-</p>
-
-</div>
-</div>
-</div>
-
-<div id="outline-container-unnumbered-62" class="outline-3">
-<h3 id="unnumbered-62">Error</h3>
-<div class="outline-text-3" id="text-unnumbered-62">
-<div class="error">
-<p>
-Error
 </p>
 
 </div>
@@ -3090,7 +2920,7 @@ A one-liner result:
 </div>
 
 <pre class="example">
-2015-03-04
+2015-03-05
 </pre>
 </div>
 </div>
