@@ -411,7 +411,7 @@ to the right.
 | Cell in column 1, row 2 | Cell in column 2, row 2 |
 #+end_src
 
-* CSV
+** CSV
 
 You can fill table from CSV file using R commands.
 
