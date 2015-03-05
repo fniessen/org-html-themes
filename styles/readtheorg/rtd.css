@@ -1,5 +1,5 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700);
-
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 *{
     -webkit-box-sizing:border-box;
@@ -88,7 +88,7 @@ mark{
     background:#fff;
     margin:1px 0 24px 0}
 
-pre.src{
+pre.src,example{
     /* color:#404040; */
     display:block;
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
@@ -481,7 +481,14 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
     padding:12px;
     line-height:24px;
     margin-bottom:24px;
-    background:#e7f2fa;
+    /* background:#e7f2fa; */
+}
+
+.example{
+    padding:12px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom:24px;
 }
 
 .wy-alert-title,#content .admonition-title{
@@ -494,64 +501,62 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
     padding:6px 12px;
     margin-bottom:0px}
 
-.wy-alert.wy-alert-danger,#content .wy-alert-danger.note,#content .wy-alert-danger.attention,#content .wy-alert-danger.caution,#content .danger,#content .error,#content .wy-alert-danger.hint,#content .wy-alert-danger.important,#content .wy-alert-danger.tip,#content .wy-alert-danger.warning,#content .wy-alert-danger.seealso,#content .wy-alert-danger.admonitiontodo{
+#content .danger,#content .error{
     background:#fdf3f2}
-
-/* .wy-alert.wy-alert-danger .wy-alert-title,#content .wy-alert-danger.note .wy-alert-title,#content .wy-alert-danger.attention .wy-alert-title,#content .wy-alert-danger.caution .wy-alert-title,#content .danger .wy-alert-title,#content .error .wy-alert-title,#content .wy-alert-danger.hint .wy-alert-title,#content .wy-alert-danger.important .wy-alert-title,#content .wy-alert-danger.tip .wy-alert-title,#content .wy-alert-danger.warning .wy-alert-title,#content .wy-alert-danger.seealso .wy-alert-title,#content .wy-alert-danger.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-danger #content .admonition-title,#content .wy-alert.wy-alert-danger .admonition-title,#content .wy-alert-danger.note .admonition-title,#content .wy-alert-danger.attention .admonition-title,#content .wy-alert-danger.caution .admonition-title,#content .danger .admonition-title,#content .error .admonition-title,#content .wy-alert-danger.hint .admonition-title,#content .wy-alert-danger.important .admonition-title,#content .wy-alert-danger.tip .admonition-title,#content .wy-alert-danger.warning .admonition-title,#content .wy-alert-danger.seealso .admonition-title,#content .wy-alert-danger.admonitiontodo .admonition-title{ */
-/*     background:#f29f97} */
 
 .wy-alert.wy-alert-warning,#content .wy-alert-warning.note,#content .attention,#content .caution,#content .wy-alert-warning.danger,#content .wy-alert-warning.error,#content .wy-alert-warning.hint,#content .wy-alert-warning.important,#content .wy-alert-warning.tip,#content .warning,#content .wy-alert-warning.seealso,#content .admonitiontodo{
     background:#ffedcc}
 
-#content .admonition-title.warning,#content .admonition-title.caution,#content .admonition-title.attention{
-    background: #f0b37e;
-    /* font-family:FontAwesome; */
-    content: "\25AE";
+
+.inlinetask {
+    background: #f2d9b4;  /* url(dialog-todo.png) no-repeat 10px 8px; */
+    border: 2px solid #e9b96e;
+    border-right-style: none;
+    border-left-style: none;
+    padding: 10px 20px 10px 60px;
 }
 
-#content .admonition-title.warning:before,#content .admonition-title.caution:before,#content .admonition-title.attention:before{
+
+#content .admonition-title.note:before,#content .admonition-title.seealso:before,
+#content .admonition-title.warning:before,#content .admonition-title.caution:before,
+#content .admonition-title.tip:before,#content .admonition-title.important:before,
+#content .admonition-title.error:before{
     font-family:FontAwesome;
     content: "";}
 
 #content .note,#content .seealso{
     background:#e7f2fa}
 
-/* .wy-alert.wy-alert-info .wy-alert-title,#content .note .wy-alert-title,#content .wy-alert-info.attention .wy-alert-title,#content .wy-alert-info.caution .wy-alert-title,#content .wy-alert-info.danger .wy-alert-title,#content .wy-alert-info.error .wy-alert-title,#content .wy-alert-info.hint .wy-alert-title,#content .wy-alert-info.important .wy-alert-title,#content .wy-alert-info.tip .wy-alert-title,#content .wy-alert-info.warning .wy-alert-title,#content .seealso .wy-alert-title,#content .wy-alert-info.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-info #content .admonition-title,#content .wy-alert.wy-alert-info .admonition-title,#content .note .admonition-title,#content .wy-alert-info.attention .admonition-title,#content .wy-alert-info.caution .admonition-title,#content .wy-alert-info.danger .admonition-title,#content .wy-alert-info.error .admonition-title,#content .wy-alert-info.hint .admonition-title,#content .wy-alert-info.important .admonition-title,#content .wy-alert-info.tip .admonition-title,#content .wy-alert-info.warning .admonition-title,#content .seealso .admonition-title,#content .wy-alert-info.admonitiontodo .admonition-title{ */
-/*     background:#6ab0de} */
+#content .neutral{
+    color:#404040;
+    background:#e1e4e5}
 
-#content .admonition-title.note,#content .admonition-title.seealso{
-    background:#6ab0de}
-}
-#content .important,#content .tip{
-    background:#dbfaf4}
-
-/* .wy-alert.wy-alert-success .wy-alert-title,#content .wy-alert-success.note .wy-alert-title,#content .wy-alert-success.attention .wy-alert-title,#content .wy-alert-success.caution .wy-alert-title,#content .wy-alert-success.danger .wy-alert-title,#content .wy-alert-success.error .wy-alert-title,#content .hint .wy-alert-title,#content .important .wy-alert-title,#content .tip .wy-alert-title,#content .wy-alert-success.warning .wy-alert-title,#content .wy-alert-success.seealso .wy-alert-title,#content .wy-alert-success.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-success #content .admonition-title,#content .wy-alert.wy-alert-success .admonition-title,#content .wy-alert-success.note .admonition-title,#content .wy-alert-success.attention .admonition-title,#content .wy-alert-success.caution .admonition-title,#content .wy-alert-success.danger .admonition-title,#content .wy-alert-success.error .admonition-title,#content .hint .admonition-title,#content .important .admonition-title,#content .tip .admonition-title,#content .wy-alert-success.warning .admonition-title,#content .wy-alert-success.seealso .admonition-title,#content .wy-alert-success.admonitiontodo .admonition-title{ */
-/*     background:#1abc9c} */
-
-.wy-alert.wy-alert-neutral,#content .wy-alert-neutral.note,#content .wy-alert-neutral.attention,#content .wy-alert-neutral.caution,#content .wy-alert-neutral.danger,#content .wy-alert-neutral.error,#content .wy-alert-neutral.hint,#content .wy-alert-neutral.important,#content .wy-alert-neutral.tip,#content .wy-alert-neutral.warning,#content .wy-alert-neutral.seealso,#content .wy-alert-neutral.admonitiontodo{
+#content .example{
+    color:#404040;
+    border:1px solid #e1e4e5;
     background:#f3f6f6}
-
-/* .wy-alert.wy-alert-neutral .wy-alert-title,#content .wy-alert-neutral.note .wy-alert-title,#content .wy-alert-neutral.attention .wy-alert-title,#content .wy-alert-neutral.caution .wy-alert-title,#content .wy-alert-neutral.danger .wy-alert-title,#content .wy-alert-neutral.error .wy-alert-title,#content .wy-alert-neutral.hint .wy-alert-title,#content .wy-alert-neutral.important .wy-alert-title,#content .wy-alert-neutral.tip .wy-alert-title,#content .wy-alert-neutral.warning .wy-alert-title,#content .wy-alert-neutral.seealso .wy-alert-title,#content .wy-alert-neutral.admonitiontodo .wy-alert-title,.wy-alert.wy-alert-neutral #content .admonition-title,#content .wy-alert.wy-alert-neutral .admonition-title,#content .wy-alert-neutral.note .admonition-title,#content .wy-alert-neutral.attention .admonition-title,#content .wy-alert-neutral.caution .admonition-title,#content .wy-alert-neutral.danger .admonition-title,#content .wy-alert-neutral.error .admonition-title,#content .wy-alert-neutral.hint .admonition-title,#content .wy-alert-neutral.important .admonition-title,#content .wy-alert-neutral.tip .admonition-title,#content .wy-alert-neutral.warning .admonition-title,#content .wy-alert-neutral.seealso .admonition-title,#content .wy-alert-neutral.admonitiontodo .admonition-title{ */
-/*     color:#404040; */
-/*     background:#e1e4e5} */
-
-/* .wy-alert.wy-alert-neutral a,#content .wy-alert-neutral.note a,#content .wy-alert-neutral.attention a,#content .wy-alert-neutral.caution a,#content .wy-alert-neutral.danger a,#content .wy-alert-neutral.error a,#content .wy-alert-neutral.hint a,#content .wy-alert-neutral.important a,#content .wy-alert-neutral.tip a,#content .wy-alert-neutral.warning a,#content .wy-alert-neutral.seealso a,#content .wy-alert-neutral.admonitiontodo a{ */
-/*     color:#2980B9} */
 
 .wy-alert p:last-child,#content .note p:last-child,#content .attention p:last-child,#content .caution p:last-child,#content .danger p:last-child,#content .error p:last-child,#content .hint p:last-child,#content .important p:last-child,#content .tip p:last-child,#content .warning p:last-child,#content .seealso p:last-child,#content .admonitiontodo p:last-child{
     margin-bottom:0}
 
 #content .admonition-title.tip,#content .admonition-title.important{
-    background:#27AE60}
+    line-height: 1;
+    background:#1abc9c}
+
+#content .important,#content .tip{
+    background:#dbfaf4}
 
 #content .admonition-title.note,#content .admonition-title.seealso{
-    background:#2980B9}
+    line-height: 1;
+    background:#6ab0de}
 
 #content .admonition-title.warning,#content .admonition-title.caution{
-    background:#E67E22}
+    line-height: 1;
+    background:#F0B37E}
 
 #content .admonition-title.error{
-    background:#E74C3C}
+    line-height: 1;
+    background:#f29f97}
 
 @media screen and (max-width: 768px){
     .wy-tray-container{
@@ -1470,6 +1475,12 @@ code.code-large,#content tt.code-large{
     min-height:100%;
     background:#343131;
     z-index:200}
+
+/* #table-of-contents{ */
+/*     background:left repeat-y #343131; */
+/*     background-image:url(data:image/png; */
+/*                          base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOERBMTRGRDBFMUUxMUUzODUwMkJCOThDMEVFNURFMCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOERBMTRGRTBFMUUxMUUzODUwMkJCOThDMEVFNURFMCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4REExNEZCMEUxRTExRTM4NTAyQkI5OEMwRUU1REUwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4REExNEZDMEUxRTExRTM4NTAyQkI5OEMwRUU1REUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+EwrlwAAAAA5JREFUeNpiMDU0BAgwAAE2AJgB9BnaAAAAAElFTkSuQmCC); */
+/*     background-size:300px 1px} */
 
 .wy-nav-top{
     display:none;
