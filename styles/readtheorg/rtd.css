@@ -509,11 +509,13 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
 
 .inlinetask {
     background: #f2d9b4;  /* url(dialog-todo.png) no-repeat 10px 8px; */
-    border: 2px solid #e9b96e;
+    /* border: 2px solid #e9b96e; */
     border-right-style: none;
     border-left-style: none;
-    padding: 10px 20px 10px 60px;
-}
+    /* padding: 10px 20px 10px 60px; */
+    padding: 9px 12px;
+    margin-bottom: 24px;
+    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
 
 #content .admonition-title.note:before,#content .admonition-title.seealso:before,
 #content .admonition-title.warning:before,#content .admonition-title.caution:before,
