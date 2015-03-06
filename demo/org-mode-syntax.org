@@ -1304,32 +1304,6 @@ the ~org-babel-load-languages~ variable.
 
 It uses directly the ~R~ command to process R language.
 
-** Text
-
-A one-liner result:
-
-#+begin_src shell :exports both :results verbatim
-date +"%Y-%m-%d"
-#+end_src
-
-#+results:
-: 2014-03-15
-
-# A multiple-line result:
-#
-# #+name: list-of-styles
-# #+begin_src shell :exports both :results verbatim
-# # output all styles, but the default one (if any)
-# ls styles | grep -v "default"
-# #+end_src
-#
-# #+results: list-of-styles
-# #+begin_example
-# bigblow
-# leuven
-# maunakea
-# #+end_example
-
 ** Example
 
 Data to be charted:
@@ -1359,28 +1333,10 @@ grid(nx=NULL, ny=NULL, col=c("#E8E8E8"), lwd=1)
 legend("bottom", legend=c("Degrees"), col=c("#ABD249"), pch=c(19))
 #+end_src
 
-** Graph
-
 The resulting chart:
 
 #+results: R-plot
 [[file:images/Rplot.png]]
-
-** R code block
-
-#+begin_src R
-library(ggplot2)
-summary(cars)
-#+end_src
-
-#+results:
-
-Plot:
-
-#+begin_src R
-library(ggplot2)
-qplot(speed, dist, data = cars) + geom_smooth()
-#+end_src
 
 * Index
 
