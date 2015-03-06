@@ -1340,17 +1340,32 @@ The resulting chart:
 #+results: R-plot
 [[file:images/Rplot.png]]
 
-* Index
-
-Index (or list of acronyms).
-
-* Bibliography
-
 * Citations
 
 Cross-referenced to bibliography.
 
-* Glossary
+* Appendix
+
+** Index
+
+Index (or list of acronyms).
+
+** Bibliography
+
+The bibliography...
+
+- Eric Steven Raymond. The Art of Unix Programming. Addison-Wesley. ISBN
+  0-13-142901-9.
+
+** Glossary
+
+Glossaries are optional.
+
+- A glossary term ::
+     The corresponding (indented) definition.
+
+- A second glossary term ::
+     The corresponding (indented) definition.
 
 * Footnotes
 
