@@ -30,13 +30,13 @@ This is an Org mode document, using the ~.org~ extension (supported by GitHub).
 *Org mode* is an easy-to-write /plain text/ formatting syntax for authoring notes,
 articles, LaTeX documents, books, Web pages, Beamer slide decks and much more!
 
-* Abstract
-
+#+begin_abstract
 This is a cheat sheet for *Org mode 8* (because of some markup syntax changes
 since Org mode 7), using [[https://github.com/fniessen/org-html-themes][ReadTheOrg CSS]].
 
 Reading through all the documentation is highly recommended, but for the truly
 impatient, following are some quick steps to get started.
+#+end_abstract
 
 # See http://asciidoctor.org/docs/user-manual/#the-big-picture
 
@@ -1263,8 +1263,9 @@ FIXME Delete this...
 To enable the Graphviz extension, we have to add it to the extensions list in
 the ~org-babel-load-languages~ variable.
 
-#+begin_src emacs-lisp
-(org-babel-do-load-languages 'org-babel-load-languages '((dot . t)))
+#+begin_src emacs-lisp :exports code
+(add-to-list 'org-babel-load-languages '(dot . t))
+(org-babel-do-load-languages 'org-babel-load-languages org-babel-load-languages)
 #+end_src
 
 It uses directly the ~dot~ command to process DOT language.
@@ -1298,8 +1299,9 @@ mindset.
 To enable the Graphviz extension, we have to add it to the extensions list in
 the ~org-babel-load-languages~ variable.
 
-#+begin_src emacs-lisp
-(org-babel-do-load-languages 'org-babel-load-languages '((R . t)))
+#+begin_src emacs-lisp :exports code
+(add-to-list 'org-babel-load-languages '(R . t)) ; Requires R and ess-mode.
+(org-babel-do-load-languages 'org-babel-load-languages org-babel-load-languages)
 #+end_src
 
 It uses directly the ~R~ command to process R language.
