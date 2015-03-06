@@ -415,7 +415,7 @@ to the right.
 
 ** CSV
 
-You can fill table from CSV file using R commands.
+You can fill a table from a CSV file using R commands.
 
 * Links
    :PROPERTIES:
