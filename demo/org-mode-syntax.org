@@ -90,8 +90,15 @@ to its 2 first levels) at the top of document.
 #+OPTIONS:   p:t
 #+end_src
 
-~#+TOC: figures~ is not implemented yet in the HMTL backend (though ~#+TOC: tables~
-is).
+** List of figures
+
+~#+TOC: figures~ is not implemented yet in the HMTL backend.
+
+** List of tables
+
+~#+TOC: tables~ is already implemented in the HTML backend.
+
+** List of equations
 
 * Section titles (headings)
 
@@ -202,6 +209,13 @@ is not
 bold.*
 #+end_src
 
+Org mode does not interpret a marker surrounded by alphanumeric characters as an
+emphasis marker. So, you can't (easily) emphasize just part of a word:
+
+#+begin_src org
+Not feas*ible*.
+#+end_src
+
 ** Monospace, superscript and subscript
 
 Other elements to use sparingly are:
@@ -209,10 +223,16 @@ Other elements to use sparingly are:
 #+begin_src org
 - monospaced typewriter font for ~inline code~
 - monospaced typewriter font for =verbatim text=
-- +deleted+ text (vs. _inserted_ text)
-- text with super^{script}, such as E=mc^{2}
+- +deleted text+ (vs. _inserted text_)
+- text with super^{script}, such as 2^{10}
 - text with sub_{script}, such as H_{2}O
 #+end_src
+
+** Smart punctuation
+
+If the XXX option is specified, Org mode will produce typographically correct
+output, converting straight quotes to curly quotes, ~---~ to em-dashes, ~--~ to
+en-dashes, and ~...~ to ellipses.
 
 * Lists
 
@@ -274,7 +294,7 @@ Labeled, multi-line lists.
      to see what happens when you have long lines.
 
 - Second term ::
-     Explication of the second term.
+     Explication of the second term with *inline markup*.
 
      In many paragraphs.
 #+end_src
@@ -1123,10 +1143,12 @@ to ~#+INCLUDE~:
 File inclusion, through INCLUDE keywords, is an *export-only feature*.
 #+end_note
 
-** Inline HTML
+** Raw HTML
+
+# http://johnmacfarlane.net/pandoc/README.html
 
 You can include raw HTML in your Org documents and it will get kept as HTML
-when it's exported. XXX
+when it's exported.
 
 #+HTML_BEGIN: <pre style="color:red">
 Text can be preformatted (in a fixed-width font).
@@ -1137,6 +1159,8 @@ need more control of the HTML options than Org mode actually gives you.
 
 Similarly, you can incorporate JS or do anything else you can do in a Web page
 (such as importing a CSS file).
+
+*** Native DIV blocks
 
 You can create named classes (to get style control from your CSS) with:
 
@@ -1157,7 +1181,7 @@ Finally, you can include an HTML file verbatim (during export) with:
 
 Don't edit the exported HTML file!
 
-** Inline LaTeX
+** Raw LaTeX
 
 You can also use raw LaTeX. XXX
 
@@ -1360,9 +1384,15 @@ qplot(speed, dist, data = cars) + geom_smooth()
 
 * Index
 
-* Glossary
+Index (or list of acronyms).
 
 * Bibliography
+
+* Citations
+
+Cross-referenced to bibliography.
+
+* Glossary
 
 * Footnotes
 
