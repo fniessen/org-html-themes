@@ -507,7 +507,6 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
 .wy-alert.wy-alert-warning,#content .wy-alert-warning.note,#content .attention,#content .caution,#content .wy-alert-warning.danger,#content .wy-alert-warning.error,#content .wy-alert-warning.hint,#content .wy-alert-warning.important,#content .wy-alert-warning.tip,#content .warning,#content .wy-alert-warning.seealso,#content .admonitiontodo{
     background:#ffedcc}
 
-
 .inlinetask {
     background: #f2d9b4;  /* url(dialog-todo.png) no-repeat 10px 8px; */
     border: 2px solid #e9b96e;
@@ -515,7 +514,6 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
     border-left-style: none;
     padding: 10px 20px 10px 60px;
 }
-
 
 #content .admonition-title.note:before,#content .admonition-title.seealso:before,
 #content .admonition-title.warning:before,#content .admonition-title.caution:before,
@@ -1557,34 +1555,6 @@ footer{
 footer p{
     margin-bottom:12px}
 
-.rst-footer-buttons{
-    *zoom:1}
-
-.rst-footer-buttons:before,.rst-footer-buttons:after{
-    display:table;
-    content:""}
-
-.rst-footer-buttons:after{
-    clear:both}
-
-#search-results .search li{
-    margin-bottom:24px;
-    border-bottom:solid 1px #e1e4e5;
-    padding-bottom:24px}
-
-#search-results .search li:first-child{
-    border-top:solid 1px #e1e4e5;
-    padding-top:24px}
-
-#search-results .search li a{
-    font-size:120%;
-    margin-bottom:12px;
-    display:inline-block}
-
-#search-results .context{
-    color:gray;
-    font-size:90%}
-
 @media screen and (max-width: 768px){
     .wy-body-for-nav{
         background:#fcfcfc}
@@ -1675,7 +1645,7 @@ nav.stickynav{
 #copyright .rst-current-version:after{
     clear:both}
 
-#copyright .rst-current-version .fa,#copyright .rst-current-version #content .admonition-title,#content #copyright .rst-current-version .admonition-title,#copyright .rst-current-version #content h1 .headerlink,#content h1 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content h2 .headerlink,#content h2 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content h3 .headerlink,#content h3 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content h4 .headerlink,#content h4 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content h5 .headerlink,#content h5 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content h6 .headerlink,#content h6 #copyright .rst-current-version .headerlink,#copyright .rst-current-version #content dl dt .headerlink,#content dl dt #copyright .rst-current-version .headerlink,#copyright .rst-current-version .icon{
+#copyright .rst-current-version .fa{
     color:#fcfcfc}
 
 #copyright .rst-current-version .fa-book,#copyright .rst-current-version .icon-book{
@@ -1735,7 +1705,7 @@ nav.stickynav{
 #copyright.rst-badge.shift-up .rst-current-version{
     text-align:right}
 
-#copyright.rst-badge.shift-up .rst-current-version .fa-book,#copyright.rst-badge.shift-up .rst-current-version .icon-book{
+#copyright.rst-badge.shift-up .rst-current-version .fa-book{
     float:left}
 
 #copyright.rst-badge.shift-up .rst-current-version .icon-book{
@@ -1910,5 +1880,20 @@ span[id*='MathJax-Span']{
 .math{
     text-align:center}
 
+/* .tag{ */
+/*     text-align: right; */
+/* } */
+
+.todo{
+    background-color: #f29f97;
+    padding: 0px 4px;
+    color: #fff;
+}
+
+.done{
+    background-color: #6ab0de;
+    padding: 0px 4px;
+    color: #fff;
+}
 
 /*# sourceMappingURL=theme.css.map */
