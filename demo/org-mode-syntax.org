@@ -4,7 +4,7 @@
 #+DESCRIPTION: Org mode syntax example
 #+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, recommended practices, latex, beamer, html
 #+LANGUAGE:  en
-#+OPTIONS:   H:4 num:nil toc:2 p:t
+#+OPTIONS:   H:4 num:nil toc:1 p:t
 
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
@@ -95,11 +95,13 @@ is).
 
 * Section titles (headings)
 
-#+begin_src org
+#+begin_src org :eval no
 ,* Biggest heading (level 1)
 
 New chapter.
+#+end_src
 
+#+begin_src org
 ,** Bigger heading (level 2)
 
 New section.
@@ -208,8 +210,8 @@ Other elements to use sparingly are:
 - monospaced typewriter font for ~inline code~
 - monospaced typewriter font for =verbatim text=
 - +deleted+ text (vs. _inserted_ text)
-- text with super^{script} (for example: ~m/s^{2}~ gives m/s^{2})
-- text with sub_{script}
+- text with super^{script}, such as E=mc^{2}
+- text with sub_{script}, such as H_{2}O
 #+end_src
 
 * Lists
@@ -1235,11 +1237,13 @@ FIXME Delete this...
 * Graphs with Graphviz
 
 To enable the Graphviz extension, we have to add it to the extensions list in
-conf.py:
+the ~org-babel-load-languages~ variable.
 
-extensions = ['sphinx.est.graphviz']
+#+begin_src emacs-lisp
+(org-babel-do-load-languages 'org-babel-load-languages '((dot . t)))
+#+end_src
 
-It uses directly the dot command to process DOT language.
+It uses directly the ~dot~ command to process DOT language.
 
 ** Undirected
 
@@ -1266,6 +1270,15 @@ digraph foo {
 The output from the *execution* of programs, scripts or commands can be inserted
 in the document itself, allowing you to work in the /reproducible research/
 mindset.
+
+To enable the Graphviz extension, we have to add it to the extensions list in
+the ~org-babel-load-languages~ variable.
+
+#+begin_src emacs-lisp
+(org-babel-do-load-languages 'org-babel-load-languages '((R . t)))
+#+end_src
+
+It uses directly the ~R~ command to process R language.
 
 ** Text
 
