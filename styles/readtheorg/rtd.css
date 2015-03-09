@@ -1186,7 +1186,7 @@ code,#content tt{
     font-size:75%;
     padding:0 5px;
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    /* color:#E74C3C; */
+    color:#000;
     overflow-x:auto}
 
 code.code-large,#content tt.code-large{
@@ -1738,4 +1738,57 @@ span[id*='MathJax-Span']{
     color: #fff;
 }
 
-/*# sourceMappingURL=theme.css.map */
+#footnotes{
+    border-top:1px solid #e1e4e5;
+    padding-top: 36px;
+}
+
+h2.footnotes{
+    display:none;
+}
+
+.footnum, .footref{
+    color: #2980b9;
+    font-size: 170%;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+}
+
+.footnum:before, .footref:before{
+    content:"[";
+}
+
+.footnum:after, .footref:after{
+    content:"]";
+}
+
+.footpara {
+    color: #999;
+    font-size: 90%;
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    line-height: 1.25em;
+    /* display: inline; */
+}
+
+.tag span {
+    background-color: #EDEDED;
+    border: 1px solid #EDEDED;
+    color: #939393;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 80%;
+    font-weight: normal;
+    margin: 0 3px;
+    padding: 1px 2px;
+    border-radius: 10px;
+}
+
+.tag .FLAGGED {
+    background-color: #EDC6C8;
+    border: 1px solid #EDC6C8;
+    color: #C15F4E;
+}
