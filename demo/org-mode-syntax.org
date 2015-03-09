@@ -1189,7 +1189,7 @@ You can also use raw LaTeX. XXX
 Text can be preformatted (in a fixed-width font).
 #+LaTeX_END: \end{verbatim}
 
-* Notes at the footer
+* Footnotes 
 
 #+begin_src org
 It is possible to define named footnotes[fn:myfootnote], or ones with automatic
@@ -1356,6 +1356,8 @@ The bibliography...
 
 - Eric Steven Raymond. The Art of Unix Programming. Addison-Wesley. ISBN
   0-13-142901-9.
+
+# http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
 
 ** Glossary
 
