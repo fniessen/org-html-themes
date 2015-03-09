@@ -1792,3 +1792,8 @@ h2.footnotes{
     border: 1px solid #EDC6C8;
     color: #C15F4E;
 }
+
+.timestamp {
+    font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+    font-size: 90%;
+}
