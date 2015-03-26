@@ -38,6 +38,10 @@ Reading through all the documentation is highly recommended, but for the truly
 impatient, following are some quick steps to get started.
 #+end_abstract
 
+#+begin_abstract
+This paper talks about...
+#+end_abstract
+
 # See http://asciidoctor.org/docs/user-manual/#the-big-picture
 
 * Document header
@@ -328,6 +332,9 @@ to create and to read.
 | Cell in column 1, row 2 | Cell in column 2, row 2 |
 #+end_src
 
+Org tables have cells of at most one line long: there is no such thing as
+a multi-line table cell in Org.
+
 ** Column formatting
 
 Columns are automatically aligned:
@@ -532,6 +539,15 @@ Books usually align/float images on the right/left of the contents.
 
 *** Image is centered
 
+#+NAME: test
+#+begin_src R :exports results :file-ext pdf :results graphics :width 8 :height 3
+plot(runif(100))
+#+end_src
+
+#+attr_latex: :float t :placement [b]
+#+RESULTS: test
+[[file:test.pdf]]
+
 ** Image attributes and values
 
 XXX Available HTML image tags include ...
@@ -587,26 +603,27 @@ Common admonitions are:
 
 ** List of supported admonitions                                      :noexport:
 
-|  Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | DocOnce | Confluence | SuperCollider |
-|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
-|      6 | note      |   1 |   1 |        1 |       1 |                 1 |         |          1 |             1 |
-|      7 | warning   |   1 |   1 |        1 |       1 |                 1 |       1 |          1 |             1 |
-|      6 | tip       |   1 |   1 |        1 |       1 |                 1 |         |          1 |               |
-|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
-|      5 | important |   1 |   1 |        1 |       1 |                 1 |         |            |               |
-|      5 | caution   |   1 |   1 |        1 |       1 |                 1 |         |            |               |
-|--------+-----------+-----+-----+----------+---------+-------------------+---------+------------+---------------|
-|      2 | attention |   1 |   1 |          |         |                   |         |            |               |
-|      2 | danger    |   1 |   1 |          |         |                   |         |            |               |
-|      2 | error     |   1 |   1 |          |         |                   |         |            |               |
-|      2 | hint      |   1 |   1 |          |         |                   |         |            |               |
-| #ERROR | seealso   |     |   ? |          |         |                   |         |            |               |
-| #ERROR | todo      |     |   ? |          |         |                   |         |            |               |
-|      1 | notice    |     |     |          |         |                   |       1 |            |               |
-|      1 | question  |     |     |          |         |                   |       1 |            |               |
-|      1 | summary   |     |     |          |         |                   |       1 |            |               |
-|      1 | info      |     |     |          |         |                   |         |          1 |               |
-#+TBLFM: $1=vsum($3..$9)
+|  Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | Bootstrap | DocOnce | Confluence | SuperCollider |
+|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      6 | note      |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |             1 |
+|      8 | warning   |   1 |   1 |        1 |       1 |                 1 |         1 |       1 |          1 |             1 |
+|      6 | tip       |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |               |
+|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      5 | important |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
+|      5 | caution   |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
+|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      3 | danger    |   1 |   1 |          |         |                   |         1 |         |            |               |
+|      2 | attention |   1 |   1 |          |         |                   |           |         |            |               |
+|      2 | error     |   1 |   1 |          |         |                   |           |         |            |               |
+|      2 | hint      |   1 |   1 |          |         |                   |           |         |            |               |
+| #ERROR | seealso   |     |   ? |          |         |                   |           |         |            |               |
+| #ERROR | todo      |     |   ? |          |         |                   |           |         |            |               |
+|      2 | info      |     |     |          |         |                   |         1 |         |          1 |               |
+|      1 | notice    |     |     |          |         |                   |           |       1 |            |               |
+|      1 | question  |     |     |          |         |                   |           |       1 |            |               |
+|      1 | summary   |     |     |          |         |                   |           |       1 |            |               |
+|      1 | success   |     |     |          |         |                   |         1 |         |            |               |
+#+TBLFM: $1=vsum($3..$10)
 
 ** Note
 
@@ -942,6 +959,7 @@ The Greek letters \alpha, \beta, and \gamma are used to denote angles.
 *** Misc
 
 #+begin_src org
+- Zero-width non-joiner: \zwnj
 # Smilies: \smiley \sad
 - Suits: \clubs \spades
 #+end_src
@@ -1092,6 +1110,17 @@ LaTeX allows to inline such ~\[...\]~ constructs (/quadratic formula/):
 #+begin_warning
 Double dollar signs (~$$~) should not be used.
 #+end_warning
+
+#+begin_src org
+\[
+\left( \int_{0}^{\infty} \frac{\sin x}{\sqrt x}\,\mathrm{d}x \
+right)^{2} -
+\prod_{k=1}^{\infty} \frac{4k^{2}}{4k^{2}-1} +
+\frac{\lambda}{2n}\sum_{k=1} ^{n} \theta_{k} ^{2} x^{n} = 0
+\]
+#+end_src
+
+The equation may be wrong, but it's a nice one!
 
 ** Equation numbers
 
@@ -1349,6 +1378,17 @@ Cross-referenced to bibliography.
 ** Index
 
 Index (or list of acronyms).
+
+- Write index entries
+
+#+index: Org-mode
+#+index: Definitions!Org-mode
+
+- Place the index at the desired location
+
+- Produce the index by updating ~org-latex-pdf-process~
+
+#+BIND: org-latex-pdf-process ("pdflatex %b" "bibtex %b" "pdflatex %b" "pdflatex %b")
 
 ** Bibliography
 
