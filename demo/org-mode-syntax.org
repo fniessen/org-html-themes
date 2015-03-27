@@ -17,6 +17,8 @@
 #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
 # #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/rtd.js"></script>
 
+#+HTML_HEAD: <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 # #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
 
 #+PROPERTY:  eval yes
@@ -552,8 +554,8 @@ plot(runif(100))
 
 XXX Available HTML image tags include ...
 
-| Attribute    | Value(s)                    |
-|--------------+-----------------------------|
+| Attribute      | Value(s)                    |
+|----------------+-----------------------------|
 | ~:alt~         | Alternate text              |
 | ~:height~      |                             |
 | ~:width~       | User defined size in pixels |
@@ -588,8 +590,8 @@ Though, you can add an image with a link to the video like this:
 
 * Admonitions
 
-Admonitions are statements taken out of the content's flow and labeled with
-a title.
+Admonitions (contextual backgrounds) are statements taken out of the content's
+flow and labeled with a title.
 
 Common admonitions are:
 
@@ -1132,21 +1134,21 @@ environments (~$$~, ...).
 #+begin_src org
 The /Pythagoras theorem/:
 
-#+name: pythag
+,#+name: pythag
 \begin{equation}
 a^2 + b^2 = c^2
 \end{equation}
 
 See equation [[pythag]].
 
-The /sinus theorem/ can be written as the equation:
-
-\begin{equation}
-\label{eqn:sinalpha}
-\frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
-\end{equation}
-
-See equation [[eqn:sinalpha]].
+# The /sinus theorem/ can be written as the equation:
+#
+# \begin{equation}
+# \label{eqn:sinalpha}
+# \frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
+# \end{equation}
+#
+# See equation [[eqn:sinalpha]].
 #+end_src
 
 Only captioned equations are numbered.
@@ -1342,15 +1344,15 @@ Data to be charted:
 #+name: data
 | Month | Degrees |
 |-------+---------|
-|     1 |     3.8 |
-|     2 |     4.1 |
-|     3 |     6.3 |
-|     4 |     9.0 |
-|     5 |    11.9 |
-|     6 |    15.1 |
-|     7 |    17.1 |
-|     8 |    17.4 |
-|     9 |    15.7 |
+|    01 |     3.8 |
+|    02 |     4.1 |
+|    03 |     6.3 |
+|    04 |     9.0 |
+|    05 |    11.9 |
+|    06 |    15.1 |
+|    07 |    17.1 |
+|    08 |    17.4 |
+|    09 |    15.7 |
 |    10 |    11.8 |
 |    11 |     7.7 |
 |    12 |     4.8 |
@@ -1419,3 +1421,10 @@ veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
 commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+#+BIND: org-hide-emphasis-markers nil
+
+# This is for the sake of Emacs.
+# Local Variables:
+# org-hide-emphasis-markers: nil
+# End:
