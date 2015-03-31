@@ -10,16 +10,11 @@
 #+HTML_LINK_UP: http://www.bing.com
 
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.css"/>
-# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/rtd.css"/>
-
 #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-
 #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
+# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/rtd.css"/>
 # #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/rtd.js"></script>
-
-#+HTML_HEAD: <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-# #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
+#+HTML_HEAD: <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
 
 #+PROPERTY:  eval yes
 #+PROPERTY:  exports both
@@ -447,13 +442,20 @@ to the right.
 You can fill a table from a CSV file using R commands.
 
 * Links
-   :PROPERTIES:
-   :CUSTOM_ID: links
-   :END:
+  :PROPERTIES:
+  :CUSTOM_ID: links
+  :END:
+
+#+begin_src org :eval no
+,* Links
+  :PROPERTIES:
+  :CUSTOM_ID: links
+  :END:
+#+end_src
 
 This document is available in [[file:org-mode-syntax.org][plain text]], [[file:org-mode-syntax.html][HTML]] and [[file:org-mode-syntax.pdf][PDF]].
 
-The links are delimited by ~[square brackets]~.
+The links are delimited by double square brackets.
 
 ** External links
 
