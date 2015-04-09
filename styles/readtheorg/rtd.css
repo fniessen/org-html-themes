@@ -1338,7 +1338,6 @@ code.code-large,#content tt.code-large{
 #table-of-contents li a{
     /* color:#404040; */
     padding:0.4045em 1.618em;
-    font-weight:bold;
     position:relative;
     /* background:#fcfcfc; */
     border:none;
@@ -1812,8 +1811,13 @@ ul.nav li.active ul li {
 }
 
 ul.nav li.active ul li a {
+    background-color: #E3E3E3;
+    color: #8099B0;
+}
+
+ul.nav li.active ul li.active a {
     background-color: #D6D6D6;
-    text-decoration-color: #8099B0;
+    font-weight: bold;
 }
 
 ul.nav li ul li ul li {
@@ -1822,6 +1826,12 @@ ul.nav li ul li ul li {
 }
 
 ul.nav li.active a {
-    text-decoration-color: black;
+    color: black !important;
+    font-weight:bold;
     background-color: white;
+    /* border-right:solid 1px #c9c9c9 !important; */
+}
+
+ul.nav li.active > a {
+    border-bottom:solid 1px #c9c9c9 !important;
 }
