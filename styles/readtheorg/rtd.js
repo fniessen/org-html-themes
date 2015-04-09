@@ -25,7 +25,13 @@ $( document ).ready(function() {
     });
     // Make tables responsive
     $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
+});
 
+$( document ).ready(function() {
+    $('#text-table-of-contents ul').first().addClass('nav');
+                                        // ScrollSpy also requires that we use
+                                        // a Bootstrap nav component.
+    $('body').scrollspy({target: '#text-table-of-contents'});
 });
 
 window.SphinxRtdTheme = (function (jquery) {

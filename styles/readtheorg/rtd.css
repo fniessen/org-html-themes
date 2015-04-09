@@ -1186,7 +1186,7 @@ code,#content tt{
     font-size:75%;
     padding:0 5px;
     font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
-    color:#000;
+    /* color:#000; */  /* for clickable code */
     overflow-x:auto}
 
 code.code-large,#content tt.code-large{
@@ -1380,6 +1380,10 @@ code.code-large,#content tt.code-large{
 #table-of-contents a:hover{
     background-color:#4e4a4a;
     cursor:pointer}
+
+/* #text-table-of-contents { */
+/*     overflow:scroll; */
+/* } */
 
 .wy-menu-vertical a:active{
     background-color:#2980B9;
@@ -1796,4 +1800,28 @@ h2.footnotes{
 .timestamp {
     font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size: 90%;
+    color: navy;
+}
+
+ul.nav li ul li {
+    display: none;
+}
+
+ul.nav li.active ul li {
+    display: inline;
+}
+
+ul.nav li.active ul li a {
+    background-color: #D6D6D6;
+    text-decoration-color: #8099B0;
+}
+
+ul.nav li ul li ul li {
+    display: none !important; /* as long as nav is on multiple levels of ul */
+    /* display: none; /\* as long as nav is on multiple levels of ul *\/ */
+}
+
+ul.nav li.active a {
+    text-decoration-color: black;
+    background-color: white;
 }
