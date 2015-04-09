@@ -9,18 +9,7 @@
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
 
-# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.css"/>
-# #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-# #+HTML_HEAD: <script type="text/javascript" src="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.js"></script>
-# # #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/rtd.css"/>
-# # #+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/rtd.js"></script>
-# #+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-# #+HTML_HEAD: <script type="text/javascript">$( document ).ready(function() { $('body').scrollspy({target: '#text-table-of-contents'});});</script>
-
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="d:/Users/fni/src/org-html-themes/styles/readtheorg/rtd.css"/>
-#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript"> $(document).ready(function(){$('body').scrollspy({'target':'#text-table-of-contents'});}); </script>
+#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
 
 #+PROPERTY:  eval yes
 #+PROPERTY:  exports both
@@ -46,6 +35,8 @@ This paper talks about...
 #+end_abstract
 
 # See http://asciidoctor.org/docs/user-manual/#the-big-picture
+
+See http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html.
 
 * Document header
 
