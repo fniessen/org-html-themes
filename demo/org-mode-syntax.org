@@ -4,11 +4,12 @@
 #+DESCRIPTION: Org mode syntax example
 #+KEYWORDS:  org-mode, syntax, quick reference, cheat sheet, recommended practices, latex, beamer, html
 #+LANGUAGE:  en
-#+OPTIONS:   H:4 num:nil toc:1 p:t
+#+OPTIONS:   H:4 num:nil toc:2 p:t
 
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
 
+# #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
 #+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
 
 #+PROPERTY:  eval yes
@@ -43,7 +44,7 @@ See http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html.
 Title and author line:
 
 #+begin_src org :eval never-export
-,#+TITLE:     Org mode syntax example
+,#+TITLE:     Org mode syntax examples
 ,#+AUTHOR:    Fabrice Niessen
 
 My document provides...
