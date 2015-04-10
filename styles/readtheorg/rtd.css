@@ -1791,9 +1791,10 @@ h2.footnotes{
 }
 
 .tag .FLAGGED {
-    background-color: #EDC6C8;
-    border: 1px solid #EDC6C8;
-    color: #C15F4E;
+    background-color: #DB2D27;
+    border: 1px solid #DB2D27;
+    color: white;
+    font-weight: bold;
 }
 
 .timestamp {
