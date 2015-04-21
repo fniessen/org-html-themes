@@ -108,6 +108,14 @@ responsibilities.  Help is welcome to work on that (and eventually improve the
 default structure of the HTML export)!
 #+end_note
 
+* Demo
+
+I've written a demo page for the themes that provides a maximal working support
+of Org mode syntax.
+
+Please see the [[file:demo/org-mode-syntax.org][org-mode-syntax]] page for full examples of headings, code,
+admonitions, footnotes, tables and other details.
+
 * Installing a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
