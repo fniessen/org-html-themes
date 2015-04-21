@@ -31,13 +31,13 @@ Reading through all the documentation is highly recommended, but for the truly
 impatient, following are some quick steps to get started.
 #+end_abstract
 
-#+begin_abstract
-This paper talks about...
-#+end_abstract
+# #+begin_abstract
+# This paper talks about...
+# #+end_abstract
 
 # See http://asciidoctor.org/docs/user-manual/#the-big-picture
 
-See http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html.
+# See http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html.
 
 * Document header
 
