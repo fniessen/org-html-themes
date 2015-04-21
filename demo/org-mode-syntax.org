@@ -89,6 +89,11 @@ to its 2 first levels) at the top of document.
 #+OPTIONS:   p:t
 #+end_src
 
+#+begin_note
+The ~ALT_TITLE~ property allows to set an alternate title (shorter, for example)
+for a given headline in the table of contents and other running heads.
+#+end_note
+
 ** List of figures
 
 ~#+TOC: figures~ is not implemented yet in the HMTL backend.
