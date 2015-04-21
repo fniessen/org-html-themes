@@ -93,6 +93,21 @@ Keyboard shortcuts to save time and boost your productivity:
 | =q=        | Stop reviewing the list of tasks  |
 | =g=        | Reload the page                   |
 
+** ReadTheOrg
+
+ReadTheOrg is a clone of the official -- and great! -- theme (called [[https://github.com/snide/sphinx_rtd_theme][Sphinx]])
+used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to
+all your Org docs.
+
+#+begin_note
+While the original theme shines on mobile devices as well, ReadTheOrg does not
+stay completely functional.
+
+I don't have a lot of time to maintain this project due to other
+responsibilities.  Help is welcome to work on that (and eventually improve the
+default structure of the HTML export)!
+#+end_note
+
 * Installing a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
@@ -118,8 +133,8 @@ You can either:
 
 ** Bigblow
 
-In order to use this style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to your
-project and link to it this way:
+In order to use the Bigblow style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to
+your project and link to it this way:
 
 #+begin_src org :exports code
 ,#+SETUPFILE: theme-bigblow.setup
@@ -166,26 +181,26 @@ Here a local version (using relative paths):
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
-*** Development version
+** ReadTheOrg
 
-Here is a remote version (with CSS/JS files served from GitHub webservers) to
-share *temporary* examples or demos with small numbers of people:
+In order to use the ReadTheOrg style, just copy the [[file:setup/theme-readtheorg.setup][theme-readtheorg.setup]] file
+to your project and link to it this way:
 
-#+begin_src org :exports code :tangle setup/theme-bigblow-github-dev.setup
+#+begin_src org :exports code
+,#+SETUPFILE: theme-readtheorg.setup
+#+end_src
+
+If you prefer, you can add the content of the setup file at the beginning of
+your Org file instead:
+
+#+begin_src org :exports code :tangle setup/theme-readtheorg.setup
 # -*- mode: org; -*-
 
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/htmlize.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/bigblow.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/css/hideshow.css"/>
+,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.localscroll-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/jquery.zclip.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/bigblow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/hideshow.js"></script>
+,#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+,#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 #+end_src
 
 * Contributing
