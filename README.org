@@ -100,7 +100,7 @@ used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It 
 all your Org docs.
 
 #+ATTR_HTML: :width 640
-[[file:readtheorg.png][file:~/src/org-html-themes/readtheorg.png]]
+[[file:readtheorg.png]]
 
 #+begin_note
 While the original theme shines on mobile devices as well, ReadTheOrg does not
