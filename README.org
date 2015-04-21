@@ -1,3 +1,4 @@
+#+TITLE:     Awesome HTML themes for files exported from Org mode
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.
@@ -10,11 +11,11 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/rtd.css"/>
 #+HTML_HEAD: <script type="text/javascript" src="styles/rtd.js"></script>
 
-* Awesome HTML themes for files exported from Org mode [[http://opensource.org/licenses/GPL-3.0][http://img.shields.io/:license-gpl-blue.svg]] [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
+[[http://opensource.org/licenses/GPL-3.0][http://img.shields.io/:license-gpl-blue.svg]] [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif]]
 
-** Overview
+* Overview
 
-*** Description
+** Description
 
 Org mode provides basic HTML support.  Though, we can easily override CSS
 stylesheets and add our own HTML themes.
@@ -24,18 +25,18 @@ stylesheets and add our own HTML themes.
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="f_niessen">Tweet</a>
 #+end_html
 
-*** Objective
+** Objective
 
 The goal of the *Org-HMTL themes* is to provide you with a list of very nice
 (cross-browser) themes.
 
-*** Requirements
+** Requirements
 
 Org mode version 8 (or later) is required.
 
 If such a version is not bundled with your Emacs, install one from ELPA.
 
-** Quotations
+* Quotations
 
 "Very very nice, I enjoy it a lot." \\
 -- /Ista Zahn/
@@ -57,7 +58,7 @@ share and maintain such spec.  Now, I can create a much neater spec which is
 available for the team's reference as a webpage." \\
 -- /Shankar R./
 
-** Gallery
+* Gallery
   :PROPERTIES:
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
   :END:
@@ -65,7 +66,7 @@ available for the team's reference as a webpage." \\
 This is a list of available *HTML themes for Org mode*, which you can use right
 now!  Well, I hope to have more than one in a couple of weeks...
 
-*** Bigblow
+** Bigblow
 
 Bigblow is perfect for your work: it is a clean design aimed at optimal *Org
 mode experience in your browser*. It looks just awesome!
@@ -92,7 +93,7 @@ Keyboard shortcuts to save time and boost your productivity:
 | =q=        | Stop reviewing the list of tasks  |
 | =g=        | Reload the page                   |
 
-** Installing a theme
+* Installing a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
 you just need to clone the Org-HTML themes project and add a =#+SETUPFILE:=
@@ -115,7 +116,7 @@ You can either:
   ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup
   #+end_src
 
-*** Bigblow
+** Bigblow
 
 In order to use this style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to your
 project and link to it this way:
@@ -144,7 +145,7 @@ your Org file instead:
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
-**** Local version
+*** Local version
 
 Here a local version (using relative paths):
 
@@ -165,7 +166,7 @@ Here a local version (using relative paths):
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
-**** Development version
+*** Development version
 
 Here is a remote version (with CSS/JS files served from GitHub webservers) to
 share *temporary* examples or demos with small numbers of people:
@@ -187,17 +188,17 @@ share *temporary* examples or demos with small numbers of people:
 ,#+HTML_HEAD: <script type="text/javascript" src="https://rawgit.com/fniessen/org-html-themes/master/styles/bigblow/js/hideshow.js"></script>
 #+end_src
 
-** Contributing
+* Contributing
 
-*** Issues
+** Issues
 
 Report issues and suggest features and improvements on the [[https://github.com/fniessen/org-html-themes/issues/new][GitHub issue tracker]].
 
-*** Patches
+** Patches
 
 I love contributions!  Patches under any form are always welcome!
 
-*** Donations
+** Donations
 
 If you like the org-html-themes project, you can show your appreciation and
 support future development by making a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal.
@@ -205,9 +206,9 @@ support future development by making a [[https://www.paypal.com/cgi-bin/webscr?c
 Regardless of the donations, org-html-themes will always be free both as in
 beer and as in speech.
 
-** License
+* License
 
-Copyright (C) 2011-2014 Fabrice Niessen.
+Copyright (C) 2011-2015 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
