@@ -100,6 +100,21 @@ pre.src,example{
     white-space:pre;
 }
 
+.org-builtin { /* font-lock-builtin-face */ color: #7a378b; }
+.org-comment { /* font-lock-comment-face */ color: #b22222; }
+.org-comment-delimiter { /* font-lock-comment-delimiter-face */ color: #b22222; }
+.org-constant { /* font-lock-constant-face */ color: #008b8b; }
+.org-doc { /* font-lock-doc-face */ color: #8b2252; }
+.org-function-name { /* font-lock-function-name-face */ color: #0000ff; }
+.org-keyword { /* font-lock-keyword-face */ color: #a020f0; }
+.org-preprocessor { /* font-lock-preprocessor-face */ color: #7a378b; }
+.org-regexp-grouping-backslash { /* font-lock-regexp-grouping-backslash */ font-weight: bold; }
+.org-regexp-grouping-construct { /* font-lock-regexp-grouping-construct */ font-weight: bold; }
+.org-string { /* font-lock-string-face */ color: #8b2252; }
+.org-type { /* font-lock-type-face */ color: #228b22; }
+.org-variable-name { /* font-lock-variable-name-face */ color: #a0522d; }
+.org-warning { /* font-lock-warning-face */ color: #ff0000; font-weight: bold; }
+
 @media print{
     .codeblock,pre.src{
         white-space:pre.src-wrap}
