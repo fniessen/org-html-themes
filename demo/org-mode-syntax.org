@@ -18,16 +18,35 @@
 
 # #+MACRO: longtext this is a very very long text to include
 
+| *Framework*   | Org mode 8                                          |
+| *Bug tracker* | https://github.com/fniessen/refcard-org-mode/issues |
+| *Source*      | https://github.com/fniessen/refcard-org-mode        |
+# | *Documentation* | http://refcard-org-mode.readthedocs.org/            |
+
+* Summary
+
+# See https://tutorialtodoapp.readthedocs.org/en/latest/
+
+#+begin_sidebar
+*You will learn to:*
+
+- create custom content-types Through-The-Web
+- create and apply custom workflows
+- create custom listings
+- dump your changes into a filesytem package to future-proof them
+- write tests for your filesystem package
+#+end_sidebar
+
+#+begin_abstract
 This is an Org mode document, using the ~.org~ extension (supported by GitHub).
 
 *Org mode* is an easy-to-write /plain text/ formatting syntax for authoring notes,
 articles, LaTeX documents, books, Web pages, Beamer slide decks and much more!
 
-#+begin_abstract
 This is a cheat sheet for *Org mode 8* (because of some markup syntax changes
 since Org mode 7), using [[https://github.com/fniessen/org-html-themes][ReadTheOrg CSS]].
 
-Reading through all the documentation is highly recommended, but for the truly
+Reading through all the [[http://orgmode.org/org.pdf][documentation]] is highly recommended, but for the truly
 impatient, following are some quick steps to get started.
 #+end_abstract
 
