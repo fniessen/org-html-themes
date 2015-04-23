@@ -1604,10 +1604,20 @@ nav.stickynav{
 #content .section>img,#content .section>a>img{
     margin-bottom:24px}
 
-#content blockquote{
-    margin-left:24px;
+blockquote{
+    /* margin-left:24px; */
     line-height:24px;
-    margin-bottom:24px}
+    margin-bottom:24px;
+    border-left:5px solid #eeeeee;
+    padding: 0px 20px;
+    font-style:italic;
+}
+
+.verse{
+    border-left:5px solid #2980B9;
+    padding: 0px 20px;
+    font-style:italic;
+}
 
 #content .note .last,#content .attention .last,#content .caution .last,#content .danger .last,#content .error .last,#content .hint .last,#content .important .last,#content .tip .last,#content .warning .last,#content .seealso .last,#content .admonitiontodo .last{
     margin-bottom:0}
@@ -1680,12 +1690,6 @@ nav.stickynav{
     display:inline-block;
     font-weight:bold;
     padding:0 6px}
-
-.verse{
-    border-left:5px solid #eeeeee;
-    padding: 0px 20px;
-    font-style:italic;
-}
 
 #content .footnote-reference,#content .citation-reference{
     vertical-align:super;
