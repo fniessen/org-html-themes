@@ -120,6 +120,8 @@ ReadTheOrg is a clone of the official -- and great! -- theme (called [[https://g
 used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to
 all your Org docs.
 
+*Thanks to the creator(s) of Sphinx!*
+
 #+ATTR_HTML: :width 640
 [[file:readtheorg.png]]
 
@@ -137,7 +139,7 @@ default structure of the HTML export)!
 I've written a demo page for the themes that provides a maximal working support
 of Org mode syntax.
 
-Please see the [[file:demo/org-mode-syntax.org][org-mode-syntax]] page for full examples of headings, code,
+Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
 admonitions, footnotes, tables and other details.
 
 * Installing a theme
