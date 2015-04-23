@@ -1681,6 +1681,12 @@ nav.stickynav{
     font-weight:bold;
     padding:0 6px}
 
+.verse{
+    border-left:5px solid #eeeeee;
+    padding: 0px 20px;
+    font-style:italic;
+}
+
 #content .footnote-reference,#content .citation-reference{
     vertical-align:super;
     font-size:90%}
