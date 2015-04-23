@@ -538,7 +538,7 @@ You can insert *image* files of different *formats* to a document:
 ** Inline picture
 
 #+begin_src org
-#+CAPTION: Org mode logo
+#+caption: Org mode logo
 [[file:images/org-mode-unicorn.png]]
 #+end_src
 
@@ -556,13 +556,13 @@ Books usually align/float images on the right/left of the contents.
 
 *** Image is centered
 
-#+NAME: test
+#+name: test
 #+begin_src R :exports results :file-ext pdf :results graphics :width 8 :height 3
 plot(runif(100))
 #+end_src
 
 #+attr_latex: :float t :placement [b]
-#+RESULTS: test
+#+results: test
 [[file:test.pdf]]
 
 ** Image attributes and values
@@ -620,27 +620,28 @@ Common admonitions are:
 
 ** List of supported admonitions                                      :noexport:
 
-|  Total |           | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | Bootstrap | DocOnce | Confluence | SuperCollider |
-|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
-|      6 | note      |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |             1 |
-|      8 | warning   |   1 |   1 |        1 |       1 |                 1 |         1 |       1 |          1 |             1 |
-|      6 | tip       |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |               |
-|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
-|      5 | important |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
-|      5 | caution   |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
-|--------+-----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
-|      3 | danger    |   1 |   1 |          |         |                   |         1 |         |            |               |
-|      2 | attention |   1 |   1 |          |         |                   |           |         |            |               |
-|      2 | error     |   1 |   1 |          |         |                   |           |         |            |               |
-|      2 | hint      |   1 |   1 |          |         |                   |           |         |            |               |
-| #ERROR | seealso   |     |   ? |          |         |                   |           |         |            |               |
-| #ERROR | todo      |     |   ? |          |         |                   |           |         |            |               |
-|      2 | info      |     |     |          |         |                   |         1 |         |          1 |               |
-|      1 | notice    |     |     |          |         |                   |           |       1 |            |               |
-|      1 | question  |     |     |          |         |                   |           |       1 |            |               |
-|      1 | summary   |     |     |          |         |                   |           |       1 |            |               |
-|      1 | success   |     |     |          |         |                   |         1 |         |            |               |
-#+TBLFM: $1=vsum($3..$10)
+|  Total |           | docutils | rST | RTD | AsciiDoc | DocBook | MoinMoin (Modern) | Bootstrap | DocOnce | Confluence | SuperCollider |
+|--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      7 | note      |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |             1 |
+|      9 | warning   |        1 |   1 |   1 |        1 |       1 |                 1 |         1 |       1 |          1 |             1 |
+|      7 | tip       |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |               |
+|--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      6 | important |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
+|      6 | caution   |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
+|--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+|      4 | danger    |        1 |   1 |   1 |          |         |                   |         1 |         |            |               |
+|      3 | attention |        1 |   1 |   1 |          |         |                   |           |         |            |               |
+|      3 | error     |        1 |   1 |   1 |          |         |                   |           |         |            |               |
+|      3 | hint      |        1 |   1 |   1 |          |         |                   |           |         |            |               |
+|--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
+| #ERROR | seealso   |          |     |   ? |          |         |                   |           |         |            |               |
+| #ERROR | todo      |          |     |   ? |          |         |                   |           |         |            |               |
+|      2 | info      |          |     |     |          |         |                   |         1 |         |          1 |               |
+|      1 | notice    |          |     |     |          |         |                   |           |       1 |            |               |
+|      1 | question  |          |     |     |          |         |                   |           |       1 |            |               |
+|      1 | summary   |          |     |     |          |         |                   |           |       1 |            |               |
+|      1 | success   |          |     |     |          |         |                   |         1 |         |            |               |
+#+TBLFM: $1=vsum($3..$11)
 
 ** Note
 
@@ -680,6 +681,12 @@ Caution
 ,#+end_caution
 #+end_src
 
+#+begin_src org
+,#+begin_attention
+Attention
+,#+end_attention
+#+end_src
+
 ** Tip
 
 A tip box is displayed as follows:
@@ -696,12 +703,24 @@ Important
 ,#+end_important
 #+end_src
 
+#+begin_src org
+,#+begin_hint
+Hint
+,#+end_hint
+#+end_src
+
 ** Error
 
 #+begin_src org
 ,#+begin_error
 Error
 ,#+end_error
+#+end_src
+
+#+begin_src org
+,#+begin_danger
+Danger
+,#+end_danger
 #+end_src
 
 ** Todo
@@ -1243,6 +1262,10 @@ Text can be preformatted (in a fixed-width font).
 It is possible to define named footnotes[fn:myfootnote], or ones with automatic
 anchors[fn:2].
 #+end_src
+
+#+results:
+It is possible to define named footnotes[fn:myfootnote], or ones with automatic
+anchors[fn:2].
 
 * Useful extensions
 
