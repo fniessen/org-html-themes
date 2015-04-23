@@ -10,7 +10,7 @@
 #+HTML_LINK_UP: http://www.bing.com
 
 # #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
-#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg-local-abs.setup
 
 #+PROPERTY:  eval yes
 #+PROPERTY:  exports both
@@ -705,6 +705,8 @@ Error
 #+end_src
 
 ** Todo
+
+# See example at http://docs.ckan.org/en/latest/contributing/python.html
 
 Simple box ("inline task"):
 
