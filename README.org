@@ -72,6 +72,13 @@ available for the team's reference as a webpage." \\
 wateringly beautiful. Thank you!" \\
 -- /Rob Stewart/
 
+"It is fantastic, so beautiful.  I will switch several of my pages over to
+this theme." \\
+-- /Carsten D./
+
+"That is incredibly impressive.  Thanks for this." \\
+-- /Noah R./
+
 * Gallery
   :PROPERTIES:
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
