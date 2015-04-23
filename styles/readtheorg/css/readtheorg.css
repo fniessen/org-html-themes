@@ -1608,14 +1608,16 @@ blockquote{
     /* margin-left:24px; */
     line-height:24px;
     margin-bottom:24px;
-    border-left:5px solid #eeeeee;
-    padding: 0px 20px;
+    background-color: #F0F0F0;
+    border-left:5px solid #CCCCCC;
+    padding: 6px 20px;
     font-style:italic;
 }
 
 .verse{
-    border-left:5px solid #2980B9;
-    padding: 0px 20px;
+    border-left:5px solid #6AB0DE;
+    background-color: #E7F2FA;
+    padding: 6px 20px;
     font-style:italic;
 }
 
