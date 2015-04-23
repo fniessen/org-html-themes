@@ -145,8 +145,9 @@ admonitions, footnotes, tables and other details.
 * Installing a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
-you just need to clone the Org-HTML themes project and add a =#+SETUPFILE:=
-directive in the preamble to include the CSS and JavaScript files.
+you just need to clone the Org-HTML themes project, add a =#+SETUPFILE:= directive
+in the preamble to include the CSS and JavaScript files, then export your Org
+mode file to HTML.
 
 You can either:
 
@@ -164,6 +165,9 @@ You can either:
   #+begin_src org :exports code
   ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup
   #+end_src
+
+Then export your Org mode file to HTML with =org-html-export-to-html= or with =C-c
+C-e h h=.
 
 ** Bigblow
 
