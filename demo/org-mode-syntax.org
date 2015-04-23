@@ -9,8 +9,8 @@
 #+HTML_LINK_HOME: http://www.google.com
 #+HTML_LINK_UP: http://www.bing.com
 
-# #+SETUPFILE: ~/src/org-style/setup/bigblow-local-abs.setup
-#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg-local-abs.setup
+# #+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg-local-abs.setup
+#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
 
 #+PROPERTY:  eval yes
 #+PROPERTY:  exports both
@@ -626,16 +626,17 @@ Common admonitions are:
 |      9 | warning   |        1 |   1 |   1 |        1 |       1 |                 1 |         1 |       1 |          1 |             1 |
 |      7 | tip       |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |          1 |               |
 |--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
-|      6 | important |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
 |      6 | caution   |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
+|      6 | important |        1 |   1 |   1 |        1 |       1 |                 1 |           |         |            |               |
 |--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
-|      4 | danger    |        1 |   1 |   1 |          |         |                   |         1 |         |            |               |
 |      3 | attention |        1 |   1 |   1 |          |         |                   |           |         |            |               |
-|      3 | error     |        1 |   1 |   1 |          |         |                   |           |         |            |               |
 |      3 | hint      |        1 |   1 |   1 |          |         |                   |           |         |            |               |
+|      3 | error     |        1 |   1 |   1 |          |         |                   |           |         |            |               |
+|      4 | danger    |        1 |   1 |   1 |          |         |                   |         1 |         |            |               |
 |--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
 | #ERROR | seealso   |          |     |   ? |          |         |                   |           |         |            |               |
 | #ERROR | todo      |          |     |   ? |          |         |                   |           |         |            |               |
+|--------+-----------+----------+-----+-----+----------+---------+-------------------+-----------+---------+------------+---------------|
 |      2 | info      |          |     |     |          |         |                   |         1 |         |          1 |               |
 |      1 | notice    |          |     |     |          |         |                   |           |       1 |            |               |
 |      1 | question  |          |     |     |          |         |                   |           |       1 |            |               |
@@ -643,7 +644,9 @@ Common admonitions are:
 |      1 | success   |          |     |     |          |         |                   |         1 |         |            |               |
 #+TBLFM: $1=vsum($3..$11)
 
-** Note
+** Base admonitions
+
+*** Note
 
 A note box is displayed as follows:
 
@@ -658,14 +661,7 @@ This is a useful note.
 # This is a useful note (with a title).
 # #+end_note
 
-#+begin_src org
-,#+begin_seealso
-- [[http://en.wikipedia.org/wiki/Apple][Apples]] ::
-     A kind of [[http://en.wikipedia.org/wiki/Fruit][fruit]].
-,#+end_seealso
-#+end_src
-
-** Warning
+*** Warning
 
 A warning box is displayed as follows:
 
@@ -675,19 +671,7 @@ Be careful!  Check that you have...
 ,#+end_warning
 #+end_src
 
-#+begin_src org
-,#+begin_caution
-Caution
-,#+end_caution
-#+end_src
-
-#+begin_src org
-,#+begin_attention
-Attention
-,#+end_attention
-#+end_src
-
-** Tip
+*** Tip
 
 A tip box is displayed as follows:
 
@@ -697,11 +681,33 @@ Try doing it this way...
 ,#+end_tip
 #+end_src
 
+*** Caution
+
+#+begin_src org
+,#+begin_caution
+Caution
+,#+end_caution
+#+end_src
+
+*** Important
+
 #+begin_src org
 ,#+begin_important
 Important
 ,#+end_important
 #+end_src
+
+** Additional admonitions
+
+*** Attention
+
+#+begin_src org
+,#+begin_attention
+Attention
+,#+end_attention
+#+end_src
+
+*** Hint
 
 #+begin_src org
 ,#+begin_hint
@@ -709,7 +715,7 @@ Hint
 ,#+end_hint
 #+end_src
 
-** Error
+*** Error
 
 #+begin_src org
 ,#+begin_error
@@ -717,13 +723,24 @@ Error
 ,#+end_error
 #+end_src
 
+*** Danger
+
 #+begin_src org
 ,#+begin_danger
 Danger
 ,#+end_danger
 #+end_src
 
-** Todo
+*** SeeAlso (Sphinx additional)
+
+#+begin_src org
+,#+begin_seealso
+- [[http://en.wikipedia.org/wiki/Apple][Apples]] ::
+     A kind of [[http://en.wikipedia.org/wiki/Fruit][fruit]].
+,#+end_seealso
+#+end_src
+
+** Todo admonition
 
 # See example at http://docs.ckan.org/en/latest/contributing/python.html
 
