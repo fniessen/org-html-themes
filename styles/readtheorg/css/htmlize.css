@@ -44,7 +44,7 @@
 .org-flyspell-duplicate { /* flyspell-duplicate */ color: #cdad00; font-weight: bold; text-decoration: underline; }
 .org-flyspell-incorrect { /* flyspell-incorrect */ color: #ff4500; font-weight: bold; text-decoration: underline; }
 .org-fringe { /* fringe */ background-color: #f2f2f2; }
-.org-function-name { /* font-lock-function-name-face */ color: #990000; font-weight: bold; }
+.org-function-name { /* font-lock-function-name-face */ color: teal; }
 .org-header-line { /* header-line */ color: #333333; background-color: #e5e5e5; }
 .org-help-argument-name { /* help-argument-name */ font-style: italic; }
 .org-highlight { /* highlight */ background-color: #b4eeb4; }
@@ -52,7 +52,7 @@
 .org-isearch { /* isearch */ color: #b0e2ff; background-color: #cd00cd; }
 .org-isearch-fail { /* isearch-fail */ background-color: #ffc1c1; }
 .org-italic { /* italic */ font-style: italic; }
-.org-keyword { /* font-lock-keyword-face */ color: #404040; font-weight: bold; }
+.org-keyword { /* font-lock-keyword-face */ color: #0086b3; }
 .org-lazy-highlight { /* lazy-highlight */ background-color: #afeeee; }
 .org-link { /* link */ color: #0000ff; text-decoration: underline; }
 .org-link-visited { /* link-visited */ color: #8b008b; text-decoration: underline; }
@@ -135,7 +135,7 @@
 .org-trailing-whitespace { /* trailing-whitespace */ background-color: #ff0000; }
 .org-type { /* font-lock-type-face */ color: #228b22; }
 .org-underline { /* underline */ text-decoration: underline; }
-.org-variable-name { /* font-lock-variable-name-face */ color: #009999; } /* not the right one! */
+.org-variable-name { /* font-lock-variable-name-face */ color: teal; }
 .org-warning { /* font-lock-warning-face */ color: #ff0000; font-weight: bold; }
 .org-widget-button { /* widget-button */ font-weight: bold; }
 .org-widget-button-pressed { /* widget-button-pressed */ color: #ff0000; }
