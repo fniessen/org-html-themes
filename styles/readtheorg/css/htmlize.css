@@ -135,7 +135,7 @@
 .org-trailing-whitespace { /* trailing-whitespace */ background-color: #ff0000; }
 .org-type { /* font-lock-type-face */ color: #228b22; }
 .org-underline { /* underline */ text-decoration: underline; }
-.org-variable-name { /* font-lock-variable-name-face */ color: #009999; }
+.org-variable-name { /* font-lock-variable-name-face */ color: #009999; } /* not the right one! */
 .org-warning { /* font-lock-warning-face */ color: #ff0000; font-weight: bold; }
 .org-widget-button { /* widget-button */ font-weight: bold; }
 .org-widget-button-pressed { /* widget-button-pressed */ color: #ff0000; }
