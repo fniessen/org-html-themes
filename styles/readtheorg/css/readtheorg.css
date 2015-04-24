@@ -1561,6 +1561,12 @@ nav.stickynav{
     margin-bottom: 0px;
 }
 
+#postamble .date {
+    font-size: 90%;
+    margin-bottom: 0px;
+    color: #27AE60;
+}
+
 #postamble .creator,#postamble .validation {
     display:none;
 }
