@@ -1,0 +1,145 @@
+#+TITLE:     Example of Tasks
+#+AUTHOR:    Fabrice Niessen
+#+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
+#+DATE:      2015-04-28
+#+LANGUAGE:  en
+#+OPTIONS:   H:4 num:nil toc:2
+
+#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
+
+-----
+
+* Work                                                                    :work:
+  :PROPERTIES:
+  :CATEGORY: Work
+  :END:
+
+** Events
+   :PROPERTIES:
+   :CATEGORY: Events
+   :END:
+
+*** TODO Plan conference
+    DEADLINE: <2014-03-13 Thu>
+
+**** Recruit volunteers
+
+**** Make sure responses are coming back
+
+** Marketing
+   :PROPERTIES:
+   :CATEGORY: Marketing
+   :END:
+
+*** Background and research
+
+**** TODO Who are the competitors?
+
+**** TODO What are our product's advantages?
+
+**** TODO Target market
+
+**** TODO Elevator pitch
+
+*** STRT Hire PR firm                                                    :phone:
+    DEADLINE: <2014-03-12 Wed>
+    :LOGBOOK:
+    CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
+    - State "TODO"        ->  "STRT"       [2013-02-05 Tue 17:48]
+    - State "TODO"        ->  "STRT"       [2013-08-19 Mon 15:16]
+    :END:
+
+**** Call Laura about PR firm                                            :phone:
+
+# *************** TODO Test with an inline task
+# *************** END
+
+**** Interview PR firm candidates
+
+# *************** TODO Another test with an inline task
+
+*** TODO Launch advertising campaign
+    DEADLINE: <2014-03-06 Thu>
+    :PROPERTIES:
+    :Effort:   4:00
+    :END:
+
+**** Call Joe
+
+** Operations
+
+*** TODO Update database to latest version
+    SCHEDULED: <2014-03-13 Thu>
+
+*** TODO Update Website
+
+Update blog.
+
+-----
+
+* Personal                                                                :home:
+  :PROPERTIES:
+  :CATEGORY: Personal
+  :END:
+
+** DONE Read "Getting Things Done"
+   :LOGBOOK:
+   - State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
+   :END:
+
+** TODO Make dentist appointment
+   SCHEDULED: <2014-03-12 Wed>
+
+** TODO Go to the gym
+   SCHEDULED: <2014-03-11 Tue>
+   :PROPERTIES:
+   :Effort:   0:10
+   :END:
+
+** Do jogging
+
+** TODO Pay electricity bill                                           :FLAGGED:
+
+** TODO Renew newspaper subscription
+
+** Buy dog food
+
+** WAIT Mail package to Susan
+   :LOGBOOK:
+   - State "TODO"        ->  "STRT"       [2013-07-24 Wed 15:45]
+   CLOCK: [2013-07-24 Wed 15:45]--[2013-07-24 Wed 17:28] =>  1:43
+   CLOCK: [2013-08-12 Mon 11:56]--[2013-08-12 Mon 12:12] =>  0:16
+   - State "STRT"        ->  "DONE"       [2013-08-12 Mon 12:12]
+   - State "DONE"        ->  "TODO"       [2013-09-27 Fri 10:23]
+   - State "TODO"        ->  "WAIT"       [2013-11-15 Fri 12:00]
+   :END:
+
+** TODO Buy groceries
+
+** TODO Mow the lawn
+
+** TODO Get a haircut
+
+** TODO Pick up dry cleaning
+
+** TODO Buy anniversary present
+
+** TODO Go to concert
+
+** TODO Cancel insurance
+
+** TODO Buy milk
+
+** TODO Get the car fixed
+
+** TODO Take out trash
+
+** Travel to Boston
+
+*** TODO Find a flight
+
+*** TODO Book hotel room
+
+*** TODO Schedule meetings
+
+*** TODO Submit expense report
