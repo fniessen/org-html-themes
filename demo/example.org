@@ -7,6 +7,12 @@
 
 #+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
 
+#+begin_html
+<div class="right">
+  <a href="https://github.com/fniessen/org-html-themes/blob/master/demo/example.org" class="fa fa-github"> Edit on GitHub</a>
+</div>
+#+end_html
+
 -----
 
 * Work                                                                    :work:
@@ -14,22 +20,14 @@
   :CATEGORY: Work
   :END:
 
-** Events
-   :PROPERTIES:
-   :CATEGORY: Events
-   :END:
-
-*** TODO Plan conference
-    DEADLINE: <2014-03-13 Thu>
-
-**** Recruit volunteers
-
-**** Make sure responses are coming back
+Only work tasks in this list.
 
 ** Marketing
    :PROPERTIES:
    :CATEGORY: Marketing
    :END:
+
+Project "Corporate Marketing".
 
 *** Background and research
 
@@ -41,30 +39,39 @@
 
 **** TODO Elevator pitch
 
-*** STRT Hire PR firm                                                    :phone:
-    DEADLINE: <2014-03-12 Wed>
-    :LOGBOOK:
-    CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
-    - State "TODO"        ->  "STRT"       [2013-02-05 Tue 17:48]
-    - State "TODO"        ->  "STRT"       [2013-08-19 Mon 15:16]
-    :END:
+*** PR firm
 
-**** Call Laura about PR firm                                            :phone:
+**** TODO Call Laura about PR firm                                       :phone:
 
 # *************** TODO Test with an inline task
 # *************** END
 
-**** Interview PR firm candidates
+**** TODO Interview PR firm candidates
+     DEADLINE: <2014-03-12 Wed>
+     :LOGBOOK:
+     CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
+     - State "TODO"        ->  "STRT"       [2013-02-05 Tue 17:48]
+     - State "TODO"        ->  "STRT"       [2013-08-19 Mon 15:16]
+     :END:
 
 # *************** TODO Another test with an inline task
 
-*** TODO Launch advertising campaign
-    DEADLINE: <2014-03-06 Thu>
-    :PROPERTIES:
-    :Effort:   4:00
-    :END:
+*** Advertising campaign
 
-**** Call Joe
+**** TODO Call Joe
+     DEADLINE: <2014-03-06 Thu>
+     :PROPERTIES:
+     :Effort:   0:10
+     :END:
+
+*** Plan conference
+
+Calendar events/invitations.
+
+**** TODO Recruit volunteers
+     DEADLINE: <2014-03-13 Thu>
+
+**** TODO Make sure responses are coming back
 
 ** Operations
 
@@ -75,6 +82,18 @@
 
 Update blog.
 
+** Travel
+
+*** Boston
+
+**** TODO Find a flight
+
+**** TODO Book hotel room
+
+**** TODO Schedule meetings
+
+**** TODO Submit expense report
+
 -----
 
 * Personal                                                                :home:
@@ -82,64 +101,58 @@ Update blog.
   :CATEGORY: Personal
   :END:
 
-** DONE Read "Getting Things Done"
-   :LOGBOOK:
-   - State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
-   :END:
+** Reading
 
-** TODO Make dentist appointment
-   SCHEDULED: <2014-03-12 Wed>
+*** DONE Read "Getting Things Done"
+    :LOGBOOK:
+    - State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
+    :END:
 
-** TODO Go to the gym
-   SCHEDULED: <2014-03-11 Tue>
-   :PROPERTIES:
-   :Effort:   0:10
-   :END:
+** Health
 
-** Do jogging
+*** TODO Make dentist appointment
+    SCHEDULED: <2014-03-12 Wed>
 
-** TODO Pay electricity bill                                           :FLAGGED:
+*** TODO Go to the gym
+    SCHEDULED: <2014-03-11 Tue>
+    :PROPERTIES:
+    :Effort:   0:10
+    :END:
 
-** TODO Renew newspaper subscription
+It should be as natural to some as showering or eating.
 
-** Buy dog food
+*** TODO Do jogging
 
-** WAIT Mail package to Susan
-   :LOGBOOK:
-   - State "TODO"        ->  "STRT"       [2013-07-24 Wed 15:45]
-   CLOCK: [2013-07-24 Wed 15:45]--[2013-07-24 Wed 17:28] =>  1:43
-   CLOCK: [2013-08-12 Mon 11:56]--[2013-08-12 Mon 12:12] =>  0:16
-   - State "STRT"        ->  "DONE"       [2013-08-12 Mon 12:12]
-   - State "DONE"        ->  "TODO"       [2013-09-27 Fri 10:23]
-   - State "TODO"        ->  "WAIT"       [2013-11-15 Fri 12:00]
-   :END:
+Marathon = 42.195 kilometres.
 
-** TODO Buy groceries
+** Finance
 
-** TODO Mow the lawn
+*** TODO Pay electricity bill                                          :FLAGGED:
 
-** TODO Get a haircut
+*** TODO Renew newspaper subscription
 
-** TODO Pick up dry cleaning
+*** TODO Cancel insurance
 
-** TODO Buy anniversary present
+** Chores
 
-** TODO Go to concert
+*** TODO Buy milk
 
-** TODO Cancel insurance
+*** TODO Buy dog food
 
-** TODO Buy milk
+*** WAIT Mail package to Susan
 
-** TODO Get the car fixed
+*** TODO Buy groceries
 
-** TODO Take out trash
+*** TODO Mow the lawn
 
-** Travel to Boston
+*** TODO Get a haircut
 
-*** TODO Find a flight
+*** TODO Buy anniversary present
 
-*** TODO Book hotel room
+*** TODO Take out trash
 
-*** TODO Schedule meetings
+*** TODO Get the car fixed
 
-*** TODO Submit expense report
+** Recreation
+
+*** TODO Go to concert
