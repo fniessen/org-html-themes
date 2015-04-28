@@ -66,6 +66,11 @@ share and maintain such spec.  Now, I can create a much neater spec which is
 available for the team's reference as a webpage." \\
 -- /Shankar R./
 
+"I like Bigblow the best.  I've exported most of my Org files using this theme
+and published them within my company's intranet.  Thanks for sharing this
+wonderful package!" \\
+-- /Richard K./
+
 ** About ReadTheOrg
 
 "OMG. The ReadTheOrg theme for exported HTML from org mode files is eye
