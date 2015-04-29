@@ -1839,7 +1839,8 @@ ul.nav li.active ul li a {
 
 ul.nav li.active ul li.active a {
     background-color: #D6D6D6;
-    font-weight: bold;
+    color: black !important;
+    font-weight: bold !important;
 }
 
 ul.nav li ul li ul li {
