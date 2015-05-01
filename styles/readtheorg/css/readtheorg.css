@@ -2,33 +2,61 @@
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 h1,h2,h3,h4,h5,h6,legend{
-    margin-top:0;
+    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
     font-weight:700;
-    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
+    margin-top:0;
+}
 
 h1{
-    font-size:175%}
+    font-size:175%;
+}
 
 h2{
-    font-size:150%}
+    font-size:150%;
+}
 
 h3{
-    font-size:125%}
+    font-size:125%;
+}
 
 h4{
-    font-size:115%}
+    font-size:115%;
+}
 
 h5{
-    font-size:110%}
+    font-size:110%;
+}
 
 h6{
-    font-size:100%}
+    font-size:100%;
+}
 
 p{
-    line-height:24px;
-    margin:0;
     font-size:16px;
-    margin-bottom:24px}
+    line-height:24px;
+    margin:0px 0px 24px 0px;
+}
+
+b,strong{
+    font-weight:bold}
+
+blockquote{
+    background-color: #F0F0F0;
+    border-left:5px solid #CCCCCC;
+    font-style:italic;
+    line-height:24px;
+    margin:0px 0px 24px 0px;
+    /* margin-left:24px; */
+    padding: 6px 20px;
+}
+
+ul,ol,dl{
+    line-height:24px;
+    list-style-image:none;
+    /* list-style:none; */
+    margin:0px 0px 24px 0px;
+    padding:0;
+}
 
 @media print{
     .codeblock,pre.src{
@@ -199,17 +227,6 @@ p{
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
     display:block}
 
-audio,canvas,video{
-    display:inline-block;
-    *display:inline;
-    *zoom:1}
-
-audio:not([controls]){
-    display:none}
-
-[hidden]{
-    display:none}
-
 html{
     font-size:100%;
     -webkit-text-size-adjust:100%;
@@ -220,15 +237,6 @@ body{
 
 a:hover,a:active{
             outline:0}
-
-abbr[title]{
-    border-bottom:1px dotted}
-
-b,strong{
-    font-weight:bold}
-
-blockquote{
-    margin:0}
 
 dfn{
     font-style:italic}
@@ -306,13 +314,6 @@ sup{
 
 sub{
     bottom:-0.25em}
-
-ul,ol,dl{
-    margin:0px 0px 24px 0px;
-    padding:0;
-    line-height:24px;
-    /* list-style:none; */
-    list-style-image:none}
 
 #table-of-contents li{
     list-style:none;
@@ -1603,16 +1604,6 @@ nav.stickynav{
 
 #content .section>img,#content .section>a>img{
     margin-bottom:24px}
-
-blockquote{
-    /* margin-left:24px; */
-    line-height:24px;
-    margin-bottom:24px;
-    background-color: #F0F0F0;
-    border-left:5px solid #CCCCCC;
-    padding: 6px 20px;
-    font-style:italic;
-}
 
 .verse{
     border-left:5px solid #6AB0DE;

@@ -20,40 +20,90 @@ approach to better HTML export.
 
 #+begin_src css
 h1,h2,h3,h4,h5,h6,legend{
-    margin-top:0;
+    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
     font-weight:700;
-    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
+    margin-top:0;
+}
 
 h1{
-    font-size:175%}
+    font-size:175%;
+}
 
 h2{
-    font-size:150%}
+    font-size:150%;
+}
 
 h3{
-    font-size:125%}
+    font-size:125%;
+}
 
 h4{
-    font-size:115%}
+    font-size:115%;
+}
 
 h5{
-    font-size:110%}
+    font-size:110%;
+}
 
 h6{
-    font-size:100%}
+    font-size:100%;
+}
 #+end_src
 
 ** Body
 
 #+begin_src css
 p{
-    line-height:24px;
-    margin:0;
     font-size:16px;
-    margin-bottom:24px}
+    line-height:24px;
+    margin:0px 0px 24px 0px;
+}
+#+end_src
+
+** Bold
+
+#+begin_src css
+b,strong{
+    font-weight:bold}
 #+end_src
 
 ** Blockquotes
+
+#+begin_src css
+blockquote{
+    background-color: #F0F0F0;
+    border-left:5px solid #CCCCCC;
+    font-style:italic;
+    line-height:24px;
+    margin:0px 0px 24px 0px;
+    /* margin-left:24px; */
+    padding: 6px 20px;
+}
+#+end_src
+
+** Lists
+
+#+begin_src css
+ul,ol,dl{
+    line-height:24px;
+    list-style-image:none;
+    /* list-style:none; */
+    margin:0px 0px 24px 0px;
+    padding:0;
+}
+#+end_src
+
+*** Unordered
+
+
+
+*** Ordered
+
+
+
+*** Description
+
+
 
 * Media queries
   :PROPERTIES:
@@ -284,17 +334,6 @@ p{
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
     display:block}
 
-audio,canvas,video{
-    display:inline-block;
-    *display:inline;
-    *zoom:1}
-
-audio:not([controls]){
-    display:none}
-
-[hidden]{
-    display:none}
-
 html{
     font-size:100%;
     -webkit-text-size-adjust:100%;
@@ -305,16 +344,9 @@ body{
 
 a:hover,a:active{
             outline:0}
+#+end_src
 
-abbr[title]{
-    border-bottom:1px dotted}
-
-b,strong{
-    font-weight:bold}
-
-blockquote{
-    margin:0}
-
+#+begin_src css
 dfn{
     font-style:italic}
 
@@ -393,14 +425,9 @@ sup{
 
 sub{
     bottom:-0.25em}
+#+end_src
 
-ul,ol,dl{
-    margin:0px 0px 24px 0px;
-    padding:0;
-    line-height:24px;
-    /* list-style:none; */
-    list-style-image:none}
-
+#+begin_src css
 #table-of-contents li{
     list-style:none;
     margin-left: 0px;
@@ -1705,16 +1732,6 @@ nav.stickynav{
 #content .section>img,#content .section>a>img{
     margin-bottom:24px}
 
-blockquote{
-    /* margin-left:24px; */
-    line-height:24px;
-    margin-bottom:24px;
-    background-color: #F0F0F0;
-    border-left:5px solid #CCCCCC;
-    padding: 6px 20px;
-    font-style:italic;
-}
-
 .verse{
     border-left:5px solid #6AB0DE;
     background-color: #E7F2FA;
@@ -1884,7 +1901,9 @@ h2.footnotes{
     line-height: 1.25em;
     /* display: inline; */
 }
+#+end_src
 
+#+begin_src css
 .tag span {
     background-color: #EDEDED;
     border: 1px solid #EDEDED;
@@ -1911,7 +1930,9 @@ h2.footnotes{
     font-size: 90%;
     color: navy;
 }
+#+end_src
 
+#+begin_src css
 ul.nav li ul li {
     display: none;
 }
@@ -1954,7 +1975,7 @@ ul.nav > li.active > a {
 }
 #+end_src
 
-* CSS
+* Htmlize
   :PROPERTIES:
   :tangle:   css/htmlize.css
   :END:
