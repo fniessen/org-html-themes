@@ -31,6 +31,20 @@ h6{
     font-size:100%;
 }
 
+html{
+    height:100%;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    font-weight:normal;
+    color:#404040;
+    min-height:100%;
+    overflow-x:hidden;
+    background:#edf0f2;
+}
+
 p{
     font-size:16px;
     line-height:24px;
@@ -737,18 +751,6 @@ a:hover{
 
 a:visited{
     color:#9B59B6}
-
-html{
-    height:100%;
-    overflow-x:hidden}
-
-body{
-    font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
-    font-weight:normal;
-    color:#404040;
-    min-height:100%;
-    overflow-x:hidden;
-    background:#edf0f2}
 
 .left{
     text-align:left}
