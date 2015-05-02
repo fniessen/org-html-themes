@@ -37,12 +37,22 @@ html{
 }
 
 body{
+    background:#edf0f2;
+    color:#404040;
     font-family:"Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
     font-weight:normal;
-    color:#404040;
     min-height:100%;
     overflow-x:hidden;
-    background:#edf0f2;
+}
+
+#content{
+    background:#fcfcfc;
+    height:100%;
+    margin-left:300px;
+    /* margin:auto; */
+    max-width:800px;
+    min-height:100%;
+    padding:1.618em 3.236em;
 }
 
 p{
@@ -296,6 +306,39 @@ pre.src{
     padding:12px;
 }
 
+table{
+    border-collapse:collapse;
+    border-spacing:0}
+
+td{
+    vertical-align:top}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    empty-cells:show;
+    margin-bottom:24px}
+
+table caption, .figure p{
+    color:#000;
+    font:italic 85%/1 arial,sans-serif;
+    padding:1em 0;}
+
+table td,table th{
+    font-size:90%;
+    margin:0;
+    overflow:visible;
+    padding:8px 16px;
+    background-color: transparent;
+    border: 1px solid #e1e4e5;}
+
+table thead th{
+    font-weight:bold;
+    border-bottom:solid 2px #e1e4e5}
+
+table tr:nth-child(2n-1) td{
+    background-color:#f3f6f6}
+
 .rotate-90{
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
@@ -365,11 +408,6 @@ sup{
 sub{
     bottom:-0.25em}
 
-#table-of-contents li{
-    list-style:none;
-    margin-left: 0px;
-}
-
 li {
     margin-left: 24px;
 }
@@ -405,13 +443,6 @@ legend{
     margin-left:-7px;
     padding:0;
     white-space:normal}
-
-table{
-    border-collapse:collapse;
-    border-spacing:0}
-
-td{
-    vertical-align:top}
 
 .fa:before,#content .admonition-title:before,#content h1 .headerlink:before,#content h2 .headerlink:before,#content h3 .headerlink:before,#content h4 .headerlink:before,#content h5 .headerlink:before,#content h6 .headerlink:before,#content dl dt .headerlink:before,.icon:before,.wy-dropdown .caret:before,.wy-inline-validate.wy-inline-validate-success .wy-input-context:before,.wy-inline-validate.wy-inline-validate-danger .wy-input-context:before,.wy-inline-validate.wy-inline-validate-warning .wy-input-context:before,.wy-inline-validate.wy-inline-validate-info .wy-input-context:before,.wy-alert,#content .note,#content .attention,#content .caution,#content .danger,#content .error,#content .hint,#content .important,#content .tip,#content .warning,#content .seealso,#content .admonitiontodo,.btn,input[type="text"],input[type="password"],input[type="email"],input[type="url"],input[type="date"],input[type="month"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="week"],input[type="number"],input[type="search"],input[type="tel"],input[type="color"],select,textarea,#table-of-contents li.on a,#table-of-contents li.current>a,.wy-side-nav-search>a,.wy-side-nav-search .wy-dropdown>a,.wy-nav-top a{
     -webkit-font-smoothing:antialiased}
@@ -715,32 +746,6 @@ label{
 .full-width{
     width:100%}
 
-table{
-    border-collapse:collapse;
-    border-spacing:0;
-    empty-cells:show;
-    margin-bottom:24px}
-
-table caption, .figure p{
-    color:#000;
-    font:italic 85%/1 arial,sans-serif;
-    padding:1em 0;}
-
-table td,table th{
-    font-size:90%;
-    margin:0;
-    overflow:visible;
-    padding:8px 16px;
-    background-color: transparent;
-    border: 1px solid #e1e4e5;}
-
-table thead th{
-    font-weight:bold;
-    border-bottom:solid 2px #e1e4e5}
-
-table tr:nth-child(2n-1) td{
-    background-color:#f3f6f6}
-
 a{
     color:#2980B9;
     text-decoration:none;
@@ -822,6 +827,11 @@ hr{
 
 .wy-plain-list-decimal li ul li,#content .section ol li ul li,#content ol li ul li,article ol li ul li{
     list-style:disc}
+
+#table-of-contents li{
+    list-style:none;
+    margin-left: 0px;
+}
 
 #table-of-contents header{
     height:32px;
@@ -923,16 +933,6 @@ hr{
     color:#fcfcfc;
     font-size: 100%;
     margin-bottom:0.809em}
-
-#content{
-    margin-left:300px;
-    background:#fcfcfc;
-    min-height:100%;
-    padding:1.618em 3.236em;
-    height:100%;
-    max-width:800px;
-    /* margin:auto */
-}
 
 footer{
     color:#999}
@@ -1089,49 +1089,11 @@ nav.stickynav{
 #content a tt{
     color:#2980B9}
 
-#content dl{
-    margin-bottom:24px}
-
-#content dl dt{
-    font-weight:bold}
-
-#content dl p,#content dl table,#content dl ul,#content dl ol{
-    margin-bottom:12px !important}
-
-#content dl dd{
-    margin:0 0 12px 24px}
-
-#content .viewcode-link,#content .viewcode-back{
-    display:inline-block;
-    color:#27AE60;
-    font-size:80%;
-    padding-left:24px}
-
-#content .viewcode-back{
-    display:block;
-    float:right}
-
 span[id*='MathJax-Span']{
     color:#404040}
 
 .math{
     text-align:center}
-
-/* .tag{ */
-/*     text-align: right; */
-/* } */
-
-.todo{
-    background-color: #f29f97;
-    padding: 0px 4px;
-    color: #fff;
-}
-
-.done{
-    background-color: #6ab0de;
-    padding: 0px 4px;
-    color: #fff;
-}
 
 #footnotes{
     border-top:1px solid #e1e4e5;
@@ -1166,6 +1128,18 @@ h2.footnotes{
     padding-top: 8px;
     line-height: 1.25em;
     /* display: inline; */
+}
+
+.todo{
+    background-color: #f29f97;
+    padding: 0px 4px;
+    color: #fff;
+}
+
+.done{
+    background-color: #6ab0de;
+    padding: 0px 4px;
+    color: #fff;
 }
 
 .tag span {
