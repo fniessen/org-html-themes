@@ -308,21 +308,13 @@ pre.src{
 
 table{
     border-collapse:collapse;
-    border-spacing:0}
+    border-spacing:0;
+    empty-cells:show;
+    margin-bottom:24px;
+}
 
 td{
     vertical-align:top}
-
-table{
-    border-collapse:collapse;
-    border-spacing:0;
-    empty-cells:show;
-    margin-bottom:24px}
-
-table caption, .figure p{
-    color:#000;
-    font:italic 85%/1 arial,sans-serif;
-    padding:1em 0;}
 
 table td,table th{
     font-size:90%;
@@ -330,14 +322,29 @@ table td,table th{
     overflow:visible;
     padding:8px 16px;
     background-color: transparent;
-    border: 1px solid #e1e4e5;}
+    border: 1px solid #e1e4e5;
+}
 
 table thead th{
     font-weight:bold;
-    border-bottom:solid 2px #e1e4e5}
+    border-bottom:solid 2px #e1e4e5;
+}
+
+table caption{
+    color:#000;
+    font:italic 85%/1 arial,sans-serif;
+    padding:1em 0;
+}
 
 table tr:nth-child(2n-1) td{
-    background-color:#f3f6f6}
+    background-color:#f3f6f6;
+}
+
+.figure p{
+    color:#000;
+    font:italic 85%/1 arial,sans-serif;
+    padding:1em 0;
+}
 
 .rotate-90{
     -webkit-transform:rotate(90deg);
