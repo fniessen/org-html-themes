@@ -121,6 +121,60 @@ ul,ol,dl{
 }
 #+end_src
 
+#+begin_src css
+li{
+    margin-left: 24px;
+}
+
+dd{
+    margin:0;
+}
+#+end_src
+
+#+begin_src css
+#content .section ul,#content .toctree-wrapper ul,article ul{
+    list-style:disc;
+    line-height:24px;
+    margin-bottom:24px}
+
+#content .section ul li,#content .toctree-wrapper ul li,article ul li{
+    list-style:disc;
+    margin-left:24px}
+
+#content .section ul li p:last-child,#content .toctree-wrapper ul li p:last-child,article ul li p:last-child{
+                                                                                                                                  margin-bottom:0}
+
+#content .section ul li ul,#content .toctree-wrapper ul li ul,article ul li ul{
+    margin-bottom:0}
+
+#content .section ul li li,#content .toctree-wrapper ul li li,article ul li li{
+    list-style:circle}
+
+#content .section ul li li li,#content .toctree-wrapper ul li li li,article ul li li li{
+    list-style:square}
+
+#content .section ul li ol li,#content .toctree-wrapper ul li ol li,article ul li ol li{
+    list-style:decimal}
+
+#content .section ol,#content ol,article ol{
+    list-style:decimal;
+    line-height:24px;
+    margin-bottom:24px}
+
+#content .section ol li,#content ol li,article ol li{
+    list-style:decimal;
+    margin-left:24px}
+
+#content .section ol li p:last-child,#content ol li p:last-child,article ol li p:last-child{
+                                                                                                                           margin-bottom:0}
+
+#content .section ol li ul,#content ol li ul,article ol li ul{
+    margin-bottom:0}
+
+#content .section ol li ul li,#content ol li ul li,article ol li ul li{
+    list-style:disc}
+#+end_src
+
 *** Unordered
 
 
@@ -534,13 +588,6 @@ sub{
 #+end_src
 
 #+begin_src css
-li {
-    margin-left: 24px;
-}
-
-dd{
-    margin:0}
-
 img{
     border:0;
     -ms-interpolation-mode:bicubic;
@@ -743,50 +790,6 @@ hr{
 #+end_src
 
 #+begin_src css
-.wy-plain-list-disc,#content .section ul,#content .toctree-wrapper ul,article ul{
-    list-style:disc;
-    line-height:24px;
-    margin-bottom:24px}
-
-.wy-plain-list-disc li,#content .section ul li,#content .toctree-wrapper ul li,article ul li{
-    list-style:disc;
-    margin-left:24px}
-
-.wy-plain-list-disc li p:last-child,#content .section ul li p:last-child,#content .toctree-wrapper ul li p:last-child,article ul li p:last-child{
-                                                                                                                                  margin-bottom:0}
-
-.wy-plain-list-disc li ul,#content .section ul li ul,#content .toctree-wrapper ul li ul,article ul li ul{
-    margin-bottom:0}
-
-.wy-plain-list-disc li li,#content .section ul li li,#content .toctree-wrapper ul li li,article ul li li{
-    list-style:circle}
-
-.wy-plain-list-disc li li li,#content .section ul li li li,#content .toctree-wrapper ul li li li,article ul li li li{
-    list-style:square}
-
-.wy-plain-list-disc li ol li,#content .section ul li ol li,#content .toctree-wrapper ul li ol li,article ul li ol li{
-    list-style:decimal}
-
-.wy-plain-list-decimal,#content .section ol,#content ol,article ol{
-    list-style:decimal;
-    line-height:24px;
-    margin-bottom:24px}
-
-.wy-plain-list-decimal li,#content .section ol li,#content ol li,article ol li{
-    list-style:decimal;
-    margin-left:24px}
-
-.wy-plain-list-decimal li p:last-child,#content .section ol li p:last-child,#content ol li p:last-child,article ol li p:last-child{
-                                                                                                                           margin-bottom:0}
-
-.wy-plain-list-decimal li ul,#content .section ol li ul,#content ol li ul,article ol li ul{
-    margin-bottom:0}
-
-.wy-plain-list-decimal li ul li,#content .section ol li ul li,#content ol li ul li,article ol li ul li{
-    list-style:disc}
-#+end_src
-
-#+begin_src css
 #table-of-contents li{
     list-style:none;
     margin-left: 0px;
@@ -977,18 +980,6 @@ footer p{
 #content .section ol p,#content .section ul p{
     margin-bottom:12px}
 
-#content .align-right{
-    float:right;
-    margin:0px 0px 24px 24px}
-
-#content .align-left{
-    float:left;
-    margin:0px 24px 24px 0px}
-
-#content .align-center{
-    margin:auto;
-    display:block}
-
 #content h1 .headerlink,#content h2 .headerlink,#content h3 .headerlink,#content h4 .headerlink,#content h5 .headerlink,#content h6 .headerlink,#content dl dt .headerlink{
     display:none;
     visibility:hidden;
@@ -1037,12 +1028,6 @@ footer p{
 #content .footnote-reference,#content .citation-reference{
     vertical-align:super;
     font-size:90%}
-
-#content tt{
-    color:#000}
-
-#content a tt{
-    color:#2980B9}
 #+end_src
 
 #+begin_src css
