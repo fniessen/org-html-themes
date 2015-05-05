@@ -690,8 +690,9 @@ hr{
     top:0;
     left:0;
     width:300px;
-    overflow:hidden;
-    min-height:100%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    height:100%;
     background:#343131;
     z-index:200}
 
