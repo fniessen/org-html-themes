@@ -1117,12 +1117,18 @@ h2.footnotes{
     font-size: 90%;
     color: navy;
 }
+#+end_src
 
+See
+http://stackoverflow.com/questions/10535432/tmux-man-page-search-highlighting
+for nice yellow or orange boxes.
+
+#+begin_src css
 .inlinetask {
-    background: #f2d9b4;  /* url(dialog-todo.png) no-repeat 10px 8px; */
-    /* border: 2px solid #e9b96e; */
-    border-right-style: none;
-    border-left-style: none;
+    background: #FFF9E3;  /* url(dialog-todo.png) no-repeat 10px 8px; */
+    border: 3px solid #FFEB8E;
+    /* border-right-style: none; */
+    /* border-left-style: none; */
     /* padding: 10px 20px 10px 60px; */
     padding: 9px 12px;
     margin-bottom: 24px;

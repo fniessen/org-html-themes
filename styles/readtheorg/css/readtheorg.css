@@ -960,10 +960,10 @@ h2.footnotes{
 }
 
 .inlinetask {
-    background: #f2d9b4;  /* url(dialog-todo.png) no-repeat 10px 8px; */
-    /* border: 2px solid #e9b96e; */
-    border-right-style: none;
-    border-left-style: none;
+    background: #FFF9E3;  /* url(dialog-todo.png) no-repeat 10px 8px; */
+    border: 3px solid #FFEB8E;
+    /* border-right-style: none; */
+    /* border-left-style: none; */
     /* padding: 10px 20px 10px 60px; */
     padding: 9px 12px;
     margin-bottom: 24px;
