@@ -832,7 +832,9 @@ hr{
     display:block;
     position:relative;
     font-size:90%;
-    color:#b3b3b3}
+    color:#b3b3b3;
+    direction: ltr;
+}
 
 #table-of-contents a:hover{
     background-color:#4e4a4a;
@@ -849,6 +851,7 @@ hr{
     width:300px;
     overflow-x:hidden;
     overflow-y:scroll;
+    direction: rtl;
     height:100%;
     background:#343131;
     z-index:200}
