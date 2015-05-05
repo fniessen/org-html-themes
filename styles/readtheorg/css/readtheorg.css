@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700);
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
@@ -144,7 +145,6 @@ dd{
 @media print{
     .codeblock,pre.src{
         white-space:pre.src-wrap}
-
 }
 
 @media print{
@@ -181,82 +181,39 @@ dd{
 
     h2,h3{
         page-break-after:avoid}
-
 }
 
 @media print{
-    .wy-breadcrumbs li.wy-breadcrumbs-aside{
-        display:none}
-
 }
 
 @media print{
-    #copyright,footer,.wy-nav-side{
+    #copyright,footer{
         display:none}
 
     #content{
         margin-left:0}
-
 }
 
 @media screen and (max-width: 768px){
-    .wy-tray-container{
-        bottom:auto;
-        top:0;
-        width:100%}
-
-    .wy-tray-container li{
-        width:100%}
-
 }
 
 @media only screen and (max-width: 480px){
-    .wy-form label{
-        margin-bottom:0.3em;
-        display:block}
-
-    .wy-form .wy-help-inline,.wy-form-message-inline,.wy-form-message{
-        display:block;
-        font-size:80%;
-        padding:6px 0}
-
 }
 
 @media screen and (max-width: 768px){
     .tablet-hide{
         display:none}
-
 }
 
 @media screen and (max-width: 480px){
     .mobile-hide{
         display:none}
-
 }
 
 @media screen and (max-width: 480px){
-    .wy-breadcrumbs-extra{
-        display:none}
-
-    .wy-breadcrumbs li.wy-breadcrumbs-aside{
-        display:none}
-
 }
 
 @media screen and (max-width: 768px){
-    .wy-body-for-nav{
-        background:#fcfcfc}
-
-    .wy-nav-top{
-        display:block}
-
-    .wy-nav-side{
-        left:-300px}
-
-    .wy-nav-side.shift{
-        width:85%;
-        left:0}
-
     #content{
         margin-left:0}
 
@@ -270,7 +227,6 @@ dd{
         top:0;
         height:100%;
         overflow:hidden}
-
 }
 
 @media screen and (min-width: 1400px){
@@ -279,7 +235,6 @@ dd{
 
     #content{
         background:#fcfcfc}
-
 }
 
 @media screen and (max-width: 768px){
@@ -293,13 +248,11 @@ dd{
     img{
         width:100%;
         height:auto}
-
 }
 
 @media screen and (max-width: 480px){
     #content .sidebar{
         width:100%}
-
 }
 
 code{
