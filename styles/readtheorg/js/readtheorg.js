@@ -36,6 +36,9 @@ $( document ).ready(function() {
                                         // ScrollSpy also requires that we use
                                         // a Bootstrap nav component.
     $('body').scrollspy({target: '#text-table-of-contents'});
+
+    // add sticky table headers
+    $('table').stickyTableHeaders();
 });
 
 window.SphinxRtdTheme = (function (jquery) {
