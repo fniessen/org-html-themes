@@ -199,7 +199,19 @@ dd{
 
 *** Description
 
+#+begin_src css
+dl dt{
+    font-weight:bold;
+}
 
+dl p,dl table,dl ul,dl ol{
+    margin-bottom:12px !important;
+}
+
+dl dd{
+    margin:0 0 12px 24px;
+}
+#+end_src
 
 * Media queries
   :PROPERTIES:
