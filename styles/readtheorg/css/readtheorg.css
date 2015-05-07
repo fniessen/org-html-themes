@@ -195,14 +195,16 @@ dl dd{
 }
 
 @media print{
-}
-
-@media print{
-    #copyright,footer{
+    #postamble{
         display:none}
 
     #content{
         margin-left:0}
+}
+
+@media print{
+    #table-of-contents{
+        display:none}
 }
 
 @media screen and (max-width: 768px){

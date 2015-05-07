@@ -228,7 +228,7 @@ dl dd{
     html,body,section{
         background:none !important}
 
-    *{
+    ,,*{
         box-shadow:none !important;
         text-shadow:none !important;
         filter:none !important;
@@ -261,14 +261,16 @@ dl dd{
 }
 
 @media print{
-}
-
-@media print{
-    #copyright,footer{
+    #postamble{
         display:none}
 
     #content{
         margin-left:0}
+}
+
+@media print{
+    #table-of-contents{
+        display:none}
 }
 #+end_src
 
