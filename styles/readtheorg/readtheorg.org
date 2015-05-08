@@ -444,6 +444,7 @@ table{
     border-spacing:0;
     empty-cells:show;
     margin-bottom:24px;
+    border-bottom:1px solid #e1e4e5;
 }
 
 td{
@@ -455,12 +456,13 @@ table td,table th{
     overflow:visible;
     padding:8px 16px;
     background-color:white;
-    border: 1px solid #e1e4e5;
+    border:1px solid #e1e4e5;
 }
 
 table thead th{
     font-weight:bold;
-    border-bottom:solid 2px #e1e4e5;
+    border-top:3px solid #e1e4e5;
+    border-bottom:1px solid #e1e4e5;
 }
 #+end_src
 
