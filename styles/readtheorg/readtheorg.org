@@ -38,6 +38,10 @@ h1{
     font-size:175%;
 }
 
+.subtitle{
+    font-size:95%; /* of h1 */
+}
+
 h2{
     font-size:150%;
 }
