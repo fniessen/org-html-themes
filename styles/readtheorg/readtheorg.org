@@ -454,7 +454,7 @@ table td,table th{
     margin:0;
     overflow:visible;
     padding:8px 16px;
-    background-color: transparent;
+    background-color:white;
     border: 1px solid #e1e4e5;
 }
 
@@ -479,6 +479,10 @@ table caption{
 #+begin_src css
 table tr:nth-child(2n-1) td{
     background-color:#f3f6f6;
+}
+
+table tr:nth-child(2n) td{
+    background-color:white;
 }
 #+end_src
 
