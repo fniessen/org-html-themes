@@ -209,6 +209,13 @@ dl dd{
 @media print{
     #table-of-contents{
         display:none}
+
+    @page{
+        size: auto;
+        margin: 25mm 25mm 25mm 25mm;}
+
+    body {
+        margin: 0px;}
 }
 
 @media screen and (max-width: 768px){
