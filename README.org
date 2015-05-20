@@ -84,6 +84,9 @@ this theme." \\
 "That is incredibly impressive.  Thanks for this." \\
 -- /Noah R./
 
+"Thank you!  I enjoy your themes.  The best ones I've ever found." \\
+-- /Kang T./
+
 * Gallery
   :PROPERTIES:
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
@@ -201,6 +204,7 @@ your Org file instead:
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
 #+end_src
 
 *** Local version
@@ -222,6 +226,7 @@ Here a local version (using relative paths):
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
 ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
 #+end_src
 
 ** ReadTheOrg
@@ -244,6 +249,7 @@ your Org file instead:
 
 ,#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 ,#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
 ,#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 #+end_src
 
