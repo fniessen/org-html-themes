@@ -23,18 +23,21 @@
 
 ** Description
 
-Org mode provides basic HTML support.  Though, we can easily override CSS
-stylesheets and add our own HTML themes.
+Though you can easily override CSS stylesheets and add your own HTML themes, we
+can say (or write) that Org mode provides a /basic/ HTML support.
+
+*Org-HMTL themes* is an open source framework for providing you with a list of
+very nice (cross-browser) themes for all your Org documents.  Use them, and your
+colleagues will come up to tell you that you are a genius!
+
+Share this content by tweeting this page:
 
 #+begin_html
 <script src="http://platform.twitter.com/widgets.js"></script>
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="f_niessen">Tweet</a>
 #+end_html
 
-** Objective
-
-The goal of the *Org-HMTL themes* is to provide you with a list of very nice
-(cross-browser) themes.
+Follow [[https://twitter.com/f_niessen][f_niessen]] on Twitter for updates on Org-HTML themes!
 
 ** Requirements
 
@@ -271,6 +274,10 @@ a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&
 
 Regardless of the donations, org-html-themes will always be free both as in
 beer and as in speech.
+
+** Follow me
+
+I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You should follow it.
 
 * License
 
