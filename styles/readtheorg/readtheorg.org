@@ -841,6 +841,9 @@ hr{
     /* background:#c9c9c9; */
     padding:0.4045em 2.427em}
 
+#table-of-contents li ul li ul li a{
+    padding:0.4045em 3.236em}
+
 #table-of-contents li.current ul{
     display:block}
 
@@ -901,6 +904,78 @@ hr{
     color:#fcfcfc;
     font-size: 100%;
     margin-bottom:0.809em}
+#+end_src
+
+#+begin_src css
+ul.nav li ul li {
+    display: none;
+}
+
+ul.nav li ul li ul li {
+    display: none;
+}
+
+ul.nav li.active ul li {
+    display: inline;
+}
+
+ul.nav li.active ul li ul li {
+    display: inline;
+}
+
+ul.nav li.active ul li a {
+    background-color: #E3E3E3;
+    color: #8099B0;
+    border-right:solid 1px #c9c9c9 !important;
+}
+
+ul.nav li.active ul li.active a {
+    background-color: #C9C9C9;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+ul.nav li.active ul li.active ul li.active a {
+    color: black !important;
+    font-weight: bold !important;
+    display: block !important;
+}
+
+ul.nav li.active ul li.active ul li a {
+    color: #808080 !important;
+    font-weight: normal !important;
+    display: block !important;
+}
+
+ul.nav li.active ul li ul li a {
+    display: none !important;
+}
+
+/* ul.nav li ul li ul li { */
+/*     display: none !important; /\* as long as nav is on multiple levels of ul *\/ */
+/*     /\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ */
+/* } */
+
+ul.nav li ul li ul li ul li {
+    display: none !important; /* as long as nav is on multiple levels of ul */
+    /* display: none; /* as long as nav is on multiple levels of ul *\/ */
+}
+
+ul.nav li.active > a {
+    border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
+    border-right:solid 1px #c9c9c9 !important;
+}
+
+ul.nav li.active a {
+    color: gray !important;
+    font-weight:bold;
+    background-color: white;
+    border-right:solid 0px white !important;
+}
+
+ul.nav > li.active > a {
+    color: black !important;
+}
 #+end_src
 
 #+begin_src css
@@ -1134,49 +1209,6 @@ for nice yellow or orange boxes.
     padding: 9px 12px;
     margin-bottom: 24px;
     font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
-#+end_src
-
-#+begin_src css
-ul.nav li ul li {
-    display: none;
-}
-
-ul.nav li.active ul li {
-    display: inline;
-}
-
-ul.nav li.active ul li a {
-    background-color: #E3E3E3;
-    color: #8099B0;
-    border-right:solid 1px #c9c9c9 !important;
-}
-
-ul.nav li.active ul li.active a {
-    background-color: #D6D6D6;
-    color: black !important;
-    font-weight: bold !important;
-}
-
-ul.nav li ul li ul li {
-    display: none !important; /* as long as nav is on multiple levels of ul */
-    /* display: none; /\* as long as nav is on multiple levels of ul *\/ */
-}
-
-ul.nav li.active > a {
-    border-bottom:solid 1px #c9c9c9 !important;
-    border-right:solid 1px #c9c9c9 !important;
-}
-
-ul.nav li.active a {
-    color: gray !important;
-    font-weight:bold;
-    background-color: white;
-    border-right:solid 0px white !important;
-}
-
-ul.nav > li.active > a {
-    color: black !important;
-}
 #+end_src
 
 * Htmlize

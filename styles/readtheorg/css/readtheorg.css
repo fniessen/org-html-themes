@@ -684,7 +684,7 @@ hr{
     padding:0.4045em 2.427em}
 
 #table-of-contents li ul li ul li a{
-    padding:0.4045em 4.854em}
+    padding:0.4045em 3.236em}
 
 #table-of-contents li.current ul{
     display:block}
@@ -770,7 +770,7 @@ ul.nav li.active ul li a {
 }
 
 ul.nav li.active ul li.active a {
-    background-color: #D6D6D6;
+    background-color: #C9C9C9;
     color: black !important;
     font-weight: bold !important;
 }
@@ -778,12 +778,11 @@ ul.nav li.active ul li.active a {
 ul.nav li.active ul li.active ul li.active a {
     color: black !important;
     font-weight: bold !important;
-    border-bottom:solid 0px #c9c9c9 !important;
     display: block !important;
 }
 
 ul.nav li.active ul li.active ul li a {
-    color: black !important;
+    color: #808080 !important;
     font-weight: normal !important;
     display: block !important;
 }
@@ -803,7 +802,7 @@ ul.nav li ul li ul li ul li {
 }
 
 ul.nav li.active > a {
-    border-bottom:solid 1px #c9c9c9 !important;
+    border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 1px #c9c9c9 !important;
 }
 
