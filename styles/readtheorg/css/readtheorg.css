@@ -991,6 +991,10 @@ h2.footnotes{
     color: #fff;
 }
 
+.WAIT, .nilWAIT{
+    background-color: #6AB097;
+}
+
 .done{
     background-color: #6ab0de;
     padding: 0px 4px;

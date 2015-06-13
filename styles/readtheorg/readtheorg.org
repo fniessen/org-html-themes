@@ -1161,6 +1161,10 @@ h2.footnotes{
     color: #fff;
 }
 
+.WAIT, .nilWAIT{
+    background-color: #6AB097;
+}
+
 .done{
     background-color: #6ab0de;
     padding: 0px 4px;
@@ -1407,6 +1411,9 @@ $( document ).ready(function() {
                                         // ScrollSpy also requires that we use
                                         // a Bootstrap nav component.
     $('body').scrollspy({target: '#text-table-of-contents'});
+
+    // add sticky table headers
+    $('table').stickyTableHeaders();
 });
 
 window.SphinxRtdTheme = (function (jquery) {
