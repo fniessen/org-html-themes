@@ -27,8 +27,8 @@ Though you can easily override CSS stylesheets and add your own HTML themes, we
 can say (or write) that Org mode provides a /basic/ HTML support.
 
 *Org-HMTL themes* is an open source framework for providing you with a list of
-very nice (cross-browser) themes for all your Org documents.  Use them, and your
-colleagues will come up to tell you that you are a genius!
+very nice (cross-browser) themes for all your Org documents.  Use them to *style
+your docs*, and your colleagues will come up to tell you that you are a genius!
 
 Share this content by tweeting this page:
 
@@ -89,6 +89,12 @@ this theme." \\
 
 "Thank you!  I enjoy your themes.  The best ones I've ever found." \\
 -- /Kang T./
+
+"Awesome theme.  Wonderful job.  You're doing a wonderful thing --- it will
+enable people (at least those who use Emacs and Org mode) to put together
+on-line reference works in a much-more usable fashion than is currently
+available." \\
+-- /D. C. Toedt/
 
 * Gallery
   :PROPERTIES:
