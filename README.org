@@ -6,7 +6,7 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 toc:t num:2
 
-#+PROPERTY:  padline no
+#+PROPERTY:  header-args :padline no
 #+SETUPFILE: setup/theme-readtheorg.setup
 
 #+begin_html
