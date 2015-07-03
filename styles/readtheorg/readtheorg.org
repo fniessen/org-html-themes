@@ -17,7 +17,7 @@ approach to better HTML export.
 
 * Typography
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 #+begin_src css
@@ -219,7 +219,7 @@ dl dd{
 
 * Media queries
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 #+begin_src css
@@ -360,7 +360,7 @@ dl dd{
 
 * Code
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 ** Inline
@@ -440,7 +440,7 @@ pre.src{
 
 * Tables
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 ** Basic example
@@ -497,7 +497,7 @@ table tr:nth-child(2n) td{
 
 * Images
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 ** Optional image caption
@@ -512,7 +512,7 @@ table tr:nth-child(2n) td{
 
 * Helper classes
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 #+begin_src css
@@ -535,12 +535,12 @@ table tr:nth-child(2n) td{
 
 * Responsive utilities
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 * CSS
   :PROPERTIES:
-  :tangle:   css/readtheorg.css
+  :header-args: :tangle css/readtheorg.css
   :END:
 
 #+begin_src css
@@ -586,7 +586,6 @@ sub{
 
 #+begin_src css
 img{
-    border:0;
     -ms-interpolation-mode:bicubic;
     vertical-align:middle;
     max-width:100%}
@@ -1217,7 +1216,7 @@ for nice yellow or orange boxes.
 
 * Htmlize
   :PROPERTIES:
-  :tangle:   css/htmlize.css
+  :header-args: :tangle css/htmlize.css
   :END:
 
 #+begin_src css
@@ -1370,7 +1369,7 @@ for nice yellow or orange boxes.
 
 * JS
   :PROPERTIES:
-  :tangle:   js/readtheorg.js
+  :header-args: :tangle js/readtheorg.js
   :END:
 
 #+begin_src js
