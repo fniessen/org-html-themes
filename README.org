@@ -96,6 +96,9 @@ on-line reference works in a much-more usable fashion than is currently
 available." \\
 -- /D. C. Toedt/
 
+"Extremely useful." \\
+-- /Thomas S. Dye/
+
 * Gallery
   :PROPERTIES:
   :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
