@@ -884,7 +884,6 @@ hr{
     width:300px;
     overflow-x:hidden;
     overflow-y:scroll;
-    direction: rtl;
     height:100%;
     background:#343131;
     z-index:200;
