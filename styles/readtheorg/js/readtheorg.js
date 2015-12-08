@@ -38,6 +38,12 @@ $( document ).ready(function() {
 
     // add sticky table headers
     $('table').stickyTableHeaders();
+
+    var $postamble = $('#postamble');
+    var $tableOfContents = $('#table-of-contents');
+    // set the height of tableOfContents
+    $tableOfContents.height($tableOfContents.height() - $postamble.outerHeight());
+
 });
 
 window.SphinxRtdTheme = (function (jquery) {
