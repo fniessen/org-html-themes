@@ -1,4 +1,4 @@
-#+TITLE:     Awesome HTML themes for files exported from Org mode
+#+TITLE:     How you export Org mode files into awesome HTML in 2 minutes
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.
@@ -9,7 +9,7 @@
 #+PROPERTY:  header-args :padline no
 #+SETUPFILE: setup/theme-readtheorg.setup
 
-#+begin_html
+#+begin_export html
 <a href="http://opensource.org/licenses/GPL-3.0">
   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
 </a>
@@ -17,7 +17,7 @@
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
   <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 </a>
-#+end_html
+#+end_export
 
 * Overview
 
@@ -32,10 +32,10 @@ your docs*, and your colleagues will come up to tell you that you are a genius!
 
 Share this content by tweeting this page:
 
-#+begin_html
+#+begin_export html
 <script src="http://platform.twitter.com/widgets.js"></script>
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="f_niessen">Tweet</a>
-#+end_html
+#+end_export
 
 Follow [[https://twitter.com/f_niessen][f_niessen]] on Twitter for updates on Org-HTML themes!
 
@@ -290,7 +290,7 @@ I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You 
 
 * License
 
-Copyright (C) 2011-2015 Fabrice Niessen.
+Copyright (C) 2011-2016 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
@@ -307,7 +307,7 @@ A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with
 this program. If not, see http://www.gnu.org/licenses/.
 
-#+begin_html
+#+begin_export html
 <a href="http://opensource.org/licenses/GPL-3.0">
   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
 </a>
@@ -315,4 +315,4 @@ this program. If not, see http://www.gnu.org/licenses/.
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
   <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 </a>
-#+end_html
+#+end_export
