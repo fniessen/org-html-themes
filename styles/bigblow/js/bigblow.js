@@ -1,7 +1,6 @@
-
 // bigblow.js --- BigBlow JS file
 //
-// Copyright (C) 2011-2014 All Right Reserved, Fabrice Niessen
+// Copyright (C) 2011-2016 All Right Reserved, Fabrice Niessen
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -93,8 +92,13 @@ function tabifySections() {
         tabs.append(html);
     }
 
-    // insert tabs menu after title (`h1')
-    $('.title').after(tabs);
+    // insert tabs menu after title (`h1'), or at the beginning of the content
+    if($('.title').length !== 0) {
+        $('.title').after(tabs);
+    }
+    else {
+        $('#content').prepend(tabs);
+    }
 }
 
 function selectTabAndScroll(href) {
