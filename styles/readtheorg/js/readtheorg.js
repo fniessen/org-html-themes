@@ -39,10 +39,15 @@ $( document ).ready(function() {
     // add sticky table headers
     $('table').stickyTableHeaders();
 
+
+    // set the height of tableOfContents
     var $postamble = $('#postamble');
     var $tableOfContents = $('#table-of-contents');
-    // set the height of tableOfContents
     $tableOfContents.height($tableOfContents.height() - $postamble.outerHeight());
+
+    // add TOC button
+    var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
+    $('#content').prepend(toggleSidebar);
 
 });
 
