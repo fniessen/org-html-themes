@@ -43,7 +43,7 @@ $( document ).ready(function() {
     // set the height of tableOfContents
     var $postamble = $('#postamble');
     var $tableOfContents = $('#table-of-contents');
-    $tableOfContents.height($tableOfContents.height() - $postamble.outerHeight());
+    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
 
     // add TOC button
     var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
