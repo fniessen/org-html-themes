@@ -1,3 +1,4 @@
+
 $(function() {
     $('.note').before("<p class='admonition-title note'>Note</p>");
     $('.seealso').before("<p class='admonition-title seealso'>See also</p>");
@@ -39,7 +40,6 @@ $( document ).ready(function() {
     // add sticky table headers
     $('table').stickyTableHeaders();
 
-
     // set the height of tableOfContents
     var $postamble = $('#postamble');
     var $tableOfContents = $('#table-of-contents');
@@ -53,7 +53,6 @@ $( document ).ready(function() {
     var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
     var tocTitle = $('#table-of-contents').find('h2');
     tocTitle.append(closeBtn);
-
 });
 
 window.SphinxRtdTheme = (function (jquery) {
