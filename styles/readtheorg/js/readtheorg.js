@@ -1,3 +1,4 @@
+
 $(function() {
     $('.note').before("<p class='admonition-title note'>Note</p>");
     $('.seealso').before("<p class='admonition-title seealso'>See also</p>");
@@ -39,11 +40,19 @@ $( document ).ready(function() {
     // add sticky table headers
     $('table').stickyTableHeaders();
 
+    // set the height of tableOfContents
     var $postamble = $('#postamble');
     var $tableOfContents = $('#table-of-contents');
-    // set the height of tableOfContents
-    $tableOfContents.height($tableOfContents.height() - $postamble.outerHeight());
+    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
 
+    // add TOC button
+    var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
+    $('#content').prepend(toggleSidebar);
+
+    // add close button when sidebar showed in mobile screen
+    var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
+    var tocTitle = $('#table-of-contents').find('h2');
+    tocTitle.append(closeBtn);
 });
 
 window.SphinxRtdTheme = (function (jquery) {
