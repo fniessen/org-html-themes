@@ -1045,7 +1045,8 @@ h2.footnotes{
 
 /******** responsive for sidebar *******/
 
-#toggle-sidebar {
+#toggle-sidebar,
+#table-of-contents .close-sidebar {
     display: none;
 }
 
@@ -1077,6 +1078,10 @@ h2.footnotes{
     #toggle-sidebar h2 {
         margin: 0;
         padding: 0;
+    }
+
+    #table-of-contents .close-sidebar {
+      display: block;
     }
 }
 
