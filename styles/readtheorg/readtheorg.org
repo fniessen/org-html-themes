@@ -6,7 +6,7 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 num:t toc:2
 
-#+SETUPFILE: ~/.dotfiles/org/theme-readtheorg-local-abs.setup
+#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg-local-abs.setup
 
 # See http://pandoc.org/README.html for another organization of the sections
 
@@ -537,57 +537,6 @@ table tr:nth-child(2n) td{
   :PROPERTIES:
   :header-args: :tangle css/readtheorg.css
   :END:
-
-Responsive for sidebar:
-
-#+begin_src css
-#toggle-sidebar,
-#table-of-contents .close-sidebar {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    #table-of-contents {
-        display: none;
-        width: 60%;
-    }
-
-    #table-of-contents h2 a {
-        display: block;
-    }
-
-    #table-of-contents:target {
-        display: block;
-    }
-
-    #copyright, #postamble {
-        display: none;
-    }
-
-    #toggle-sidebar {
-        background-color: #2980B9;
-        display: block;
-        margin-bottom: 1.6em;
-        padding: 0.6em;
-        text-align: center;
-    }
-
-    #toggle-sidebar h2 {
-        color: white;
-        font-size: 100%;
-        line-height: 50px;
-        margin: 0;
-        padding: 0;
-    }
-
-    #table-of-contents .close-sidebar {
-       color: rgba(255, 255, 255, 0.3);
-       display: inline-block;
-       margin: 0px 10px 0px 45px;
-       padding: 10px;
-    }
-}
-#+end_src
 
 * CSS
   :PROPERTIES:
@@ -1463,20 +1412,6 @@ $( document ).ready(function() {
 
     // add sticky table headers
     $('table').stickyTableHeaders();
-
-    // set the height of tableOfContents
-    var $postamble = $('#postamble');
-    var $tableOfContents = $('#table-of-contents');
-    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
-
-    // add TOC button
-    var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
-    $('#content').prepend(toggleSidebar);
-
-    // add close button when sidebar showed in mobile screen
-    var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
-    var tocTitle = $('#table-of-contents').find('h2');
-    tocTitle.append(closeBtn);
 });
 
 window.SphinxRtdTheme = (function (jquery) {
