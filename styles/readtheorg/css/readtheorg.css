@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700);
 @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
@@ -402,6 +403,53 @@ table tr:nth-child(2n) td{
     -ms-transform:rotate(270deg);
     -o-transform:rotate(270deg);
     transform:rotate(270deg);
+}
+
+#toggle-sidebar,
+#table-of-contents .close-sidebar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #table-of-contents {
+        display: none;
+        width: 60%;
+    }
+
+    #table-of-contents h2 a {
+        display: block;
+    }
+
+    #table-of-contents:target {
+        display: block;
+    }
+
+    #copyright, #postamble {
+        display: none;
+    }
+
+    #toggle-sidebar {
+        background-color: #2980B9;
+        display: block;
+        margin-bottom: 1.6em;
+        padding: 0.6em;
+        text-align: center;
+    }
+
+    #toggle-sidebar h2 {
+        color: white;
+        font-size: 100%;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #table-of-contents .close-sidebar {
+       color: rgba(255, 255, 255, 0.3);
+       display: inline-block;
+       margin: 0px 10px 0px 45px;
+       padding: 10px;
+    }
 }
 
 *{
@@ -1034,55 +1082,4 @@ h2.footnotes{
     /* padding: 10px 20px 10px 60px; */
     padding: 9px 12px;
     margin-bottom: 24px;
-    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif
-}
-
-
-
-
-
-
-
-/******** responsive for sidebar *******/
-
-#toggle-sidebar,
-#table-of-contents .close-sidebar {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    #table-of-contents {
-        display: none;
-        width: 60%;
-    }
-
-    #table-of-contents h2 a {
-        display: block;
-    }
-
-    #table-of-contents:target {
-        display: block;
-    }
-
-    #copyright, #postamble {
-        display: none;
-    }
-
-    #toggle-sidebar {
-        display: block;
-        background-color: #E0D6E9;
-        text-align: center;
-        padding: 0.6em;
-        margin-bottom: 0.6em;
-    }
-    #toggle-sidebar h2 {
-        margin: 0;
-        padding: 0;
-    }
-
-    #table-of-contents .close-sidebar {
-      display: block;
-    }
-}
-
-/******** End responsive for sidebar *******/
+    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
