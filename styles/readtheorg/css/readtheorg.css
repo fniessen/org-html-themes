@@ -1034,4 +1034,55 @@ h2.footnotes{
     /* padding: 10px 20px 10px 60px; */
     padding: 9px 12px;
     margin-bottom: 24px;
-    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
+    font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif
+}
+
+
+
+
+
+
+
+/******** responsive for sidebar *******/
+
+#toggle-sidebar,
+#table-of-contents .close-sidebar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #table-of-contents {
+        display: none;
+        width: 60%;
+    }
+
+    #table-of-contents h2 a {
+        display: block;
+    }
+
+    #table-of-contents:target {
+        display: block;
+    }
+
+    #copyright, #postamble {
+        display: none;
+    }
+
+    #toggle-sidebar {
+        display: block;
+        background-color: #E0D6E9;
+        text-align: center;
+        padding: 0.6em;
+        margin-bottom: 0.6em;
+    }
+    #toggle-sidebar h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    #table-of-contents .close-sidebar {
+      display: block;
+    }
+}
+
+/******** End responsive for sidebar *******/
