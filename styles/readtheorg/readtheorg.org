@@ -1083,7 +1083,7 @@ footer p{
 #+begin_src css
 #content img{
     max-width:100%;
-    height:auto !important}
+}
 
 #content div.figure{
     margin-bottom:24px}
