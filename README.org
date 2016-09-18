@@ -1,4 +1,4 @@
-#+TITLE:     How you export Org mode files into awesome HTML in 2 minutes
+#+TITLE:     How to export Org mode files into awesome HTML in 2 minutes
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.

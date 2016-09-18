@@ -3,32 +3,25 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>How you export Org mode files into awesome HTML in 2 minutes</title>
-<meta name="generator" content="Org-mode" />
-<meta name="author" content="Fabrice Niessen" />
-<meta name="description" content="Org-HTML export made simple."
+<title>How to export Org mode files into awesome HTML in 2 minutes</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Fabrice Niessen" />
+<meta  name="description" content="Org-HTML export made simple."
  />
-<meta name="keywords" content="org-mode, export, html, theme, style, css, js, bigblow" />
+<meta  name="keywords" content="org-mode, export, html, theme, style, css, js, bigblow" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
+  .title  { text-align: center; }
   .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
+  .done   { color: green; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -67,14 +60,15 @@
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara { display: inline; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -105,49 +99,49 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">How you export Org mode files into awesome HTML in 2 minutes</h1>
+<h1 class="title">How to export Org mode files into awesome HTML in 2 minutes</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline3">1. Overview</a>
+<li><a href="#sec-1">1. Overview</a>
 <ul>
-<li><a href="#orgheadline1">1.1. Description</a></li>
-<li><a href="#orgheadline2">1.2. Requirements</a></li>
+<li><a href="#sec-1-1">1.1. Description</a></li>
+<li><a href="#sec-1-2">1.2. Requirements</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline6">2. Quotations</a>
+<li><a href="#sec-2">2. Quotations</a>
 <ul>
-<li><a href="#orgheadline4">2.1. About Bigblow</a></li>
-<li><a href="#orgheadline5">2.2. About ReadTheOrg</a></li>
+<li><a href="#sec-2-1">2.1. About Bigblow</a></li>
+<li><a href="#sec-2-2">2.2. About ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline9">3. Gallery</a>
+<li><a href="#sec-3">3. Gallery</a>
 <ul>
-<li><a href="#orgheadline7">3.1. Bigblow</a></li>
-<li><a href="#orgheadline8">3.2. ReadTheOrg</a></li>
+<li><a href="#sec-3-1">3.1. Bigblow</a></li>
+<li><a href="#sec-3-2">3.2. ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline10">4. Demo</a></li>
-<li><a href="#orgheadline14">5. Installing a theme</a>
+<li><a href="#sec-4">4. Demo</a></li>
+<li><a href="#sec-5">5. Installing a theme</a>
 <ul>
-<li><a href="#orgheadline12">5.1. Bigblow</a>
+<li><a href="#sec-5-1">5.1. Bigblow</a>
 <ul>
-<li><a href="#orgheadline11">Local version</a></li>
+<li><a href="#sec-5-1-1">Local version</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline13">5.2. ReadTheOrg</a></li>
+<li><a href="#sec-5-2">5.2. ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline19">6. Contributing</a>
+<li><a href="#sec-6">6. Contributing</a>
 <ul>
-<li><a href="#orgheadline15">6.1. Issues</a></li>
-<li><a href="#orgheadline16">6.2. Patches</a></li>
-<li><a href="#orgheadline17">6.3. Donations</a></li>
-<li><a href="#orgheadline18">6.4. Follow me</a></li>
+<li><a href="#sec-6-1">6.1. Issues</a></li>
+<li><a href="#sec-6-2">6.2. Patches</a></li>
+<li><a href="#sec-6-3">6.3. Donations</a></li>
+<li><a href="#sec-6-4">6.4. Follow me</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline20">7. License</a></li>
+<li><a href="#sec-7">7. License</a></li>
 </ul>
 </div>
 </div>
@@ -158,11 +152,11 @@
 <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 </a>
 
-<div id="outline-container-orgheadline3" class="outline-2">
-<h2 id="orgheadline3"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-orgheadline1" class="outline-3">
-<h3 id="orgheadline1"><span class="section-number-3">1.1</span> Description</h3>
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Description</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Though you can easily override CSS stylesheets and add your own HTML themes, we
@@ -188,8 +182,8 @@ Follow <a href="https://twitter.com/f_niessen">f_niessen</a> on Twitter for upda
 </div>
 </div>
 
-<div id="outline-container-orgheadline2" class="outline-3">
-<h3 id="orgheadline2"><span class="section-number-3">1.2</span> Requirements</h3>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Requirements</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Org mode version 8 (or later) is required.
@@ -202,11 +196,11 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">2</span> Quotations</h2>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Quotations</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">2.1</span> About Bigblow</h3>
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> About Bigblow</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 &ldquo;Very very nice, I enjoy it a lot.&rdquo; <br  />
@@ -247,8 +241,8 @@ wonderful package!&rdquo; <br  />
 </div>
 </div>
 
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">2.2</span> About ReadTheOrg</h3>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> About ReadTheOrg</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 &ldquo;OMG. The ReadTheOrg theme for exported HTML from org mode files is eye
@@ -288,17 +282,18 @@ available.&rdquo; <br  />
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><a id="ID-79e0ed21-c3b0-4f00-bdab-29fbff9dcad4"></a><span class="section-number-2">3</span> Gallery</h2>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><a id="ID-79e0ed21-c3b0-4f00-bdab-29fbff9dcad4" name="ID-79e0ed21-c3b0-4f00-bdab-29fbff9dcad4"></a><span class="section-number-2">3</span> Gallery</h2>
 <div class="outline-text-2" id="text-3">
+
 <p>
 This is a list of available <b>HTML themes for Org mode</b>, which you can use right
 now!  Well, I hope to have more than one in a couple of weeks&#x2026;
 </p>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">3.1</span> Bigblow</h3>
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Bigblow</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Bigblow is perfect for your work: it is a clean design aimed at optimal <b>Org
@@ -323,83 +318,83 @@ Keyboard shortcuts to save time and boost your productivity:
 
 
 <colgroup>
-<col  class="org-left" />
+<col  class="left" />
 
-<col  class="org-left" />
+<col  class="left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Shortcut</th>
-<th scope="col" class="org-left">What it does</th>
+<th scope="col" class="left">Shortcut</th>
+<th scope="col" class="left">What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><code>?</code> or <code>h</code></td>
-<td class="org-left">Access the <b>dashboard</b></td>
+<td class="left"><code>?</code> or <code>h</code></td>
+<td class="left">Access the <b>dashboard</b></td>
 </tr>
 
 <tr>
-<td class="org-left"><code>n</code></td>
-<td class="org-left">Move to the <b>next</b> main heading</td>
+<td class="left"><code>n</code></td>
+<td class="left">Move to the <b>next</b> main heading</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>p</code></td>
-<td class="org-left">Move to the <b>previous</b> main heading</td>
+<td class="left"><code>p</code></td>
+<td class="left">Move to the <b>previous</b> main heading</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>b</code></td>
-<td class="org-left">Scroll up</td>
+<td class="left"><code>b</code></td>
+<td class="left">Scroll up</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>&lt;</code></td>
-<td class="org-left">Scroll to top</td>
+<td class="left"><code>&lt;</code></td>
+<td class="left">Scroll to top</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>&gt;</code></td>
-<td class="org-left">Scroll to bottom</td>
+<td class="left"><code>&gt;</code></td>
+<td class="left">Scroll to bottom</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>-</code></td>
-<td class="org-left">Collapse all</td>
+<td class="left"><code>-</code></td>
+<td class="left">Collapse all</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>+</code></td>
-<td class="org-left">Expand all</td>
+<td class="left"><code>+</code></td>
+<td class="left">Expand all</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>r</code></td>
-<td class="org-left">Go to next task in list</td>
+<td class="left"><code>r</code></td>
+<td class="left">Go to next task in list</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>R</code></td>
-<td class="org-left">Go to previous task in list</td>
+<td class="left"><code>R</code></td>
+<td class="left">Go to previous task in list</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>q</code></td>
-<td class="org-left">Stop reviewing the list of tasks</td>
+<td class="left"><code>q</code></td>
+<td class="left">Stop reviewing the list of tasks</td>
 </tr>
 
 <tr>
-<td class="org-left"><code>g</code></td>
-<td class="org-left">Reload the page</td>
+<td class="left"><code>g</code></td>
+<td class="left">Reload the page</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">3.2</span> ReadTheOrg</h3>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> ReadTheOrg</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 ReadTheOrg is a clone of the official &#x2013; and great! &#x2013; theme (called <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx</a>)
@@ -434,8 +429,8 @@ default structure of the HTML export)!
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10"><span class="section-number-2">4</span> Demo</h2>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Demo</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 I&rsquo;ve written a demo page for the themes that provides a maximal working support
@@ -449,11 +444,11 @@ admonitions, footnotes, tables and other details.
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">5</span> Installing a theme</h2>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Installing a theme</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-Using a theme from the <a href="#orgheadline9">theme gallery</a> for your own Org documents is very easy:
+Using a theme from the <a href="#sec-3">theme gallery</a> for your own Org documents is very easy:
 you just need to clone the Org-HTML themes project, add a <code>#+SETUPFILE:</code> directive
 in the preamble to include the CSS and JavaScript files, then export your Org
 mode file to HTML.
@@ -464,9 +459,7 @@ You can either:
 </p>
 
 <ul class="org-ul">
-<li><p>
-copy the &ldquo;setup file&rdquo; of the chosen theme to the directory of your Org files,
-</p>
+<li>copy the &ldquo;setup file&rdquo; of the chosen theme to the directory of your Org files,
 
 <div class="org-src-container">
 
@@ -476,18 +469,18 @@ copy the &ldquo;setup file&rdquo; of the chosen theme to the directory of your O
 
 <p>
 or
-</p></li>
-
-<li><p>
-use the (relative or absolute) path to the &ldquo;setup file&rdquo; (in your Git local
-repository)
 </p>
+</li>
+
+<li>use the (relative or absolute) path to the &ldquo;setup file&rdquo; (in your Git local
+repository)
 
 <div class="org-src-container">
 
 <pre class="src src-org"><span class="org-org-meta-line">#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup</span>
 </pre>
-</div></li>
+</div>
+</li>
 </ul>
 
 <p>
@@ -496,8 +489,8 @@ C-e h h</code>.
 </p>
 </div>
 
-<div id="outline-container-orgheadline12" class="outline-3">
-<h3 id="orgheadline12"><span class="section-number-3">5.1</span> Bigblow</h3>
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Bigblow</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 In order to use the Bigblow style, just copy the <a href="setup/theme-bigblow.setup">theme-bigblow.setup</a> file to
@@ -536,9 +529,9 @@ your Org file instead:
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11">Local version</h4>
-<div class="outline-text-4" id="text-orgheadline11">
+<div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1">Local version</h4>
+<div class="outline-text-4" id="text-5-1-1">
 <p>
 Here a local version (using relative paths):
 </p>
@@ -566,8 +559,8 @@ Here a local version (using relative paths):
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-3">
-<h3 id="orgheadline13"><span class="section-number-3">5.2</span> ReadTheOrg</h3>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> ReadTheOrg</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 In order to use the ReadTheOrg style, just copy the <a href="setup/theme-readtheorg.setup">theme-readtheorg.setup</a> file
@@ -602,11 +595,11 @@ your Org file instead:
 </div>
 </div>
 
-<div id="outline-container-orgheadline19" class="outline-2">
-<h2 id="orgheadline19"><span class="section-number-2">6</span> Contributing</h2>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Contributing</h2>
 <div class="outline-text-2" id="text-6">
-</div><div id="outline-container-orgheadline15" class="outline-3">
-<h3 id="orgheadline15"><span class="section-number-3">6.1</span> Issues</h3>
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Issues</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Report issues and suggest features and improvements on the <a href="https://github.com/fniessen/org-html-themes/issues/new">GitHub issue tracker</a>.
@@ -614,8 +607,8 @@ Report issues and suggest features and improvements on the <a href="https://gith
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">6.2</span> Patches</h3>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Patches</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 I love contributions!  Patches under any form are always welcome!
@@ -623,13 +616,13 @@ I love contributions!  Patches under any form are always welcome!
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">6.3</span> Donations</h3>
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Donations</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 If you like the org-html-themes project (or any of <a href="https://github.com/fniessen/">my other projects</a>), you can
 show your appreciation and help support future development by making today
-a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=VCVAS6KPDQ4JC&amp;lc=BE&amp;item_number=org-html-themes&amp;currency_code=EUR&amp;bn=PP-DonationsBF:btn_donate_LG.gif:NonHosted">donation</a> through PayPal.
+a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org-html-themes&currency_code=EUR&bn=PP-DonationsBF:btn_donate_LG.gif:NonHosted">donation</a> through PayPal.
 </p>
 
 <p>
@@ -639,8 +632,8 @@ beer and as in speech.
 </div>
 </div>
 
-<div id="outline-container-orgheadline18" class="outline-3">
-<h3 id="orgheadline18"><span class="section-number-3">6.4</span> Follow me</h3>
+<div id="outline-container-sec-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Follow me</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 I have an <a href="https://twitter.com/f_niessen">f_niessen</a> account on Twitter.  You should follow it.
@@ -649,8 +642,8 @@ I have an <a href="https://twitter.com/f_niessen">f_niessen</a> account on Twitt
 </div>
 </div>
 
-<div id="outline-container-orgheadline20" class="outline-2">
-<h2 id="orgheadline20"><span class="section-number-2">7</span> License</h2>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> License</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Copyright (C) 2011-2016 Fabrice Niessen.
@@ -690,6 +683,7 @@ this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Fabrice Niessen</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
