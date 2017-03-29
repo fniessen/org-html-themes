@@ -220,9 +220,13 @@ dl dd{
 }
 
 @media screen and (max-width: 768px){
+    #table-of-contents{
+        display:none}
 }
 
 @media only screen and (max-width: 480px){
+    #table-of-contents{
+        display:none}
 }
 
 @media screen and (max-width: 768px){
