@@ -60,6 +60,7 @@ body{
 }
 
 #content{
+    position:relative;
     background:#fcfcfc;
     height:100%;
     margin-left:300px;
