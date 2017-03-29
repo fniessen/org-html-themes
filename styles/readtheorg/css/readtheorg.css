@@ -62,7 +62,7 @@ body{
 #content{
     background:#fcfcfc;
     height:100%;
-    margin-left:300px;
+    left:300px;
     /* margin:auto; */
     max-width:800px;
     min-height:100%;
