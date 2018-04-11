@@ -139,11 +139,11 @@ Keyboard shortcuts to save time and boost your productivity:
 
 ** ReadTheOrg
 
-ReadTheOrg is a clone of the official -- and great! -- theme (called [[https://github.com/snide/sphinx_rtd_theme][Sphinx]])
+ReadTheOrg is a clone of the official -- and great! --  [[https://github.com/snide/sphinx_rtd_theme][theme]]
 used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to
 all your Org docs.
 
-*Thanks to the creator(s) of Sphinx!*
+*Thanks to its creator(s)!*
 
 #+ATTR_HTML: :width 640
 [[file:readtheorg.png]]
