@@ -1,0 +1,9 @@
+# -*- mode: org; -*-
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/Users/bob/Github/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/Users/bob/Github/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+
+#+HTML_HEAD: <script src="/Users/bob/anaconda3/lib/python3.6/site-packages/notebook/static/components/jquery/jquery.min.js/Users/bob/anaconda3/lib/python3.6/site-packages/notebook/static/components/bootstrap/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="/Users/bob/Github/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="/Users/bob/Github/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
