@@ -165,108 +165,115 @@ of Org mode syntax.
 Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
 admonitions, footnotes, tables and other details.
 
-* Installing a theme
+* Using a theme
 
 Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]] for your own Org documents is very easy:
-you just need to *clone or download* the Org-HTML themes project, add
-a =#+SETUPFILE:= directive in the preamble to include the CSS and JavaScript
-files, then export your Org mode file to HTML.
 
-You can either:
+1. You *add a =#+SETUPFILE:= directive* in the preamble of your document (to include
+   the necessary CSS and JavaScript files).
 
-- copy the "setup file" of the chosen theme to the directory of your Org files,
+   You can either use an URL of the following type for the "setup file" of your
+   chosen theme:
 
   #+begin_src org :exports code
-  ,#+SETUPFILE: THEME-NAME.setup
+  ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/THEME-NAME.setup
   #+end_src
 
-  or
+  (where ~THEME-NAME~ is ~theme-bigblow~ or ~theme-readtheorg~)
 
-- use the (relative or absolute) path to the "setup file" (in your Git local
-  repository)
+  or, if you *cloned or downloaded* the Org-HTML themes project, use a (relative
+  or absolute) path to the "setup file":
 
   #+begin_src org :exports code
   ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME.setup
   #+end_src
 
-Then export your Org mode file to HTML with =org-html-export-to-html= or with =C-c
-C-e h h=.
+2. Then, you *export* your Org mode file *to HTML* with =org-html-export-to-html= or
+   with =C-c C-e h h=.
 
-** Bigblow
-
-In order to use the Bigblow style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to
-your project and link to it this way:
-
-#+begin_src org :exports code
-,#+SETUPFILE: theme-bigblow.setup
-#+end_src
-
-If you prefer, you can add the content of the setup file at the beginning of
-your Org file instead:
-
-#+begin_src org :exports code :tangle setup/theme-bigblow.setup
-# -*- mode: org; -*-
-
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/htmlize.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/bigblow.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/hideshow.css"/>
-
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.zclip.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/bigblow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/hideshow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-#+end_src
-
-*** Local version
-
-Here a local version (using relative paths):
-
-#+begin_src org :exports code :tangle setup/theme-bigblow-local.setup
-# -*- mode: org; -*-
-
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
-
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
-#+end_src
-
-** ReadTheOrg
-
-In order to use the ReadTheOrg style, just copy the [[file:setup/theme-readtheorg.setup][theme-readtheorg.setup]] file
-to your project and link to it this way:
-
-#+begin_src org :exports code
-,#+SETUPFILE: theme-readtheorg.setup
-#+end_src
-
-If you prefer, you can add the content of the setup file at the beginning of
-your Org file instead:
-
-#+begin_src org :exports code :tangle setup/theme-readtheorg.setup
-# -*- mode: org; -*-
-
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
-,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
-
-,#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-,#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
-#+end_src
+# ** Bigblow                                                            :noexport:
+#
+# In order to use the Bigblow style, just copy the [[file:setup/theme-bigblow.setup][theme-bigblow.setup]] file to
+# your project and link to it this way:
+#
+# #+begin_src org :exports code
+# ,#+SETUPFILE: theme-bigblow.setup
+# #+end_src
+#
+# If you prefer, you can add the content of the setup file at the beginning of
+# your Org file instead:
+#
+# #+begin_src org :exports code :tangle setup/theme-bigblow.setup
+# # -*- mode: org; -*-
+#
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/htmlize.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/bigblow.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/hideshow.css"/>
+#
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+#
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/bigblow.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/hideshow.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+# #+end_src
+#
+# #+begin_src org :exports code :tangle setup/theme-bigblow-local.setup
+# # -*- mode: org; -*-
+#
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
+#
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+#
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+# #+end_src
+#
+# ** Readtheorg                                                         :noexport:
+#
+# In order to use the ReadTheOrg style, just copy the [[file:setup/theme-readtheorg.setup][theme-readtheorg.setup]] file
+# to your project and link to it this way:
+#
+# #+begin_src org :exports code
+# ,#+SETUPFILE: theme-readtheorg.setup
+# #+end_src
+#
+# If you prefer, you can add the content of the setup file at the beginning of
+# your Org file instead:
+#
+# #+begin_src org :exports code :tangle setup/theme-readtheorg.setup
+# # -*- mode: org; -*-
+#
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+#
+# ,#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+# ,#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+# #+end_src
+#
+# #+begin_src org :exports code :tangle setup/theme-readtheorg-local.setup
+# # -*- mode: org; -*-
+#
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/htmlize.css"/>
+# ,#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles/readtheorg/css/readtheorg.css"/>
+#
+# ,#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+# ,#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+# ,#+HTML_HEAD: <script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
+# #+end_src
 
 * Contributing
 
