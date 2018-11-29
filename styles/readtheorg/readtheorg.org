@@ -232,7 +232,7 @@ dl dd{
     html,body,section{
         background:none !important}
 
-    ,,*{
+    ,*{
         box-shadow:none !important;
         text-shadow:none !important;
         filter:none !important;
@@ -573,11 +573,18 @@ Responsive for sidebar:
     }
 
     #toggle-sidebar h2 {
+        background-color:#2980B9;
+        width:100%;
+        height:50px;
+        left:0;
+        top:0;
         color: white;
         font-size: 100%;
         line-height: 50px;
+        position:fixed;
         margin: 0;
         padding: 0;
+        opacity:0.7;
     }
 
     #table-of-contents .close-sidebar {
@@ -1245,6 +1252,10 @@ h2.footnotes{
     font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
     font-size: 90%;
     color: navy;
+}
+
+.nav .timestamp {
+    color: inherit;
 }
 #+end_src
 
