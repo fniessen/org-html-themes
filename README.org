@@ -275,6 +275,22 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
 # ,#+HTML_HEAD: <script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
 # #+end_src
 
+* Customizing a theme
+
+You love those themes, but you still would like to override particular HTML
+tags?
+
+Here's an example to insert into your Org documents:
+
+#+begin_src org :tangle no
+# Change the background of source block.
+,#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
+#+end_src
+
+Before doing that, though, if you think it really is an improvement that could
+server other persons as well, including me, you're invited to submit your
+change...
+
 * Contributing
 
 ** Issues
