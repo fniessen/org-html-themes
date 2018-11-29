@@ -317,7 +317,7 @@ I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You 
 
 * License
 
-Copyright (C) 2011-2017 Fabrice Niessen.
+Copyright (C) 2011-2018 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
