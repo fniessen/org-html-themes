@@ -47,8 +47,10 @@ $(function() {
 function generateMiniToc(divId) {
     $('#minitoc').empty().append('<h2>In this section</h2>');
     $('#' + divId).find('h3').each(function(i) {
+        let pos = $(this).text().search(" ");
+        let text = $(this).text().substring(0, pos);
         $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
-                             + $(this).text() + "</a>");
+                             + text + "</a>");
     });
     // Ensure that the target is expanded (hideShow)
     $('#minitoc a[href^="#"]').click(function() {
