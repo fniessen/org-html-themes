@@ -187,7 +187,13 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
 * Customizing a theme
 
 You love those themes, but you still would like to override particular HTML
-tags?
+tags?  Some examples do follow...
+
+Before doing that, though, if you think it really is an improvement that could
+server other persons as well, including me, you're invited to submit your
+change...
+
+** Change the background code blocks
 
 Here's an example to insert into your Org documents:
 
@@ -196,9 +202,15 @@ Here's an example to insert into your Org documents:
 ,#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
 #+end_src
 
-Before doing that, though, if you think it really is an improvement that could
-server other persons as well, including me, you're invited to submit your
-change...
+** Unset body width limit of ReadTheOrg
+
+Solution provided by Malcolm Cook:
+
+#+begin_src org :tangle no
+,#+HTML_HEAD: <style> #content{max-width:1800px;}</style>
+,#+HTML_HEAD: <style> p{max-width:800px;}</style>
+,#+HTML_HEAD: <style> li{max-width:800px;}</style
+#+end_src
 
 * Contributing
 
