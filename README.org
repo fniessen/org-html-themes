@@ -175,7 +175,7 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
 
    or, if you *cloned or downloaded* the Org-HTML themes project -- to get no
    dependency on an Internet connection --, use a (relative or absolute) path to
-   the local "setup file":
+   the local "setup file" and copy the "styles" folder from the cloned folder into the same folder as the file you want to export:
 
    #+begin_src org :exports code
    ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME-local.setup
