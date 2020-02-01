@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  header-args :padline no
-#+SETUPFILE: setup/theme-readtheorg.setup
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
@@ -238,7 +238,7 @@ I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You 
 
 * License
 
-Copyright (C) 2011-2018 Fabrice Niessen.
+Copyright (C) 2011-2020 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
