@@ -5,13 +5,13 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 num:nil toc:2
 
-#+SETUPFILE: ~/src/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: ../setup/theme-readtheorg.setup
 
-#+begin_html
+#+begin_export html
 <div class="right">
   <a href="https://github.com/fniessen/org-html-themes/blob/master/demo/example.org" class="fa fa-github"> Edit on GitHub</a>
 </div>
-#+end_html
+#+end_export
 
 -----
 
