@@ -6,8 +6,8 @@ function collapse_toc_elements_on_click (nav_li_a){
       states. The active attribute is documented in bootstrap.
       https://getbootstrap.com/docs/4.0/components/navbar/#nav
     */
-    $(nav_li_a).parent().toggleClass("active");
 	$("#text-table-of-contents li").removeClass("active");
+    $(nav_li_a).parents().toggleClass("active");
 }
 
 $( document ).ready(function() {
