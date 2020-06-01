@@ -787,6 +787,45 @@ hr{
     font-size: 100%;
     margin-bottom:0.809em}
 
+ul.nav > li ul {
+	display: none;
+}
+
+li.active {
+	background-color: #e3e3e3;
+}
+
+li.active>a {
+	color: black !important;
+}
+
+ul.nav>li.active a {
+	color: #404040 !important;
+}
+
+ul.nav>li.active li.active {
+	background-color: #c9c9c9;
+}
+
+ul.nav>li.active li.active>a {
+	color: black !important;
+    border-right:solid 1px #c9c9c9 !important;
+    font-weight: bold !important;
+    display: block !important;
+}
+
+ul.nav>li.active>a {
+	background-color: #fcfcfc;
+	color: black !important;
+    border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
+    border-right:solid 1px #c9c9c9 !important;
+    font-weight: bold !important;
+    display: block !important;
+}
+
+li.active>ul {
+	display: inline !important;
+}
 /* ul.nav li ul li { */
 /*     display: none; */
 /* } */
