@@ -766,6 +766,7 @@ hr{
 }
 
 #table-of-contents a:hover{
+	color: #ffffff !important;
     background-color:#4e4a4a;
     cursor:pointer}
 
