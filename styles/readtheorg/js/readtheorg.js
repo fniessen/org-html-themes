@@ -33,7 +33,7 @@ $( document ).ready(function() {
 $( document ).ready(function() {
 	// Solving Issue #80
 	// Add home/index link in sidebar above TOC in readtheorg theme
-	$("#table-of-contents > h2").html($(".title").html());
+    $("#table-of-contents > h2").html(`<a href="#">${$(".title").html()}</a>`);
     $('#text-table-of-contents ul').first().addClass('nav');
                                         // ScrollSpy also requires that we use
                                         // a Bootstrap nav component.
