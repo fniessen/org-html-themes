@@ -47,8 +47,17 @@ $(function() {
 function generateMiniToc(divId) {
     $('#minitoc').empty().append('<h2>In this section</h2>');
     $('#' + divId).find('h3').each(function(i) {
-        let pos = $(this).text().search(" ");
-        let text = $(this).text().substring(0, pos);
+	// Get text up to non-breaking space, to omit the
+	// tags. If there are no tags, there will be no
+	// &nbsp;, so get all the text.
+	let text = null;
+        let pos = $(this).text().search(/ | ►/);
+        if (pos > 0) {
+            text = $(this).text().substring(0, pos);
+        }
+        else {
+            text = $(this).text();
+	}
         $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
                              + text + "</a>");
     });
