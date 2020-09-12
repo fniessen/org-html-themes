@@ -711,9 +711,6 @@ legend{
     border:solid 0.08em #eee;
     border-radius:.1em}
 
-.fa,#content .admonition-title{
-    font-family:inherit}
-
 .fa:before,#content .admonition-title:before{
     font-family:"FontAwesome";
     display:inline-block;
