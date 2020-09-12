@@ -517,8 +517,19 @@ legend{
 .fa:before,#content .admonition-title:before,#content h1 .headerlink:before,#content h2 .headerlink:before,#content h3 .headerlink:before,#content h4 .headerlink:before,#content h5 .headerlink:before,#content h6 .headerlink:before,#content dl dt .headerlink:before,.icon:before,.wy-dropdown .caret:before,.wy-inline-validate.wy-inline-validate-success .wy-input-context:before,.wy-inline-validate.wy-inline-validate-danger .wy-input-context:before,.wy-inline-validate.wy-inline-validate-warning .wy-input-context:before,.wy-inline-validate.wy-inline-validate-info .wy-input-context:before,.wy-alert,#content .note,#content .attention,#content .caution,#content .danger,#content .error,#content .hint,#content .important,#content .tip,#content .warning,#content .seealso,#content .admonitiontodo,.btn,input[type="text"],input[type="password"],input[type="email"],input[type="url"],input[type="date"],input[type="month"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="week"],input[type="number"],input[type="search"],input[type="tel"],input[type="color"],select,textarea,#table-of-contents li.on a,#table-of-contents li.current>a,.wy-side-nav-search>a,.wy-side-nav-search .wy-dropdown>a,.wy-nav-top a{
     -webkit-font-smoothing:antialiased}
 
+/*!
+ *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{
+    font-family:'FontAwesome';
+    src:url("../fonts/fontawesome-webfont.eot?v=4.1.0");
+    src:url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"),url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"),url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"),url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+    font-weight:normal;
+    font-style:normal}
+
 .fa,#content .admonition-title,.icon{
     display:inline-block;
+    font-family:FontAwesome;
     font-style:normal;
     font-weight:normal;
     line-height:1;
@@ -548,10 +559,8 @@ legend{
     border:solid 0.08em #eee;
     border-radius:.1em}
 
-.fa,#content .admonition-title{
-    font-family:inherit}
-
 .fa:before,#content .admonition-title:before{
+    font-family:"FontAwesome";
     display:inline-block;
     font-style:normal;
     font-weight:normal;
@@ -594,6 +603,7 @@ a .fa,a #content .admonition-title,#content a .admonition-title{
 #content .admonition-title.tip:before, #content .admonition-title.hint:before,
 #content .admonition-title.important:before,
 #content .admonition-title.error:before, #content .admonition-title.danger:before{
+    font-family:FontAwesome;
     content: "";}
 
 #content .note,#content .seealso{
@@ -754,7 +764,6 @@ hr{
 }
 
 #table-of-contents a:hover{
-	color: #ffffff !important;
     background-color:#4e4a4a;
     cursor:pointer}
 
@@ -788,114 +797,75 @@ hr{
     font-size: 100%;
     margin-bottom:0.809em}
 
-ul.nav > li ul {
-	display: none;
+ul.nav li ul li {
+    display: none;
 }
 
-li.active {
-	background-color: #e3e3e3;
+ul.nav li ul li ul li {
+    display: none;
 }
 
-li.active>a {
-	color: black !important;
+ul.nav li.active ul li {
+    display: inline;
 }
 
-ul.nav>li.active a {
-	color: #404040 !important;
+ul.nav li.active ul li ul li {
+    display: inline;
 }
 
-ul.nav>li.active li.active {
-	background-color: #c9c9c9;
-}
-
-ul.nav>li.active li.active>a {
-	color: black !important;
+ul.nav li.active ul li a {
+    background-color: #E3E3E3;
+    color: #8099B0;
     border-right:solid 1px #c9c9c9 !important;
+}
+
+ul.nav li.active ul li.active a {
+    background-color: #C9C9C9;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+ul.nav li.active ul li.active ul li.active a {
+    color: black !important;
     font-weight: bold !important;
     display: block !important;
 }
 
-ul.nav>li.active>a {
-	background-color: #fcfcfc;
-	color: black !important;
+ul.nav li.active ul li.active ul li a {
+    color: #808080 !important;
+    font-weight: normal !important;
+    display: block !important;
+}
+
+ul.nav li.active ul li ul li a {
+    display: none !important;
+}
+
+/* ul.nav li ul li ul li { */
+/*     display: none !important; /\* as long as nav is on multiple levels of ul *\/ */
+/*     /\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ */
+/* } */
+
+ul.nav li ul li ul li ul li {
+    display: none !important; /* as long as nav is on multiple levels of ul */
+    /* display: none; /* as long as nav is on multiple levels of ul *\/ */
+}
+
+ul.nav li.active > a {
     border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 1px #c9c9c9 !important;
-    font-weight: bold !important;
-    display: block !important;
 }
 
-li.active>ul {
-	display: inline !important;
+ul.nav li.active a {
+    color: gray !important;
+    font-weight:bold;
+    background-color: white;
+    border-right:solid 0px white !important;
 }
-/* ul.nav li ul li { */
-/*     display: none; */
-/* } */
 
-/* ul.nav li ul li ul li { */
-/*     display: none; */
-/* } */
-
-/* ul.nav li.active ul li { */
-/*     display: inline; */
-/* } */
-
-/* ul.nav li.active ul li ul li { */
-/*     display: inline; */
-/* } */
-
-/* ul.nav li.active ul li a { */
-/*     background-color: #E3E3E3; */
-/*     color: #8099B0; */
-/*     border-right:solid 1px #c9c9c9 !important; */
-/* } */
-
-/* ul.nav li.active ul li.active a { */
-/*     background-color: #C9C9C9; */
-/*     color: black !important; */
-/*     font-weight: bold !important; */
-/* } */
-
-/* ul.nav li.active ul li.active ul li.active a { */
-    /* color: black !important; */
-    /* font-weight: bold !important; */
-    /* display: block !important; */
-/* } */
-
-/* ul.nav li.active ul li.active ul li a { */
-/*     color: #808080 !important; */
-/*     font-weight: normal !important; */
-/*     display: block !important; */
-/* } */
-
-/* ul.nav li.active ul li ul li a { */
-/*     display: none !important; */
-/* } */
-
-/* ul.nav li ul li ul li { */
-/*     display: none !important; /\* as long as nav is on multiple levels of ul *\/ */
-/*     /\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ */
-/* } */
-
-/* ul.nav li ul li ul li ul li { */
-/*     display: none !important; /\* as long as nav is on multiple levels of ul *\/ */
-/*     /\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ */
-/* } */
-
-/* ul.nav li.active > a { */
-    /* border-bottom:solid 1px #c9c9c9 !important; /\* XXX Restrict it to 2nd level *\/ */
-    /* border-right:solid 1px #c9c9c9 !important; */
-/* } */
-
-/* ul.nav li.active a { */
-/*     color: gray !important; */
-/*     font-weight:bold; */
-/*     background-color: white; */
-/*     border-right:solid 0px white !important; */
-/* } */
-
-/* ul.nav > li.active > a { */
-/*     color: black !important; */
-/* } */
+ul.nav > li.active > a {
+    color: black !important;
+}
 
 footer{
     color:#999}
@@ -983,6 +953,7 @@ footer p{
 #content h1 .headerlink:after,#content h2 .headerlink:after,#content h3 .headerlink:after,#content h4 .headerlink:after,#content h5 .headerlink:after,#content h6 .headerlink:after,#content dl dt .headerlink:after{
     visibility:visible;
     content:"";
+    font-family:FontAwesome;
     display:inline-block}
 
 #content h1:hover .headerlink,#content h2:hover .headerlink,#content h3:hover .headerlink,#content h4:hover .headerlink,#content h5:hover .headerlink,#content h6:hover .headerlink,#content dl dt:hover .headerlink{
