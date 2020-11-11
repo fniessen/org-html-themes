@@ -1,6 +1,6 @@
 // hideshow.js --- HideShow JS file
 //
-// Copyright (C) 2014 All Right Reserved, Fabrice Niessen
+// Copyright (C) 2014-2020 All Right Reserved, Fabrice Niessen
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -310,7 +310,8 @@ function hsAddReviewingPanels() {
                             + '(out of ' +  nbReviewTotalTasks + ' tasks)<br>'
                             + 'Shortcuts: '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskNext()">r (next)</span> - '
-                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span><br>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">q (quit)</span>'
                             + '</div>');
         }
         else {
@@ -318,7 +319,8 @@ function hsAddReviewingPanels() {
                             + '(out of ' +  nbReviewTotalTasks + ' tasks)<br>'
                             + 'Shortcuts: '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskNext()">r (next)</span> - '
-                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span><br>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">q (quit)</span>'
                             + '</div>');
         }
     });
