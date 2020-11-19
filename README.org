@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  header-args :padline no
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
@@ -168,17 +168,18 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
    chosen theme:
 
    #+begin_src org :exports code
-   ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/THEME-NAME.setup
+   ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
    #+end_src
 
    (where ~THEME-NAME~ is ~theme-bigblow~ or ~theme-readtheorg~)
 
    or, if you *cloned or downloaded* the Org-HTML themes project -- to get no
    dependency on an Internet connection --, use a (relative or absolute) path to
-   the local "setup file" and copy the "styles" folder from the cloned folder into the same folder as the file you want to export:
+   the local "setup file" and copy the "styles" folder from the cloned folder
+   into the same folder as the file you want to export:
 
    #+begin_src org :exports code
-   ,#+SETUPFILE: path/to/Git/repo/setup/THEME-NAME-local.setup
+   ,#+SETUPFILE: PATH/TO/GIT/REPO/org/theme-NAME-local.setup
    #+end_src
 
 2. Then, you *export* your Org mode file *to HTML* with =org-html-export-to-html= or

@@ -1,11 +1,10 @@
 #+TITLE:     Example of Tasks
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
-#+DATE:      2015-04-28
 #+LANGUAGE:  en
-#+OPTIONS:   H:4 num:nil toc:2
+#+OPTIONS:   H:4 num:2 toc:4
 
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+SETUPFILE: org/theme-readtheorg-local.setup
 
 #+begin_export html
 <div class="right">
@@ -16,26 +15,26 @@
 -----
 
 * Work                                                                    :work:
-  :PROPERTIES:
-  :CATEGORY: Work
-  :END:
+:PROPERTIES:
+:CATEGORY: Work
+:END:
 
 Only work tasks in this list.
 
 ** Marketing
-   :PROPERTIES:
-   :CATEGORY: Marketing
-   :END:
+:PROPERTIES:
+:CATEGORY: Marketing
+:END:
 
 Project "Corporate Marketing".
 
 *** Background and research
 
-**** TODO Who are the competitors?
+**** TODO Who are the competitors?                                   :important:
 
-**** TODO What are our product's advantages?
+***** TODO What are our product's advantages?
 
-**** TODO Target market
+***** TODO Target market
 
 **** TODO Elevator pitch
 
@@ -46,37 +45,36 @@ Project "Corporate Marketing".
 # *************** TODO Test with an inline task
 # *************** END
 
-**** TODO Interview PR firm candidates
-     DEADLINE: <2014-03-12 Wed>
-     :LOGBOOK:
-     CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
-     - State "TODO"        ->  "STRT"       [2013-02-05 Tue 17:48]
-     - State "TODO"        ->  "STRT"       [2013-08-19 Mon 15:16]
-     :END:
+**** STRT Interview PR firm candidates
+DEADLINE: <2014-03-12 Wed>
+:LOGBOOK:
+CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
+- State "TODO"        ->  "STRT"       [2013-02-05 Tue 09:00]
+:END:
 
 # *************** TODO Another test with an inline task
 
 *** Advertising campaign
 
 **** TODO Call Joe
-     DEADLINE: <2014-03-06 Thu>
-     :PROPERTIES:
-     :Effort:   0:10
-     :END:
+DEADLINE: <2014-03-06 Thu>
+:PROPERTIES:
+:Effort:   0:10
+:END:
 
 *** Plan conference
 
 Calendar events/invitations.
 
 **** TODO Recruit volunteers
-     DEADLINE: <2014-03-13 Thu>
+DEADLINE: <2014-03-13 Thu>
 
 **** TODO Make sure responses are coming back
 
 ** Operations
 
 *** TODO Update database to latest version
-    SCHEDULED: <2014-03-13 Thu>
+SCHEDULED: <2014-03-13 Thu>
 
 *** TODO Update Website
 
@@ -96,28 +94,28 @@ Update blog.
 
 -----
 
-* Personal                                                                :home:
-  :PROPERTIES:
-  :CATEGORY: Personal
-  :END:
+* Personal                                                            :personal:
+:PROPERTIES:
+:CATEGORY: Personal
+:END:
 
 ** Reading
 
 *** DONE Read "Getting Things Done"
-    :LOGBOOK:
-    - State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
-    :END:
+:LOGBOOK:
+- State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
+:END:
 
 ** Health
 
 *** TODO Make dentist appointment
-    SCHEDULED: <2014-03-12 Wed>
+SCHEDULED: <2014-03-12 Wed>
 
 *** TODO Go to the gym
-    SCHEDULED: <2014-03-11 Tue>
-    :PROPERTIES:
-    :Effort:   0:10
-    :END:
+SCHEDULED: <2014-03-11 Tue>
+:PROPERTIES:
+:Effort:   0:10
+:END:
 
 It should be as natural to some as showering or eating.
 
