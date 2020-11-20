@@ -1,3 +1,4 @@
+# Hey Emacs, this is a -*- org -*- file ...
 #+TITLE:     Example of Tasks
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
