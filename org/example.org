@@ -30,7 +30,7 @@ Project "Corporate Marketing".
 
 *** Background and research
 
-**** TODO Who are the competitors?                                   :important:
+**** TODO Who are the competitors?                                     :FLAGGED:
 
 ***** TODO What are our product's advantages?
 
@@ -108,7 +108,7 @@ Update blog.
 
 ** Health
 
-*** TODO Make dentist appointment
+*** TODO Make dentist appointment                                        :phone:
 SCHEDULED: <2014-03-12 Wed>
 
 *** TODO Go to the gym
@@ -121,7 +121,7 @@ It should be as natural to some as showering or eating.
 
 *** TODO Do jogging
 
-Marathon = 42.195 kilometres.
+Marathon = 42,195 km.
 
 ** Finance
 
@@ -129,7 +129,7 @@ Marathon = 42.195 kilometres.
 
 *** TODO Renew newspaper subscription
 
-*** TODO Cancel insurance
+*** TODO Cancel insurance                                                 :mail:
 
 ** Chores
 
