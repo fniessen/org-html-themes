@@ -40,64 +40,10 @@ Org mode version 8 (or later) is required.
 
 If such a version is not bundled with your Emacs, install one from ELPA.
 
-* Quotations
-
-** About Bigblow
-
-"Very very nice, I enjoy it a lot." \\
--- /Ista Zahn/
-
-"This is awesome. I love it!" \\
--- /Rainer M Krug/
-
-"This is awesome!!" \\
--- /Mehul Sanghvi/
-
-"This very nice html theme. [...] I cannot use another emacs-theme than your
-[[https://github.com/fniessen/emacs-leuven-theme][emacs-leuven-theme]], and it is going to be probably the same with your html
-theme!" \\
--- /Joseph Vidal-Rosset/
-
-"Thanks a lot for sharing [...] the wonderful Bigblow theme.  I create lot of
-specification for other team members to use.  It has always been a trouble to
-share and maintain such spec.  Now, I can create a much neater spec which is
-available for the team's reference as a webpage." \\
--- /Shankar R./
-
-"I like Bigblow the best.  I've exported most of my Org files using this theme
-and published them within my company's intranet.  Thanks for sharing this
-wonderful package!" \\
--- /Richard K./
-
-** About ReadTheOrg
-
-"OMG. The ReadTheOrg theme for exported HTML from org mode files is eye
-wateringly beautiful. Thank you!" \\
--- /Rob Stewart/
-
-"It is fantastic, so beautiful.  I will switch several of my pages over to
-this theme." \\
--- /Carsten D./
-
-"That is incredibly impressive.  Thanks for this." \\
--- /Noah R./
-
-"Thank you!  I enjoy your themes.  The best ones I've ever found." \\
--- /Kang T./
-
-"Awesome theme.  Wonderful job.  You're doing a wonderful thing --- it will
-enable people (at least those who use Emacs and Org mode) to put together
-on-line reference works in a much-more usable fashion than is currently
-available." \\
--- /D. C. Toedt/
-
-"Extremely useful." \\
--- /Thomas S. Dye/
-
 * Gallery
-  :PROPERTIES:
-  :ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
-  :END:
+:PROPERTIES:
+:ID:       79e0ed21-c3b0-4f00-bdab-29fbff9dcad4
+:END:
 
 This is a list of available *HTML themes for Org mode*, which you can use right
 now!  Well, I hope to have more than one in a couple of weeks...
@@ -105,7 +51,7 @@ now!  Well, I hope to have more than one in a couple of weeks...
 ** Bigblow
 
 Bigblow is perfect for your work: it is a clean design aimed at optimal *Org
-mode experience in your browser*. It looks just awesome!
+mode experience in your browser*.  It looks just awesome!
 
 #+ATTR_HTML: :width 640
 [[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
@@ -129,6 +75,33 @@ Keyboard shortcuts to save time and boost your productivity:
 | =q=        | Stop reviewing the list of tasks  |
 | =g=        | Reload the page                   |
 
+*** Quotations about Bigblow
+
+"Very very nice, I enjoy it a lot." \\
+-- /Ista Zahn/
+
+"This is awesome.  I love it!" \\
+-- /Rainer M Krug/
+
+"This is awesome!!" \\
+-- /Mehul Sanghvi/
+
+"This very nice html theme. [...]  I cannot use another emacs-theme than your
+[[https://github.com/fniessen/emacs-leuven-theme][emacs-leuven-theme]], and it is going to be probably the same with your html
+theme!" \\
+-- /Joseph Vidal-Rosset/
+
+"Thanks a lot for sharing [...] the wonderful Bigblow theme.  I create lot of
+specification for other team members to use.  It has always been a trouble to
+share and maintain such spec.  Now, I can create a much neater spec which is
+available for the team's reference as a webpage." \\
+-- /Shankar R./
+
+"I like Bigblow the best.  I've exported most of my Org files using this theme
+and published them within my company's intranet.  Thanks for sharing this
+wonderful package!" \\
+-- /Richard K./
+
 ** ReadTheOrg
 
 ReadTheOrg is a clone of the official -- and great! --  [[https://github.com/snide/sphinx_rtd_theme][theme]]
@@ -148,6 +121,31 @@ I don't have a lot of time to maintain this project due to other
 responsibilities.  Help is welcome to work on that (and eventually improve the
 default structure of the HTML export)!
 #+end_note
+
+*** Quotations about ReadTheOrg
+
+"OMG.  The ReadTheOrg theme for exported HTML from org mode files is eye
+wateringly beautiful.  Thank you!" \\
+-- /Rob Stewart/
+
+"It is fantastic, so beautiful.  I will switch several of my pages over to
+this theme." \\
+-- /Carsten D./
+
+"That is incredibly impressive.  Thanks for this." \\
+-- /Noah R./
+
+"Thank you!  I enjoy your themes.  The best ones I've ever found." \\
+-- /Kang T./
+
+"Awesome theme.  Wonderful job.  You're doing a wonderful thing --- it will
+enable people (at least those who use Emacs and Org mode) to put together
+on-line reference works in a much-more usable fashion than is currently
+available." \\
+-- /D. C. Toedt/
+
+"Extremely useful." \\
+-- /Thomas S. Dye/
 
 * Demo
 
@@ -251,10 +249,10 @@ version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
-A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
-this program. If not, see http://www.gnu.org/licenses/.
+this program.  If not, see http://www.gnu.org/licenses/.
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
