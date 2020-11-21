@@ -149,7 +149,7 @@ available." \\
 
 * Demo
 
-I've written a demo page for the themes that provides a maximal working support
+I've written a [[file:org/org-mode-syntax-example.txt][demo page]] for the themes that provides a maximal working support
 of Org mode syntax.
 
 Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
