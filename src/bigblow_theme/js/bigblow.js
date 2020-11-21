@@ -217,7 +217,7 @@ $(document).ready(function() {
         if ((window.location.protocol != 'file:') && ($(this).find('.zclip').length == 0)) {
             $(this).find('.copy-to-clipboard-button').zclip({
                 //path: 'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
-                //path: 'styles/bigblow/js/ZeroClipboard.swf',
+                //path: 'src/bigblow_theme/js/ZeroClipboard.swf',
                 path: bbPathToZeroClipboardSwf,
                 copy: function() {
                     return $(this).parent().parent().find('.src').text();
