@@ -54,7 +54,7 @@ Bigblow is perfect for your work: it is a clean design aimed at optimal *Org
 mode experience in your browser*.  It looks just awesome!
 
 #+ATTR_HTML: :width 640
-[[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:bigblow.png]]
+[[https://www.youtube.com/watch?v=DnSGSiXYuOk][file:docs/bigblow.png]]
 
 Click on the image for a quick [[https://www.youtube.com/watch?v=DnSGSiXYuOk][demo of Bigblow]] (2:49 min, no audio).
 
@@ -111,7 +111,7 @@ all your Org docs.
 *Thanks to its creator(s)!*
 
 #+ATTR_HTML: :width 640
-[[file:readtheorg.png]]
+[[file:docs/readtheorg.png]]
 
 #+begin_note
 While the original theme shines on mobile devices as well, ReadTheOrg does not
