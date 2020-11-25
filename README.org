@@ -104,9 +104,9 @@ wonderful package!" \\
 
 ** ReadTheOrg
 
-ReadTheOrg is a clone of the official -- and great! --  [[https://github.com/snide/sphinx_rtd_theme][theme]]
-used in the [[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to
-all your Org docs.
+ReadTheOrg is a clone of the official -- and great! -- [[https://github.com/snide/sphinx_rtd_theme][Sphinx theme]] used in the
+[[http://docs.readthedocs.org/en/latest/][Read The Docs]] site.  It gives a beautiful and professional style to all your Org
+docs.
 
 *Thanks to its creator(s)!*
 
@@ -169,7 +169,7 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
    ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
    #+end_src
 
-   (where ~THEME-NAME~ is ~theme-bigblow~ or ~theme-readtheorg~)
+   (where ~NAME~ is either ~bigblow~ or ~readtheorg~)
 
    or, if you *cloned or downloaded* the Org-HTML themes project -- to get no
    dependency on an Internet connection --, use a (relative or absolute) path to
