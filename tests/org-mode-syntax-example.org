@@ -7,7 +7,7 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:5 num:nil toc:2 p:t
 
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/theme-readtheorg.setup
 
 #+PROPERTY:  header-args :eval never-export
 
