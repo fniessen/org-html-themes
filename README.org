@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  header-args :padline no
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/theme-readtheorg.setup
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
@@ -173,7 +173,7 @@ Using a theme from the [[id:79e0ed21-c3b0-4f00-bdab-29fbff9dcad4][theme gallery]
 
    or, if you *cloned or downloaded* the Org-HTML themes project -- to get no
    dependency on an Internet connection --, use a (relative or absolute) path to
-   the local "setup file" and copy the "src" folder from the cloned folder
+   the /local/ "setup file" and copy the =src= folder from the cloned folder
    into the same folder as the file you want to export:
 
    #+begin_src org :exports code
@@ -237,7 +237,7 @@ I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You 
 
 * License
 
-Copyright (C) 2011-2020 Fabrice Niessen.
+Copyright (C) 2011-2021 Fabrice Niessen.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
