@@ -5,7 +5,7 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:6 num:nil toc:4
 
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/theme-readtheorg.setup
 
 # See GitHub Settings > GitHub Pages > Theme Chooser
 
