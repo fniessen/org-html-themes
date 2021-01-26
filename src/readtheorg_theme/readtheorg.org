@@ -6,7 +6,7 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 num:t toc:2
 
-#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ~/org/theme-readtheorg.setup
 
 # See http://pandoc.org/README.html for another organization of the sections
 
@@ -36,6 +36,8 @@ h1,h2,h3,h4,h5,h6,legend{
 
 h1{
     font-size:175%;
+    text-align: left !important;
+    margin-bottom: 0.83em !important;
 }
 
 .subtitle{
@@ -195,11 +197,7 @@ dd{
 
 *** Unordered
 
-
-
 *** Ordered
-
-
 
 *** Description
 

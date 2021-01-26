@@ -9,6 +9,8 @@ h1,h2,h3,h4,h5,h6,legend{
 
 h1{
     font-size:175%;
+    text-align: left !important;
+    margin-bottom: 0.83em !important;
 }
 
 .subtitle{
