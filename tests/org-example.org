@@ -1,7 +1,7 @@
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE:     Example of Tasks
 #+AUTHOR:    Fabrice Niessen
-#+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
+#+EMAIL:     booster.emacs@gmail.com
 #+LANGUAGE:  en
 #+OPTIONS:   H:4 num:2 toc:4
 
@@ -47,7 +47,7 @@ Project "Corporate Marketing".
 # *************** END
 
 **** STRT Interview PR firm candidates
-DEADLINE: <2014-03-12 Wed>
+DEADLINE: <2021-04-12 Wed>
 :LOGBOOK:
 CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
 - State "TODO"        ->  "STRT"       [2013-02-05 Tue 09:00]
@@ -58,7 +58,7 @@ CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
 *** Advertising campaign
 
 **** TODO Call Joe
-DEADLINE: <2014-03-06 Thu>
+DEADLINE: <2021-04-06 Thu>
 :PROPERTIES:
 :Effort:   0:10
 :END:
@@ -68,14 +68,14 @@ DEADLINE: <2014-03-06 Thu>
 Calendar events/invitations.
 
 **** TODO Recruit volunteers
-DEADLINE: <2014-03-13 Thu>
+DEADLINE: <2021-04-13 Thu>
 
 **** TODO Make sure responses are coming back
 
 ** Operations
 
 *** TODO Update database to latest version
-SCHEDULED: <2014-03-13 Thu>
+SCHEDULED: <2021-04-13 Thu>
 
 *** TODO Update Website
 
@@ -104,16 +104,16 @@ Update blog.
 
 *** DONE Read "Getting Things Done"
 :LOGBOOK:
-- State "TODO"        ->  "DONE"       [2014-01-06 Mon 15:10]
+- State "TODO"        ->  "DONE"       [2021-02-06 Sat 15:10]
 :END:
 
 ** Health
 
 *** TODO Make dentist appointment                                        :phone:
-SCHEDULED: <2014-03-12 Wed>
+SCHEDULED: <2021-04-12 Wed>
 
 *** TODO Go to the gym
-SCHEDULED: <2014-03-11 Tue>
+SCHEDULED: <2021-04-11 Tue>
 :PROPERTIES:
 :Effort:   0:10
 :END:
