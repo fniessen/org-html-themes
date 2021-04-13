@@ -124,6 +124,13 @@ You can have ordered lists with jumping numbers:
 - Term to define ::
      Explication of the term.
 
+*** Checkboxes
+- [ ] First item not checked
+- [-] Second item half done
+  - [ ] Another first
+  - [ ] Another second
+- [X] Third item checked
+
 ** Miscellaneous effects
 
 *** Include Org files
