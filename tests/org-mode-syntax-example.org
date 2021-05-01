@@ -397,7 +397,7 @@ Other elements to use sparingly are:
 - monospaced typewriter font for =verbatim text=
 - +deleted+ text (vs. _inserted_ text)
 - text with^{superscript} (for example: ~m/s^{2}~ gives m/s^{2})
-- text with_{subscript}
+- text with_{subscript} (for example: ~H_{2}O~ gives H_{2}O)
 
 *** Quotations
 
