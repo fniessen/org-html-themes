@@ -47,7 +47,7 @@ Project "Corporate Marketing".
 # *************** END
 
 **** STRT Interview PR firm candidates
-DEADLINE: <2021-04-12 Wed>
+DEADLINE: <2021-05-08 Sat>
 :LOGBOOK:
 CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
 - State "TODO"        ->  "STRT"       [2013-02-05 Tue 09:00]
@@ -58,7 +58,7 @@ CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
 *** Advertising campaign
 
 **** TODO Call Joe
-DEADLINE: <2021-04-06 Thu>
+DEADLINE: <2021-05-06 Thu>
 :PROPERTIES:
 :Effort:   0:10
 :END:
@@ -68,7 +68,7 @@ DEADLINE: <2021-04-06 Thu>
 Calendar events/invitations.
 
 **** TODO Recruit volunteers
-DEADLINE: <2021-04-13 Thu>
+DEADLINE: <2021-05-13 Thu>
 
 **** TODO Make sure responses are coming back
 
