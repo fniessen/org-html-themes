@@ -147,6 +147,10 @@ available." \\
 "Extremely useful." \\
 -- /Thomas S. Dye/
 
+"This is amazing, I've been looking for something like this for a LONG time!
+I will share." \\
+Edward H.
+
 * Demo
 
 I've written a [[file:tests/org-mode-syntax-example.org][demo page]] for the themes that provides a maximal working support
