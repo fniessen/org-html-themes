@@ -563,7 +563,6 @@ Responsive for sidebar:
     }
 
     #toggle-sidebar {
-        background-color: #2980B9;
         display: block;
         margin-bottom: 1.6em;
         padding: 0.6em;
