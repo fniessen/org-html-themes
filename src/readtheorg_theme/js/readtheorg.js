@@ -19,16 +19,22 @@ $( document ).ready(function() {
 });
 
 $(function() {
-    $('.note').before("<p class='admonition-title note'>Note</p>");
-    $('.seealso').before("<p class='admonition-title seealso'>See also</p>");
-    $('.warning').before("<p class='admonition-title warning'>Warning</p>");
-    $('.caution').before("<p class='admonition-title caution'>Caution</p>");
-    $('.attention').before("<p class='admonition-title attention'>Attention</p>");
-    $('.tip').before("<p class='admonition-title tip'>Tip</p>");
-    $('.important').before("<p class='admonition-title important'>Important</p>");
-    $('.hint').before("<p class='admonition-title hint'>Hint</p>");
-    $('.error').before("<p class='admonition-title error'>Error</p>");
-    $('.danger').before("<p class='admonition-title danger'>Danger</p>");
+    function replace_admonition (tag, readable) {
+        $(`.${tag}:not(#table-of-contents *)`)
+            .parent().parent().replaceWith(function() {
+                return `<p id='${this.id}' class='admonition-title ${tag}'>${readable}</p>`
+            });
+    }
+    replace_admonition('note', 'Note');
+    replace_admonition('seealso', 'See also');
+    replace_admonition('warning', 'Warning');
+    replace_admonition('caution', 'Caution');
+    replace_admonition('attention', 'Attention');
+    replace_admonition('tip', 'Tip');
+    replace_admonition('important', 'Important');
+    replace_admonition('hint', 'Hint');
+    replace_admonition('error', 'Error');
+    replace_admonition('danger', 'Danger');
 });
 
 $( document ).ready(function() {
