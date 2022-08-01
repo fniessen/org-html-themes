@@ -339,6 +339,7 @@ pre.src{
     line-height: 1.5;
     margin-bottom:24px;
     padding:12px;
+    overflow: auto;
 }
 
 table{
