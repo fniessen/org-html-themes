@@ -189,55 +189,35 @@ $(document).ready(function() {
     $('table').stickyTableHeaders();
 });
 
-function copyToClipboard(text)
-{
-    if (window.clipboardData && window.clipboardData.setData) { // Internet Explorer
-        window.clipboardData.setData("Text", text);
-    }
-    else { // Fallback solution
-        window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
-    }
-}
-
 $(document).ready(function() {
-    // Assuming that the ZeroClipboard swf file is in the same folder than bigblow,
-    // get the path to it (it will be relative to the current page location).
-    var bbScriptPath = $('script[src$="bigblow.js"]').attr('src');  // the js file path
-    var bbPathToZeroClipboardSwf = bbScriptPath.replace('bigblow.js', 'ZeroClipboard.swf');
-
     // Add copy to clipboard snippets
     $('.org-src-container').prepend('<div class="snippet-copy-to-clipboard"><span class="copy-to-clipboard-button">[copy]</span></div>');
 
     // Display/hide snippets on source block mouseenter/mouseleave
     $(document).on('mouseenter', '.org-src-container', function () {
         $(this).find('.snippet-copy-to-clipboard').show();
-
-        // Need to call zclip here, once the button is visible.
-        // Beacause when the button is not visible, zclip does nothing.
-        if ((window.location.protocol != 'file:') && ($(this).find('.zclip').length == 0)) {
-            $(this).find('.copy-to-clipboard-button').zclip({
-                //path: 'http://www.steamdev.com/zclip/js/ZeroClipboard.swf',
-                //path: 'src/bigblow_theme/js/ZeroClipboard.swf',
-                path: bbPathToZeroClipboardSwf,
-                copy: function() {
-                    return $(this).parent().parent().find('.src').text();
-                }
-            });
-        }
-    }).on('mouseleave', '.org-src-container', function () {
+    });
+    $(document).on('mouseleave', '.org-src-container', function () {
         $(this).find('.snippet-copy-to-clipboard').hide();
     });
 
-    // Handle copy to clipboard (here, for a local file only 'file://...'
-    if (window.location.protocol == 'file:') { // if local file use browser-specific code
-        $('.copy-to-clipboard-button').click(function() {
-            // Get the text to be copied
-            var text = $(this).parent().parent().find('.src').text();
-            text = text.replace(/\n/g, "\r\n");
-            // alert(text);
-            copyToClipboard(text);
-        });
-    }
+    $('.copy-to-clipboard-button').click( function() {
+        var element = $(this).parent().parent().find('.src');
+        var val = element.text();
+        val = val.replace(/\n/g, "\r\n");
+        
+        var $copyElement = $("<textarea>");
+        $("body").append($copyElement);
+
+        $copyElement.val(val);
+        
+        $copyElement.trigger('select');
+        document.execCommand('copy');
+        
+        $copyElement.remove();
+
+        $(this).parent().parent().find('.snippet-copy-to-clipboard').hide();
+    });
 });
 
 $(function() {

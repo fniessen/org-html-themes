@@ -10,7 +10,6 @@
 
 #+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery.localscroll-min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery.zclip.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/bigblow.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/hideshow.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
