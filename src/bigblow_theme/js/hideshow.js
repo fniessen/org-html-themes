@@ -311,7 +311,7 @@ function hsAddReviewingPanels() {
                             + 'Shortcuts: '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskNext()">r (next)</span> - '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span><br>'
-                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">q (quit)</span>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskQuit()">q (quit)</span>'
                             + '</div>');
         }
         else {
@@ -320,7 +320,7 @@ function hsAddReviewingPanels() {
                             + 'Shortcuts: '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskNext()">r (next)</span> - '
                             + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">R (previous)</span><br>'
-                            + '<span class="hsReviewButton" onclick="hsReviewTaskPrev()">q (quit)</span>'
+                            + '<span class="hsReviewButton" onclick="hsReviewTaskQuit()">q (quit)</span>'
                             + '</div>');
         }
     });
