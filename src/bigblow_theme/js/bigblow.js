@@ -45,13 +45,27 @@ $(function() {
 
 // generate contents of minitoc
 function generateMiniToc(divId) {
-    $('#minitoc').empty().append('<h2>In this section</h2>');
-    $('#' + divId).find('h3').each(function(i) {
-        let pos = $(this).text().search(" ");
-        let text = $(this).text().substring(0, pos);
-        $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
-                             + text + "</a>");
-    });
+    let headers = null;
+    if(divId) {
+        $('#minitoc').empty().append('<h2>In this section</h2>');
+        headers = $('#' + divId).find('h3');
+    }
+    else {
+        $('#minitoc').empty().append('<h2>In this document</h2>');
+        headers = $('div#content').find(':header');
+    }
+    headers.each(function(i) {
+            let text = $(this)
+                .clone()    //clone the element
+                .children() //select all the children
+                .remove()   //remove all the children
+                .end()  //again go back to selected element
+                .text().trim();
+            var level = parseInt(this.nodeName.substring(1), 10);
+            let prefix = "".padStart(level-1, "  ");
+            $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
+                                 + prefix + text + "</a>");
+        });
     // Ensure that the target is expanded (hideShow)
     $('#minitoc a[href^="#"]').click(function() {
         var href = $(this).attr('href');
