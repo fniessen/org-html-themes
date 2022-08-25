@@ -620,6 +620,7 @@ span.todo .selected {
     padding: 4px;
     position: fixed;
     width: auto;
+    white-space: pre;
 }
 
 #minitoc a {
