@@ -19,21 +19,56 @@ $( document ).ready(function() {
 });
 
 $(function() {
-    function replace_admonition (tag, readable) {
+    function replace_admonition (tag, map, language) {
+        var language = document.documentElement.lang;
+        var translations = map.get(tag);
+        var readable = translations.get(language) || translations.get("en"); // fallback to english
         $(`span.${tag}:not(#table-of-contents *)`) .parent().parent()
             .replaceWith(`<p id='${this.id}' class='admonition-title ${tag}'>${readable}</p>`);
         $(`div.${tag}`).before(`<p class='admonition-title ${tag}'>${readable}</p>`)
     }
-    replace_admonition('note', 'Note');
-    replace_admonition('seealso', 'See also');
-    replace_admonition('warning', 'Warning');
-    replace_admonition('caution', 'Caution');
-    replace_admonition('attention', 'Attention');
-    replace_admonition('tip', 'Tip');
-    replace_admonition('important', 'Important');
-    replace_admonition('hint', 'Hint');
-    replace_admonition('error', 'Error');
-    replace_admonition('danger', 'Danger');
+    const map = new Map()
+          .set("note", new Map()
+               .set("en", "Note")
+               .set("de", "Hinweis"))
+          .set("seealso", new Map()
+               .set("en", "See also")
+               .set("de", "Siehe auch"))
+          .set("warning", new Map()
+               .set("en", "Warning")
+               .set("de", "Warnung"))
+          .set("caution", new Map()
+               .set("en", "Caution")
+               .set("de", "Vorsicht"))
+          .set("attention", new Map()
+               .set("en", "Attention")
+               .set("de", "Obacht"))
+          .set("tip", new Map()
+               .set("en", "Tip")
+               .set("de", "Tipp"))
+          .set("important", new Map()
+               .set("en", "Important")
+               .set("de", "Wichtig"))
+          .set("hint", new Map()
+               .set("en", "Hint")
+               .set("de", "Hinweis"))
+          .set("error", new Map()
+               .set("en", "Error")
+               .set("de", "Fehler"))
+          .set("danger", new Map()
+               .set("en", "Danger")
+               .set("de", "Gefahr"))
+    ;
+    replace_admonition('note', map);
+    replace_admonition('seealso', map);
+    replace_admonition('warning', map);
+    replace_admonition('caution', map);
+    replace_admonition('attention', map);
+    replace_admonition('tip', map);
+    replace_admonition('important', map);
+    replace_admonition('hint', map);
+    replace_admonition('error', map);
+    replace_admonition('danger', map);
 });
 
 $( document ).ready(function() {
