@@ -193,7 +193,7 @@ You love those themes, but you still would like to override particular HTML
 tags?  Some examples do follow...
 
 Before doing that, though, if you think it really is an improvement that could
-server other persons as well, including me, you're invited to submit your
+serve other persons as well, including me, you're invited to submit your
 change...
 
 ** Change the background code blocks
