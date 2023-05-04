@@ -46,7 +46,7 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 :END:
 
 This is a list of available *HTML themes for Org mode*, which you can use right
-now!  Well, I hope to have more than one in a couple of weeks...
+now!
 
 ** Bigblow
 
