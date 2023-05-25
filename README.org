@@ -23,7 +23,7 @@
 Though you can easily override CSS stylesheets and add your own HTML themes, we
 can say (or write) that Org mode provides a /basic/ HTML support.
 
-*Org-HMTL themes* is an open source framework for providing you with a list of
+*Org-HTML themes* is an open source framework for providing you with a list of
 very nice (cross-browser) themes for all your Org documents.  Use them to *style
 your docs*, and your colleagues will come up to tell you that you are a genius!
 
