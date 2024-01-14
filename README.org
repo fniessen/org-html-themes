@@ -1,4 +1,4 @@
-#+TITLE:     How to export Org mode files into awesome HTML in 2 minutes
+#+TITLE:     How to effortlessly transform your Org mode files into stunning HTML in just 2 minutes
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+DESCRIPTION: Org-HTML export made simple.
@@ -19,7 +19,7 @@
 * ADVERT: Elevate your Emacs skills in Paris, Rotterdam, Leuven or Valencia!
 
 *Unlock the power of Emacs in Rotterdam!  Join my next exclusive "Emacs Boost"
-course on February 14th to 16th, 2024!*
+course on March 13th to 15th, 2024!*
 
 Ready to /supercharge your productivity/ and become an Emacs ninja?  Look no
 further!
@@ -31,7 +31,7 @@ further!
 - And much more!
 
 *Upcoming course details:*
-- *Date:* February 14th to 16th (Wed to Fri)
+- *Date:* March 13th to 15th (Wed to Fri)
 - *Location:* Rotterdam, The Netherlands
 - *Audience:* Open to anyone interested in Emacs, from beginners to advanced
   users.
@@ -94,20 +94,20 @@ Click on the image for a quick [[https://www.youtube.com/watch?v=DnSGSiXYuOk][de
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut | What it does                      |
-|----------+-----------------------------------|
-| =?= or =h=   | Access the *dashboard*              |
+| Shortcut   | What it does                        |
+|------------+-------------------------------------|
+| =?= or =h= | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                         |
-| =<=        | Scroll to top                     |
-| =>=        | Scroll to bottom                  |
-| =-=        | Collapse all                      |
-| =+=        | Expand all                        |
-| =r=        | Go to next task in list           |
-| =R=        | Go to previous task in list       |
-| =q=        | Stop reviewing the list of tasks  |
-| =g=        | Reload the page                   |
+| =b=        | Scroll up                           |
+| =<=        | Scroll to top                       |
+| =>=        | Scroll to bottom                    |
+| =-=        | Collapse all                        |
+| =+=        | Expand all                          |
+| =r=        | Go to next task in list             |
+| =R=        | Go to previous task in list         |
+| =q=        | Stop reviewing the list of tasks    |
+| =g=        | Reload the page                     |
 
 *** Quotations about Bigblow
 
@@ -249,33 +249,31 @@ Solution provided by Malcolm Cook:
 ,#+HTML_HEAD: <style> li{max-width:800px;}</style
 #+end_src
 
-* Contributing
+* Contribute to the project!
 
-** Issues
+** Report issues and enhancements
 
-Report issues and suggest features and improvements on the [[https://github.com/fniessen/org-html-themes/issues/new][GitHub issue tracker]].
+Found a bug or have an idea for a new feature?  Share your thoughts on the
+[[https://github.com/fniessen/org-html-themes/issues/new][GitHub issue tracker]].
 
-** Patches
+** Submit patches
 
-I love contributions!  Patches under any form are always welcome!
+I welcome contributions in any form!  Feel free to submit patches to enhance the
+project.
 
-** Donations
+** Support development with a donation!
 
-If you use the org-html-themes project (or any of [[https://github.com/fniessen/][my other projects]]) and feel it
-is making your life better and easier, you can show your appreciation and help
-support future development by making today a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal.  Thank
-you!
+If you find the "org-html-themes" project (or any of [[https://github.com/fniessen/][my other projects]])
+enhancing your Emacs experience and simplifying your workflow, seize the
+opportunity to express your appreciation!  Help fuel future development by
+making a [[https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted][donation]] through PayPal. Your support is invaluable -- thank you!
 
-Regardless of the donations, org-html-themes will always be free both as in
-beer and as in speech.
-
-** Follow me
-
-I have an [[https://twitter.com/f_niessen][f_niessen]] account on Twitter.  You should follow it.
+Remember, regardless of donations, "org-html-themes" will always remain freely
+accessible, both as in Belgian beer and as in speech.
 
 * License
 
-Copyright (C) 2011-2022 Fabrice Niessen
+Copyright (C) 2011-2024 Fabrice Niessen
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes
