@@ -18,8 +18,11 @@
 
 * ADVERT: Elevate your Emacs skills in Paris, Rotterdam, Leuven or Valencia!
 
-*Unlock the power of Emacs in Rotterdam!  Join my next exclusive "Emacs Boost"
-course on March 13th to 15th, 2024!*
+*Unlock the power of Emacs in Valencia!  Join my next exclusive "Emacs Boost"
+course on April 11th to 12th, 2024!*
+
+#+attr_html: :style height: 90px !important;
+[[file:images/Logo-HD-transparent-25pc.png]]
 
 Ready to /supercharge your productivity/ and become an Emacs ninja?  Look no
 further!
@@ -31,8 +34,8 @@ further!
 - And much more!
 
 *Upcoming course details:*
-- *Date:* March 13th to 15th (Wed to Fri)
-- *Location:* Rotterdam, The Netherlands
+- *Date:* April 11th to 12th (Thu + Fri)
+- *Location:* Valencia, Spain
 - *Audience:* Open to anyone interested in Emacs, from beginners to advanced
   users.
 
@@ -48,7 +51,7 @@ Seats are limited, so /reserve yours today/.
 Visit https://emacsboost.com/en/ for more information, other dates and other
 locations, and to /reserve your seat/.
 
-/See you in Rotterdam!/  [[https://emacsboost.com/en/][#EmacsBoostRotterdam]]
+/See you in Valencia!/  [[https://emacsboost.com/en/][#EmacsBoostValencia]]
 
 * Overview
 
@@ -94,20 +97,20 @@ Click on the image for a quick [[https://www.youtube.com/watch?v=DnSGSiXYuOk][de
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut   | What it does                        |
-|------------+-------------------------------------|
-| =?= or =h= | Access the *dashboard*              |
+| Shortcut | What it does                      |
+|----------+-----------------------------------|
+| =?= or =h=   | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                           |
-| =<=        | Scroll to top                       |
-| =>=        | Scroll to bottom                    |
-| =-=        | Collapse all                        |
-| =+=        | Expand all                          |
-| =r=        | Go to next task in list             |
-| =R=        | Go to previous task in list         |
-| =q=        | Stop reviewing the list of tasks    |
-| =g=        | Reload the page                     |
+| =b=        | Scroll up                         |
+| =<=        | Scroll to top                     |
+| =>=        | Scroll to bottom                  |
+| =-=        | Collapse all                      |
+| =+=        | Expand all                        |
+| =r=        | Go to next task in list           |
+| =R=        | Go to previous task in list       |
+| =q=        | Stop reviewing the list of tasks  |
+| =g=        | Reload the page                   |
 
 *** Quotations about Bigblow
 
