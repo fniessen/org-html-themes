@@ -751,6 +751,10 @@ p.verse {
     cursor: pointer;
 }
 
+.underline {
+  text-decoration:underline
+}
+
 /* This is for the sake of Emacs. */
 /* Local Variables: */
 /* eval: (when (locate-library "rainbow-mode") (require 'rainbow-mode) (rainbow-mode)) */
