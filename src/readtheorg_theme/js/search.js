@@ -1,8 +1,11 @@
-// readh-the-org-search v1.5
-console.log('custom-search.js v1.6 is being loaded');
+// -*- mode: js2 -*-
+
+// readh-the-org-search v1.8
+
+console.log('custom-search.js v1.8 is being loaded');
 
 $(document).ready(function() {
-  console.log('Document ready, initializing search functionality v1.5');
+  console.log('Document ready, initializing search functionality v1.8');
 
   $('#table-of-contents').prepend(`
     <div id="search-container">
@@ -15,6 +18,7 @@ $(document).ready(function() {
 
   const searchInput = $('#search-input');
   const searchResults = $('#search-results');
+  const searchDescription = $('#search-description');
   const content = $('#content');
   let searchIndex = [];
 
@@ -57,8 +61,17 @@ $(document).ready(function() {
     const searchTerm = searchInput.val().toLowerCase();
     searchResults.empty();
 
+    if (searchTerm.length === 0) {
+      searchDescription.show();
+      searchResults.hide();
+      return;
+    }
+
+    searchDescription.hide();
+    searchResults.show();
+
     if (searchTerm.length < 3) {
-      searchResults.append('<li>Please enter at least 3 characters</li>');
+      searchResults.html('<li>Please enter at least 3 characters</li>');
       return;
     }
 
@@ -131,5 +144,5 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  console.log('Search functionality v1.6 initialization complete');
+  console.log('Search functionality v1.8 initialization complete');
 });
