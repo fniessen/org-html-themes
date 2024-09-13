@@ -1,0 +1,47 @@
+/* -*- mode: css -*- */
+
+/* read-the-org search styles, v1.6 */
+
+#search-container {
+  padding: 10px;
+  background-color: #343131;
+}
+
+#search-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#search-results {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#search-results li {
+  background-color: #2980B9;
+  color: white;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#search-results li:hover {
+  background-color: #3091d1;
+}
+
+#search-description {
+  color: #b3b3b3; /* Lighter color, matching the TOC text color in readtheorg.css */
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+}
