@@ -8,5 +8,21 @@
 #+HTML_HEAD: <script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/search.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
+
+#+MACRO: enable-search #+HTML_HEAD: <script type="text/javascript">enableSearch();</script>
+#+MACRO: disable-search #+HTML_HEAD: <script type="text/javascript">disableSearch();</script>
+#+MACRO: set-search-limit #+HTML_HEAD: <script type="text/javascript">setSearchLimit($1);</script>
+
+* Search Configuration (v1.12) :noexport:
+Usage: Optionally place these macros after including this file, before your content.
+- {{{enable-search}}}: :: enable search bar (default)
+- {{{disable-search}}}: :: disable search bar
+- {{{set-search-limit(N)}}}: :: Limit results to N (default: 0 for no limit)
+
+Example:
+#+BEGIN_SRC org
+{{{enable-search}}}
+{{{set-search-limit(10)}}}
+#+END_SRC
