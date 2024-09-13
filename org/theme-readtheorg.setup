@@ -8,5 +8,21 @@
 #+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 #+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/search.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+
+#+MACRO: enable-search #+HTML_HEAD: <script type="text/javascript">enableSearch();</script>
+#+MACRO: disable-search #+HTML_HEAD: <script type="text/javascript">disableSearch();</script>
+#+MACRO: set-search-limit #+HTML_HEAD: <script type="text/javascript">setSearchLimit($1);</script>
+
+* Search Configuration (v1.12) :noexport:
+Usage: Optionally place these macros after including this file, before your content.
+- {{{enable-search}}}: :: enable search bar (default)
+- {{{disable-search}}}: :: disable search bar
+- {{{set-search-limit(N)}}}: :: Limit results to N (default: 0 for no limit)
+
+Example:
+#+BEGIN_SRC org
+{{{enable-search}}}
+{{{set-search-limit(10)}}}
+#+END_SRC

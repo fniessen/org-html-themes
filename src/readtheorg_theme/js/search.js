@@ -1,11 +1,47 @@
 // -*- mode: js2 -*-
 
-// readh-the-org-search v1.8
+// read-the-org-search
 
-console.log('custom-search.js v1.8 is being loaded');
+// Configuration
+const SEARCH_VERSION = "v1.12";
+
+// Default configuration
+window.searchConfig = {
+    enableSearch: true,
+    searchResultLimit: 0
+};
+
+// Configuration function
+
+
+function enableSearch(enableSearch, searchResultLimit) {
+    window.searchConfig.enableSearch = true;
+}
+
+
+function disableSearch() {
+    window.searchConfig.enableSearch = false;
+}
+
+
+function setSearchLimit(searchResultLimit) {
+    window.searchConfig.searchResultLimit = searchResultLimit;
+}
+
+
+console.log(`custom-search.js ${SEARCH_VERSION} is being loaded`);
+
 
 $(document).ready(function() {
-  console.log('Document ready, initializing search functionality v1.8');
+  console.log(`Document ready, initializing search ${SEARCH_VERSION}`);
+
+  const ENABLE_SEARCH = window.searchConfig.enableSearch;
+  const SEARCH_RESULT_LIMIT = window.searchConfig.searchResultLimit;
+
+  if (!ENABLE_SEARCH) {
+    console.log('Search functionality is disabled');
+    return;
+  }
 
   $('#table-of-contents').prepend(`
     <div id="search-container">
@@ -82,7 +118,10 @@ $(document).ready(function() {
       return;
     }
 
-    matches.slice(0, 10).forEach((match, index) => {
+    // Apply the search result limit
+    const limitedMatches = SEARCH_RESULT_LIMIT > 0 ? matches.slice(0, SEARCH_RESULT_LIMIT) : matches;
+
+    limitedMatches.forEach((match, index) => {
       const snippet = match.text.length > 100 ? match.text.substr(0, 100) + '...' : match.text;
       const highlightedSnippet = highlightText(snippet, searchTerm);
       const li = $(`<li role="option" tabindex="-1">${highlightedSnippet}</li>`);
@@ -144,5 +183,5 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  console.log('Search functionality v1.8 initialization complete');
+  console.log(`Search ${SEARCH_VERSION} initialization complete`);
 });
