@@ -16,8 +16,10 @@
 #+html:   <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 #+html: </a>
 
-* ADVERT: Elevate your Emacs skills in Paris, Utrecht, Leuven or Valencia!
+#+begin_quote
+[!TIP]
 
+*** Elevate your Emacs skills in Paris, Utrecht, Leuven or Valencia!
 *Unlock the power of Emacs!  Join my next exclusive "Emacs Boost" course!*
 
 Ready to /supercharge your productivity/ and become an Emacs ninja?  Look no
@@ -29,7 +31,9 @@ further!
 - Customize Emacs to fit your unique needs.
 - And much more!
 
-*Audience:* Open to anyone interested in Emacs, from beginners to advanced
+*Audience:*
+
+Open to anyone interested in Emacs, from beginners to advanced
 users.
 
 *Why choose my course?*
@@ -42,6 +46,7 @@ Don't miss this opportunity to take your Emacs skills to the next level! \\
 
 Visit https://emacsboost.com/en/ for more information, dates and locations, and
 to /reserve your seat/.
+#+end_quote
 
 * Overview
 
