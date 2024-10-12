@@ -15,14 +15,17 @@
 #+MACRO: disable-search #+HTML_HEAD: <script type="text/javascript">disableSearch();</script>
 #+MACRO: set-search-limit #+HTML_HEAD: <script type="text/javascript">setSearchLimit($1);</script>
 
-* Search Configuration (v1.12) :noexport:
+* Search Configuration (v1.12)                                        :noexport:
+
 Usage: Optionally place these macros after including this file, before your content.
-- {{{enable-search}}}: :: enable search bar (default)
-- {{{disable-search}}}: :: disable search bar
-- {{{set-search-limit(N)}}}: :: Limit results to N (default: 0 for no limit)
+
+- {{{enable-search}}} :: Enable search bar (default)
+- {{{disable-search}}} :: Disable search bar
+- {{{set-search-limit(N)}}} :: Limit results to N (default: 0 for no limit)
 
 Example:
-#+BEGIN_SRC org
+
+#+begin_src org
 {{{enable-search}}}
 {{{set-search-limit(10)}}}
-#+END_SRC
+#+end_src
