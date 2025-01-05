@@ -1,6 +1,6 @@
 // hideshow.js --- HideShow JS file
 //
-// Copyright (C) 2014-2020 All Right Reserved, Fabrice Niessen
+// Copyright (C) 2014-2020 Fabrice Niessen. All rights reserved.
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as

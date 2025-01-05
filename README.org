@@ -271,7 +271,7 @@ accessible, both as in Belgian beer and as in speech.
 
 * License
 
-Copyright (C) 2011-2024 Fabrice Niessen
+Copyright (C) 2011-2025 Fabrice Niessen. All rights reserved.
 
 Author: Fabrice Niessen \\
 Keywords: org-mode html themes

@@ -1,6 +1,6 @@
 // bigblow.js --- BigBlow JS file
 //
-// Copyright (C) 2011-2016 All Right Reserved, Fabrice Niessen
+// Copyright (C) 2011-2016 Fabrice Niessen. All rights reserved.
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
