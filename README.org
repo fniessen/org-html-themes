@@ -92,20 +92,20 @@ Click on the image for a quick [[https://www.youtube.com/watch?v=DnSGSiXYuOk][de
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut | What it does                      |
-|----------+-----------------------------------|
-| =?= or =h=   | Access the *dashboard*              |
+| Shortcut   | What it does                        |
+|------------+-------------------------------------|
+| =?= or =h= | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                         |
-| =<=        | Scroll to top                     |
-| =>=        | Scroll to bottom                  |
-| =-=        | Collapse all                      |
-| =+=        | Expand all                        |
-| =r=        | Go to next task in list           |
-| =R=        | Go to previous task in list       |
-| =q=        | Stop reviewing the list of tasks  |
-| =g=        | Reload the page                   |
+| =b=        | Scroll up                           |
+| =<=        | Scroll to top                       |
+| =>=        | Scroll to bottom                    |
+| =-=        | Collapse all                        |
+| =+=        | Expand all                          |
+| =r=        | Go to next task in list             |
+| =R=        | Go to previous task in list         |
+| =q=        | Stop reviewing the list of tasks    |
+| =g=        | Reload the page                     |
 
 *** Quotations about Bigblow
 
@@ -185,7 +185,7 @@ I will share." \\
 
 * Demo
 
-I've written a [[file:tests/org-mode-syntax-example.org][demo page]] for the themes that provides a maximal working support
+I've written a [[file:examples/org-mode-syntax-example.org][demo page]] for the themes that provides a maximal working support
 of Org mode syntax.
 
 Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
