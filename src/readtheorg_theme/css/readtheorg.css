@@ -1084,13 +1084,13 @@ h2.footnotes{
 }
 
 .WAIT, .nilWAIT{
-    background-color: #6AB097;
-}
-
-.done{
     background-color: #6ab0de;
     padding: 0px 4px;
     color: #fff;
+}
+
+.done{
+    background-color: #6AB097;
 }
 
 .tag span {
