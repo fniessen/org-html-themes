@@ -52,19 +52,19 @@ to /reserve your seat/.
 
 ** Description
 
-Though you can easily override CSS stylesheets and add your own HTML themes, we
-can say (or write) that Org mode provides a /basic/ HTML support.
+While Org mode provides /basic/ HTML support, you can effortlessly enhance your
+document's appearance by overriding CSS stylesheets and adding custom HTML
+themes.
 
-*Org-HTML themes* is an open source framework for providing you with a list of
-very nice (cross-browser) themes for all your Org documents.  Use them to *style
-your docs*, and your colleagues will come up to tell you that you are a genius!
+*Org-HTML Themes* is an innovative, open-source framework that delivers
+a collection of stunning, cross-browser themes designed to transform your Org
+documents. Use these themes to elevate your document's visual design, create
+professional-looking reports, and impress colleagues with polished, visually
+appealing content.
 
-Share this content by tweeting this page:
+#+html: <a href="https://mastodon.social/share?text=Check%20out%20these%20amazing%20Org-HTML%20themes!%20https://github.com/fniessen/org-html-themes" target="_blank" rel="noopener noreferrer">Share on Mastodon</a>
 
-#+html: <script src="http://platform.twitter.com/widgets.js"></script>
-#+html: <a href="https://twitter.com/share" class="twitter-share-button" data-via="f_niessen">Tweet</a>
-
-Follow [[https://twitter.com/f_niessen][f_niessen]] on Twitter for updates on Org-HTML themes!
+Follow [[https://mastodon.social/@fniessen][@fniessen on Mastodon]] for the latest updates on Org-HTML themes!
 
 ** Requirements
 
@@ -92,22 +92,22 @@ Click on the image for a quick [[https://www.youtube.com/watch?v=DnSGSiXYuOk][de
 
 Keyboard shortcuts to save time and boost your productivity:
 
-| Shortcut   | What it does                        |
-|------------+-------------------------------------|
-| =?= or =h= | Access the *dashboard*              |
+| Shortcut | What it does                      |
+|----------+-----------------------------------|
+| =?= or =h=   | Access the *dashboard*              |
 | =n=        | Move to the *next* main heading     |
 | =p=        | Move to the *previous* main heading |
-| =b=        | Scroll up                           |
-| =<=        | Scroll to top                       |
-| =>=        | Scroll to bottom                    |
-| =-=        | Collapse all                        |
-| =+=        | Expand all                          |
-| =r=        | Go to next task in list             |
-| =R=        | Go to previous task in list         |
-| =q=        | Stop reviewing the list of tasks    |
-| =g=        | Reload the page                     |
+| =b=        | Scroll up                         |
+| =<=        | Scroll to top                     |
+| =>=        | Scroll to bottom                  |
+| =-=        | Collapse all                      |
+| =+=        | Expand all                        |
+| =r=        | Go to next task in list           |
+| =R=        | Go to previous task in list       |
+| =q=        | Stop reviewing the list of tasks  |
+| =g=        | Reload the page                   |
 
-*** Quotations about Bigblow
+*** What people are saying about Bigblow
 
 "Very very nice, I enjoy it a lot." \\
 -- /Ista Zahn/
@@ -154,7 +154,7 @@ responsibilities.  Help is welcome to work on that (and eventually improve the
 default structure of the HTML export)!
 #+end_note
 
-*** Quotations about ReadTheOrg
+*** What people are saying about ReadTheOrg
 
 "OMG.  The ReadTheOrg theme for exported HTML from org mode files is eye
 wateringly beautiful.  Thank you!" \\
