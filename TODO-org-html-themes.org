@@ -1,8 +1,0 @@
-# Hey Emacs, this is a -*- org -*- file ...
-#+TITLE:     TODO
-
-* Tasks
-
-** TODO Fixer Org HTML theme : detangle
-
-** TODO Fixer Org HTML theme : CSS for Pull Request "search" + default value

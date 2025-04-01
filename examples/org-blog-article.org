@@ -1,0 +1,63 @@
+#+TITLE: The Art of Writing Clean Code
+#+AUTHOR: John Doe
+#+DATE: [2025-03-31]
+#+OPTIONS: toc:t
+#+SETUPFILE: ../org/theme-blog-article.setup
+
+#+begin_quote
+Never apologize for what you feel. It's like being sorry for being real.
+#+end_quote
+
+* Introduction
+Writing clean code is an essential skill for any programmer. Clean
+code is not just about making the code work; it is about writing code
+that is readable, maintainable, and efficient.
+
+* Principles of Clean Code
+
+** Meaningful Names
+Using meaningful names for variables, functions, and classes makes the
+code more readable and self-explanatory[fn:1]. For example:
+
+#+BEGIN_SRC 
+int userCount = 10; // Good
+int x = 10;        // Bad
+#+END_SRC
+
+** Small Functions
+Functions should be small and do only one thing. A function with
+multiple responsibilities is harder to understand and maintain.
+
+** Consistent Formatting
+Maintaining a consistent formatting style across the codebase improves
+readability and reduces cognitive load[fn:2].
+
+* Example Code
+Here’s an example of a cleanly written C++ function:
+
+#+BEGIN_SRC 
+#include <iostream>
+
+void printUserCount(int count) {
+    std::cout << "Total users: " << count << std::endl;
+}
+
+int main() {
+    int userCount = 10;
+    printUserCount(userCount);
+    return 0;
+}
+#+END_SRC
+
+* Conclusion
+By following the principles of clean code, we can create software that
+is easier to understand and maintain. This leads to better
+collaboration and long-term project success.
+
+* References
+1. Robert C. Martin, "Clean Code: A Handbook of Agile Software
+   Craftsmanship" [[https://www.oreilly.com/library/view/clean-code/9780136083238/][O'Reilly]]
+
+* Footnotes
+[fn:1] Always name variables descriptively to avoid confusion later.
+[fn:2] Functions should not exceed 20 lines for better readability.
