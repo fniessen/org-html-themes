@@ -1,5 +1,3 @@
 #+OPTIONS: html-style:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../src/blog_article_theme/css/style.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../src/blog_article_theme/css/style.css"/>
-
 #+HTML_HEAD: <script src="../src/blog_article_theme/js/go_up.js"></script>
