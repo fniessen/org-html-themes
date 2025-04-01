@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-31 Mon 22:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Art of Writing Clean Code</title>
+<meta name="author" content="John Doe" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../src/blog_article_theme/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../src/blog_article_theme/css/style.css"/>
+<script src="../src/blog_article_theme/js/go_up.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">The Art of Writing Clean Code</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf682ac5">1. Introduction</a></li>
+<li><a href="#org132354a">2. Principles of Clean Code</a>
+<ul>
+<li><a href="#org7af8966">2.1. Meaningful Names</a></li>
+<li><a href="#org34890e2">2.2. Small Functions</a></li>
+<li><a href="#org5416568">2.3. Consistent Formatting</a></li>
+</ul>
+</li>
+<li><a href="#orgcc2e3f1">3. Example Code</a></li>
+<li><a href="#orgf6443ac">4. Conclusion</a></li>
+<li><a href="#orgeb1e15e">5. References</a></li>
+</ul>
+</div>
+</div>
+<blockquote>
+<p>
+Never apologize for what you feel. It's like being sorry for being real.
+</p>
+</blockquote>
+<div id="outline-container-orgf682ac5" class="outline-2">
+<h2 id="orgf682ac5"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Writing clean code is an essential skill for any programmer. Clean
+code is not just about making the code work; it is about writing code
+that is readable, maintainable, and efficient.
+</p>
+</div>
+</div>
+<div id="outline-container-org132354a" class="outline-2">
+<h2 id="org132354a"><span class="section-number-2">2.</span> Principles of Clean Code</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7af8966" class="outline-3">
+<h3 id="org7af8966"><span class="section-number-3">2.1.</span> Meaningful Names</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Using meaningful names for variables, functions, and classes makes the
+code more readable and self-explanatory<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>. For example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-nil">int userCount = 10; // Good
+int x = 10;        // Bad
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org34890e2" class="outline-3">
+<h3 id="org34890e2"><span class="section-number-3">2.2.</span> Small Functions</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Functions should be small and do only one thing. A function with
+multiple responsibilities is harder to understand and maintain.
+</p>
+</div>
+</div>
+<div id="outline-container-org5416568" class="outline-3">
+<h3 id="org5416568"><span class="section-number-3">2.3.</span> Consistent Formatting</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Maintaining a consistent formatting style across the codebase improves
+readability and reduces cognitive load<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcc2e3f1" class="outline-2">
+<h2 id="orgcc2e3f1"><span class="section-number-2">3.</span> Example Code</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Here’s an example of a cleanly written C++ function:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-nil">#include &lt;iostream&gt;
+
+void printUserCount(int count) {
+    std::cout &lt;&lt; "Total users: " &lt;&lt; count &lt;&lt; std::endl;
+}
+
+int main() {
+    int userCount = 10;
+    printUserCount(userCount);
+    return 0;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf6443ac" class="outline-2">
+<h2 id="orgf6443ac"><span class="section-number-2">4.</span> Conclusion</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+By following the principles of clean code, we can create software that
+is easier to understand and maintain. This leads to better
+collaboration and long-term project success.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb1e15e" class="outline-2">
+<h2 id="orgeb1e15e"><span class="section-number-2">5.</span> References</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>Robert C. Martin, "Clean Code: A Handbook of Agile Software
+Craftsmanship" <a href="https://www.oreilly.com/library/view/clean-code/9780136083238/">O'Reilly</a></li>
+</ol>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Always name variables descriptively to avoid confusion later.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Functions should not exceed 20 lines for better readability.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-03-31 Mon 00:00</p>
+<p class="author">Author: John Doe</p>
+<p class="date">Created: 2025-03-31 Mon 22:23</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

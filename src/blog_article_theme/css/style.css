@@ -1,0 +1,79 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marat+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noe+Display&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Charter', Georgia, serif;
+    background-color: #FFFFFF;
+    color: #242424;
+    line-height: 1.6;
+    margin: 0 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Marat Sans', Arial, sans-serif;
+    color: #000000;
+}
+
+a {
+    color: #00AB6B;
+    text-decoration: none;
+    font-size: 100%;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 110%;
+}
+
+blockquote {
+    border-left: 4px solid #00AB6B;
+    margin: 0;
+    padding-left: 16px;
+    color: #555555;
+    font-style: italic;
+}
+
+.src {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #F4F4F4;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.footdef{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+p.footpara{
+margin: 5px;
+}
+
+.content{
+width: 80%;
+}
+
+.status{
+width: 80%;
+line-height: 0.5;
+}
+
+li{
+    list-style: none;
+}
+
+ol {padding:0;}
