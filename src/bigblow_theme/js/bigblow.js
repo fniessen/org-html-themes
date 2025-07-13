@@ -1,6 +1,6 @@
 // bigblow.js --- BigBlow JS file
 //
-// Copyright (C) 2011-2016, 2025 Fabrice Niessen. All rights reserved.
+// Copyright (C) 2011-2025 Fabrice Niessen. All rights reserved.
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -46,28 +46,25 @@ $(function() {
 // generate contents of minitoc
 function generateMiniToc(divId) {
     let headers = null;
-    if (divId) {
+    if(divId) {
         $('#minitoc').empty().append('<h2>In this section</h2>');
         headers = $('#' + divId).find('h3');
-    } else {
+    }
+    else {
         $('#minitoc').empty().append('<h2>In this document</h2>');
         headers = $('div#content').find(':header');
     }
-
     headers.each(function(i) {
         let rawText = $(this).text();
-        let pos = rawText.search(/ | ►/); // match nbsp or triangle
+        let pos = rawText.search(/ | ►/); // Match nbsp or triangle (from Shi-Chao Xia).
         let text = (pos > 0) ? rawText.substring(0, pos) : rawText;
         text = text.trim();
-
-        // Compute heading level and indentation
+        // Compute heading level and indentation.
         let level = parseInt(this.nodeName.substring(1), 10);
-        let prefix = "".padStart(level - 1, "  ");
-
+        let prefix = "".padStart(level-1, "  ");
         $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
                              + prefix + text + "</a>");
     });
-
     // Ensure that the target is expanded (hideShow)
     $('#minitoc a[href^="#"]').click(function() {
         var href = $(this).attr('href');
