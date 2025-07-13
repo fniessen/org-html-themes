@@ -331,6 +331,12 @@ pre.src{
     white-space:pre;
 }
 
+pre,
+code {
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Ensure long lines break */
+}
+
 .example{
     background:#f3f6f6;
     border:1px solid #e1e4e5;
