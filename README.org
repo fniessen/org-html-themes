@@ -232,7 +232,7 @@ change...
 
 Here's an example to insert into your Org documents:
 
-#+begin_src org :tangle no
+#+begin_src org
 # Change the background of source block.
 ,#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
 #+end_src
@@ -241,7 +241,7 @@ Here's an example to insert into your Org documents:
 
 Solution provided by Malcolm Cook:
 
-#+begin_src org :tangle no
+#+begin_src org
 ,#+HTML_HEAD: <style> #content{max-width:1800px;}</style>
 ,#+HTML_HEAD: <style> p{max-width:800px;}</style>
 ,#+HTML_HEAD: <style> li{max-width:800px;}</style
