@@ -1,6 +1,6 @@
 // bigblow.js --- BigBlow JS file
 //
-// Copyright (C) 2011-2016 Fabrice Niessen. All rights reserved.
+// Copyright (C) 2011-2025 Fabrice Niessen. All rights reserved.
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -55,17 +55,16 @@ function generateMiniToc(divId) {
         headers = $('div#content').find(':header');
     }
     headers.each(function(i) {
-            let text = $(this)
-                .clone()    //clone the element
-                .children() //select all the children
-                .remove()   //remove all the children
-                .end()  //again go back to selected element
-                .text().trim();
-            var level = parseInt(this.nodeName.substring(1), 10);
-            let prefix = "".padStart(level-1, "  ");
-            $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
-                                 + prefix + text + "</a>");
-        });
+        let rawText = $(this).text();
+        let pos = rawText.search(/ | ►/); // Match nbsp or triangle (from Shi-Chao Xia).
+        let text = (pos > 0) ? rawText.substring(0, pos) : rawText;
+        text = text.trim();
+        // Compute heading level and indentation.
+        let level = parseInt(this.nodeName.substring(1), 10);
+        let prefix = "".padStart(level-1, "  ");
+        $("#minitoc").append("<a href='#" + $(this).attr("id") + "'>"
+                             + prefix + text + "</a>");
+    });
     // Ensure that the target is expanded (hideShow)
     $('#minitoc a[href^="#"]').click(function() {
         var href = $(this).attr('href');
