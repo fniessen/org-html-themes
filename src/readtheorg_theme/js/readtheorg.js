@@ -23,8 +23,12 @@ $(function() {
         var language = document.documentElement.lang;
         var translations = map.get(tag);
         var readable = translations.get(language) || translations.get("en"); // fallback to english
-        $(`span.${tag}:not(#table-of-contents *)`) .parent().parent()
-            .replaceWith(`<p id='${this.id}' class='admonition-title ${tag}'>${readable}</p>`);
+        $(`span.${tag}:not(#table-of-contents *)`).each(function() {
+            const id = $(this).attr('id') || '';
+            $(this).parent().parent().replaceWith(
+                `<p id='${id}' class='admonition-title ${tag}'>${readable}</p>`
+            );
+        });
         $(`div.${tag}`).before(`<p class='admonition-title ${tag}'>${readable}</p>`)
     }
     const map = new Map()
