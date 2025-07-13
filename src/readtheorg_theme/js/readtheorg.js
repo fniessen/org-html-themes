@@ -1,9 +1,9 @@
-function collapse_toc_elements_on_click (nav_li_a){
+function collapse_toc_elements_on_click(nav_li_a) {
     /*
-      When an `a' element in the TOC is clicked, its parent
-      `li' element's active attribute is toggled.  This causes
+      When an `a` element in the TOC is clicked, its parent
+      `li` element's active attribute is toggled. This causes
       the element to toggle between minimized and maximized
-      states.  The active attribute is documented in bootstrap.
+      states. The active attribute is documented in bootstrap.
       https://getbootstrap.com/docs/4.0/components/navbar/#nav
     */
     $(nav_li_a).parent().toggleClass("active");
@@ -71,8 +71,8 @@ $(function() {
           .set("danger", new Map()
                .set("en", "Danger")
                .set("de", "Gefahr")
-               .set("sv", "Fara"))
-    ;
+               .set("sv", "Fara"));
+
     replace_admonition('note', map);
     replace_admonition('seealso', map);
     replace_admonition('warning', map);
@@ -133,27 +133,27 @@ window.SphinxRtdTheme = (function (jquery) {
         var navBar,
             win,
             stickyNavCssClass = 'stickynav',
-            applyStickNav = function () {
+            applyStickNav = function() {
                 if (navBar.height() <= win.height()) {
                     navBar.addClass(stickyNavCssClass);
                 } else {
                     navBar.removeClass(stickyNavCssClass);
                 }
             },
-            enable = function () {
+            enable = function() {
                 applyStickNav();
                 win.on('resize', applyStickNav);
             },
-            init = function () {
-                navBar = jquery('nav.wy-nav-side:first');
-                win    = jquery(window);
+            init = function() {
+                navBar = $('nav.wy-nav-side:first');
+                win = $(window);
             };
-        jquery(init);
+        $(init);
         return {
-            enable : enable
+            enable: enable
         };
     }());
     return {
-        StickyNav : stickyNav
+        StickyNav: stickyNav
     };
-}($));
+})(jQuery);
