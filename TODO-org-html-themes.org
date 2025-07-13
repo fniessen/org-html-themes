@@ -3,6 +3,4 @@
 
 * Tasks
 
-** TODO Fixer Org HTML theme : detangle
-
-** TODO Fixer Org HTML theme : CSS for Pull Request "search" + default value
+** TODO Fix Org HTML theme: improve CSS style for "search" component and add default value
