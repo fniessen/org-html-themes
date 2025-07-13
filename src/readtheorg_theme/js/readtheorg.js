@@ -10,9 +10,7 @@ function collapse_toc_elements_on_click(nav_li_a) {
 }
 
 $( document ).ready(function() {
-    // When the document is loaded and ready, bind the
-    // function `collapse_toc_elements_on_click' to the
-    // `a' elements in the table of contents.
+    // Bind collapse function to TOC links.
     $("#text-table-of-contents a").click(function() {
         collapse_toc_elements_on_click(this);
     });
@@ -108,21 +106,24 @@ $( document ).ready(function() {
     $('#text-table-of-contents ul').first().addClass('nav');
                                         // ScrollSpy also requires that we use
                                         // a Bootstrap nav component.
-    $('body').scrollspy({target: '#text-table-of-contents'});
+
+    // Initialize ScrollSpy and refresh to ensure all headings are included.
+    $('body').scrollspy({ target: '#text-table-of-contents' });
+    $('body').scrollspy('refresh');
 
     // DON'T add sticky table headers (Fix issue #69?)
     // $('table').stickyTableHeaders();
 
-    // set the height of tableOfContents
+    // Set TOC height based on postamble.
     var $postamble = $('#postamble');
     var $tableOfContents = $('#table-of-contents');
     $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
 
-    // add TOC button
+    // Add TOC button.
     var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
     $('#content').prepend(toggleSidebar);
 
-    // add close button when sidebar showed in mobile screen
+    // Add close button for mobile.
     var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
     var tocTitle = $('#table-of-contents').find('h2');
     tocTitle.append(closeBtn);
