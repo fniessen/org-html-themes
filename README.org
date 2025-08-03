@@ -37,7 +37,7 @@ Open to anyone interested in Emacs, from beginners to advanced
 users.
 
 *Why choose my course?*
-- Expert instructor with 25 years of Emacs experience.
+- Expert instructor with 26 years of Emacs experience.
 - /Hands-on exercises/ to reinforce your learning.
 - /Networking opportunities/ with like-minded Emacs enthusiasts.
 - Personalized attention.
