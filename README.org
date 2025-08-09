@@ -19,33 +19,37 @@
 #+begin_quote
 [!TIP]
 
-*** Elevate your Emacs skills in Paris, Utrecht, Leuven or Valencia!
-*Unlock the power of Emacs!  Join my next exclusive "Emacs Boost" course!*
+*** Transform your Emacs experience in the vibrant cities of Paris, Utrecht, Leuven, or Valencia!
+*Unlock unparalleled productivity with my exclusive "EmacsBoost" course!*
 
-Ready to /supercharge your productivity/ and become an Emacs ninja?  Look no
-further!
+Are you ready to /supercharge your productivity/ and become an unstoppable Emacs
+ninja?  This is the opportunity you've been waiting for!
 
 *What you'll learn:*
-- Master Emacs from the basics to advanced tricks.
-- /Boost your editing efficiency/ and streamline your workflow.
-- Customize Emacs to fit your unique needs.
-- And much more!
+- Expertly master Emacs from the ground up to advanced techniques that set you
+  apart.
+- /Maximize your editing efficiency/ and elevate your workflow to new heights.
+- Personalize Emacs to perfectly fit your unique style and needs.
+- And much more tips and tricks!
 
-*Audience:*
+*Who should join:*
 
-Open to anyone interested in Emacs, from beginners to advanced
-users.
+This course is designed for everyone passionate about Emacs -- from curious
+beginners to seasoned users looking to refine their skills.
 
 *Why choose my course?*
-- Expert instructor with 26 years of Emacs experience.
-- /Hands-on exercises/ to reinforce your learning.
-- /Networking opportunities/ with like-minded Emacs enthusiasts.
-- Personalized attention.
+- Learn from an expert instructor with over 26 years of Emacs mastery.
+- Engage in /dynamic hands-on exercises/ that reinforce and enhance your learning
+  journey.
+- Enjoy /exclusive networking opportunities/ with fellow Emacs enthusiasts who
+  share your passion.
+- Experience personalized guidance tailored just for you.
 
-Don't miss this opportunity to take your Emacs skills to the next level! \\
+Seize this exceptional opportunity to elevate your Emacs skills to new levels!
+\\
 
-Visit https://emacsboost.com/en/ for more information, dates and locations, and
-to /reserve your seat/.
+Visit https://emacsboost.com/en/ for more details, course dates and locations,
+and to /secure your place today/.
 #+end_quote
 
 * Overview
