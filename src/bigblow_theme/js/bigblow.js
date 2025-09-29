@@ -204,7 +204,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     // Add copy to clipboard snippets
-    $('.org-src-container').prepend('<div class="snippet-copy-to-clipboard"><span class="copy-to-clipboard-button">[copy]</span></div>');
+    $('.src').prepend('<div class="snippet-copy-to-clipboard"><span class="copy-to-clipboard-button">[copy]</span></div>');
 
     // Display/hide snippets on source block mouseenter/mouseleave
     $(document).on('mouseenter', '.org-src-container', function () {
@@ -215,7 +215,7 @@ $(document).ready(function() {
     });
 
     $('.copy-to-clipboard-button').click( function() {
-        var element = $(this).parent().parent().find('.src');
+        var element = $(this).parent().parent();
         var val = element.text();
         val = val.replace(/\n/g, "\r\n");
         

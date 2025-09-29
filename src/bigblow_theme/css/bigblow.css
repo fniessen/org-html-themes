@@ -214,6 +214,10 @@ pre {
     padding: 10px;
 }
 
+pre.src {
+    position: relative;
+}
+
 code {
     background-color: #F8F8FF;
     border: 1px solid #DEDEDE;
