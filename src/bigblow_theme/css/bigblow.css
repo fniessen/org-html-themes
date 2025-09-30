@@ -738,6 +738,10 @@ p.verse {
     position: relative;
 }
 
+.org-src-container pre.src {
+    position: relative;
+}
+
 .snippet-copy-to-clipboard {
     display: none;
     position: absolute;
