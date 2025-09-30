@@ -204,7 +204,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     // Add copy to clipboard snippets
-    $('.org-src-container').prepend('<div class="snippet-copy-to-clipboard"><span class="copy-to-clipboard-button">[copy]</span></div>');
+    $('.org-src-container pre.src').each(function() {
+        $(this).append('<div class="snippet-copy-to-clipboard"><span class="copy-to-clipboard-button">[copy]</span></div>');
+    });
 
     // Display/hide snippets on source block mouseenter/mouseleave
     $(document).on('mouseenter', '.org-src-container', function () {
@@ -215,21 +217,28 @@ $(document).ready(function() {
     });
 
     $('.copy-to-clipboard-button').click( function() {
-        var element = $(this).parent().parent().find('.src');
-        var val = element.text();
+        // Get the pre element
+        var preElement = $(this).closest('pre.src');
+
+        // Clone it and remove the copy button from the clone
+        var clone = preElement.clone();
+        clone.find('.snippet-copy-to-clipboard').remove();
+
+        // Get the text from the cleaned clone
+        var val = clone.text();
         val = val.replace(/\n/g, "\r\n");
-        
+
         var $copyElement = $("<textarea>");
         $("body").append($copyElement);
 
         $copyElement.val(val);
-        
+
         $copyElement.trigger('select');
         document.execCommand('copy');
-        
+
         $copyElement.remove();
 
-        $(this).parent().parent().find('.snippet-copy-to-clipboard').hide();
+        $(this).closest('.snippet-copy-to-clipboard').hide();
     });
 });
 
