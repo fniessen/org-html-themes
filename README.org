@@ -19,8 +19,8 @@
 #+begin_quote
 [!TIP]
 
-*** Transform your Emacs experience in the vibrant cities of Paris, Utrecht, Leuven, or Valencia!
-*Unlock unparalleled productivity with my exclusive "EmacsBoost" course!*
+*** Transform your Emacs experience in Paris from 24 to 28 November 2025!
+Unlock unparalleled productivity with my exclusive "EmacsBoost" course!*
 
 Are you ready to /supercharge your productivity/ and become an unstoppable Emacs
 ninja?  This is the opportunity you've been waiting for!
