@@ -1,15 +1,15 @@
 # -*- mode: org; -*-
 
 #+OPTIONS: html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow_theme/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow_theme/css/bigblow.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow_theme/css/hideshow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow/css/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow/css/hideshow.css"/>
 
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery-1.11.0.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery-ui-1.10.2.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/jquery-1.11.0.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/jquery-ui-1.10.2.min.js"></script>
 
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery.localscroll-min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/bigblow.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow_theme/js/hideshow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/jquery.localscroll-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/bigblow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/hideshow.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
