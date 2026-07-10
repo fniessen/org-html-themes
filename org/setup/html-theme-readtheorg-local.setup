@@ -6,9 +6,9 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/code-copy.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
 
-#+HTML_HEAD: <script type="text/javascript" src="src/lib/js/jquery.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/lib/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="src/lib/js/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/vendor/jquery/jquery.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/vendor/bootstrap/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/search.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/readtheorg.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/readtheorg_theme/js/code-copy.js"></script>
