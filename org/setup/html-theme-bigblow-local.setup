@@ -5,7 +5,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow/css/bigblow.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/bigblow/css/hideshow.css"/>
 
-#+HTML_HEAD: <script type="text/javascript" src="src/bigblow/js/jquery-1.11.0.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="src/vendor/jquery/jquery-1.11.0.min.js"></script>
 #+HTML_HEAD: <script type="text/javascript" src="src/vendor/jquery-ui/jquery-ui-1.10.2.min.js"></script>
 
 #+HTML_HEAD: <script type="text/javascript" src="src/vendor/jquery-local-scroll/jquery.localscroll-min.js"></script>
