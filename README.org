@@ -7,7 +7,7 @@
 #+OPTIONS:   H:4 toc:t num:2
 
 #+PROPERTY:  header-args :padline no
-#+SETUPFILE: ~/org/html-theme-readtheorg.setup
+#+SETUPFILE: ~/org/setup/html-theme-readtheorg.setup
 
 #+html: <a href="http://opensource.org/licenses/GPL-3.0">
 #+html:   <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
@@ -175,6 +175,25 @@ are *deprecated* and replaced by:
 - =html-theme-bigblow.setup=
 - =html-theme-readtheorg.setup=
 
+** Relocated setup files
+
+As of [2026-07-10 Fri], all setup files have been moved to the =org/setup/=
+directory.
+
+For example, update:
+
+#+begin_example
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-bigblow.setup
+#+end_example
+
+to:
+
+#+begin_example
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/setup/html-theme-bigblow.setup
+#+end_example
+
+and similarly for the ReadTheOrg theme.
+
 ** Backward compatibility and warning banner
 
 Org files using the old names still work, but a warning banner is injected into
@@ -200,7 +219,7 @@ straightforward:
    - You may reference the setup file directly via GitHub Pages:
 
      #+begin_src org :exports code
-     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/html-theme-NAME.setup
+     ,#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/setup/html-theme-NAME.setup
      #+end_src
 
      where =NAME= is either =bigblow= or =readtheorg=.
@@ -210,7 +229,7 @@ straightforward:
      or absolute path to the) local setup file:
 
      #+begin_src org :exports code
-     ,#+SETUPFILE: PATH/TO/org/html-theme-NAME-local.setup
+     ,#+SETUPFILE: PATH/TO/org/setup/html-theme-NAME-local.setup
      #+end_src
 
      In that case, the =src/= directory from the repository must be copied into
