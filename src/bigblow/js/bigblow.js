@@ -1,6 +1,6 @@
 // bigblow.js --- BigBlow JS file
 //
-// Copyright (C) 2011-2025 Fabrice Niessen. All rights reserved.
+// Copyright (C) 2011-2026 Fabrice Niessen. All rights reserved.
 //
 // This file is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -74,41 +74,58 @@ function generateMiniToc(divId) {
 
 // display tabs
 function tabifySections() {
+    // Do not create a second tab bar.
+    if ($('#tabs').length) {
+        return;
+    }
 
-    // hide TOC (if present)
+    // Hide TOC if present.
     $('#table-of-contents').hide();
 
-    // grab the list of `h2' from the page
+    // Grab the list of `h2' from the page.
     var allSections = [];
-    $('h2')
-        .each(function() {
-            // Remove TODO keywords and tags (contained in spans)
-            var tabText = $(this).clone().find('span').remove().end()
-                .text().trim();
-            var tabId = $(this).parent().attr('id');
-            if (tabText) {
-                // - remove heading number (all leading digits)
-                // - remove progress logging (between square brackets)
-                // - remove leading and trailing spaces
-                tabText = tabText.replace(/^\d+\s+/, '').replace(/\[[\d/%]+\]/, '').trim();
 
-                allSections.push({
-                    text: tabText,
-                    id: tabId
-                });
-            }
-        });
+    $('h2').each(function() {
+        var tabText = $(this)
+            .clone()
+            .find('span')
+            .remove()
+            .end()
+            .text()
+            .trim();
 
-    // create the tab links
+        var tabId = $(this).parent().attr('id');
+
+        if (tabText) {
+            // - remove heading number (all leading digits)
+            // - remove progress logging (between square brackets)
+            // - remove leading and trailing spaces
+            tabText = tabText
+                .replace(/^\d+\s+/, '')
+                .replace(/\[[\d/%]+\]/, '')
+                .trim();
+
+            allSections.push({
+                text: tabText,
+                id: tabId
+            });
+        }
+    });
+
+    // Create the tab links.
     var tabs = $('<ul id="tabs"></ul>');
-    for (i = 0; i < allSections.length; i++) {
+
+    for (var i = 0; i < allSections.length; i++) {
         var item = allSections[i];
-        html = $('<li><a href="#' + item.id + '">' + item.text + '</a></li>');
+        var html = $('<li><a href="#' + item.id + '">' +
+                     item.text +
+                     '</a></li>');
+
         tabs.append(html);
     }
 
-    // insert tabs menu after title (`h1'), or at the beginning of the content
-    if($('.title').length !== 0) {
+    // Insert tabs menu after title (`h1'), or at the beginning of the content.
+    if ($('.title').length !== 0) {
         $('.title').after(tabs);
     }
     else {
@@ -149,6 +166,14 @@ function selectTabAndScroll(href) {
 }
 
 $(document).ready(function() {
+    // bigblow.js can be included several times when Org files are combined.
+    // Initialize the interface only once.
+    if (window.bigBlowInitialized) {
+        return;
+    }
+
+    window.bigBlowInitialized = true;
+
     $('#preamble').remove();
     $('#table-of-contents').remove();
 
@@ -177,11 +202,11 @@ $(document).ready(function() {
     });
 
     // Handle hash in URL
-    if ($('#content') && document.location.hash) {
+    if ($('#content').length && document.location.hash) {
         hsExpandAnchor(document.location.hash);
         selectTabAndScroll(document.location.hash);
     }
-    // If no hash, build the minitoc anyway for selected tab
+    // If no hash, build the minitoc anyway for selected tab.
     else {
         var divId = $('#content div[aria-expanded=true]').attr('id');
         generateMiniToc(divId);
@@ -198,7 +223,7 @@ $(document).ready(function() {
     // Initialize hideShow
     hsInit();
 
-    // add sticky headers to tables
+    // Add sticky headers to tables
     $('table').stickyTableHeaders();
 });
 
