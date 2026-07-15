@@ -1,160 +1,279 @@
-function collapse_toc_elements_on_click(nav_li_a) {
-    /*
-      When an `a` element in the TOC is clicked, its parent
-      `li` element's active attribute is toggled. This causes
-      the element to toggle between minimized and maximized
-      states. The active attribute is documented in bootstrap.
-      https://getbootstrap.com/docs/4.0/components/navbar/#nav
-    */
-    $(nav_li_a).parent().toggleClass("active");
+/**
+ * Toggles the expanded state of a table-of-contents entry.
+ *
+ * @param {HTMLElement} link
+ */
+function toggleTocEntry(link) {
+  /*
+   * When a link in the table of contents is clicked, the `active`
+   * class is toggled on its parent `li` element. This switches the
+   * entry between its collapsed and expanded states.
+   */
+  $(link).parent().toggleClass('active');
 }
 
-$( document ).ready(function() {
-    // Bind collapse function to TOC links.
-    $("#text-table-of-contents a").click(function() {
-        collapse_toc_elements_on_click(this);
-    });
-});
+/**
+ * Replaces exported Org admonition elements with styled titles.
+ *
+ * @param {string} tag
+ * @param {Map<string, Map<string, string>>} translations
+ * @param {string} language
+ */
+function replaceAdmonition(tag, translations, language) {
+  const tagTranslations = translations.get(tag);
 
-$(function() {
-    function replace_admonition (tag, map, language) {
-        var language = document.documentElement.lang;
-        var translations = map.get(tag);
-        var readable = translations.get(language) || translations.get("en"); // fallback to english
-        $(`span.${tag}:not(#table-of-contents *)`).each(function() {
-            const id = $(this).attr('id') || '';
-            $(this).parent().parent().replaceWith(
-                `<p id='${id}' class='admonition-title ${tag}'>${readable}</p>`
-            );
-        });
-        $(`div.${tag}`).before(`<p class='admonition-title ${tag}'>${readable}</p>`)
+  if (!tagTranslations) {
+    return;
+  }
+
+  const readable =
+    tagTranslations.get(language) || tagTranslations.get('en') || tag;
+
+  $(`span.${tag}:not(#table-of-contents *)`).each(function () {
+    const id = $(this).attr('id') || '';
+    const idAttribute = id ? ` id="${id}"` : '';
+
+    $(this)
+      .parent()
+      .parent()
+      .replaceWith(
+        `<p${idAttribute} class="admonition-title ${tag}">${readable}</p>`
+      );
+  });
+
+  $(`div.${tag}`).before(
+    `<p class="admonition-title ${tag}">${readable}</p>`
+  );
+}
+
+/**
+ * Initializes translated admonition titles.
+ */
+function initializeAdmonitions() {
+  const language = document.documentElement.lang || 'en';
+
+  const translations = new Map([
+    [
+      'note',
+      new Map([
+        ['en', 'Note'],
+        ['de', 'Hinweis'],
+        ['sv', 'Notera'],
+      ]),
+    ],
+    [
+      'seealso',
+      new Map([
+        ['en', 'See also'],
+        ['de', 'Siehe auch'],
+        ['sv', 'Se även'],
+      ]),
+    ],
+    [
+      'warning',
+      new Map([
+        ['en', 'Warning'],
+        ['de', 'Warnung'],
+        ['sv', 'Varning'],
+      ]),
+    ],
+    [
+      'caution',
+      new Map([
+        ['en', 'Caution'],
+        ['de', 'Vorsicht'],
+        ['sv', 'Var försiktig'],
+      ]),
+    ],
+    [
+      'attention',
+      new Map([
+        ['en', 'Attention'],
+        ['de', 'Obacht'],
+        ['sv', 'Var uppmärksam'],
+      ]),
+    ],
+    [
+      'tip',
+      new Map([
+        ['en', 'Tip'],
+        ['de', 'Tipp'],
+        ['sv', 'Tips'],
+      ]),
+    ],
+    [
+      'important',
+      new Map([
+        ['en', 'Important'],
+        ['de', 'Wichtig'],
+        ['sv', 'Viktigt'],
+      ]),
+    ],
+    [
+      'hint',
+      new Map([
+        ['en', 'Hint'],
+        ['de', 'Hinweis'],
+        ['sv', 'Ledtråd'],
+      ]),
+    ],
+    [
+      'error',
+      new Map([
+        ['en', 'Error'],
+        ['de', 'Fehler'],
+        ['sv', 'Fel'],
+      ]),
+    ],
+    [
+      'danger',
+      new Map([
+        ['en', 'Danger'],
+        ['de', 'Gefahr'],
+        ['sv', 'Fara'],
+      ]),
+    ],
+  ]);
+
+  translations.forEach((_tagTranslations, tag) => {
+    replaceAdmonition(tag, translations, language);
+  });
+}
+
+/**
+ * Initializes responsive navigation behavior.
+ */
+function initializeNavigation() {
+  $(document).on('click', '[data-toggle="wy-nav-top"]', () => {
+    $('[data-toggle="wy-nav-shift"]').toggleClass('shift');
+    $('[data-toggle="rst-versions"]').toggleClass('shift');
+  });
+
+  $(document).on(
+    'click',
+    '.wy-menu-vertical .current ul li a',
+    () => {
+      $('[data-toggle="wy-nav-shift"]').removeClass('shift');
+      $('[data-toggle="rst-versions"]').removeClass('shift');
     }
-    const map = new Map()
-          .set("note", new Map()
-               .set("en", "Note")
-               .set("de", "Hinweis")
-               .set("sv", "Notera"))
-          .set("seealso", new Map()
-               .set("en", "See also")
-               .set("de", "Siehe auch")
-               .set("sv", "Se även"))
-          .set("warning", new Map()
-               .set("en", "Warning")
-               .set("de", "Warnung")
-               .set("sv", "Varning"))
-          .set("caution", new Map()
-               .set("en", "Caution")
-               .set("de", "Vorsicht")
-               .set("sv", "Var försiktig"))
-          .set("attention", new Map()
-               .set("en", "Attention")
-               .set("de", "Obacht")
-               .set("sv", "Var uppmärksam"))
-          .set("tip", new Map()
-               .set("en", "Tip")
-               .set("de", "Tipp")
-               .set("sv", "Tips"))
-          .set("important", new Map()
-               .set("en", "Important")
-               .set("de", "Wichtig")
-               .set("sv", "Viktigt"))
-          .set("hint", new Map()
-               .set("en", "Hint")
-               .set("de", "Hinweis")
-               .set("sv", "Ledtråd"))
-          .set("error", new Map()
-               .set("en", "Error")
-               .set("de", "Fehler")
-               .set("sv", "Fel"))
-          .set("danger", new Map()
-               .set("en", "Danger")
-               .set("de", "Gefahr")
-               .set("sv", "Fara"));
+  );
 
-    replace_admonition('note', map);
-    replace_admonition('seealso', map);
-    replace_admonition('warning', map);
-    replace_admonition('caution', map);
-    replace_admonition('attention', map);
-    replace_admonition('tip', map);
-    replace_admonition('important', map);
-    replace_admonition('hint', map);
-    replace_admonition('error', map);
-    replace_admonition('danger', map);
+  $(document).on('click', '[data-toggle="rst-current-version"]', () => {
+    $('[data-toggle="rst-versions"]').toggleClass('shift-up');
+  });
+}
+
+/**
+ * Wraps exported documentation tables in responsive containers.
+ */
+function initializeResponsiveTables() {
+  $('table.docutils:not(.field-list)').each(function () {
+    if (!$(this).parent().hasClass('wy-table-responsive')) {
+      $(this).wrap('<div class="wy-table-responsive"></div>');
+    }
+  });
+}
+
+/**
+ * Initializes the table of contents and ScrollSpy.
+ */
+function initializeTableOfContents() {
+  const $tableOfContents = $('#table-of-contents');
+  const $textTableOfContents = $('#text-table-of-contents');
+  const $postamble = $('#postamble');
+
+  $textTableOfContents.find('ul').first().addClass('nav');
+
+  /*
+   * ScrollSpy requires the table of contents to use a Bootstrap
+   * navigation component.
+   */
+  $('body').scrollspy({
+    target: '#text-table-of-contents',
+  });
+  $('body').scrollspy('refresh');
+
+  /*
+   * Sticky table headers are intentionally disabled.
+   *
+   * $('table').stickyTableHeaders();
+   */
+
+  if ($postamble.length && $tableOfContents.length) {
+    $tableOfContents.css({
+      paddingBottom: $postamble.outerHeight(),
+    });
+  }
+
+  if (!$('#toggle-sidebar').length) {
+    const $toggleSidebar = $(
+      '<div id="toggle-sidebar">' +
+        '<a href="#table-of-contents">' +
+          '<h2>Table of Contents</h2>' +
+        '</a>' +
+      '</div>'
+    );
+
+    $('#content').prepend($toggleSidebar);
+  }
+
+  const $tocTitle = $tableOfContents.find('h2');
+
+  if ($tocTitle.length && !$tocTitle.find('.close-sidebar').length) {
+    $tocTitle.append(
+      '<a class="close-sidebar" href="#">Close</a>'
+    );
+  }
+}
+
+$(document).ready(() => {
+  $('#text-table-of-contents').on('click', 'a', function () {
+    toggleTocEntry(this);
+  });
+
+  initializeAdmonitions();
+  initializeNavigation();
+  initializeResponsiveTables();
+  initializeTableOfContents();
 });
 
-$( document ).ready(function() {
+window.SphinxRtdTheme = ((jquery) => {
+  const stickyNav = (() => {
+    const stickyNavClass = 'stickynav';
 
-    // Shift nav in mobile when clicking the menu.
-    $(document).on('click', "[data-toggle='wy-nav-top']", function() {
-      $("[data-toggle='wy-nav-shift']").toggleClass("shift");
-      $("[data-toggle='rst-versions']").toggleClass("shift");
-    });
-    // Close menu when you click a link.
-    $(document).on('click', ".wy-menu-vertical .current ul li a", function() {
-      $("[data-toggle='wy-nav-shift']").removeClass("shift");
-      $("[data-toggle='rst-versions']").toggleClass("shift");
-    });
-    $(document).on('click', "[data-toggle='rst-current-version']", function() {
-      $("[data-toggle='rst-versions']").toggleClass("shift-up");
-    });
-    // Make tables responsive
-    $("table.docutils:not(.field-list)").wrap("<div class='wy-table-responsive'></div>");
-});
+    let $navBar;
+    let $window;
 
-$( document ).ready(function() {
-    $('#text-table-of-contents ul').first().addClass('nav');
-                                        // ScrollSpy also requires that we use
-                                        // a Bootstrap nav component.
+    function applyStickyNav() {
+      if (!$navBar || !$navBar.length) {
+        return;
+      }
 
-    // Initialize ScrollSpy and refresh to ensure all headings are included.
-    $('body').scrollspy({ target: '#text-table-of-contents' });
-    $('body').scrollspy('refresh');
+      if ($navBar.height() <= $window.height()) {
+        $navBar.addClass(stickyNavClass);
+      } else {
+        $navBar.removeClass(stickyNavClass);
+      }
+    }
 
-    // DON'T add sticky table headers (Fix issue #69?)
-    // $('table').stickyTableHeaders();
+    function initialize() {
+      $navBar = jquery('nav.wy-nav-side:first');
+      $window = jquery(window);
+    }
 
-    // Set TOC height based on postamble.
-    var $postamble = $('#postamble');
-    var $tableOfContents = $('#table-of-contents');
-    $tableOfContents.css({paddingBottom: $postamble.outerHeight()});
+    function enable() {
+      applyStickyNav();
+      $window.on('resize', applyStickyNav);
+    }
 
-    // Add TOC button.
-    var toggleSidebar = $('<div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>');
-    $('#content').prepend(toggleSidebar);
+    jquery(initialize);
 
-    // Add close button for mobile.
-    var closeBtn = $('<a class="close-sidebar" href="#">Close</a>');
-    var tocTitle = $('#table-of-contents').find('h2');
-    tocTitle.append(closeBtn);
-});
-
-window.SphinxRtdTheme = (function (jquery) {
-    var stickyNav = (function () {
-        var navBar,
-            win,
-            stickyNavCssClass = 'stickynav',
-            applyStickNav = function() {
-                if (navBar.height() <= win.height()) {
-                    navBar.addClass(stickyNavCssClass);
-                } else {
-                    navBar.removeClass(stickyNavCssClass);
-                }
-            },
-            enable = function() {
-                applyStickNav();
-                win.on('resize', applyStickNav);
-            },
-            init = function() {
-                navBar = $('nav.wy-nav-side:first');
-                win = $(window);
-            };
-        $(init);
-        return {
-            enable: enable
-        };
-    }());
     return {
-        StickyNav: stickyNav
+      enable,
     };
+  })();
+
+  return {
+    StickyNav: stickyNav,
+  };
 })(jQuery);
