@@ -1,6 +1,6 @@
 /* bigblow.css --- BigBlow CSS file */
 
-/* Copyright (C) 2011-2014 Fabrice Niessen. All rights reserved. */
+/* Copyright (C) 2011-2026 Fabrice Niessen. All rights reserved. */
 
 /* This file is free software: you can redistribute it and/or */
 /* modify it under the terms of the GNU General Public License as */
@@ -50,38 +50,38 @@ html, body {
     width: 100%;
 }
 
-    #tabs ul {
-        margin: 0;
-        padding: 0;
-    }
+#tabs ul {
+    margin: 0;
+    padding: 0;
+}
 
-    #tabs li {
-        float: left;
-        list-style-type: none;
-        margin: 0px 2px 0px 0px;
-        padding: 0px 0px 0px 0px;
-        white-space: nowrap;
-    }
+#tabs li {
+    float: left;
+    list-style-type: none;
+    margin: 0px 2px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    white-space: nowrap;
+}
 
-        #tabs li a {
-            color: #EEEEEE;
-            display: block;
-            font-size: 13px;
-            font-weight: bold;
-            margin: 0;
-            padding: 4px 10px 4px 10px;
-            text-decoration: none;
-        }
+#tabs li a {
+    color: #EEEEEE;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 4px 10px 4px 10px;
+    text-decoration: none;
+}
 
-            #tabs li a:hover {
-                background: #759FCF;
-                color: #FFFFFF;
-            }
+#tabs li a:hover {
+    background: #759FCF;
+    color: #FFFFFF;
+}
 
-            #tabs li.ui-tabs-active a {
-                background: #FFFFFF;
-                color: #555555;
-            }
+#tabs li.ui-tabs-active a {
+    background: #FFFFFF;
+    color: #555555;
+}
 
 #content {
     clear: both;
@@ -171,13 +171,13 @@ h6 {
     text-decoration: line-through;
 }
 
-    h3.DONEheader {
-        border-bottom: 1px solid #DDDDDD;
-    }
+h3.DONEheader {
+    border-bottom: 1px solid #DDDDDD;
+}
 
-    h4.DONEheader {
-        border-bottom: 1px dotted #DDDDDD;
-    }
+h4.DONEheader {
+    border-bottom: 1px dotted #DDDDDD;
+}
 
 .outline-text-2, .outline-text-3, .outline-text-4, .outline-text-5,
 .outline-3 > ul, /* for HTML export of Beamer slides */
@@ -269,29 +269,29 @@ a:focus {
     width: 188px;
 }
 
-    #search input {
-        border: 0 none;
-        color: #666666;
-        float: left;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 11px;
-        font-weight: normal;
-        margin: 0;
-        padding: 2px 4px;
-        width: 160px;
-    }
+#search input {
+    border: 0 none;
+    color: #666666;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+    padding: 2px 4px;
+    width: 160px;
+}
 
-    #search button {
-        background: url("../images/search-glass.png") no-repeat scroll 0 50% transparent;
-        border: 0 none;
-        cursor: pointer;
-        display: block;
-        float: right;
-        height: 18px;
-        margin: 0;
-        text-indent: -999em;
-        width: 14px;
-    }
+#search button {
+    background: url("../images/search-glass.png") no-repeat scroll 0 50% transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 18px;
+    margin: 0;
+    text-indent: -999em;
+    width: 14px;
+}
 
 table {
     border-collapse: collapse;
@@ -299,9 +299,9 @@ table {
     margin-left: auto;
 }
 
-    table td {
-        padding: 3px 5px;
-    }
+table td {
+    padding: 3px 5px;
+}
 
 table, th, td
 {
@@ -369,10 +369,10 @@ img {
     margin: 10px 0px;
 }
 
-    .inlinetask td {
-        padding: 2px 5px 0px 2px;
-        border: 0px;
-    }
+.inlinetask td {
+    padding: 2px 5px 0px 2px;
+    border: 0px;
+}
 
 .info {
     border: 1px solid;
@@ -478,19 +478,19 @@ img {
     border-radius: 10px;
 }
 
-    #right-panel-contents .tag span {
-        font-size: 100%;
-    }
+#right-panel-contents .tag span {
+    font-size: 100%;
+}
 
-    .tag span:hover {
-        background: #BABDB6;
-    }
+.tag span:hover {
+    background: #BABDB6;
+}
 
-    .tag .FLAGGED {
-        background-color: #EDC6C8;
-        border: 1px solid #EDC6C8;
-        color: #C15F4E;
-    }
+.tag .FLAGGED {
+    background-color: #EDC6C8;
+    border: 1px solid #EDC6C8;
+    color: #C15F4E;
+}
 
 .tag .selected {
     background-color: #FFEBC1;
@@ -510,10 +510,10 @@ span.todo {
     margin: -1px 3px 0px 0px;
 }
 
-    span.todo:hover {
-        background: #BABDB6;
-        color: #888888;
-    }
+span.todo:hover {
+    background: #BABDB6;
+    color: #888888;
+}
 
 span.todo .selected {
     background-color: #FFEBC1;
@@ -577,39 +577,39 @@ span.todo .selected {
     width: auto;
 }
 
-    #table-of-contents h2 {
-        display: none;
-    }
+#table-of-contents h2 {
+    display: none;
+}
 
-    #table-of-contents ul {
-        margin: 0;
-        padding: 0;
-    }
+#table-of-contents ul {
+    margin: 0;
+    padding: 0;
+}
 
-    #table-of-contents li {
-        list-style-type: none;
-        margin: 0;
-    }
+#table-of-contents li {
+    list-style-type: none;
+    margin: 0;
+}
 
-        #table-of-contents li li {
-            margin-left: 1.5em;
-        }
+#table-of-contents li li {
+    margin-left: 1.5em;
+}
 
-            #table-of-contents li li li {
-                font-size: 0.8em;
-            }
+#table-of-contents li li li {
+    font-size: 0.8em;
+}
 
-    #table-of-contents a {
-        color: #606060;
-        font-size: 0.9em;
-        font-weight: normal;
-        text-decoration: none;
-    }
+#table-of-contents a {
+    color: #606060;
+    font-size: 0.9em;
+    font-weight: normal;
+    text-decoration: none;
+}
 
-        #table-of-contents a:hover {
-            color: #C61A1A;
-            text-decoration: underline;
-        }
+#table-of-contents a:hover {
+    color: #C61A1A;
+    text-decoration: underline;
+}
 
 #minitoc {
     background-color: #FFFFDD;
@@ -676,9 +676,9 @@ p.verse {
     z-index: 999;
 }
 
-    #toTop:hover {
-        text-decoration: underline;
-    }
+#toTop:hover {
+    text-decoration: underline;
+}
 
 #left-panel-wrapper {
     position: fixed;
@@ -756,7 +756,7 @@ p.verse {
 }
 
 .underline {
-  text-decoration:underline
+    text-decoration:underline
 }
 
 /* This is for the sake of Emacs. */
