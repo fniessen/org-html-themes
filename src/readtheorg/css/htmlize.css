@@ -124,7 +124,8 @@
 
 .org-diff-file-header {
     /* diff-file-header */
-    background-color: #b3b3b3;
+    color: #57606a;
+    background-color: #f6f8fa;
     font-weight: bold;
 }
 
@@ -135,12 +136,15 @@
 
 .org-diff-header {
     /* diff-header */
-    background-color: #ccc;
+    color: #57606a;
+    background-color: #f6f8fa;
 }
 
 .org-diff-hunk-header {
-    /* diff-hunk-header */
-    background-color: #ccc;
+    /* diff-hunk-header: @@ ... @@ */
+    color: #57606a;
+    background-color: #dbeafe;   /* light blue */
+    font-weight: bold;
 }
 
 .org-diff-index {
@@ -158,6 +162,33 @@
 .org-diff-refine-change {
     /* diff-refine-change */
     background-color: #d9d9d9;
+}
+
+.org-diff-indicator-removed,
+.org-diff-removed {
+    /* Removed */
+    color: #82071e;
+    background-color: #ffebe9;   /* light red */
+}
+
+.org-diff-indicator-added,
+.org-diff-added {
+    /* Added */
+    color: #116329;
+    background-color: #dafbe1;   /* light green */
+}
+
+.org-diff-refine-added {
+    /* Word-level changes */
+    background-color: #aceebb;
+    color: #116329;
+    font-weight: bold;
+}
+
+.org-diff-refine-removed {
+    background-color: #ffcecb;
+    color: #82071e;
+    font-weight: bold;
 }
 
 .org-dired-directory {
