@@ -214,6 +214,11 @@ pre {
     padding: 10px;
 }
 
+/* Prevent line numbers from being selected when copying source code. */
+.linenr {
+    user-select: none;
+}
+
 code {
     background-color: #F8F8FF;
     border: 1px solid #DEDEDE;

@@ -431,6 +431,11 @@ pre.src {
     white-space: pre;
 }
 
+/* Prevent line numbers from being selected when copying source code. */
+.linenr {
+    user-select: none;
+}
+
 pre,
 code {
     white-space: pre-wrap;
