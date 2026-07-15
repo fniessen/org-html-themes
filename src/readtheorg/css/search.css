@@ -3,60 +3,60 @@
 /* ReadTheOrg search styles, RTD-inspired */
 
 #search-container {
-  padding: 12px;
-  background-color: #2980b9;
+    padding: 12px;
+    background-color: #2980b9;
 }
 
 #search-input {
-  width: 100%;
-  padding: 6px 12px;
-  border: 1px solid #2472a4;
-  border-radius: 50px;
-  background-color: #fcfcfc;
-  color: #404040;
-  font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
-  font-size: 80%;
-  box-shadow: inset 0 1px 3px #ddd;
-  transition: border-color 0.3s linear, box-shadow 0.3s linear;
+    width: 100%;
+    padding: 6px 12px;
+    border: 1px solid #2472a4;
+    border-radius: 50px;
+    background-color: #fcfcfc;
+    color: #404040;
+    box-shadow: inset 0 1px 3px #ddd;
+    font-family: "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+    font-size: 80%;
+    transition: border-color 0.3s linear, box-shadow 0.3s linear;
 }
 
 #search-input:focus {
-  outline: none;
-  border-color: #1b5f8a;
-  box-shadow:
-      inset 0 1px 3px #ddd,
-      0 0 4px rgba(36, 114, 164, 0.6);
+    outline: none;
+    border-color: #1b5f8a;
+    box-shadow:
+        inset 0 1px 3px #ddd,
+        0 0 4px rgb(36 114 164 / 60%);
 }
 
 #search-input::placeholder {
-  color: #777;
-  opacity: 1;
+    color: #777;
+    opacity: 1;
 }
 
 #search-results {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0 0;
-  max-height: 300px;
-  overflow-y: auto;
+    margin: 10px 0 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 300px;
+    list-style: none;
 }
 
 #search-results li {
-  margin: 0 0 5px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  background-color: #2472a4;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
+    margin: 0 0 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #2472a4;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 #search-results li:hover,
 #search-results li[aria-selected="true"] {
-  background-color: #3091d1;
+    background-color: #3091d1;
 }
 
 mark {
-  background-color: yellow;
-  color: black;
+    color: #000;
+    background-color: #ff0;
 }
