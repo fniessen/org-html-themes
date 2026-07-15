@@ -1106,7 +1106,6 @@ ul.nav > li.active > a {
     background-color: #fcfcfc;
     color: #55a5d9 !important;
     border-bottom: solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
-    border-right: solid 1px #c9c9c9 !important;
     font-weight: bold !important;
     display: block !important;
 }
