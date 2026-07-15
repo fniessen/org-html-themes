@@ -19,15 +19,22 @@
 
 * Search Configuration (v1.12)                                        :noexport:
 
-Usage: Optionally place these macros after including this file, before your content.
+Use the following macros, if needed, after including this file and before your
+document content.
 
-- {{{enable-search}}} :: Enable search bar (default)
-- {{{disable-search}}} :: Disable search bar
-- {{{set-search-limit(N)}}} :: Limit results to N (default: 0 for no limit)
+Available macros:
 
-Example:
+- {{{enable-search}}} :: Enable the search bar (default).
+- {{{disable-search}}} :: Disable the search bar.
+- {{{set-search-limit(N)}}} :: Limit the number of search results to *N* (default: ~0~,
+  meaning no limit).
+
+Examples:
 
 #+begin_src org
-{{{enable-search}}}
+{{{disable-search}}}
+#+end_src
+
+#+begin_src org
 {{{set-search-limit(10)}}}
 #+end_src

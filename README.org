@@ -257,6 +257,27 @@ Here's an example to insert into your Org documents:
 ,#+HTML_HEAD: <style>pre.src{background:#343131;color:white;} </style>
 #+end_src
 
+** Disable the ReadTheOrg search bar
+
+The ReadTheOrg theme includes a client-side search bar by default.
+
+You can disable it by adding the following macro *after* the =#+SETUPFILE= directive
+and *before* the rest of your document:
+
+#+begin_src org
+{{{disable-search}}}
+#+end_src
+
+The search feature is enabled by default.
+
+To limit the maximum number of displayed results, use:
+
+#+begin_src org
+{{{set-search-limit(10)}}}
+#+end_src
+
+A value of =0= (the default) disables the limit and displays all matching results.
+
 ** Unset body width limit of ReadTheOrg
 
 Solution provided by Malcolm Cook:
