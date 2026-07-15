@@ -28,12 +28,15 @@
 .hsButton {
     float: right;
     margin-left: 10px;
+    border: 0;
+    background: transparent;
     color: #fff;
+    cursor: pointer;
+    font: inherit;
     font-size: 70%;
 }
 
 .hsButton:hover {
-    cursor: pointer;
     background: #fbe448;
     color: #000;
 }
