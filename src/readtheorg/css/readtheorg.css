@@ -903,21 +903,20 @@ label {
 
 a {
     color: #2980b9;
-    text-decoration: none;
+    border-bottom: 1px solid rgb(41 128 185 / 35%);
     cursor: pointer;
+    text-decoration: none;
 }
 
 a:hover,
-a:active {
-    outline: 0;
-}
-
-a:hover {
+a:focus {
     color: #3091d1;
+    border-bottom-color: #3091d1;
 }
 
 a:visited {
     color: #9b59b6;
+    border-bottom-color: #9b59b6;
 }
 
 .left {
