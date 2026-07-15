@@ -411,7 +411,8 @@ pre.src,
     border: 1px solid #e1e4e5;
     padding: 12px;
     overflow-x: auto;
-    background: #fff;
+    background-color: #fffde7;
+    border: 1px solid #f0e6a0;
     margin: 1px 0 24px 0;
 }
 
