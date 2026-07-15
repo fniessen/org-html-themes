@@ -199,12 +199,66 @@ function initializeTableOfContents() {
    * $('table').stickyTableHeaders();
    */
 
+  // Set the bottom padding so the TOC does not overlap the postamble.
   if ($postamble.length && $tableOfContents.length) {
     $tableOfContents.css({
       paddingBottom: $postamble.outerHeight(),
     });
   }
 
+  /*
+   * Show the vertical scrollbar only when the table of contents exceeds the
+   * available height.
+   */
+  function updateTocScrollbar() {
+    if (!$tableOfContents.length) {
+      return;
+    }
+
+    const tocElement = $tableOfContents[0];
+    const needsScrollbar =
+        tocElement.scrollHeight > tocElement.clientHeight + 1;
+
+    $tableOfContents.css(
+      'overflow-y',
+      needsScrollbar ? 'auto' : 'hidden'
+    );
+  }
+
+  /*
+   * Delay the scrollbar computation until after the browser has completed
+   * layout and ScrollSpy has updated the active TOC entry.
+   * Two animation frames ensure all layout changes have settled.
+   */
+  function scheduleTocScrollbarUpdate() {
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(updateTocScrollbar);
+    });
+  }
+
+  // Perform the initial scrollbar computation.
+  scheduleTocScrollbarUpdate();
+
+  // Recompute the scrollbar when the viewport size changes.
+  $(window)
+    .off('resize.readtheorg')
+    .on('resize.readtheorg', scheduleTocScrollbarUpdate);
+
+  /*
+   * Recompute the scrollbar whenever the TOC structure or its CSS
+   * classes change (for example, when expanding or collapsing
+   * sections).
+   */
+  const tocObserver = new MutationObserver(scheduleTocScrollbarUpdate);
+
+  tocObserver.observe($tableOfContents[0], {
+    attributes: true,
+    childList: true,
+    subtree: true,
+    attributeFilter: ['class', 'style'],
+  });
+
+  // Add TOC button.
   if (!$('#toggle-sidebar').length) {
     const $toggleSidebar = $(
       '<div id="toggle-sidebar">' +
