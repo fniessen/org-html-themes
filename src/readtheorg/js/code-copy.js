@@ -1,83 +1,118 @@
 /**
  * Code Copy Button Functionality
- * Adds copy buttons to code blocks for easy clipboard copying
+ * Adds copy buttons to code blocks for easy clipboard copying.
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Add copy button to all code blocks
-    const codeBlocks = document.querySelectorAll('pre.src, .org-src-container pre');
-    
-    codeBlocks.forEach(function(codeBlock) {
-        // Create copy button
-        const copyButton = document.createElement('button');
-        copyButton.className = 'copy-code-button';
-        copyButton.textContent = 'Copy';
-        copyButton.setAttribute('aria-label', 'Copy code to clipboard');
-        
-        // Position the button
-        const container = codeBlock.closest('.org-src-container') || codeBlock.parentElement;
-        container.style.position = 'relative';
-        container.appendChild(copyButton);
-        
-        // Add click handler
-        copyButton.addEventListener('click', function() {
-            // Get the code text
-            let codeText = codeBlock.textContent || codeBlock.innerText;
-            
-            // Remove line numbers if present (format: "  1: " or " 123: ")
-            const lines = codeText.split('\n');
-            const cleanedLines = lines.map(line => {
-                return line.replace(/^\s*\d+:\s/, '');
-            });
-            codeText = cleanedLines.join('\n').trim();
-            
-            // Copy to clipboard
-            if (navigator.clipboard && window.isSecureContext) {
-                // Use modern clipboard API
-                navigator.clipboard.writeText(codeText).then(function() {
-                    showCopyFeedback(copyButton, true);
-                }).catch(function(err) {
-                    console.error('Failed to copy: ', err);
-                    fallbackCopy(codeText, copyButton);
-                });
-            } else {
-                // Fallback for older browsers or non-HTTPS
-                fallbackCopy(codeText, copyButton);
-            }
-        });
+document.addEventListener('DOMContentLoaded', () => {
+  const codeBlocks = document.querySelectorAll(
+    'pre.src, .org-src-container pre'
+  );
+
+  codeBlocks.forEach((codeBlock) => {
+    // Create copy button.
+    const copyButton = document.createElement('button');
+    copyButton.className = 'copy-code-button';
+    copyButton.type = 'button';
+    copyButton.textContent = 'Copy';
+    copyButton.setAttribute('aria-label', 'Copy code to clipboard');
+
+    // Position the button.
+    const container =
+      codeBlock.closest('.org-src-container') || codeBlock.parentElement;
+
+    if (!container) {
+      return;
+    }
+
+    container.style.position = 'relative';
+    container.appendChild(copyButton);
+
+    // Add click handler.
+    copyButton.addEventListener('click', async () => {
+      const codeText = cleanCodeText(codeBlock);
+
+      try {
+        await copyText(codeText);
+        showCopyFeedback(copyButton, true);
+      } catch (error) {
+        console.error('Failed to copy code:', error);
+        showCopyFeedback(copyButton, false);
+      }
     });
-    
-    // Show copy feedback
-    function showCopyFeedback(button, success) {
-        const originalText = button.textContent;
-        button.textContent = success ? 'Copied!' : 'Failed';
-        button.classList.add(success ? 'copied' : 'failed');
-        
-        setTimeout(function() {
-            button.textContent = originalText;
-            button.classList.remove('copied', 'failed');
-        }, 2000);
-    }
-    
-    // Fallback copy method using textarea
-    function fallbackCopy(text, button) {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        
-        try {
-            const successful = document.execCommand('copy');
-            showCopyFeedback(button, successful);
-        } catch (err) {
-            console.error('Fallback copy failed: ', err);
-            showCopyFeedback(button, false);
-        }
-        
-        document.body.removeChild(textArea);
-    }
+  });
 });
+
+/**
+ * Extracts and cleans text from a code block.
+ *
+ * @param {HTMLElement} codeBlock
+ * @returns {string}
+ */
+function cleanCodeText(codeBlock) {
+  const codeText = codeBlock.textContent || codeBlock.innerText || '';
+
+  return codeText
+    .split('\n')
+    .map((line) => line.replace(/^\s*\d+:\s/, ''))
+    .join('\n')
+    .trim();
+}
+
+/**
+ * Copies text using the Clipboard API, with a fallback for older browsers.
+ *
+ * @param {string} text
+ * @returns {Promise<void>}
+ */
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  fallbackCopy(text);
+}
+
+/**
+ * Copies text using a temporary textarea.
+ *
+ * @param {string} text
+ */
+function fallbackCopy(text) {
+  const textArea = document.createElement('textarea');
+
+  textArea.value = text;
+  textArea.setAttribute('readonly', '');
+  textArea.style.position = 'fixed';
+  textArea.style.top = '0';
+  textArea.style.left = '-9999px';
+
+  document.body.appendChild(textArea);
+  textArea.select();
+
+  const successful = document.execCommand('copy');
+
+  document.body.removeChild(textArea);
+
+  if (!successful) {
+    throw new Error('The fallback copy command failed.');
+  }
+}
+
+/**
+ * Displays temporary feedback on the copy button.
+ *
+ * @param {HTMLButtonElement} button
+ * @param {boolean} success
+ */
+function showCopyFeedback(button, success) {
+  const originalText = button.textContent;
+
+  button.textContent = success ? 'Copied!' : 'Failed';
+  button.classList.add(success ? 'copied' : 'failed');
+
+  window.setTimeout(() => {
+    button.textContent = originalText;
+    button.classList.remove('copied', 'failed');
+  }, 2000);
+}
