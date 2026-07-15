@@ -45,9 +45,7 @@ $(document).ready(function() {
 
   $('#table-of-contents').prepend(`
     <div id="search-container">
-      <label for="search-input" class="sr-only">Search document</label>
-      <input type="text" id="search-input" placeholder="Search..." aria-describedby="search-description">
-      <div id="search-description" class="sr-only">Type to search the document. Use arrow keys to navigate results.</div>
+      <input type="text" id="search-input" placeholder="Search doc" aria-describedby="search-description">
       <ul id="search-results" role="listbox" aria-label="Search results"></ul>
     </div>
   `);
