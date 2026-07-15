@@ -835,7 +835,7 @@ ul.nav>li.active li.active>a {
 
 ul.nav>li.active>a {
     background-color: #fcfcfc;
-    color: black !important;
+    color: #55a5d9 !important;
     border-bottom:solid 1px #c9c9c9 !important; /* XXX Restrict it to 2nd level */
     border-right:solid 1px #c9c9c9 !important;
     font-weight: bold !important;
