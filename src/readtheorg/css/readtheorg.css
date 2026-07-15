@@ -1148,3 +1148,10 @@ h2.footnotes{
 .underline {
   text-decoration:underline
 }
+
+/* Top-level entries in the navigation sidebar */
+#table-of-contents ul.nav > li > a { 
+    color: #55a5d9;
+    text-transform: uppercase;
+    font-weight: 700;
+}
