@@ -1,5 +1,5 @@
 # Hey Emacs, this is a -*- org -*- file ...
-#+TITLE:     Example of Tasks
+#+TITLE:     Org mode task management example
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     booster.emacs@gmail.com
 #+LANGUAGE:  en
