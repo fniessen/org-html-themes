@@ -1,5 +1,5 @@
 # Hey Emacs, this is a -*- org -*- file ...
-#+TITLE:     Theme Chooser
+#+TITLE:     Org mode theme preview
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
 #+LANGUAGE:  en
