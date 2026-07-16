@@ -159,7 +159,7 @@ Raw HTML can be embedded directly in an Org document. When exporting to HTML,
 the markup is preserved exactly as written.
 
 #+HTML: <pre style="color:red">
-This text appears in a fixed-width font.
+This text appears in a fixed-width font only in HTML.
 #+HTML: </pre>
 
 Embedding raw HTML is particularly useful when you need functionality beyond Org
@@ -193,7 +193,7 @@ exported HTML output!
 Raw LaTeX may also be embedded directly in an Org document.
 
 #+LATEX: \begin{verbatim}
-This text is displayed using a fixed-width font.
+This text is displayed in a fixed-width font only in LaTeX.
 #+LATEX: \end{verbatim}
 
 *** Centered text
