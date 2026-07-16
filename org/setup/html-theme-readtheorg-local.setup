@@ -1,6 +1,7 @@
 # -*- mode: org; -*-
 
 #+OPTIONS: html-style:nil
+
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg/css/htmlize.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg/css/readtheorg.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg/css/code-copy.css"/>

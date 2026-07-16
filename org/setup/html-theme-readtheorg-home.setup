@@ -1,0 +1,41 @@
+# -*- mode: org; -*-
+
+#+OPTIONS: html-style:nil
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/css/code-copy.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/css/search.css"/>
+
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/vendor/jquery/jquery.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/vendor/bootstrap/bootstrap.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/js/search.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/js/readtheorg.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="file://wsl$/Ubuntu/home/fni/.dotfiles/org-html-themes/src/readtheorg/js/code-copy.js"></script>
+
+#+MACRO: enable-search #+HTML_HEAD: <script type="text/javascript">enableSearch();</script>
+#+MACRO: disable-search #+HTML_HEAD: <script type="text/javascript">disableSearch();</script>
+#+MACRO: set-search-limit #+HTML_HEAD: <script type="text/javascript">setSearchLimit($1);</script>
+
+* Search Configuration (v1.12)                                        :noexport:
+
+Use the following macros, if needed, after including this file and before your
+document content.
+
+Available macros:
+
+- {{{enable-search}}} :: Enable the search bar (default).
+- {{{disable-search}}} :: Disable the search bar.
+- {{{set-search-limit(N)}}} :: Limit the number of search results to *N* (default: ~0~,
+  meaning no limit).
+
+Examples:
+
+#+begin_src org
+{{{disable-search}}}
+#+end_src
+
+#+begin_src org
+{{{set-search-limit(10)}}}
+#+end_src
