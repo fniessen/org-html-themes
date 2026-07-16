@@ -1,5 +1,5 @@
 # Hey Emacs, this is a -*- org -*- file ...
-#+TITLE:     Org mode syntax reference
+#+TITLE:     Comprehensive Org mode syntax and features reference
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     fniessen@pirilampo.org
 #+DESCRIPTION: A comprehensive reference demonstrating Org mode syntax and features.
