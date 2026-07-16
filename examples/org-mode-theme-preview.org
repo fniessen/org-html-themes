@@ -2,6 +2,8 @@
 #+TITLE:     Org mode theme preview
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
+#+DESCRIPTION: A sample Org mode document for previewing and testing HTML themes.
+#+KEYWORDS:  Org mode, HTML, theme, preview, demo
 #+LANGUAGE:  en
 #+OPTIONS:   H:6 num:nil toc:4
 
@@ -9,29 +11,53 @@
 
 # See GitHub Settings > GitHub Pages > Theme Chooser
 
+This document demonstrates how common Org mode elements are rendered by an HTML
+theme. It includes headings, paragraphs, emphasis, source code, tables, lists,
+definition lists, images, and other common constructs.
+
 Text can be *bold*, /italic/, or +strikethrough+.
 
-[[https://github.com/fniessen/org-html-themes/org/theme-chooser.htmltheme-chooser.txt][Link to another page.]]
+[[https://github.com/fniessen/org-html-themes/examples/org-mode-theme-preview.html][Link to another page.]]
 
 There should be whitespace between paragraphs.
 
-There should be whitespace between paragraphs. We recommend including a README,
-or a file with information about your project.
+This paragraph demonstrates spacing between consecutive paragraphs.
 
-* Header 1
+* Level 1 heading
 
-This is a normal paragraph following a header. GitHub is a code hosting platform
-for version control and collaboration. It lets you and others work together on
-projects from anywhere.
+This paragraph is a normal paragraph following a header. It demonstrates how
+regular body text is rendered by the selected HTML theme.
 
-** Header 2
+** Level 2 heading
 
 This is a blockquote following a header.
 
 When something is important enough, you do it even if the odds are not in your
 favor.
 
-*** Header 3
+*** Level 3 heading
+
+**** Level 4 heading
+
+- This is an unordered list following a header.
+- This is an unordered list following a header.
+- This is an unordered list following a header.
+
+***** Level 5 heading
+
+1. This is an ordered list following a header.
+2. This is an ordered list following a header.
+3. This is an ordered list following a header.
+
+****** Level 6 heading
+
+| Status  | Description   | Result |
+|---------+---------------+--------|
+| OK      | Sample value  | ✓      |
+| Warning | Another value | !      |
+| Error   | Example entry | ✗      |
+
+**** Source code
 
 #+begin_src javascript
 // Javascript code with syntax highlighting.
@@ -47,27 +73,6 @@ GitHubPages::Dependencies.gems.each do |gem, version|
   s.add_dependency(gem, "= #{version}")
 end
 #+end_src
-
-**** Header 4
-
-- This is an unordered list following a header.
-- This is an unordered list following a header.
-- This is an unordered list following a header.
-
-***** Header 5
-
-1. This is an ordered list following a header.
-2. This is an ordered list following a header.
-3. This is an ordered list following a header.
-
-****** Header 6
-
-| head1        | head two          | three |
-|--------------+-------------------+-------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good ~oreos~      | hmm   |
-| ok           | good =zoute= drop | yumm  |
 
 *** There's a horizontal rule below this.
 
@@ -103,11 +108,11 @@ end
   + level 2 item
 - level 1 item
 
-*** Small image
+*** Small image example
 
 Octocat
 
-*** Large image
+*** Large image example
 
 Branching
 
