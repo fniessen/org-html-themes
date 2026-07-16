@@ -1,0 +1,2662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comprehensive Org mode syntax and features reference</title>
+<meta name="author" content="Fabrice Niessen" />
+<meta name="description" content="A comprehensive reference demonstrating Org mode syntax and features." />
+<meta name="keywords" content="Org mode, syntax, markup, documentation" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/code-copy.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Comprehensive Org mode syntax and features reference</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf6daa7b">Basics</a>
+<ul>
+<li><a href="#orgeb7afe7">Biggest heading</a></li>
+<li><a href="#org5f5f40f">Lists</a></li>
+<li><a href="#org7a379b4">Additional features</a></li>
+<li><a href="#org03b1869">Code blocks</a></li>
+<li><a href="#orgcf34b28">Inline code</a></li>
+<li><a href="#orgb667f58">Text formatting</a></li>
+<li><a href="#orgcbe1b3e">Mathematical expressions</a></li>
+<li><a href="#org94d7330">Special characters</a></li>
+<li><a href="#org3c2d3f3">Comments</a></li>
+<li><a href="#orgbf46012">Tables</a></li>
+<li><a href="#org060f005">Images, video, and audio</a></li>
+<li><a href="#org5d10044">Special text boxes</a></li>
+<li><a href="#links">Links</a></li>
+</ul>
+</li>
+<li><a href="#orgbab63c6">Org mode features</a>
+<ul>
+<li><a href="#org8c61bbf">Dates</a></li>
+<li><a href="#orgb2eb89d"><span class="done DONE">DONE</span> <span class="priority">[A]</span> Buy GTD book&#xa0;&#xa0;&#xa0;<span class="tag"><span class="online">online</span></span></a></li>
+<li><a href="#orgb777d66"><span class="todo TODO">TODO</span> <span class="priority">[A]</span> Read GTD book</a></li>
+<li><a href="#orga57c705"><span class="todo TODO">TODO</span> <span class="priority">[B]</span> Apply the GTD methodology</a></li>
+<li><a href="#org94da894">Personal note&#xa0;&#xa0;&#xa0;<span class="tag"><span class="computer">computer</span>&#xa0;<span class="write">write</span></span></a></li>
+<li><a href="#orgf1322f6">Weekly review&#xa0;&#xa0;&#xa0;<span class="tag"><span class="computer">computer</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org277c4ad">Org macros</a></li>
+<li><a href="#org7a47064">BigBlow extensions</a></li>
+</ul>
+</div>
+</div>
+<p>
+This document demonstrates a broad range of Org mode features. It serves as
+a comprehensive reference for writing technical documentation, producing HTML
+and PDF output, embedding source code, and testing CSS, LaTeX, and export
+behavior.
+</p>
+
+<p>
+<b>Org mode</b> provides a simple <i>plain-text</i> markup language for creating
+well-structured documents. From a single source file, you can produce
+high-quality HTML, LaTeX, PDF, and many other output formats while maintaining
+an efficient writing workflow.
+</p>
+
+<script src="https://platform.twitter.com/widgets.js"></script>
+
+<a href="https://twitter.com/share"
+   class="twitter-share-button"
+   data-via="f_niessen">Tweet</a>
+<div id="outline-container-orgf6daa7b" class="outline-2">
+<h2 id="orgf6daa7b">Basics</h2>
+<div class="outline-text-2" id="text-orgf6daa7b">
+<p>
+This chapter introduces the fundamental building blocks of an Org document.
+</p>
+</div>
+<div id="outline-container-orgeb7afe7" class="outline-3">
+<h3 id="orgeb7afe7">Biggest heading</h3>
+<div class="outline-text-3" id="text-orgeb7afe7">
+<p>
+Start a new chapter by creating a top-level heading.
+</p>
+</div>
+<div id="outline-container-orge846b95" class="outline-4">
+<h4 id="orge846b95">Bigger heading</h4>
+<div class="outline-text-4" id="text-orge846b95">
+<p>
+Use section headings to organize related content.
+</p>
+</div>
+<div id="outline-container-orgb3be7a6" class="outline-5">
+<h5 id="orgb3be7a6">Big heading</h5>
+<div class="outline-text-5" id="text-orgb3be7a6">
+<p>
+Subsections help divide longer sections into manageable parts.
+</p>
+</div>
+</div>
+<div id="outline-container-org4b968fb" class="outline-5">
+<h5 id="org4b968fb">Paragraphs and line breaks</h5>
+<div class="outline-text-5" id="text-org4b968fb">
+<p>
+A single newline does not create a new paragraph.
+The following lines belong to the same paragraph.
+</p>
+
+<p>
+But an empty line
+</p>
+
+<p>
+demarcates a new paragraph.
+</p>
+
+<p>
+To force a line break without beginning a new paragraph, end a line with
+2 backslashes. <br />
+The next line will appear immediately below it.
+</p>
+
+<p>
+To insert a horizontal rule, write at least 5 consecutive hyphens: this text
+appears above the horizontal rule.
+</p>
+<hr />
+<p>
+and this text appears below it.
+</p>
+</div>
+</div>
+<div id="outline-container-org4530671" class="outline-5">
+<h5 id="org4530671">Numbered headings</h5>
+<div class="outline-text-5" id="text-org4530671">
+<p>
+You can automatically number headings up to a specified depth by setting the
+appropriate export option.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-org-meta-line">#+OPTIONS: H:4</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a3332e" class="outline-4">
+<h4 id="org4a3332e">Text width</h4>
+<div class="outline-text-4" id="text-org4a3332e">
+<p>
+The following paragraph is intentionally long to demonstrate line wrapping and
+text formatting during export.
+</p>
+
+<p>
+One morning, when Gregor Samsa woke from troubled dreams, he found himself
+transformed in his bed into a horrible vermin. He lay on his armour-like back,
+and if he lifted his head a little he could see his brown belly, slightly domed
+and divided by arches into stiff sections. The bedding was hardly able to cover
+it and seemed ready to slide off any moment. His many legs, pitifully thin
+compared with the size of the rest of him, waved about helplessly as he looked.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5f5f40f" class="outline-3">
+<h3 id="org5f5f40f">Lists</h3>
+<div class="outline-text-3" id="text-org5f5f40f">
+<p>
+Org mode provides several types of lists that can be freely combined to organize
+information clearly and consistently.
+</p>
+</div>
+<div id="outline-container-org58693fa" class="outline-4">
+<h4 id="org58693fa">Unordered lists</h4>
+<div class="outline-text-4" id="text-org58693fa">
+<p>
+Bulleted lists are useful for presenting related information without implying
+a particular order.
+</p>
+
+<p>
+They are commonly used to:
+</p>
+
+<ul class="org-ul">
+<li>organize information, and</li>
+<li>present content
+<ul class="org-ul">
+<li>hierarchically, and</li>
+<li>easy to read.</li>
+</ul></li>
+</ul>
+
+<p>
+You can begin list items with either a minus (<code>-</code>) or a plus sign (<code>+</code>).
+</p>
+</div>
+</div>
+<div id="outline-container-org8e53c74" class="outline-4">
+<h4 id="org8e53c74">Ordered lists</h4>
+<div class="outline-text-4" id="text-org8e53c74">
+<p>
+Numbered lists express sequences or ordered procedures.
+</p>
+
+<ol class="org-ol">
+<li>First item
+<ol class="org-ol">
+<li>First sub-item</li>
+<li>Second sub-item</li>
+</ol></li>
+<li>Second item</li>
+</ol>
+
+<p>
+You can also specify explicit numbering when necessary:
+</p>
+
+<ol class="org-ol">
+<li value="1">First item</li>
+<li value="2">Second item</li>
+<li value="5">Continue with item 5</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org06b0e17" class="outline-4">
+<h4 id="org06b0e17">Definition lists</h4>
+<div class="outline-text-4" id="text-org06b0e17">
+<p>
+Definition lists associate terms with descriptions.
+</p>
+
+<dl class="org-dl">
+<dt>Definition list</dt><dd>A list in which each item consists of a term followed by its definition.</dd>
+
+<dt>Org mode</dt><dd>A powerful plain-text authoring system built into Emacs.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org8d9fa90" class="outline-4">
+<h4 id="org8d9fa90">Checklists</h4>
+<div class="outline-text-4" id="text-org8d9fa90">
+<p>
+Checkboxes make it easy to track progress.
+</p>
+
+<ul class="org-ul">
+<li class="off">&#x2610; Incomplete task</li>
+<li class="trans">&#x2610; Task in progress
+<ul class="org-ul">
+<li class="on">&#x2611; First subtask</li>
+<li class="off">&#x2610; Second subtask</li>
+</ul></li>
+<li class="on">&#x2611; Completed task</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a379b4" class="outline-3">
+<h3 id="org7a379b4">Additional features</h3>
+<div class="outline-text-3" id="text-org7a379b4">
+</div>
+<div id="outline-container-org3b66065" class="outline-4">
+<h4 id="org3b66065">Including other Org files</h4>
+<div class="outline-text-4" id="text-org3b66065">
+<p>
+You can include the contents of another Org file during export. For example, the
+following directive imports the referenced file while skipping its title:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-org-meta-line">#+INCLUDE: chapter1.org :lines "2-"</span>
+</pre>
+</div>
+
+<div class="note" id="org91c23fa">
+<p>
+File inclusion using the <code>#+INCLUDE</code> keyword is supported <b>during export only</b>.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org7002bda" class="outline-4">
+<h4 id="org7002bda">Inline HTML</h4>
+<div class="outline-text-4" id="text-org7002bda">
+<p>
+Raw HTML can be embedded directly in an Org document. When exporting to HTML,
+the markup is preserved exactly as written.
+</p>
+
+<pre style="color:red">
+<p>
+This text appears in a fixed-width font.
+</p>
+</pre>
+
+<p>
+Embedding raw HTML is particularly useful when you need functionality beyond Org
+mode&rsquo;s built-in export options, such as custom markup, advanced styling, or
+interactive content.
+</p>
+
+<p>
+For example, you can define custom HTML containers that correspond to CSS
+classes:
+</p>
+
+<pre class="example" id="org663cd4b">
+#+begin_info
+*Info example* \\
+Additional details appear here.
+#+end_info
+</pre>
+
+<p>
+You may also embed JavaScript, interactive visualizations (such as interactive
+R plots), or other HTML elements when appropriate.
+</p>
+
+<p>
+To include an existing HTML file verbatim during export:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-org-meta-line">#+INCLUDE: file.html html</span>
+</pre>
+</div>
+
+<p>
+Changes should always be made to the original Org source rather than the
+exported HTML output!
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9b4296" class="outline-4">
+<h4 id="orgd9b4296">Inline LaTeX</h4>
+<div class="outline-text-4" id="text-orgd9b4296">
+<p>
+Raw LaTeX may also be embedded directly in an Org document.
+</p>
+
+<p>
+This text is displayed using a fixed-width font.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc898b16" class="outline-4">
+<h4 id="orgc898b16">Centered text</h4>
+<div class="outline-text-4" id="text-orgc898b16">
+<p>
+Use a <code>center</code> block to center its contents.
+</p>
+
+<div class="org-center">
+<p>
+This text is centered.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org03b1869" class="outline-3">
+<h3 id="org03b1869">Code blocks</h3>
+<div class="outline-text-3" id="text-org03b1869">
+<p>
+Source code blocks are one of Org mode&rsquo;s most powerful features. They support
+syntax highlighting, executable code through Org Babel, export to multiple
+formats, and <b>reproducible research</b> workflows.
+</p>
+</div>
+<div id="outline-container-org493c375" class="outline-4">
+<h4 id="org493c375">Diff</h4>
+<div class="outline-text-4" id="text-org493c375">
+<p>
+Unified diffs are useful for illustrating changes between two versions of
+a file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-diff"><span class="org-diff-header">diff --git a/config.org b/config.org</span>
+<span class="org-diff-header">index 1a2b3c4..5d6e7f8 100644</span>
+<span class="org-diff-header">--- </span><span class="org-diff-header"><span class="org-diff-file-header">a/config.org</span></span>
+<span class="org-diff-header">+++ </span><span class="org-diff-header"><span class="org-diff-file-header">b/config.org</span></span>
+<span class="org-diff-hunk-header">@@ -1,6 +1,7 @@</span>
+<span class="org-diff-context"> #+TITLE: Example document</span>
+<span class="org-diff-context"> #+AUTHOR: Alice</span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">#+LANGUAGE: en</span>
+
+<span class="org-diff-indicator-removed">-</span><span class="org-diff-removed">* </span><span class="org-diff-removed"><span class="org-diff-refine-removed">Introduction</span></span>
+<span class="org-diff-indicator-added">+</span><span class="org-diff-added">* </span><span class="org-diff-added"><span class="org-diff-refine-added">Getting started</span></span>
+
+<span class="org-diff-indicator-removed">-</span><span class="org-diff-removed">This is the </span><span class="org-diff-removed"><span class="org-diff-refine-removed">original</span></span><span class="org-diff-removed"> paragraph</span><span class="org-diff-removed"><span class="org-diff-refine-removed">.</span></span>
++This is the <span class="org-diff-refine-added">updated</span> paragraph <span class="org-diff-refine-added">with clearer wording.</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org54d978c" class="outline-4">
+<h4 id="org54d978c">Line numbers</h4>
+<div class="outline-text-4" id="text-org54d978c">
+<p>
+Both <code>example</code> and <code>src</code> blocks support optional line numbering. Add the <code>-n</code>
+switch to the <code>#+begin</code> line to display line numbers.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="linenr">1: </span>(<span class="org-keyword">defun</span> <span class="org-function-name">org-xor</span> (a b)
+<span class="linenr">2: </span>  <span class="org-doc">"Exclusive or."</span>
+</pre>
+</div>
+
+<p>
+To continue numbering from a previous numbered block, use the <code>+n</code> switch.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span class="linenr">3: </span>  (<span class="org-keyword">if</span> a (not b) b))
+</pre>
+</div>
+
+<p>
+Literal example blocks can also define labels such as <code>(ref:name)</code>. These labels
+become reference targets that may be linked elsewhere in the document, using
+special hyperlinks like <code>[[(name)]]</code> (i.e., with the reference name enclosed in
+single parenthesis).
+</p>
+
+<p>
+(In HTML, hovering the mouse over such a link will remote-highlight the
+corresponding code line, which is kind of cool.)
+</p>
+
+<p>
+Use the <code>-r</code> switch to suppress labels in the exported source while still
+allowing references.
+</p>
+
+<p>
+With the <code>-n</code> switch, links to these references will be labeled by the line
+numbers from the code listing, otherwise links will use the labels with no
+parentheses.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span id="coderef-sc" class="coderef-off"><span class="linenr">1: </span>  (<span class="org-keyword">save-excursion</span>                  <span class="org-comment-delimiter">;</span></span>
+<span id="coderef-jump" class="coderef-off"><span class="linenr">2: </span>    (goto-char (point-min)))       <span class="org-comment-delimiter">;</span></span>
+</pre>
+</div>
+
+<p>
+In line <a href="#coderef-sc" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-sc');" onmouseout="CodeHighlightOff(this, 'coderef-sc');">1</a>, the current cursor position is saved. <a href="#coderef-jump" class="coderef" onmouseover="CodeHighlightOn(this, 'coderef-jump');" onmouseout="CodeHighlightOff(this, 'coderef-jump');">Line 2</a> moves directly
+to <code>point-min</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org91286d3" class="outline-4">
+<h4 id="org91286d3">Program output</h4>
+<div class="outline-text-4" id="text-org91286d3">
+<p>
+One of Org mode&rsquo;s most powerful features is the ability to <b>execute</b> code and
+insert its output directly into the document. This enables <i>reproducible
+research</i>.
+</p>
+</div>
+<div id="outline-container-orgf0ad06b" class="outline-5">
+<h5 id="orgf0ad06b">Text output</h5>
+<div class="outline-text-5" id="text-orgf0ad06b">
+<p>
+A simple example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">date +<span class="org-string">"%Y-%m-%d"</span>
+</pre>
+</div>
+
+<pre class="example">
+2026-07-15
+</pre>
+
+
+<p>
+Longer command output may also be inserted into the document.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell" id="orge2c9f12"><span class="org-comment-delimiter"># </span><span class="org-comment">Output all styles, but the default one (if any).</span>
+ls ../src/ | grep -v <span class="org-string">"default"</span>
+</pre>
+</div>
+
+<pre class="example" id="orgfa73b20">
+bigblow
+readtheorg
+vendor
+</pre>
+</div>
+</div>
+<div id="outline-container-org1007f02" class="outline-5">
+<h5 id="org1007f02">Graphics</h5>
+<div class="outline-text-5" id="text-org1007f02">
+<p>
+Data to be plotted:
+</p>
+
+<table id="org94cd970" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Month</th>
+<th scope="col" class="org-right">Degrees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">3.8</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">4.1</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">6.3</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">9.0</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">11.9</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">15.1</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-right">17.1</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-right">17.4</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-right">15.7</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-right">11.8</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-right">7.7</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-right">4.8</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The following R code generates a plot from the table above.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R" id="org16a5a2c">plot(data, type = <span class="org-string">"b"</span>, bty = <span class="org-string">"l"</span>, col = c(<span class="org-string">"#ABD249"</span>), lwd = 4, las = 1)
+grid(nx = <span class="org-ess-constant">NULL</span>, ny = <span class="org-ess-constant">NULL</span>, col = c(<span class="org-string">"#E8E8E8"</span>), lwd = 1)
+legend(<span class="org-string">"bottom"</span>, legend = c(<span class="org-string">"Degrees"</span>), col = c(<span class="org-string">"#ABD249"</span>), pch = c(19))
+</pre>
+</div>
+
+<p>
+Generated figure:
+</p>
+
+
+<div id="org08e9944" class="figure">
+<p><img src="../images/Rplot.png" alt="Rplot.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2fb0a17" class="outline-5">
+<h5 id="org2fb0a17">R code example</h5>
+<div class="outline-text-5" id="text-org2fb0a17">
+<div class="org-src-container">
+<pre class="src src-R"><span class="org-ess-modifiers">library</span>(ggplot2)
+summary(cars)
+</pre>
+</div>
+
+<p>
+Example plot:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span class="org-ess-modifiers">library</span>(ggplot2)
+qplot(speed, dist, data = cars) + geom_smooth()
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf34b28" class="outline-3">
+<h3 id="orgcf34b28">Inline code</h3>
+<div class="outline-text-3" id="text-orgcf34b28">
+<p>
+Inline source blocks can be evaluated directly within normal text.
+</p>
+
+<p>
+For example, 1 + 1 evaluates to .
+</p>
+</div>
+</div>
+<div id="outline-container-orgb667f58" class="outline-3">
+<h3 id="orgb667f58">Text formatting</h3>
+<div class="outline-text-3" id="text-orgb667f58">
+</div>
+<div id="outline-container-orgaa79cc8" class="outline-4">
+<h4 id="orgaa79cc8">Emphasis</h4>
+<div class="outline-text-4" id="text-orgaa79cc8">
+<p>
+Org mode supports several forms of inline emphasis.
+</p>
+
+<p>
+Examples include:
+</p>
+
+<ul class="org-ul">
+<li><i>italic</i></li>
+<li><b>bold</b></li>
+<li><b><i>bold italic</i></b></li>
+<li><span class="underline">underlined</span></li>
+<li><code>inline code</code></li>
+<li><code>verbatim text</code></li>
+<li><del>deleted text</del></li>
+<li>superscripts such as m/s<sup>2</sup></li>
+<li>subscripts such as H<sub>2</sub>O</li>
+</ul>
+
+<p>
+Formatting can also be nested.
+</p>
+
+<p>
+For example:
+</p>
+
+<p>
+<i>Italic text containing <span class="underline">underlined text</span> within it.</i>
+</p>
+
+<p>
+By default, emphasis does <b>not span more than 2</b> consecutive lines.
+</p>
+
+<p>
+<b>This
+is not
+bold</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org26e5e42" class="outline-4">
+<h4 id="org26e5e42">Quotations</h4>
+<div class="outline-text-4" id="text-org26e5e42">
+<p>
+Use a <code>quote</code> block for quoted prose.
+</p>
+
+<blockquote>
+<p>
+Let us change our traditional attitude to the construction of programs:
+Instead of imagining that our main task is to instruct a computer what to do,
+let us concentrate rather on explaining to human beings what we want a
+computer to do.
+</p>
+
+<p>
+The practitioner of literate programming can be regarded as an essayist, whose
+main concern is with exposition and excellence of style. Such an author, with
+thesaurus in hand, chooses the names of variables carefully and explains what
+each variable means. He or she strives for a program that is comprehensible
+because its concepts have been introduced in an order that is best for human
+understanding, using a mixture of formal and informal methods that reinforce
+each other.
+</p>
+
+<p>
+&#x2014; Donald Knuth
+</p>
+</blockquote>
+
+<p>
+Short quotations are equally straightforward.
+</p>
+
+<blockquote>
+<p>
+Everything should be made as simple as possible,
+but not any simpler. &#x2013; Albert Einstein
+</p>
+</blockquote>
+
+<p>
+A <code>verse</code> block preserves indentation and line breaks exactly as written.
+</p>
+
+<p class="verse">
+Everything should be made as simple as possible,<br />
+but not any simpler. &#x2013; Albert Einstein<br />
+</p>
+
+<p>
+Verse blocks are also useful for preserving the formatting of email
+conversations.
+</p>
+
+<p class="verse">
+&gt;&gt; This is an email containing nested quotations.<br />
+&gt;&gt; Each level of indentation is preserved.<br />
+&gt;<br />
+&gt; Replies remain visually distinct from the original message.<br />
+<br />
+Bullet lists may also appear inside verse blocks:<br />
+- First item<br />
+- Second item<br />
+<br />
+Numbered lists are equally valid:<br />
+1. First item<br />
+2. Second item<br />
+<br />
+Maybe an equation here?<br />
+<br />
+See <a href="https://www.google.com/">https://www.google.com/</a> for additional information&#x2026;<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8e4eda" class="outline-4">
+<h4 id="orgf8e4eda">Spaces</h4>
+<div class="outline-text-4" id="text-orgf8e4eda">
+<p>
+Non-breaking spaces may be inserted using the Unicode character <code>U+00A0</code> or an
+appropriate Org entity, depending on your export requirements.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcbe1b3e" class="outline-3">
+<h3 id="orgcbe1b3e">Mathematical expressions</h3>
+<div class="outline-text-3" id="text-orgcbe1b3e">
+<p>
+Org mode supports LaTeX mathematics in both HTML (via MathJax) and LaTeX/PDF
+exports.
+</p>
+
+<ul class="org-ul">
+<li><p>
+For <b>inline mathematics</b>, use <code>\(...\)</code>: \(x^2\) or \(1 < 2\).
+</p>
+
+<p>
+Although <code>$...$</code> is commonly used in LaTeX, <code>\(...\)</code> is preferred in Org
+documents.
+</p></li>
+
+<li><p>
+Display equations appear centered on their own line (the <i>Euler theorem</i>):
+</p>
+
+<p>
+\[
+  \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+  \]
+</p>
+
+<p>
+Display math using <code>\[...\]</code> is useful whenever an equation deserves <b>visual
+emphasis</b>.
+</p>
+
+<p>
+For example, the <i>quadratic formula</i> may be written as:
+\[ \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+</p>
+
+<p>
+<b>Double dollar signs (<code>$$</code>) should not be used</b>.
+</p></li>
+
+<li><p>
+For <b>numbered</b> equations, use the <code>equation</code> environment. The <i>sinus theorem</i> can
+then be written as the equation:
+</p>
+
+\begin{equation}
+  \label{eqn:sinalpha}
+  \frac{\sin\alpha}{a}=\frac{\sin\beta}{b}
+\end{equation}</li>
+
+<li><p>
+Equation references are also supported.
+</p>
+
+<p>
+See Equation \eqref{orga7b4998}.
+</p>
+
+\begin{equation}
+\label{orga7b4998}
+  n_{i+1}= \frac{n_{i}(d-i)(e-1)}{(i+1)}
+\end{equation}
+
+<p>
+Only captioned equations receive automatic numbering.
+</p></li>
+
+<li>If numbering is not required, use <code>equation*</code>, <code>displaymath</code>, or the shorter
+<code>\[...\]</code> syntax.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94d7330" class="outline-3">
+<h3 id="org94d7330">Special characters</h3>
+<div class="outline-text-3" id="text-org94d7330">
+<p>
+Org mode provides convenient entities for many commonly used symbols.
+</p>
+</div>
+<div id="outline-container-org3e43a70" class="outline-4">
+<h4 id="org3e43a70">Accented characters</h4>
+<div class="outline-text-4" id="text-org3e43a70">
+<p>
+&Agrave; &Aacute;
+</p>
+</div>
+</div>
+<div id="outline-container-orgb127cff" class="outline-4">
+<h4 id="orgb127cff">Punctuation</h4>
+<div class="outline-text-4" id="text-orgb127cff">
+<p>
+Dash: &ndash; &mdash;
+</p>
+
+<p>
+Inverted punctuation: &iexcl; &iquest;
+</p>
+
+<p>
+Quotation marks: &laquo; &raquo;
+</p>
+
+<p>
+Other symbols: &para; &ordf;
+</p>
+</div>
+</div>
+<div id="outline-container-orgb176f62" class="outline-4">
+<h4 id="orgb176f62">Commercial symbols</h4>
+<div class="outline-text-4" id="text-orgb176f62">
+<p>
+Copyright: &copy;
+</p>
+
+<p>
+Registered trademark: &reg;
+</p>
+
+<p>
+Currency: &cent; &euro; &yen; &pound;
+</p>
+</div>
+</div>
+<div id="outline-container-org54a3d82" class="outline-4">
+<h4 id="org54a3d82">Greek letters</h4>
+<div class="outline-text-4" id="text-org54a3d82">
+<p>
+The Greek letters &alpha;, &beta;, and &gamma; are used to denote angles in mathematics.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0f26bc" class="outline-4">
+<h4 id="orge0f26bc">Mathematical symbols</h4>
+<div class="outline-text-4" id="text-orge0f26bc">
+<p>
+Arithmetic: &plusmn; &divide;
+</p>
+
+<p>
+Arrows: &rarr; &rarr; &larr; &harr; &rArr; &lArr; &hArr;
+</p>
+
+<p>
+Functions: arccos cos
+</p>
+
+<p>
+Additional symbols: &bull; *
+</p>
+</div>
+</div>
+<div id="outline-container-org4a74cb7" class="outline-4">
+<h4 id="org4a74cb7">Miscellaneous symbols</h4>
+<div class="outline-text-4" id="text-org4a74cb7">
+<p>
+Card suits: &clubs; &spades;
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c2d3f3" class="outline-3">
+<h3 id="org3c2d3f3">Comments</h3>
+<div class="outline-text-3" id="text-org3c2d3f3">
+<p>
+Comments may be placed anywhere in an Org document.
+</p>
+
+<p>
+Lines beginning with <code>#</code> are ignored during export.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbf46012" class="outline-3">
+<h3 id="orgbf46012">Tables</h3>
+<div class="outline-text-3" id="text-orgbf46012">
+<p>
+Org mode makes it easy to create and maintain tables.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Example table</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Header 1</th>
+<th scope="col" class="org-left">Header 2</th>
+<th scope="col" class="org-left">Header 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Top left</td>
+<td class="org-left">Top middle</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Right</td>
+</tr>
+
+<tr>
+<td class="org-left">Bottom left</td>
+<td class="org-left">Bottom middle</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Columns are aligned automatically.
+</p>
+
+<ul class="org-ul">
+<li>Numeric columns are right-aligned.</li>
+<li>Text columns are left-aligned.</li>
+</ul>
+
+<p>
+Alignment can also be specified explicitly.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> Table with explicit alignment</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-center" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-center">2</td>
+<td class="org-left">3</td>
+</tr>
+
+<tr>
+<td class="org-right">right</td>
+<td class="org-center">center</td>
+<td class="org-left">left</td>
+</tr>
+
+<tr>
+<td class="org-right">xxxxxxxxxxxx</td>
+<td class="org-center">xxxxxxxxxxxx</td>
+<td class="org-left">xxxxxxxxxxxx</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Placement may be controlled during LaTeX export.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+This differs from the default centered table.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org7a6f1e4" class="outline-4">
+<h4 id="org7a6f1e4">Table alignment on the page</h4>
+<div class="outline-text-4" id="text-org7a6f1e4">
+<p>
+Left-aligned table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">b</th>
+<th scope="col" class="org-right">c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">5</td>
+<td class="org-right">6</td>
+</tr>
+</tbody>
+</table>
+<p>
+The <code>noindent</code> just gets rid of the indentation of the first line of a paragraph
+which in this case is the table, and the <code>hfill</code> adds infinite stretch after the
+table, so it pushes the table to the left.
+</p>
+
+<p>
+Centered table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">b</th>
+<th scope="col" class="org-right">c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">5</td>
+<td class="org-right">6</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Right-aligned table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">b</th>
+<th scope="col" class="org-right">c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">5</td>
+<td class="org-right">6</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Here, the <code>hfill</code> adds infinite stretch before the table, so it pushes the table
+to the right.
+</p>
+</div>
+</div>
+<div id="outline-container-org67e476f" class="outline-4">
+<h4 id="org67e476f">Long tables</h4>
+<div class="outline-text-4" id="text-org67e476f">
+<p>
+Long tables may span multiple pages when exporting to PDF. Depending on the
+LaTeX configuration, table headers can automatically be repeated at the top of
+each page.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> Example of a long table</caption>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Row</th>
+<th scope="col" class="org-left">Project</th>
+<th scope="col" class="org-left">Owner</th>
+<th scope="col" class="org-left">Status</th>
+<th scope="col" class="org-left">Priority</th>
+<th scope="col" class="org-left">Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Alpha</td>
+<td class="org-left">Alice</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Bravo</td>
+<td class="org-left">Bob</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Charlie</td>
+<td class="org-left">Carol</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Delta</td>
+<td class="org-left">David</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Echo</td>
+<td class="org-left">Emma</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Foxtrot</td>
+<td class="org-left">Frank</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Golf</td>
+<td class="org-left">Grace</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Hotel</td>
+<td class="org-left">Henry</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">India</td>
+<td class="org-left">Irene</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Juliet</td>
+<td class="org-left">John</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Kilo</td>
+<td class="org-left">Kate</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Lima</td>
+<td class="org-left">Luke</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Mike</td>
+<td class="org-left">Mary</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">November</td>
+<td class="org-left">Neil</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Oscar</td>
+<td class="org-left">Olivia</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">Papa</td>
+<td class="org-left">Peter</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">17</td>
+<td class="org-left">Quebec</td>
+<td class="org-left">Quinn</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">18</td>
+<td class="org-left">Romeo</td>
+<td class="org-left">Rose</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">Sierra</td>
+<td class="org-left">Steve</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">Tango</td>
+<td class="org-left">Tina</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">Uniform</td>
+<td class="org-left">Uma</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">22</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Victor</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">23</td>
+<td class="org-left">Whiskey</td>
+<td class="org-left">Wendy</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">24</td>
+<td class="org-left">Xray</td>
+<td class="org-left">Xavier</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">25</td>
+<td class="org-left">Yankee</td>
+<td class="org-left">Yvonne</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">26</td>
+<td class="org-left">Zulu</td>
+<td class="org-left">Zach</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">27</td>
+<td class="org-left">Alpha</td>
+<td class="org-left">Alice</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">28</td>
+<td class="org-left">Bravo</td>
+<td class="org-left">Bob</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">29</td>
+<td class="org-left">Charlie</td>
+<td class="org-left">Carol</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">30</td>
+<td class="org-left">Delta</td>
+<td class="org-left">David</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">31</td>
+<td class="org-left">Echo</td>
+<td class="org-left">Emma</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">32</td>
+<td class="org-left">Foxtrot</td>
+<td class="org-left">Frank</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">33</td>
+<td class="org-left">Golf</td>
+<td class="org-left">Grace</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">34</td>
+<td class="org-left">Hotel</td>
+<td class="org-left">Henry</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">35</td>
+<td class="org-left">India</td>
+<td class="org-left">Irene</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">36</td>
+<td class="org-left">Juliet</td>
+<td class="org-left">John</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">37</td>
+<td class="org-left">Kilo</td>
+<td class="org-left">Kate</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">38</td>
+<td class="org-left">Lima</td>
+<td class="org-left">Luke</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">39</td>
+<td class="org-left">Mike</td>
+<td class="org-left">Mary</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">40</td>
+<td class="org-left">November</td>
+<td class="org-left">Neil</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">41</td>
+<td class="org-left">Oscar</td>
+<td class="org-left">Olivia</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">42</td>
+<td class="org-left">Papa</td>
+<td class="org-left">Peter</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">43</td>
+<td class="org-left">Quebec</td>
+<td class="org-left">Quinn</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">44</td>
+<td class="org-left">Romeo</td>
+<td class="org-left">Rose</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">45</td>
+<td class="org-left">Sierra</td>
+<td class="org-left">Steve</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">46</td>
+<td class="org-left">Tango</td>
+<td class="org-left">Tina</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">47</td>
+<td class="org-left">Uniform</td>
+<td class="org-left">Uma</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">48</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">49</td>
+<td class="org-left">Whiskey</td>
+<td class="org-left">Wendy</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-left">Xray</td>
+<td class="org-left">Xavier</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">51</td>
+<td class="org-left">Yankee</td>
+<td class="org-left">Yvonne</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">52</td>
+<td class="org-left">Zulu</td>
+<td class="org-left">Zach</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">53</td>
+<td class="org-left">Alpha</td>
+<td class="org-left">Alice</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">54</td>
+<td class="org-left">Bravo</td>
+<td class="org-left">Bob</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">55</td>
+<td class="org-left">Charlie</td>
+<td class="org-left">Carol</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">56</td>
+<td class="org-left">Delta</td>
+<td class="org-left">David</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">57</td>
+<td class="org-left">Echo</td>
+<td class="org-left">Emma</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">58</td>
+<td class="org-left">Foxtrot</td>
+<td class="org-left">Frank</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">59</td>
+<td class="org-left">Golf</td>
+<td class="org-left">Grace</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">60</td>
+<td class="org-left">Hotel</td>
+<td class="org-left">Henry</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">61</td>
+<td class="org-left">India</td>
+<td class="org-left">Irene</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">62</td>
+<td class="org-left">Juliet</td>
+<td class="org-left">John</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">63</td>
+<td class="org-left">Kilo</td>
+<td class="org-left">Kate</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">64</td>
+<td class="org-left">Lima</td>
+<td class="org-left">Luke</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">65</td>
+<td class="org-left">Mike</td>
+<td class="org-left">Mary</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">66</td>
+<td class="org-left">November</td>
+<td class="org-left">Neil</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">67</td>
+<td class="org-left">Oscar</td>
+<td class="org-left">Olivia</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">68</td>
+<td class="org-left">Papa</td>
+<td class="org-left">Peter</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">69</td>
+<td class="org-left">Quebec</td>
+<td class="org-left">Quinn</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">70</td>
+<td class="org-left">Romeo</td>
+<td class="org-left">Rose</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">71</td>
+<td class="org-left">Sierra</td>
+<td class="org-left">Steve</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">72</td>
+<td class="org-left">Tango</td>
+<td class="org-left">Tina</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">73</td>
+<td class="org-left">Uniform</td>
+<td class="org-left">Uma</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">74</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">75</td>
+<td class="org-left">Whiskey</td>
+<td class="org-left">Wendy</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">76</td>
+<td class="org-left">Xray</td>
+<td class="org-left">Xavier</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">77</td>
+<td class="org-left">Yankee</td>
+<td class="org-left">Yvonne</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">78</td>
+<td class="org-left">Zulu</td>
+<td class="org-left">Zach</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">79</td>
+<td class="org-left">Alpha</td>
+<td class="org-left">Alice</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">80</td>
+<td class="org-left">Bravo</td>
+<td class="org-left">Bob</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">81</td>
+<td class="org-left">Charlie</td>
+<td class="org-left">Carol</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">82</td>
+<td class="org-left">Delta</td>
+<td class="org-left">David</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">83</td>
+<td class="org-left">Echo</td>
+<td class="org-left">Emma</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">84</td>
+<td class="org-left">Foxtrot</td>
+<td class="org-left">Frank</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">85</td>
+<td class="org-left">Golf</td>
+<td class="org-left">Grace</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">86</td>
+<td class="org-left">Hotel</td>
+<td class="org-left">Henry</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">87</td>
+<td class="org-left">India</td>
+<td class="org-left">Irene</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">88</td>
+<td class="org-left">Juliet</td>
+<td class="org-left">John</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">89</td>
+<td class="org-left">Kilo</td>
+<td class="org-left">Kate</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">90</td>
+<td class="org-left">Lima</td>
+<td class="org-left">Luke</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+
+<tr>
+<td class="org-right">91</td>
+<td class="org-left">Mike</td>
+<td class="org-left">Mary</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">92</td>
+<td class="org-left">November</td>
+<td class="org-left">Neil</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">Medium</td>
+<td class="org-left">5 d</td>
+</tr>
+
+<tr>
+<td class="org-right">93</td>
+<td class="org-left">Oscar</td>
+<td class="org-left">Olivia</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">94</td>
+<td class="org-left">Papa</td>
+<td class="org-left">Peter</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">1 d</td>
+</tr>
+
+<tr>
+<td class="org-right">95</td>
+<td class="org-left">Quebec</td>
+<td class="org-left">Quinn</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Medium</td>
+<td class="org-left">4 d</td>
+</tr>
+
+<tr>
+<td class="org-right">96</td>
+<td class="org-left">Romeo</td>
+<td class="org-left">Rose</td>
+<td class="org-left">Done</td>
+<td class="org-left">High</td>
+<td class="org-left">2 d</td>
+</tr>
+
+<tr>
+<td class="org-right">97</td>
+<td class="org-left">Sierra</td>
+<td class="org-left">Steve</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">8 d</td>
+</tr>
+
+<tr>
+<td class="org-right">98</td>
+<td class="org-left">Tango</td>
+<td class="org-left">Tina</td>
+<td class="org-left">Done</td>
+<td class="org-left">Medium</td>
+<td class="org-left">3 d</td>
+</tr>
+
+<tr>
+<td class="org-right">99</td>
+<td class="org-left">Uniform</td>
+<td class="org-left">Uma</td>
+<td class="org-left">In Progress</td>
+<td class="org-left">High</td>
+<td class="org-left">6 d</td>
+</tr>
+
+<tr>
+<td class="org-right">100</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Victor</td>
+<td class="org-left">Planned</td>
+<td class="org-left">Low</td>
+<td class="org-left">7 d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org060f005" class="outline-3">
+<h3 id="org060f005">Images, video, and audio</h3>
+<div class="outline-text-3" id="text-org060f005">
+</div>
+<div id="outline-container-orgac0d6f8" class="outline-4">
+<h4 id="orgac0d6f8">Images</h4>
+<div class="outline-text-4" id="text-orgac0d6f8">
+<p>
+Org mode supports several image formats.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Format</th>
+<th scope="col" class="org-left">HTML</th>
+<th scope="col" class="org-left">PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GIF</td>
+<td class="org-left">Yes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">JPEG</td>
+<td class="org-left">Yes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">PNG</td>
+<td class="org-left">Yes</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">BMP</td>
+<td class="org-left">Browser dependent</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Example image:
+</p>
+
+
+<div id="org9a6568d" class="figure">
+<p><img src="../images/org-mode-unicorn.png" alt="org-mode-unicorn.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Org mode logo</p>
+</div>
+
+<p>
+You may also link directly to an image file.
+</p>
+
+<p>
+<a href="../images/org-mode-unicorn.png">Org mode unicorn image</a>
+</p>
+
+<p>
+Common HTML image attributes include:
+</p>
+
+<ul class="org-ul">
+<li><code>align</code></li>
+<li><code>border</code></li>
+<li><code>bordercolor</code></li>
+<li><code>hspace</code></li>
+<li><code>vspace</code></li>
+<li><code>width</code></li>
+<li><code>height</code></li>
+<li><code>title</code></li>
+<li><code>alt</code></li>
+</ul>
+
+<p>
+Multiple images can also be arranged side by side using appropriate export
+options.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc4814a9" class="outline-4">
+<h4 id="orgc4814a9">Video</h4>
+<div class="outline-text-4" id="text-orgc4814a9">
+<p>
+Video files are typically referenced through hyperlinks.
+</p>
+
+<p>
+A common approach is to use a thumbnail image that links to the video.
+</p>
+
+<p>
+<a href="https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg">https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orga26bfb7" class="outline-4">
+<h4 id="orga26bfb7">Audio</h4>
+<div class="outline-text-4" id="text-orga26bfb7">
+<p>
+Audio resources may be linked using standard Org hyperlinks.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5d10044" class="outline-3">
+<h3 id="org5d10044">Special text boxes</h3>
+<div class="outline-text-3" id="text-org5d10044">
+<p>
+Org mode supports several block types for emphasizing content.
+</p>
+</div>
+<div id="outline-container-org0372bd5" class="outline-4">
+<h4 id="org0372bd5">Inline task</h4>
+<div class="outline-text-4" id="text-org0372bd5">
+<div class="inlinetask">
+<b><span class="todo TODO">TODO</span> Do this task</b><br />
+<p>
+Description of inline task.
+</p>
+</div>
+
+<p>
+or:
+</p>
+
+<div class="inlinetask">
+<b><span class="todo WAIT">WAIT</span> <span class="priority">[B]</span> Do also this other task&#xa0;&#xa0;&#xa0;<span class="tag"><span class="phone">phone</span></span></b><br />
+</div>
+</div>
+</div>
+<div id="outline-container-orged88f85" class="outline-4">
+<h4 id="orged88f85">Example</h4>
+<div class="outline-text-4" id="text-orged88f85">
+<p>
+Example blocks display literal text exactly as written.
+</p>
+
+<p>
+Find entries containing an <b>exact phrase</b> by enclosing the phrase in quotation
+marks:
+</p>
+
+<pre class="example">
+"hd ready"
+</pre>
+
+
+<p>
+Additional block types include <code>info</code>, <code>tip</code>, <code>note</code>, and <code>warning</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org06756d6" class="outline-4">
+<h4 id="org06756d6">Info</h4>
+<div class="outline-text-4" id="text-org06756d6">
+<p>
+An info box is displayed as follows:
+</p>
+
+<div class="info" id="orga90f4af">
+<p>
+<b>Info example</b> <br />
+Did you know&#x2026;
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org2e4017a" class="outline-4">
+<h4 id="org2e4017a">Tip</h4>
+<div class="outline-text-4" id="text-org2e4017a">
+<p>
+A tip box is displayed as follows:
+</p>
+
+<div class="tip" id="org0a7bc42">
+<p>
+<b>Tip example</b> <br />
+Consider using this approach&#x2026;
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgcd97d7f" class="outline-4">
+<h4 id="orgcd97d7f">Note</h4>
+<div class="outline-text-4" id="text-orgcd97d7f">
+<p>
+A note box is displayed as follows:
+</p>
+
+<div class="note" id="orgb346a6b">
+<p>
+<b>Note example</b> <br />
+This information may be useful.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org0151b16" class="outline-4">
+<h4 id="org0151b16">Warning</h4>
+<div class="outline-text-4" id="text-org0151b16">
+<p>
+A warning box is displayed as follows:
+</p>
+
+<div class="warning" id="orgefcf126">
+<p>
+<b>Warning example</b> <br />
+Verify your configuration before proceeding.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-links" class="outline-3">
+<h3 id="links">Links</h3>
+<div class="outline-text-3" id="text-links">
+</div>
+<div id="outline-container-orge8b2188" class="outline-4">
+<h4 id="orge8b2188">Anchors</h4>
+<div class="outline-text-4" id="text-orge8b2188">
+<p>
+Org mode supports several types of links.
+</p>
+
+<p>
+Most links point to headings, but they may also reference custom anchors within
+the current document or another Org document.
+</p>
+
+<p>
+You can create an anchor using <code>&lt;&lt;name-of-anchor-here&gt;&gt;</code> <a id="org58d7a7d"></a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org9b927b0" class="outline-4">
+<h4 id="org9b927b0">Hyperlinks</h4>
+<div class="outline-text-4" id="text-org9b927b0">
+<p>
+This document is available in multiple formats:
+</p>
+
+<ul class="org-ul">
+<li><a href="example.txt">Plain text</a></li>
+<li><a href="example.html">HTML</a></li>
+<li><a href="example.pdf">PDF</a></li>
+</ul>
+
+<p>
+Links are enclosed in square brackets.
+</p>
+</div>
+<div id="outline-container-org1f1cc6b" class="outline-5">
+<h5 id="org1f1cc6b">Internal links</h5>
+<div class="outline-text-5" id="text-org1f1cc6b">
+<p>
+Examples:
+</p>
+<ul class="org-ul">
+<li>Chapter <a href="#links">Links</a></li>
+<li>Section <a href="#orge8b2188">Anchors</a></li>
+<li><a href="#org58d7a7d">Named anchor</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org60cb972" class="outline-5">
+<h5 id="org60cb972">External links</h5>
+<div class="outline-text-5" id="text-org60cb972">
+<p>
+Visit the official <a href="https://orgmode.org/">Org mode website</a>.
+</p>
+
+<p>
+Email links are also supported.
+</p>
+
+<p>
+<a href="mailto:concat.fni.at-sign.pirilampo.org">Send email</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbab63c6" class="outline-2">
+<h2 id="orgbab63c6">Org mode features</h2>
+<div class="outline-text-2" id="text-orgbab63c6">
+</div>
+<div id="outline-container-org8c61bbf" class="outline-3">
+<h3 id="org8c61bbf">Dates</h3>
+<div class="outline-text-3" id="text-org8c61bbf">
+<p>
+Org mode recognizes both inactive and active timestamps.
+</p>
+
+<p>
+Inactive timestamp: <span class="timestamp-wrapper"><span class="timestamp">[2014-01-16 Thu]</span></span>
+</p>
+
+<p>
+Active timestamp: <span class="timestamp-wrapper"><span class="timestamp">&lt;2014-01-16 Thu&gt;</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb2eb89d" class="outline-3">
+<h3 id="orgb2eb89d"><span class="done DONE">DONE</span> <span class="priority">[A]</span> Buy GTD book&#xa0;&#xa0;&#xa0;<span class="tag"><span class="online">online</span></span></h3>
+<div class="outline-text-3" id="text-orgb2eb89d">
+<p>
+Completed tasks are typically collapsed by default in exported documents.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb777d66" class="outline-3">
+<h3 id="orgb777d66"><span class="todo TODO">TODO</span> <span class="priority">[A]</span> Read GTD book</h3>
+<div class="outline-text-3" id="text-orgb777d66">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">SCHEDULED:</span> <span class="timestamp">&lt;2014-09-11 Thu&gt;</span></span></p>
+
+<p>
+Scheduled tasks remain expanded unless configured otherwise.
+</p>
+
+<p>
+To collapse all headings when exporting HTML with BigBlow, include:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org"><span class="org-org-meta-line">#+HTML_HEAD: &lt;script&gt; var HS_STARTUP_FOLDED = true; &lt;/script&gt;</span>
+</pre>
+</div>
+
+<p>
+into your Org document.
+</p>
+</div>
+</div>
+<div id="outline-container-orga57c705" class="outline-3 hsCollapsed">
+<h3 id="orga57c705"><span class="todo TODO">TODO</span> <span class="priority">[B]</span> Apply the GTD methodology</h3>
+<div class="outline-text-3" id="text-orga57c705">
+<p><span class="timestamp-wrapper"><span class="timestamp-kwd">DEADLINE:</span> <span class="timestamp">&lt;2014-12-01 Mon&gt;</span></span></p>
+<p>
+The <code>hsCollapsed</code> class causes this section to appear collapsed when the exported
+HTML page is first loaded.
+</p>
+
+<p>
+Powerful, no?
+</p>
+</div>
+</div>
+<div id="outline-container-org94da894" class="outline-3">
+<h3 id="org94da894">Personal note&#xa0;&#xa0;&#xa0;<span class="tag"><span class="computer">computer</span>&#xa0;<span class="write">write</span></span></h3>
+<div class="outline-text-3" id="text-org94da894">
+<p>
+Tags may be assigned to headings to improve organization and searching.
+</p>
+
+<p>
+Interactive HTML exports (such as BigBlow) can also highlight entries that share
+the same tag.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf1322f6" class="outline-3">
+<h3 id="orgf1322f6">Weekly review&#xa0;&#xa0;&#xa0;<span class="tag"><span class="computer">computer</span></span></h3>
+<div class="outline-text-3" id="text-orgf1322f6">
+<p>
+The BigBlow HTML export supports a &ldquo;review mode&rdquo;&#x2026;
+</p>
+
+<p>
+Press the <code>r</code> key to collapse every active heading except the current one, making
+it easier to focus on a single task during a review session!
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org277c4ad" class="outline-2">
+<h2 id="org277c4ad">Org macros</h2>
+<div class="outline-text-2" id="text-org277c4ad">
+<p>
+Macros allow reusable snippets to be defined once and expanded throughout the
+document.
+</p>
+
+<p>
+Example:
+</p>
+
+<p>
+<span style="color: blue"> This text is displayed in blue.</span> 
+</p>
+
+<p>
+<span style="color: red"> This other text is displayed in red.</span> 
+</p>
+
+<p>
+Additional macros are available on <a href="https://github.com/fniessen/org-macros">GitHub</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org7a47064" class="outline-2">
+<h2 id="org7a47064">BigBlow extensions</h2>
+<div class="outline-text-2" id="text-org7a47064">
+<p>
+Some HTML themes provide additional features.
+</p>
+
+<p>
+For example, the keyword <code>FIXME</code> may automatically be replaced with a visual
+&ldquo;Fix Me!&rdquo; indicator:
+</p>
+
+<p>
+FIXME Delete this&#x2026;
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.myfootnote" class="footnum" href="#fnr.myfootnote" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Named footnotes are particularly useful in larger documents.
+</p>
+
+<p class="footpara">
+Automatically numbered footnotes are also supported.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Fabrice Niessen</p>
+</div>
+</body>
+</html>
