@@ -264,6 +264,28 @@ print("This block is rendered using \scriptsize")
 #+end_src
 #+latex: \normalsize
 
+*** Diff
+
+Unified diffs are useful for illustrating changes between two versions of
+a file.
+
+#+begin_src diff
+diff --git a/config.org b/config.org
+index 1a2b3c4..5d6e7f8 100644
+--- a/config.org
++++ b/config.org
+@@ -1,6 +1,7 @@
+ #+TITLE: Example document
+ #+AUTHOR: Alice
++#+LANGUAGE: en
+
+-* Introduction
++* Getting started
+
+-This is the original paragraph.
++This is the updated paragraph with clearer wording.
+#+end_src
+
 *** Line numbers
 
 Both ~example~ and ~src~ blocks support optional line numbering. Add the ~-n~
@@ -412,8 +434,8 @@ Examples include:
 - ~inline code~
 - =verbatim text=
 - +deleted text+
-- superscripts such as ~m/s^{2}~
-- subscripts such as ~H_{2}O~
+- superscripts such as m/s^{2}
+- subscripts such as H_{2}O
 
 Formatting can also be nested.
 
@@ -644,7 +666,8 @@ Left-aligned table:
 #+LATEX: \hfill
 
 The ~noindent~ just gets rid of the indentation of the first line of a paragraph
-which in this case is the table, so it pushes the table to the left.
+which in this case is the table, and the ~hfill~ adds infinite stretch after the
+table, so it pushes the table to the left.
 
 Centered table:
 
@@ -664,6 +687,116 @@ Right-aligned table:
 
 Here, the ~hfill~ adds infinite stretch before the table, so it pushes the table
 to the right.
+
+*** Long tables
+
+Long tables may span multiple pages when exporting to PDF. Depending on the
+LaTeX configuration, table headers can automatically be repeated at the top of
+each page.
+
+#+CAPTION: Example of a long table
+| Row | Project | Owner | Status      | Priority | Estimate |
+|-----+---------+-------+-------------+----------+----------|
+|   1 | Alpha   | Alice | Done        | High     |      2 d |
+|   2 | Bravo   | Bob   | In Progress | Medium   |      5 d |
+|   3 | Charlie | Carol | Planned     | Low      |      3 d |
+|   4 | Delta   | David | Done        | High     |      1 d |
+|   5 | Echo    | Emma  | Planned     | Medium   |      4 d |
+|   6 | Foxtrot | Frank | Done        | High     |      2 d |
+|   7 | Golf    | Grace | Planned     | Low      |      8 d |
+|   8 | Hotel   | Henry | Done        | Medium   |      3 d |
+|   9 | India   | Irene | In Progress | High     |      6 d |
+|  10 | Juliet  | John  | Planned     | Low      |      7 d |
+|  11 | Kilo    | Kate  | Done        | High     |      2 d |
+|  12 | Lima    | Luke  | In Progress | Medium   |      5 d |
+|  13 | Mike    | Mary  | Planned     | Low      |      3 d |
+|  14 | November| Neil  | Done        | High     |      1 d |
+|  15 | Oscar   | Olivia| Planned     | Medium   |      4 d |
+|  16 | Papa    | Peter | Done        | High     |      2 d |
+|  17 | Quebec  | Quinn | Planned     | Low      |      8 d |
+|  18 | Romeo   | Rose  | Done        | Medium   |      3 d |
+|  19 | Sierra  | Steve | In Progress | High     |      6 d |
+|  20 | Tango   | Tina  | Planned     | Low      |      7 d |
+|  21 | Uniform | Uma   | Done        | High     |      2 d |
+|  22 | Victor  | Victor| In Progress | Medium   |      5 d |
+|  23 | Whiskey | Wendy | Planned     | Low      |      3 d |
+|  24 | Xray    | Xavier| Done        | High     |      1 d |
+|  25 | Yankee  | Yvonne| Planned     | Medium   |      4 d |
+|  26 | Zulu    | Zach  | Done        | High     |      2 d |
+|  27 | Alpha   | Alice | Planned     | Low      |      8 d |
+|  28 | Bravo   | Bob   | Done        | Medium   |      3 d |
+|  29 | Charlie | Carol | In Progress | High     |      6 d |
+|  30 | Delta   | David | Planned     | Low      |      7 d |
+|  31 | Echo    | Emma  | Done        | High     |      2 d |
+|  32 | Foxtrot | Frank | In Progress | Medium   |      5 d |
+|  33 | Golf    | Grace | Planned     | Low      |      3 d |
+|  34 | Hotel   | Henry | Done        | High     |      1 d |
+|  35 | India   | Irene | Planned     | Medium   |      4 d |
+|  36 | Juliet  | John  | Done        | High     |      2 d |
+|  37 | Kilo    | Kate  | Planned     | Low      |      8 d |
+|  38 | Lima    | Luke  | Done        | Medium   |      3 d |
+|  39 | Mike    | Mary  | In Progress | High     |      6 d |
+|  40 | November| Neil  | Planned     | Low      |      7 d |
+|  41 | Oscar   | Olivia| Done        | High     |      2 d |
+|  42 | Papa    | Peter | In Progress | Medium   |      5 d |
+|  43 | Quebec  | Quinn | Planned     | Low      |      3 d |
+|  44 | Romeo   | Rose  | Done        | High     |      1 d |
+|  45 | Sierra  | Steve | Planned     | Medium   |      4 d |
+|  46 | Tango   | Tina  | Done        | High     |      2 d |
+|  47 | Uniform | Uma   | Planned     | Low      |      8 d |
+|  48 | Victor  | Victor| Done        | Medium   |      3 d |
+|  49 | Whiskey | Wendy | In Progress | High     |      6 d |
+|  50 | Xray    | Xavier| Planned     | Low      |      7 d |
+|  51 | Yankee  | Yvonne| Done        | High     |      2 d |
+|  52 | Zulu    | Zach  | In Progress | Medium   |      5 d |
+|  53 | Alpha   | Alice | Planned     | Low      |      3 d |
+|  54 | Bravo   | Bob   | Done        | High     |      1 d |
+|  55 | Charlie | Carol | Planned     | Medium   |      4 d |
+|  56 | Delta   | David | Done        | High     |      2 d |
+|  57 | Echo    | Emma  | Planned     | Low      |      8 d |
+|  58 | Foxtrot | Frank | Done        | Medium   |      3 d |
+|  59 | Golf    | Grace | In Progress | High     |      6 d |
+|  60 | Hotel   | Henry | Planned     | Low      |      7 d |
+|  61 | India   | Irene | Done        | High     |      2 d |
+|  62 | Juliet  | John  | In Progress | Medium   |      5 d |
+|  63 | Kilo    | Kate  | Planned     | Low      |      3 d |
+|  64 | Lima    | Luke  | Done        | High     |      1 d |
+|  65 | Mike    | Mary  | Planned     | Medium   |      4 d |
+|  66 | November| Neil  | Done        | High     |      2 d |
+|  67 | Oscar   | Olivia| Planned     | Low      |      8 d |
+|  68 | Papa    | Peter | Done        | Medium   |      3 d |
+|  69 | Quebec  | Quinn | In Progress | High     |      6 d |
+|  70 | Romeo   | Rose  | Planned     | Low      |      7 d |
+|  71 | Sierra  | Steve | Done        | High     |      2 d |
+|  72 | Tango   | Tina  | In Progress | Medium   |      5 d |
+|  73 | Uniform | Uma   | Planned     | Low      |      3 d |
+|  74 | Victor  | Victor| Done        | High     |      1 d |
+|  75 | Whiskey | Wendy | Planned     | Medium   |      4 d |
+|  76 | Xray    | Xavier| Done        | High     |      2 d |
+|  77 | Yankee  | Yvonne| Planned     | Low      |      8 d |
+|  78 | Zulu    | Zach  | Done        | Medium   |      3 d |
+|  79 | Alpha   | Alice | In Progress | High     |      6 d |
+|  80 | Bravo   | Bob   | Planned     | Low      |      7 d |
+|  81 | Charlie | Carol | Done        | High     |      2 d |
+|  82 | Delta   | David | In Progress | Medium   |      5 d |
+|  83 | Echo    | Emma  | Planned     | Low      |      3 d |
+|  84 | Foxtrot | Frank | Done        | High     |      1 d |
+|  85 | Golf    | Grace | Planned     | Medium   |      4 d |
+|  86 | Hotel   | Henry | Done        | High     |      2 d |
+|  87 | India   | Irene | Planned     | Low      |      8 d |
+|  88 | Juliet  | John  | Done        | Medium   |      3 d |
+|  89 | Kilo    | Kate  | In Progress | High     |      6 d |
+|  90 | Lima    | Luke  | Planned     | Low      |      7 d |
+|  91 | Mike    | Mary  | Done        | High     |      2 d |
+|  92 | November| Neil  | In Progress | Medium   |      5 d |
+|  93 | Oscar   | Olivia| Planned     | Low      |      3 d |
+|  94 | Papa    | Peter | Done        | High     |      1 d |
+|  95 | Quebec  | Quinn | Planned     | Medium   |      4 d |
+|  96 | Romeo   | Rose  | Done        | High     |      2 d |
+|  97 | Sierra  | Steve | Planned     | Low      |      8 d |
+|  98 | Tango   | Tina  | Done        | Medium   |      3 d |
+|  99 | Uniform | Uma   | In Progress | High     |      6 d |
+| 100 | Victor  | Victor| Planned     | Low      |      7 d |
 
 ** Images, video, and audio
 
@@ -792,7 +925,7 @@ Org mode supports several types of links.
 Most links point to headings, but they may also reference custom anchors within
 the current document or another Org document.
 
-You can create an anchor using <<name-of-anchor-here>>.
+You can create an anchor using ~<<name-of-anchor-here>>~ <<name-of-anchor-here>>.
 
 *** Hyperlinks
 
