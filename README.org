@@ -153,7 +153,7 @@ I will share." \\
 
 * Demo
 
-I've written a [[file:examples/org-mode-syntax-example.org][demo page]] for the themes that provides a maximal working support
+I've written a [[file:examples/org-mode-syntax-reference.org][demo page]] for the themes that provides a maximal working support
 of Org mode syntax.
 
 Please see the [[https://github.com/fniessen/refcard-org-mode][Org mode refcard]] page for full examples of headings, code,
