@@ -427,13 +427,18 @@ Org mode supports several forms of inline emphasis.
 
 Examples include:
 
-- /italic/
-- *bold*
-- */bold italic/*
-- _underlined_
-- ~inline code~
-- =verbatim text=
-- +deleted text+
+- /italic/ for emphasis, book titles, or introducing new terms.
+- *bold* for strong emphasis or important information.
+- */bold italic/* for very strong emphasis.
+- _underlined_ for text that should appear underlined, such as headings or terms
+  that require visual emphasis.
+- ~inline code~ for program code such as ~printf("hi")~, commands such as ~git
+  status~, variable names, function names such as ~strlen()~, or language keywords.
+- =verbatim text= for exact strings such as =YES=, command-line options such as
+  =--force-with-lease=, filenames such as =README.old=, or any text that should be
+  reproduced exactly.
+- +deleted text+ for text that has been removed, is obsolete, or should be
+  ignored.
 - superscripts such as m/s^{2}
 - subscripts such as H_{2}O
 
