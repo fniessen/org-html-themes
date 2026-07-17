@@ -435,7 +435,7 @@ Examples include:
 - ~inline code~ for program code such as ~printf("hi")~, commands such as ~git
   status~, variable names, function names such as ~strlen()~, or language keywords.
 - =verbatim text= for exact strings such as =YES=, command-line options such as
-  =--force-with-lease=, filenames such as =README.old=, or any text that should be
+  =--force-with-lease=, filenames such as =README.org=, or any text that should be
   reproduced exactly.
 - +deleted text+ for text that has been removed, is obsolete, or should be
   ignored.
@@ -446,9 +446,7 @@ Examples include:
 
 Formatting can be nested.
 
-For example:
-
-/Italic text containing _underlined text_ within it./
+For example, /italic text containing _underlined text_ within it./
 
 Inline markup must be surrounded by appropriate boundaries and cannot be
 embedded within a word.
