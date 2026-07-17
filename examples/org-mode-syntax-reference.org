@@ -442,13 +442,22 @@ Examples include:
 - superscripts such as m/s^{2}
 - subscripts such as H_{2}O
 
-Formatting can also be nested.
+*Markup recognition rules*
+
+Formatting can be nested.
 
 For example:
 
 /Italic text containing _underlined text_ within it./
 
-By default, emphasis does *not span more than 2* consecutive lines.
+Inline markup must be surrounded by appropriate boundaries and cannot be
+embedded within a word.
+
+For example, foo*bold*bar is not recognized because the markup is embedded
+within a word.
+
+By default, emphasis markup cannot span more than *2 consecutive lines*. For
+example, the following is not recognized as bold text:
 
 *This
 is not
