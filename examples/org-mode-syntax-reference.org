@@ -851,7 +851,7 @@ marks:
 
 Additional block types include ~note~, ~seealso~, ~tip~ and ~warning~.
 
-*** Note
+*** Note and See also
 
 A note box is displayed as follows:
 
@@ -859,9 +859,7 @@ A note box is displayed as follows:
 This information may be useful.
 #+end_note
 
-*** See also
-
-A seealso box is displayed as follows:
+A see-also box is displayed as follows:
 
 #+begin_seealso
 Related information.
