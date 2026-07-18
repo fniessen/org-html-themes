@@ -6,7 +6,7 @@
 #+KEYWORDS:  Org mode, syntax, markup, documentation
 #+LANGUAGE:  en
 
-#+OPTIONS:   H:5 num:nil toc:2 p:t
+#+OPTIONS:   H:5 num:t toc:2 p:t
 #+LATEX_CLASS: mcreport
 
 #+SETUPFILE: ~/org/setup/html-theme-readtheorg.setup
