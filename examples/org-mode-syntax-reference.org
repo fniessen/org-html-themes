@@ -8,6 +8,7 @@
 #+OPTIONS:   H:5 num:nil toc:2 p:t
 
 #+SETUPFILE: ~/org/setup/html-theme-readtheorg.setup
+#+SETUPFILE: ~/org/setup/latex-listings.setup
 
 #+PROPERTY:  header-args :eval never-export
 
@@ -432,8 +433,9 @@ Examples include:
 - */bold italic/* for very strong emphasis.
 - _underlined_ for text that should appear underlined, such as headings or terms
   that require visual emphasis.
-- ~inline code~ for program code such as ~printf("hi")~, commands such as ~git
-  status~, variable names, function names such as ~strlen()~, or language keywords.
+- ~inline code~ for program code such as ~printf("hi")~, commands such as
+  ~git status~, variable names, function names such as ~strlen()~, or language
+  keywords.
 - =verbatim text= for exact strings such as =YES=, command-line options such as
   =--force-with-lease=, filenames such as =README.org=, or any text that should be
   reproduced exactly.
@@ -769,46 +771,6 @@ each page.
 |  58 | Foxtrot | Frank | Done        | Medium   |      3 d |
 |  59 | Golf    | Grace | In Progress | High     |      6 d |
 |  60 | Hotel   | Henry | Planned     | Low      |      7 d |
-|  61 | India   | Irene | Done        | High     |      2 d |
-|  62 | Juliet  | John  | In Progress | Medium   |      5 d |
-|  63 | Kilo    | Kate  | Planned     | Low      |      3 d |
-|  64 | Lima    | Luke  | Done        | High     |      1 d |
-|  65 | Mike    | Mary  | Planned     | Medium   |      4 d |
-|  66 | November| Neil  | Done        | High     |      2 d |
-|  67 | Oscar   | Olivia| Planned     | Low      |      8 d |
-|  68 | Papa    | Peter | Done        | Medium   |      3 d |
-|  69 | Quebec  | Quinn | In Progress | High     |      6 d |
-|  70 | Romeo   | Rose  | Planned     | Low      |      7 d |
-|  71 | Sierra  | Steve | Done        | High     |      2 d |
-|  72 | Tango   | Tina  | In Progress | Medium   |      5 d |
-|  73 | Uniform | Uma   | Planned     | Low      |      3 d |
-|  74 | Victor  | Victor| Done        | High     |      1 d |
-|  75 | Whiskey | Wendy | Planned     | Medium   |      4 d |
-|  76 | Xray    | Xavier| Done        | High     |      2 d |
-|  77 | Yankee  | Yvonne| Planned     | Low      |      8 d |
-|  78 | Zulu    | Zach  | Done        | Medium   |      3 d |
-|  79 | Alpha   | Alice | In Progress | High     |      6 d |
-|  80 | Bravo   | Bob   | Planned     | Low      |      7 d |
-|  81 | Charlie | Carol | Done        | High     |      2 d |
-|  82 | Delta   | David | In Progress | Medium   |      5 d |
-|  83 | Echo    | Emma  | Planned     | Low      |      3 d |
-|  84 | Foxtrot | Frank | Done        | High     |      1 d |
-|  85 | Golf    | Grace | Planned     | Medium   |      4 d |
-|  86 | Hotel   | Henry | Done        | High     |      2 d |
-|  87 | India   | Irene | Planned     | Low      |      8 d |
-|  88 | Juliet  | John  | Done        | Medium   |      3 d |
-|  89 | Kilo    | Kate  | In Progress | High     |      6 d |
-|  90 | Lima    | Luke  | Planned     | Low      |      7 d |
-|  91 | Mike    | Mary  | Done        | High     |      2 d |
-|  92 | November| Neil  | In Progress | Medium   |      5 d |
-|  93 | Oscar   | Olivia| Planned     | Low      |      3 d |
-|  94 | Papa    | Peter | Done        | High     |      1 d |
-|  95 | Quebec  | Quinn | Planned     | Medium   |      4 d |
-|  96 | Romeo   | Rose  | Done        | High     |      2 d |
-|  97 | Sierra  | Steve | Planned     | Low      |      8 d |
-|  98 | Tango   | Tina  | Done        | Medium   |      3 d |
-|  99 | Uniform | Uma   | In Progress | High     |      6 d |
-| 100 | Victor  | Victor| Planned     | Low      |      7 d |
 
 ** Images, video, and audio
 
