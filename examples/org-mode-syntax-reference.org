@@ -5,12 +5,17 @@
 #+DESCRIPTION: A comprehensive reference demonstrating Org mode syntax and features.
 #+KEYWORDS:  Org mode, syntax, markup, documentation
 #+LANGUAGE:  en
+
 #+OPTIONS:   H:5 num:nil toc:2 p:t
+#+LATEX_CLASS: mcreport
 
 #+SETUPFILE: ~/org/setup/html-theme-readtheorg.setup
 #+SETUPFILE: ~/org/setup/latex-listings.setup
 
-#+PROPERTY:  header-args :eval never-export
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{boostboxes}
+
+#+PROPERTY: header-args :eval never-export
 
 This document demonstrates a broad range of Org mode features. It serves as
 a comprehensive reference for writing technical documentation, producing HTML
