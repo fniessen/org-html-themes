@@ -849,41 +849,37 @@ marks:
 
 : "hd ready"
 
-Additional block types include ~info~, ~tip~, ~note~, and ~warning~.
-
-*** Info
-
-An info box is displayed as follows:
-
-#+begin_info
-*Info example* \\
-Did you know...
-#+end_info
-
-*** Tip
-
-A tip box is displayed as follows:
-
-#+begin_tip
-*Tip example* \\
-Consider using this approach...
-#+end_tip
+Additional block types include ~note~, ~seealso~, ~tip~ and ~warning~.
 
 *** Note
 
 A note box is displayed as follows:
 
 #+begin_note
-*Note example* \\
 This information may be useful.
 #+end_note
+
+*** See also
+
+A seealso box is displayed as follows:
+
+#+begin_seealso
+Related information.
+#+end_seealso
+
+*** Tip
+
+A tip box is displayed as follows:
+
+#+begin_tip
+Consider using this approach...
+#+end_tip
 
 *** Warning
 
 A warning box is displayed as follows:
 
 #+begin_warning
-*Warning example* \\
 Verify your configuration before proceeding.
 #+end_warning
 
