@@ -829,15 +829,20 @@ Audio resources may be linked using standard Org hyperlinks.
 
 Org mode supports several block types for emphasizing content.
 
-*** Inline task
+*** Inline tasks
 
-*************** TODO Do this task
-Description of inline task.
+Inline tasks can be used to record reminders or small tasks directly within a
+document. They may include a TODO keyword, a priority, and tags.
+
+An inline task with a description:
+
+*************** TODO Write the introduction
+Draft the introductory section before the next review meeting.
 *************** END
 
-or:
+A compact inline task without a description:
 
-*************** WAIT [#B] Do also this other task                        :phone:
+*************** WAIT [#A] Contact the customer                           :phone:
 *************** END
 
 *** Example
