@@ -344,12 +344,9 @@ research/.
 
 A simple example:
 
-#+begin_src shell :exports both :results verbatim
+#+begin_src shell :exports both :results verbatim :eval export
 date +"%Y-%m-%d"
 #+end_src
-
-#+results:
-: 2026-07-15
 
 Longer command output may also be inserted into the document.
 
