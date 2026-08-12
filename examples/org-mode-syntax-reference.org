@@ -2,19 +2,25 @@
 #+TITLE:     Comprehensive Org mode syntax and features reference
 #+AUTHOR:    Fabrice Niessen
 #+EMAIL:     fniessen@pirilampo.org
-#+DESCRIPTION: A comprehensive reference demonstrating Org mode syntax and features.
+#+DESCRIPTION: Examples of Org mode markup, export features, Babel, tables, links, drawers, and advanced document elements.
 #+KEYWORDS:  Org mode, syntax, markup, documentation
 #+LANGUAGE:  en
 
-#+OPTIONS:   H:5 num:t toc:2 p:t
+#+OPTIONS:   H:5 toc:2 num:t p:t
+
+#+SETUPFILE: ~/org/setup/org-macros.setup
+
+# HTML export.
+#+SETUPFILE: ~/org/setup/html-theme-readtheorg-home.setup
+
+# LaTeX export.
 #+LATEX_CLASS: mcreport
-
-#+SETUPFILE: ~/org/setup/html-theme-readtheorg.setup
 #+SETUPFILE: ~/org/setup/latex-listings.setup
+#+SETUPFILE: ~/org/setup/latex-admonitions.setup
+#+LATEX_HEADER: \usepackage{amssymb} % Required for examples using \checkmark, \square, etc.
+# TODO: Should be in in mcdocument.cls?
 
-#+LATEX_HEADER: \usepackage{amssymb}
-#+LATEX_HEADER: \usepackage{boostboxes}
-
+# Global properties.
 #+PROPERTY: header-args :eval never-export
 
 This document demonstrates a broad range of Org mode features. It serves as
@@ -290,6 +296,75 @@ index 1a2b3c4..5d6e7f8 100644
 
 -This is the original paragraph.
 +This is the updated paragraph with clearer wording.
+#+end_src
+
+*** LaTeX
+
+#+begin_src latex :exports code
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\title{Syntax Highlighting Demo}
+\author{Fabrice Niessen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This is a simple demonstration of \LaTeX{} syntax.
+
+Inline math: \(e^{i\pi} + 1 = 0\).
+
+Displayed equation:
+
+\[
+\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}.
+\]
+
+A numbered equation:
+
+\begin{equation}
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}.
+\end{equation}
+
+\subsection{Lists}
+
+\begin{itemize}
+  \item First item
+  \item Second item with \textbf{bold} and \emph{emphasis}
+  \item A colored word: \textcolor{blue}{blue}
+\end{itemize}
+
+\subsection{Table}
+
+\begin{tabular}{lcr}
+\hline
+Name  & Value & Unit \\
+\hline
+Speed &    42 & m/s  \\
+Mass  &   5.3 & kg   \\
+\hline
+\end{tabular}
+
+\subsection{Figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{example-image}
+  \caption{An example image.}
+\end{figure}
+
+A hyperlink: \url{https://www.latex-project.org}
+
+\end{document}
 #+end_src
 
 *** Line numbers
@@ -687,6 +762,7 @@ table, so it pushes the table to the left.
 
 Centered table:
 
+#+ATTR_HTML: :style margin-left:auto; margin-right:auto;
 | a | b | c |
 |---+---+---|
 | 1 | 2 | 3 |
@@ -695,6 +771,7 @@ Centered table:
 Right-aligned table:
 
 #+LATEX: \hfill
+#+ATTR_HTML: :style margin-left:auto; margin-right:0;
 #+ATTR_LATEX: :center nil
 | a | b | c |
 |---+---+---|
@@ -941,7 +1018,7 @@ Inactive timestamp: [2014-01-16 Thu]
 
 Active timestamp: <2014-01-16 Thu>
 
-** DONE [#A] Buy GTD book                                              :online:
+** DONE [#A] Buy GTD book                                               :online:
 :LOGBOOK:
 - State "TODO"        ->  "DONE"       [2014-01-16 Thu 09:52]
 :END:
@@ -972,14 +1049,14 @@ HTML page is first loaded.
 
 Powerful, no?
 
-** Personal note                                              :computer:write:
+** Personal note                                                :computer:write:
 
 Tags may be assigned to headings to improve organization and searching.
 
 Interactive HTML exports (such as BigBlow) can also highlight entries that share
 the same tag.
 
-** Weekly review                                               :computer:
+** Weekly review                                                      :computer:
 
 The BigBlow HTML export supports a "review mode"...
 
@@ -999,7 +1076,7 @@ Example:
 
 {{{color(red, This other text is displayed in red.)}}}
 
-Additional macros are available on [[https://github.com/fniessen/org-macros][GitHub]].
+{{{hl(Additional macros)}}} are available on [[https://github.com/fniessen/org-macros][GitHub]].
 
 * BigBlow extensions
 
