@@ -3,4 +3,120 @@
 
 * Tasks
 
-** TODO Fix Org HTML theme: improve CSS style for "search" component and add default value
+** TODO Align syntax colors between the Bigblow and ReadTheOrg themes
+
+Compare the generated syntax-highlighting rules in:
+- `src/bigblow/css/htmlize.css`
+- `src/readtheorg/css/htmlize.css`
+
+Decide which differences are intentional. For differences without a documented
+reason, use the same color and style in both themes. Keep the result compatible
+with the current Org HTML output and remove this reference diff once the files
+are aligned.
+
+#+begin_src diff
+$ diff src/readtheorg/css/htmlize.css src/bigblow/css/htmlize.css
+17,18c17,18
+< .org-comment { /* font-lock-comment-face */ color: #999988; font-style: italic; }
+< .org-comment-delimiter { /* font-lock-comment-delimiter-face */ color: #999988; font-style: italic; }
+---
+> .org-comment { /* font-lock-comment-face */ color: #b22222; }
+> .org-comment-delimiter { /* font-lock-comment-delimiter-face */ color: #b22222; }
+47c47
+< .org-function-name { /* font-lock-function-name-face */ color: teal; }
+---
+> .org-function-name { /* font-lock-function-name-face */ color: #0000ff; }
+55c55
+< .org-keyword { /* font-lock-keyword-face */ color: #0086b3; }
+---
+> .org-keyword { /* font-lock-keyword-face */ color: #a020f0; }
+132c132
+< .org-string { /* font-lock-string-face */ color: #dd1144; }
+---
+> .org-string { /* font-lock-string-face */ color: #8b2252; }
+138c138
+< .org-variable-name { /* font-lock-variable-name-face */ color: teal; }
+---
+> .org-variable-name { /* font-lock-variable-name-face */ color: #a0522d; }
+#+end_src
+
+** TODO Order CSS properties consistently in the theme stylesheets
+
+Apply the following order to CSS declarations in the theme stylesheets under
+`src/bigblow/css/` and `src/readtheorg/css/`:
+
+1. Layout
+2. Box model
+3. Visual appearance
+4. Typography
+5. Effects
+
+Preserve selector behavior and values. Do not reorder declarations in vendor
+files. The task is complete when the touched stylesheets follow this order
+consistently and no unrelated formatting changes remain.
+
+** TODO Add links to Emacs and Org Mode technical-documentation videos
+
+Target: add a short resources subsection to `README.org`.
+
+Add both videos with descriptive link labels:
+- Consistent Technical Documents Using Emacs and Org Mode: https://www.youtube.com/watch?v=0g9BcZvQbXU
+- Literate Documentation with Emacs and Org Mode: https://www.youtube.com/watch?v=BAFZ-vTnfSo
+
+Use Org link syntax and do not duplicate an existing resource entry.
+
+** TODO Document workarounds for hiding the dashboard and mobile mini-TOC
+
+Document the following workaround for Bigblow output, including its limitations:
+- Remove `#left-panel-wrapper` after page load with JavaScript. The dashboard
+	can remain visible briefly because this runs during post-processing.
+- Hide `#minitoc` below a mobile breakpoint with a CSS media query.
+
+Keep the example snippets below, explain where to place them, and verify that
+the selectors still exist in `src/bigblow/js/bigblow.js` and
+`src/bigblow/css/bigblow.css`.
+
+JavaScript example:
+#+HTML_HEAD_EXTRA: <script>
+#+HTML_HEAD_EXTRA:         window.onload = function() {
+#+HTML_HEAD_EXTRA:             var leftPanel = document.getElementById('left-panel-wrapper');
+#+HTML_HEAD_EXTRA:             if (leftPanel) {
+#+HTML_HEAD_EXTRA:                 leftPanel.parentNode.removeChild(leftPanel);
+#+HTML_HEAD_EXTRA:             }
+#+HTML_HEAD_EXTRA:         };
+#+HTML_HEAD_EXTRA:     </script>
+
+CSS example for mobile devices:
+#+HTML_HEAD_EXTRA: <style>
+#+HTML_HEAD_EXTRA: /* Media query for mobile devices (adjust the max-width as needed) */
+#+HTML_HEAD_EXTRA:         @media only screen and (max-width: 768px) {
+#+HTML_HEAD_EXTRA:             #minitoc {
+#+HTML_HEAD_EXTRA:                 display: none;
+#+HTML_HEAD_EXTRA:             }
+#+HTML_HEAD_EXTRA:         }
+#+HTML_HEAD_EXTRA:     </style>
+
+** TODO Add a green success admonition to both HTML themes
+
+Implement a `success` admonition, with green styling, in both the Bigblow and
+ReadTheOrg themes. Follow the existing implementation and markup conventions
+used for `important`, `warning`, `note`, and `tip`.
+
+Use the GitHub Markdown presentation as a visual reference:
+https://github.com/copilot-emacs/copilot.el/blob/main/README.md
+
+Also review the `Details` button support documented in:
+https://raw.githubusercontent.com/milanglacier/minuet-ai.el/refs/heads/main/README.md
+
+Add or update focused examples so the generated HTML proves that the new
+admonition has the expected label, color, spacing, and readability.
+
+** TODO Improve the search component styling and define its default value
+
+Inspect the ReadTheOrg search component in its CSS and JavaScript files. Define
+the expected default value or placeholder explicitly, improve the component's
+layout and visual states, and preserve keyboard and mouse behavior.
+
+Validate the result with a generated page: the search field must be usable when
+empty, focused, populated, and cleared, and the styling must remain readable
+on both desktop and mobile widths.
