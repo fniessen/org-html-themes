@@ -184,10 +184,8 @@ function initializeTableOfContents() {
 
   $textTableOfContents.find('ul').first().addClass('nav');
 
-  // Hide Org's section numbers on first-level entries in the sidebar TOC.
-  $textTableOfContents.find('ul.nav').first()
-    .children('li')
-    .children('a')
+  // Hide the first Org section number on every entry in the sidebar TOC.
+  $textTableOfContents.find('a')
     .each(function () {
       const firstTextNode = $(this).contents().filter(function () {
         return this.nodeType === 3 && this.nodeValue.trim();
@@ -195,7 +193,7 @@ function initializeTableOfContents() {
 
       if (firstTextNode) {
         firstTextNode.nodeValue =
-          firstTextNode.nodeValue.replace(/^\s*\d+\.\s+/, '');
+          firstTextNode.nodeValue.replace(/^\s*\d+\.\s*/, '');
       }
     });
 
