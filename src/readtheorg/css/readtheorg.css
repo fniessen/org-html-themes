@@ -1079,6 +1079,11 @@ hr {
     margin-bottom: 0.809em;
 }
 
+/* Hide the title "Table of Contents" at the top of the navigation sidebar. */
+#table-of-contents > h2 {
+    display: none;
+}
+
 ul.nav > li ul {
     display: none;
 }
@@ -1491,4 +1496,28 @@ h2.footnotes {
     color: #55a5d9;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+/* Navigation entries by heading level (based on a 16px root font size) */
+#table-of-contents ul.nav > li > a,
+#table-of-contents ul.nav > li > ul > li > a {
+    font-size: 90%;
+}
+
+#table-of-contents ul.nav > li > a {
+    padding-left: 1.618em;
+}
+
+#table-of-contents ul.nav > li > ul > li > a {
+    padding-left: 2.427em;
+}
+
+#table-of-contents ul.nav > li > ul > li > ul > li > a {
+    font-size: 81%;
+    padding-left: 4.045em;
+}
+
+#table-of-contents ul.nav > li > ul > li > ul > li > ul > li > a {
+    font-size: 73%;
+    padding-left: 5.664em;
 }
