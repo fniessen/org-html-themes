@@ -184,6 +184,21 @@ function initializeTableOfContents() {
 
   $textTableOfContents.find('ul').first().addClass('nav');
 
+  // Hide Org's section numbers on first-level entries in the sidebar TOC.
+  $textTableOfContents.find('ul.nav').first()
+    .children('li')
+    .children('a')
+    .each(function () {
+      const firstTextNode = $(this).contents().filter(function () {
+        return this.nodeType === 3 && this.nodeValue.trim();
+      })[0];
+
+      if (firstTextNode) {
+        firstTextNode.nodeValue =
+          firstTextNode.nodeValue.replace(/^\s*\d+\.\s+/, '');
+      }
+    });
+
   /*
    * ScrollSpy requires the table of contents to use a Bootstrap
    * navigation component.
