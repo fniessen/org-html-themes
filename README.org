@@ -289,7 +289,7 @@ Solution provided by Malcolm Cook:
 #+begin_src org
 ,#+HTML_HEAD: <style> #content{max-width:1800px;}</style>
 ,#+HTML_HEAD: <style> p{max-width:800px;}</style>
-,#+HTML_HEAD: <style> li{max-width:800px;}</style
+,#+HTML_HEAD: <style> li{max-width:800px;}</style>
 #+end_src
 
 * Contribute to the project!
